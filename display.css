@@ -1,0 +1,364 @@
+/** theme:    base
+ *
+ * @author    Sarven Capadisli <info@csarven.ca>
+ * @license   http://creativecommons.org/licenses/by/3.0/ Creative Commons Attribution 3.0 Unported
+ * @link      http://csarven.ca/
+ */
+
+/*
+XXX:The following @page doesn't work in Gecko and WebKit because of https://bugzilla.mozilla.org/show_bug.cgi?id=115199 and https://bugs.webkit.org/show_bug.cgi?id=35329 . Leaving it here and hoping that it will work one day. See also: http://en.wikipedia.org/wiki/Comparison_of_layout_engines_%28Cascading_Style_Sheets%29#CSS_version_support
+*/
+@page {
+margin:1.9cm 1.9cm 2.54cm 1.9cm;
+size:18cm 23.5cm;
+}
+
+
+* { margin:0; padding:0; background: transparent !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; }
+img { display:block; border:0; }
+a abbr { cursor: pointer; border-bottom:0; }
+table { border-collapse:collapse; }
+tr { vertical-align:top; }
+ol { list-style-position:inside; }
+h2, h3, h4, h5, h6, p, ul, ol, li, pre, code, table {
+orphans: 3;
+widows: 3;
+}
+
+thead { display: table-header-group; }
+tr, img { page-break-inside: avoid; }
+img { max-width: 100% !important; }
+
+#references {
+/*page-break-before: always;*/
+}
+#references a,
+table code {
+word-wrap:break-word;
+word-break:break-all;
+}
+
+
+body {
+background-color:#FFFFFF;
+color:#000000;
+font-family:sans-serif;
+font-size:16px;
+line-height:1.4;
+counter-reset: section;
+counter-reset: sub-section;
+width:18cm;
+margin:0 auto;
+}
+
+h1,h2,h3,h4,h5,h6 {
+overflow:hidden;
+page-break-after: avoid;
+}
+
+
+.journal {
+
+}
+
+
+
+/*
+XXX: column-width doesn't seem to get applied in Firefox
+https://bugzilla.mozilla.org/show_bug.cgi?id=684062
+
+*/
+/*
+#content .entry-content {
+-webkit-columns:8.45cm 2;
+-webkit-column-count:2;
+-webkit-column-width:8.45cm;
+-webkit-column-gap:0.83cm;
+-moz-columns:8.45cm 2;
+-moz-column-count:2;
+-moz-column-width:8.45cm;
+-moz-column-gap:0.83cm;
+columns:8.45cm 2;
+column-count:2;
+column-width:8.45cm;
+column-gap:0.83cm;
+}
+*/
+
+p, ol, ul, table, figure {
+margin-bottom:1em;
+}
+
+h1 {
+margin-bottom:1em;
+font-family:Arial, sans-serif;
+font-size:2em;
+text-align:center;
+}
+h2 { font-size:1.8em; }
+h3 { font-size:1.4em; }
+h4 { font-size:1.3em; }
+h5 { font-size:1.2em; }
+h6 { font-size:1.1em; }
+
+h2 {
+margin-top:1.5em;
+}
+h3, h4, h5, h6 {
+margin-top:1em;
+}
+
+h2:nth-of-type(n+3) {
+counter-increment: section;
+counter-reset: sub-section;
+}
+h2:nth-of-type(n+3):before {
+content: counter(section) ". ";
+}
+h3 {
+counter-increment: sub-section;
+counter-reset: sub-sub-section;
+}
+h3:before {
+content: counter(section)"." counter(sub-section) " ";
+}
+h4 {
+counter-increment: sub-sub-section;
+}
+h4:before {
+content: counter(section)"." counter(sub-section) "." counter(sub-sub-section) " ";
+}
+
+
+li {
+list-style-position:inside;
+margin-bottom:0.25em;
+}
+
+a {
+/*
+text-decoration:none;
+color:#000;
+*/
+}
+
+code {
+font-size:90%;
+font-family:"Courier New", monospace;
+word-wrap: break-word;
+}
+
+dd {
+margin:0.5em 0 1em 1em;
+}
+
+#authors {
+margin-bottom:2.5em;
+text-align:center;
+}
+
+#authors dl {
+line-height:1;
+}
+
+#author_emails,
+#author_orgs,
+#abstract p {
+/*font-size:12px;*/
+}
+
+
+
+#authors dl,
+#authors ul {
+margin-bottom:1em;
+text-align:center;
+}
+
+#authors dd,
+#authors li {
+display:inline;
+margin-bottom:0;
+}
+
+#authors dd:after,
+#author_emails li:after,
+#author_orgs li:after {
+content:", ";
+}
+#authors dd:last-child:after,
+#author_emails li:last-child:after,
+#author_orgs li:last-child:after {
+content:"";
+}
+
+
+
+#document-identifier h2:before,
+#categories-and-subject-descriptors h2:before,
+#keywords h2:before,
+#references h2:before {
+content: "";
+}
+
+#document-identifier h2,
+#document-identifier h2 + p,
+#keywords h2,
+#keywords h2 + ul {
+display:inline;
+}
+
+/*
+.column-count-2 {
+-webkit-column-count:2;
+-webkit-column-width:40%;
+-webkit-column-gap:5%;
+-moz-column-count:2;
+-moz-column-width:40%;
+-moz-column-gap:5%;
+column-count:2;
+column-column-width:40%;
+column-gap:5%;
+}
+*/
+
+
+#authors li,
+#categories-and-subject-descriptors li,
+#keywords li {
+list-style-type:none;
+}
+
+#authors li {
+margin-bottom:1em;
+}
+
+#authors .entry-author {
+display:block;
+}
+
+#authors p {
+margin-bottom:0.1em;
+}
+
+#authors .author_name,
+#authors .author_email {
+font-size:12pt;
+}
+
+#authors .author_org {
+font-size:10pt;
+}
+
+
+#authors dt {
+display:none;
+}
+
+#authors p {
+text-align:center;
+}
+
+#authors li,
+#categories-and-subject-descriptors li,
+#keywords li {
+list-style-type:none;
+}
+#categories-and-subject-descriptors li,
+#keywords li {
+display:inline;
+}
+#categories-and-subject-descriptors li:after {
+content:"; ";
+}
+#keywords li:after {
+content:", ";
+}
+#categories-and-subject-descriptors li:last-child:after,
+#keywords li:last-child:after {
+content:"";
+}
+
+#categories-and-subject-descriptors h2,
+#keywords h2,
+#document-identifier h2 {
+text-transform:capitalize;
+}
+
+
+.entry-content p,
+.entry-content li {
+text-align:justify;
+}
+
+.entry-content ul {
+margin-left:0.2em;
+}
+
+
+.article_labels {
+display:none;
+}
+.article_labels * {
+display:inline;
+}
+
+.article_labels dt {
+display:none;
+}
+.article_labels ul:before {
+content: "Keywords: ";
+font-weight:bold;
+}
+.article_labels li {
+list-style-type:none;
+}
+.article_labels li:after {
+content:", ";
+}
+.article_labels li:last-child:after {
+content:"";
+}
+
+.journal table {
+border-collapse:collapse;
+}
+.journal table,
+.journal th,
+.journal td {
+border: 1px solid;
+}
+.journal table thead td:first-child,
+.journal table tfoot td:first-child {
+border:0;
+}
+..journal th,
+.journal td {
+padding:0.5em;
+}
+.journal caption {
+padding:0.25em;
+}
+
+.journal tbody th {
+text-align:left;
+}
+.main figcaption {
+margin-bottom:1em;
+}
+
+
+#references + ol {
+font-family:"Times New Roman", serif;
+font-size:9pt;
+}
+#references + ol {
+counter-reset: list-order;
+}
+#references + ol li { 
+counter-increment: list-order;
+list-style-type: none;
+}
+#references + ol li:before {
+content: "[" counter(list-order) "] ";
+}
