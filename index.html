@@ -28,7 +28,7 @@
         <meta name="description" content=""/>
         <link rel="stylesheet" type="text/css" media="all" href="display.css"/>
     </head>
-z
+
     <body about="[this:]" typeof="foaf:Document sioc:Post biblio:Paper" class="hfeed journal">
         <div id="wrap">
             <div class="hentry">
@@ -127,16 +127,20 @@ z
 
 
                     <h3>Linked Data</h3>
-                    <p>One manifestation of the Semantic Web vision is Linked Data. It is the a pragmatic approach to publishing structured data on the Web in order to discover related data from different sources. The original design principles was put forward by Sir Tim Berners-Lee in 2006 as follows:</p>
+                    <p>One manifestation of the Semantic Web vision is Linked Data. It is the a pragmatic approach to publishing structured data on the Web in order to discover related data from different sources. The original design principles was put forward by <a about="http://csarven.ca/#i" rel="foaf:knows" href="http://www.w3.org/People/Berners-Lee/card#i">Sir Tim Berners-Lee</a> in 2006 as follows:</p>
 
-                    <ol>
-                        <li>Use URIs as names for things</li>
-                        <li>Use HTTP URIs so that people can look up those names.</li>
-                        <li>When someone looks up a URI, provide useful information, using the standards (RDF*, SPARQL)</li>
-                        <li>Include links to other URIs. so that they can discover more things.</li>
-                    </ol>
+                    <blockquote href="http://www.w3.org/DesignIssues/LinkedData.html">
+                        <ol>
+                            <li>Use URIs as names for things</li>
+                            <li>Use HTTP URIs so that people can look up those names.</li>
+                            <li>When someone looks up a URI, provide useful information, using the standards (RDF*, SPARQL)</li>
+                            <li>Include links to other URIs. so that they can discover more things.</li>
+                        </ol>
+                    </blockquote>
 
-                    <p>In a nutshell, the use of URIs allows us to refer to things and concepts, whether they are real or imaginary, in an absolute way. By employing the widely adopted <code>http:</code> URI scheme, the idea for Linked Data sets off in terms of providing a representation for requested resources. The key ingredient in what information is returned to the user has to do with the model of the data in the response. Regardless of the syntax that is used, Resource Description Framework (RDF) is essentially an entity-relationship model that provides a way to make statements about the things in our reality. A statement contains three atomic parts: the <em>subject</em> resource in which the statement is about, followed with a <em>property</em> which describes the type of relationship it has to an <em>object</em> resource. Each of these components are typically represented using HTTP URIs, with the possibility of the object resource being a literal string. In mathematical terms, RDF is a directed, labeled graph, which conceptually depicts a graph of things. The part that makes this particular method to make claims about things worthwhile is the act of linking any two URIs together in a particular way. It fundamentally presents an opportunity to discover new resources in an uniform way, whether the resource is in local storage or in some other data source on the Web. Effectively creating a giant global graph of things, also known as the Linked Data bandwagon.</p>
+                    <p>In a nutshell, the use of URIs allows us to refer to things and concepts, whether they are real or imaginary, in an absolute way. In order to persistently make use of things, <cite>Sir Tim Berners-Lee</cite> proposed that <q xml:lang="en" href="http://www.w3.org/DesignIssues/Axioms.html#Universality2">any resource of significance should be given a URI</q>. By employing the widely adopted <code>http:</code> URI scheme, the idea for Linked Data sets off in terms of providing a representation for requested resources. The key ingredient in the information that is returned to the user has to do with the model of the data in the response. Regardless of the syntax that is used, Resource Description Framework (RDF) is essentially an entity-relationship model that provides a way to make statements about the things in our reality. A statement contains three atomic parts: the <em>subject</em> resource in which the statement is about, followed with a <em>property</em> which describes the type of relationship it has to an <em>object</em> resource. Each of these components are typically represented using HTTP URIs, with the possibility of the object resource being a literal string. In mathematical terms, RDF is a directed, labeled graph, which conceptually depicts a graph of things. What makes this method to make claims about things worthwhile is the act of linking any two URIs together in a particular way. It fundamentally presents an opportunity to discover new resources in an uniform way, whether the resource is in local storage or somewhere else.</p>
+
+                    <p>Surrounding efforts in Linked Data front leads to interconnected <em>Giant Global Graph</em> of stuff that's published anywhere on the Web. Some of the motivations behind this is to uncover insights about societies, build smarter systems, making predictions, democratizing data for people, or to make better decisions.</p>
 
 
 

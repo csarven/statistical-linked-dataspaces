@@ -89,6 +89,8 @@ p, ol, ul, table, figure {
 margin-bottom:1em;
 }
 
+q:lang(en) { quotes: "\201C" "\201D" }
+
 h1 {
 margin-bottom:1em;
 font-family:Arial, sans-serif;
@@ -143,7 +145,6 @@ color:#000;
 }
 
 code {
-font-size:90%;
 font-family:"Courier New", monospace;
 word-wrap: break-word;
 }
