@@ -89,8 +89,6 @@ p, ol, ul, table, figure {
 margin-bottom:1em;
 }
 
-q:lang(en) { quotes: "\201C" "\201D" }
-
 h1 {
 margin-bottom:1em;
 font-family:Arial, sans-serif;
@@ -321,29 +319,50 @@ content:", ";
 content:"";
 }
 
-.journal table {
+table {
 border-collapse:collapse;
+width:100%;
 }
-.journal table,
-.journal th,
-.journal td {
-border: 1px solid;
+table, th, td {
+
 }
-.journal table thead td:first-child,
-.journal table tfoot td:first-child {
-border:0;
+caption {
+text-align:left;
+border-bottom:1px solid #aaa;
 }
-..journal th,
-.journal td {
-padding:0.5em;
+tbody {
+border-top:2px solid #aaa;
+border-bottom:2px solid #aaa;
 }
-.journal caption {
-padding:0.25em;
+th, td {
+padding:0.25em 1em 0.25em 0.25em;
+}
+th:last-child,
+td:last-child {
+padding-right:0;
 }
 
-.journal tbody th {
+th:last-child,
+td:last-child {
+padding-right:0;
+}
+th, td {
+padding-top:0.25em;
+padding-bottom:0.25em;
+padding-right:1em;
+}
+th {
 text-align:left;
 }
+tr {
+border-bottom:1px solid #aaa;
+}
+tr:last-child {
+border-bottom:0;
+}
+
+
+
 .main figcaption {
 margin-bottom:1em;
 }
