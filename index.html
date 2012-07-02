@@ -170,7 +170,7 @@
 
 
                     <h2 id="statistical-linked-dataspace">Statistical Linked Dataspace</h2>
-                    <p>The idea of <em>Dataspaces</em> as discussed earlier was proposed without being tied to any particular set of technologies or types of data. For the moment, without diving into specific technologies, tooling, or data, first possible parallels needs to be drawn between the <em>Dataspaces</em> components and datapspaces which follows the Linked Data design principles. Table [<a href="#table_dataspaces-to-linked-dataspaces">1</a>] presents a generalized view for dataspace layers.</p>
+                    <p>The idea of <em>Dataspaces</em> as discussed earlier was proposed without being tied to any particular set of technologies or types of data. It is a broad understanding of what constitutes a dataspace. For the moment, without diving into specific technologies, tooling, or data, first possible parallels needs to be drawn between the <em>Dataspaces</em> components and dataspaces which follows the Linked Data design principles. Table [<a href="#table_dataspaces-to-linked-dataspaces">1</a>] presents a generalized view for Linked Dataspaces.</p>
 
                     <table id="table_dataspaces-to-linked-dataspaces">
                         <caption><strong>Table 1.</strong> Dataspaces to Linked Dataspaces</caption>
@@ -183,20 +183,18 @@
                             <tr><td>Local store and index</td><td>RDF files, stores, HTTP URIs</td></tr>
                             <tr><td>Search and Query</td><td>Free-text search and SPARQL</td></tr>
                             <tr><td>Discovery and relationships</td><td>Link discovery framework</td></tr>
-                            <tr><td>Data management extensions</td><td>Automatic data deployment</td></tr>
-                            <tr><td>Metadata</td><td>RDF vocabularies</td></tr>
+                            <tr><td>Data management extensions</td><td>Semi-automatic data deployment</td></tr>
+                            <tr><td>Metadata and provenance</td><td>RDF vocabularies</td></tr>
                         </tbody>
                     </table>
 
+                    <p>As Dataspaces are not attached to any specific list of data deployment services or practices, the Linked Dataspace can be seen as a narrower or a particular realization of that. Having a dataspace that adheres to Linked Data principles is that, one of the forefront goals is to offer the data sources and some of its services in such a way that they are globally accessible or linked to by external data sources and applications. It is worth point out that, a Linked Dataspace can house any data.</p>
 
-                    <p>how does that relate to LD case,, or how it is realized.. what does it mean to have dataspace in linked data? sparql, browsing, navigation... what should it do and why..</p>
-<!--
-catalogueing data elements ~= LD codelist
--->
+                    <p>The proposal here is that, a Linked Dataspace is ideal for publishing statistical data on the Web. It then follows that a statistical Linked Dataspace needs to cater to specific challenges in order to: extract, transform and load (ETL) data sources; create global identifiers for its resources in its data catalogs; use vocabularies which are designed for modeling statistical data; offer services to the outside world such that its participating data can browsed through; be discovered via searches and queries; and interlinked with other data sources.</p>
 
 
-
-                    <h2 id="requirements">Requirements from Case Studies</h2>
+                    <h2 id="requirements">Requirements</h2>
+                    <p>from Case Studies</p>
                     <p>Analysis of the original datasets (CSO Ireland, Eurostat, World Bank): What's available, why and what we are interested in (, what we need to prepare to access them?)</p>
                     <h3>Case Studies; what are they? ISWC paper (Data Sources)</h3>
                     <h3>Quantity: Huge amount of observations.. characteristics of the datasets (codelists.. in order to interpret observations).. how frequently are they updated (lower-upper bound)? Quality issues.. Provenance.. Not technically. Understanding / Analysis of the datasets.. How are they available (dumps, APIs)</h3>
