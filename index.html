@@ -131,14 +131,14 @@
                         <dd>Another type of dataspace service is the discovery component which is used for relating dataspace participants and consequently allow the system to provide better query results. This component would discover, identify and classify data sources and their content in order to easily locate and refer to items in the dataspace in the future. It is important for this component to monitor and allow an environment to update the schema mappings over time in order to accurately represent the dataspace's assets.<dd>
 
                         <dt>Pay-as-you-go</dt>
-                        <dd>The involvement of users and administrators in dataspaces is usually focused on taking care of most beneficial efforts first in creating semantic relationships. Hence, a pay-as-you-go approach to data integration is employed in dataspaces as complete upfront semantic integration is considered to be difficult and is not a required goal. The system should allow a way for it to be improved incrementally based on the knowledge of the underlying data's structure, semantics and relationships between sources.</dd>
+                        <dd>In creating semantic relationships between data sources, the involvement of users is usually focused on taking care of most beneficial efforts first. The system is expected to allow increment improvements based on the knowledge of the underlying data's structure, semantics and relationships between sources. Hence, a <em>pay-as-you-go</em> approach to data integration is employed in dataspaces as complete upfront integration is considered to be difficult and is not a required goal.</dd>
                     </dl>
 
 
                     <h3>Linked Data</h3>
                     <p>One manifestation of the Semantic Web vision is Linked Data. It is the a pragmatic approach to publishing structured data on the Web in order to discover related data from different sources. The original design principles was put forward by <a about="http://csarven.ca/#i" rel="foaf:knows" href="http://www.w3.org/People/Berners-Lee/card#i">Sir Tim Berners-Lee</a> in 2006 as follows:</p>
 
-                    <blockquote href="http://www.w3.org/DesignIssues/LinkedData.html">
+                    <blockquote about="http://www.w3.org/People/Berners-Lee/card#i" rel="dcterms:creator" href="http://www.w3.org/DesignIssues/LinkedData.html">
                         <ol>
                             <li>Use URIs as names for things</li>
                             <li>Use HTTP URIs so that people can look up those names.</li>
@@ -207,9 +207,9 @@
                         </tbody>
                     </table>
 
-                    <p>As Dataspaces are not attached to any specific list of data deployment services or practices, the Linked Dataspace can be seen as a narrower or a particular realization of a dataspace. Having a dataspace that adheres to Linked Data principles is that, one of the forefront goals is to offer the data sources and some of its services in such a way that the underlying data can be globally accessed and can linked to by external data sources and applications.</p>
+                    <p>As Dataspaces are not attached to any specific list of data deployment services or practices, the Linked Dataspace can be seen as a narrower or a particular realization of a Dataspace. Having a dataspace that adheres to Linked Data principles is that, one of the forefront goals is to offer the data sources and some of its services in a way that the underlying data can be globally accessed and linked to by external data sources and applications.</p>
 
-                    <p>The proposal here is that, although a Linked Dataspace can be used for any data, it is ideal for publishing statistical data on the Web. A statistical Linked Dataspace needs to identify resources and provide access to their descriptions. Such resources are in the nature of code lists, data cube observations, datasets and structures. Some of the specific challenges include: extraction of original data sources, transformations to RDF, and loading (ETL) to data storage services; creating global identifiers for the resources in its data catalogs; using vocabularies which are designed for modeling statistical data; offering services to the outside world such that its participating data sources can browsed through; discovery via text searches and structured queries; and building interlinks with other data sources.</p>
+                    <p>The proposal here is that, with the assumption of publishing statistical data in a way that its components can be identified, discovered, and disseminated for numerous uses, a Linked Dataspace can be an ideal candidate. A statistical Linked Dataspace needs to identify resources and provide access to their descriptions, where such resources are in the nature of code lists, data cube observations, datasets and structures. Some of the specific challenges include: extraction of original data sources, transformations to RDF, and loading (ETL) to data storage services; creating global identifiers for the resources in its data catalogs; using vocabularies which are designed for modeling statistical data; offering services to the outside world such that its participating data sources can browsed through; discovery via text searches and structured queries; and building interlinks with other data sources.</p>
 
 
                     <h2 id="requirements">Requirements</h2>
@@ -217,7 +217,24 @@
                     <p>Analysis of the original datasets (CSO Ireland, Eurostat, World Bank): What's available, why and what we are interested in (, what we need to prepare to access them?)</p>
                     <h3>Quantity: Huge amount of observations.. characteristics of the datasets (codelists.. in order to interpret observations).. how frequently are they updated (lower-upper bound)? Quality issues.. Provenance.. Not technically. Understanding / Analysis of the datasets.. How are they available (dumps, APIs)</h3>
 -->
-                    <p>A set of requirements to create a statistical Linked Dataspace are derived from the case studies of deploying CSO Ireland, Eurostat, and World Bank Linked Data. The requirements will be based on analysis of the original data sources, such as their characteristics in terms of quality, quantity, update frequency.</p>
+                    <p>A set of requirements to create a statistical Linked Dataspace are derived from the case studies of deploying CSO Ireland, Eurostat, and World Bank Linked Data. The requirements will be based on analysis of the original data sources, such as their characteristics in terms of quality, quantity, and update frequency.</p>
+
+                    <p>A high-level inspection of published statistical data reveals itself as a collection of significant amounts of data, that's compiled over time by different parties. Naturally the quality of the data sources varies from one publisher to next, as they try to cater to different publishing criteria. For instance, statistical data is often available in different data formats, with varying vocabularies and available thesaurus. To take one particular example: the usefulness of raw data that is available in CSV format may depend on the availability of the metadata for the terms that are used in the file. The shape in which the data is available, sets the tone for the data consumer. The data consumers need to make decisions based on the amount of work involved to obtain and work with said data in their own space.</p>
+
+                    <p>Therefore, it is reasonable to conclude that a number of decisions are made by answering questions like the following:</p>
+                    <ul>
+                        <li>Who is the publisher?</li>
+                        <li>What data is being published?</li>
+                        <li>What's the importance of that data?</li>
+                        <li>What's the license?</li>
+                        <li>When will it be updated, if at all?</li>
+                        <li>Which formats are the data available in?</li>
+                        <li>Is there sufficient metadata?</li>
+                        <li>How big is the data?</li>
+                        <li>Are the data files syntactically well-formed?</li>
+                    </ul>
+
+
 
                     <h3 id="data-sources">Data sources</h3>
                     <h4 id="data-source_cso-ireland">CSO Ireland</h4>
