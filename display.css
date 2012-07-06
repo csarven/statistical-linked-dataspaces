@@ -147,6 +147,7 @@ font-family:"Courier New", monospace;
 word-wrap: break-word;
 }
 
+dt { font-weight:bold; }
 dd {
 margin:0.5em 0 1em 1em;
 }
