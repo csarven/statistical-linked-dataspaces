@@ -189,7 +189,7 @@
 
 
                     <h2 id="statistical-linked-dataspace">Statistical Linked Dataspace</h2>
-                    <p>The idea of <em>Dataspaces</em> as discussed earlier was proposed without being tied to any particular set of technologies or types of data. It is a broad description for what constitutes a dataspace. For the moment, without diving into specific technologies, tooling, or data, possible parallels can be drawn between the <em>Dataspaces</em> components and dataspaces which follows the Linked Data design principles. Table [<a href="#table_dataspaces-to-linked-dataspaces">1</a>] presents a generalized view for Linked Dataspaces.</p>
+                    <p>The idea of <em>Dataspaces</em> as discussed earlier was proposed without being tied to any particular set of technologies or types of data. It is a broad description for what constitutes a dataspace. For the moment, without diving into specific technologies, tooling, or data, possible parallels can be drawn between <em>Dataspaces</em> and dataspaces which follows the Linked Data design principles. Table [<a href="#table_dataspaces-to-linked-dataspaces">1</a>] presents a generalized view for the components and services in Linked Dataspaces.</p>
 
                     <table id="table_dataspaces-to-linked-dataspaces">
                         <caption><strong>Table 1.</strong> Dataspaces to Linked Dataspaces</caption>
@@ -209,7 +209,7 @@
 
                     <p>As Dataspaces are not attached to any specific list of data deployment services or practices, the Linked Dataspace can be seen as a narrower or a particular realization of a Dataspace. Having a dataspace that adheres to Linked Data principles is that, one of the forefront goals is to offer the data sources and some of its services in a way that the underlying data can be globally accessed and linked to by external data sources and applications.</p>
 
-                    <p>The proposal here is that, with the assumption of publishing statistical data in a way that its components can be identified, discovered, and disseminated for numerous uses, a Linked Dataspace can be an ideal candidate. A statistical Linked Dataspace needs to identify resources and provide access to their descriptions, where such resources are in the nature of code lists, data cube observations, datasets and structures. Some of the specific challenges include: extraction of original data sources, transformations to RDF, and loading (ETL) to data storage services; creating global identifiers for the resources in its data catalogs; using vocabularies which are designed for modeling statistical data; offering services to the outside world such that its participating data sources can browsed through; discovery via text searches and structured queries; and building interlinks with other data sources.</p>
+                    <p>The proposal here is that, with the assumption of publishing statistical data in a way that its components can be identified, discovered, and disseminated for numerous uses, a Linked Dataspace can be an ideal candidate. A statistical Linked Dataspace needs to identify resources and provide access to their descriptions, where such resources are in the nature of code lists, data cube observations, datasets and structures. Some of the specific challenges include: extraction of original data sources, transformations to RDF, and loading (ETL) to data storage services; creating global identifiers for the resources in its data catalogs; using vocabularies which are designed for modeling statistical data; offering services to the outside world such that its participating data sources can be browsed through; discovery via text searches and structured queries; and building interlinks with other data sources.</p>
 
 
                     <h2 id="requirements">Requirements</h2>
@@ -219,19 +219,25 @@
 -->
                     <p>A set of requirements to create a statistical Linked Dataspace are derived from the case studies of deploying CSO Ireland, Eurostat, and World Bank Linked Data. The requirements will be based on analysis of the original data sources, such as their characteristics in terms of quality, quantity, and update frequency.</p>
 
-                    <p>A high-level inspection of published statistical data reveals itself as a collection of significant amounts of data, that's compiled over time by different parties. Naturally the quality of the data sources varies from one publisher to next, as they try to cater to different publishing criteria. For instance, statistical data is often available in different data formats, with varying vocabularies and available thesaurus. To take one particular example: the usefulness of raw data that is available in CSV format may depend on the availability of the metadata for the terms that are used in the file. The shape in which the data is available, sets the tone for the data consumer. The data consumers need to make decisions based on the amount of work involved to obtain and work with said data in their own space.</p>
+                    <p>A high-level inspection of published statistical data reveals itself as a collection of significant amounts of data, that's compiled over time by different parties. Naturally the quality of the data sources vary from one publisher to the next, as they try to cater to different publishing criteria. For instance, statistical data is often available in different data formats, with varying vocabularies and thesaurus that's specific to publisher's view about the data. In terms of consumption, one particular example is as follows: the usefulness of raw data that is available in CSV format may depend on the availability and quality of the metadata for the terms that are used in the file. The shape in which the data is available, sets the tone for the data consumer. The data consumers need to make decisions based on the amount of work involved to obtain and work with such data in their own space.</p>
 
-                    <p>Therefore, it is reasonable to conclude that a number of decisions are made by answering questions like the following:</p>
+                    <p>Therefore, it is reasonable to conclude that a number of decisions need to be made in order to prepare the dataspace for retrieval and reuse. A questionnaire along the following the lines can help determine the required actions to take:</p>
                     <ul>
                         <li>Who is the publisher?</li>
                         <li>What data is being published?</li>
                         <li>What's the importance of that data?</li>
-                        <li>What's the license?</li>
-                        <li>When will it be updated, if at all?</li>
-                        <li>Which formats are the data available in?</li>
+                        <li>What's the data license and terms of use?</li>
+                        <li>How frequently is the data updated, if at all?</li>
+                        <li>Which formats is the data available in?</li>
                         <li>Is there sufficient metadata?</li>
+                        <li>Which languages is the data and metadata available in?</li>
+                        <li>What granularity is the data in?</li>
                         <li>How big is the data?</li>
+                        <li>Which access points is the data distributed through?</li>
+                        <li>Are there special access privileges required to retrieve the data?</li>
+                        <li>How many retrieval requests need to be made?</li>
                         <li>Are the data files syntactically well-formed?</li>
+                        <li>Who are the people to contact?</li>
                     </ul>
 
 
