@@ -221,14 +221,16 @@
 
                     <p>A high-level inspection of published statistical data reveals itself as a collection of significant amounts of data, that's compiled over time by different parties. Naturally the quality of the data sources vary from one publisher to the next, as they try to cater to different publishing criteria. For instance, statistical data is often available in different data formats, with varying vocabularies and thesaurus that's specific to publisher's view about the data. In terms of consumption, one particular example is as follows: the usefulness of raw data that is available in CSV format may depend on the availability and quality of the metadata for the terms that are used in the file. The shape in which the data is available, sets the tone for the data consumer. The data consumers need to make decisions based on the amount of work involved to obtain and work with such data in their own space.</p>
 
-                    <p>Therefore, it is reasonable to conclude that a number of decisions need to be made in order to prepare the dataspace for retrieval and reuse. A questionnaire along the following the lines can help determine the required actions to take:</p>
+                    <p>Therefore, it is reasonable to conclude that a number of decisions need to be made in order to prepare the dataspace for retrieval and reuse. A questionnaire along the following the lines can help determine the initial required actions to take:</p>
                     <ul>
-                        <li>Who is the publisher?</li>
+                        <li>Who is the data publisher?</li>
+                        <li>Which parties was involved in compiling the original data?</li>
                         <li>What data is being published?</li>
                         <li>What's the importance of that data?</li>
                         <li>What's the data license and terms of use?</li>
                         <li>How frequently is the data updated, if at all?</li>
                         <li>Which formats is the data available in?</li>
+                        <li>Is the necessary tooling in place in order to work with the available formats?</li>
                         <li>Is there sufficient metadata?</li>
                         <li>Which languages is the data and metadata available in?</li>
                         <li>What granularity is the data in?</li>
@@ -238,6 +240,8 @@
                         <li>How many retrieval requests need to be made?</li>
                         <li>Are the data files syntactically well-formed?</li>
                         <li>Who are the people to contact?</li>
+                        <li>Is the accuracy of the data indicated?</li>
+                        <li>Are there different versions or variations of the data?</li>
                     </ul>
 
 
@@ -256,7 +260,7 @@
                     <h4 id="data-source_world-bank">World Bank</h4>
                     <p>The <a href="http://worldbank.org/">World Bank</a> [<a href="#r_9">9</a>] is an international development organization that provides access to a comprehensive set of data about countries around the globe. The publicly available statistical data is collected from officially-recognized international sources, and consists of a wide array of observations on development indicators, financial statements, climate change, projects and operations.</p>
 
-                    <p>The World Bank provides a free and open access to numerous datasets in their <a href="http://data.worldbank.org/data-catalog">data catalog</a> [<a href="#r_10">10</a>]. These datasets are available in one or more formats: XML, JSON, CSV, XLS; with additional geospatial data in SHP and KML, and supporting documentations in PDF. The World Bank APIs offers some of the datasets primarily in XML and JSON representations, whereas the rest of the formats are available as data dumps. In our use-case, the decision on which datasets to work with was based on several factors such as the importance of the dataset, its completeness, and the ease of converting it into an RDF representation. Hence, the following datasets from the World Bank's API were selected with the preference of working with XML:</p>
+                    <p>The World Bank provides a free and open access to numerous datasets in their <a href="http://data.worldbank.org/data-catalog">data catalog</a> [<a href="#r_10">10</a>]. These datasets are available in one or more formats: XML, JSON, CSV, XLS; with additional geospatial data in SHP and KML, and supporting documentations in PDF. The World Bank APIs offers some of the datasets primarily in XML and JSON representations, whereas the rest of the formats are available as data dumps. In our use-case, the decision on which datasets to work with was based on several factors such as the importance of the dataset, its completeness, and the ease of converting it into an RDF representation. Hence, the following datasets from the World Bank's API was selected with the preference of working with XML:</p>
 
                     <ul>
                         <li><a href="http://data.worldbank.org/developers/climate-data-api">World Bank Climate Change</a> (<dfn><abbr title="World Bank Climate Change">WBCC</abbr></dfn>) [<a href="#r_11">11</a>] contains data from historical observations and future projections derived from global circulation models.</li>
@@ -266,6 +270,25 @@
                     </ul>
 
 
+                    <h3 id="data-retrieval">Data Retrieval</h3>
+                    <h4 id="data-retrieval_cso-ireland">CSO Ireland</h4>
+                    <p>Data from the 2006 Irish Census was retrieved manually, downloading each slice of small area population statistics individually via the export to Excel files from the <a href="http://beyond2020.cso.ie/census/ReportFolders/ReportFolders.aspx">CSO's instance of the Beyond 20/20</a> [<a href="#r_15">15</a>]. 14 datasets in CSV format in total of 8MB was manually retrieved using the interactive application by clicking on the access URLs.</p>
+
+                    <h4 id="data-retrieval_eurostat">Eurostat</h4>
+                    <p>There are approximately 6100 datasets published by Eurostat. Eurostat updates information about datasets as well as table of contents twice a day. The datasets holds statistics on daily, monthly, quarterly and annual basis. Therefore, certain datasets are updated daily and many datasets are updated on monthly basis. To keep Eurostat RDF datasets up to date, we've scheduled a cronjob, which runs a set of scripts on weekly basis. In order to avoid unnecessary RDF transformations of each dataset, we've only updated the changed datasets within the past week.</p>
+
+                    <p>Along with the datasets, Eurostat also publishes Data Structure Definitions (<dfn><abbr title="Data Structure Definition">DSD</abbr></dfn>) about each dataset, as well as a set of dictionaries (code lists) which are shared among all datasets. Hence we take into consideration every type of information provided by Eurostat. The DSDs are published in XML format while the code lists are published in TSV format. Dataset is available in three different formats: TSV, DFT and SDMX. Given that the datasets, metadata and code lists each provide different type of information and is represented differently, we wrote Java programs to process XML and TSV formats of the metadata, dataset and code lists separately.</p>
+
+                    <p>We have written different shell scripts which wrap each Java program and one main script which handles the whole process of data downloading and transformation by invoking other scripts.</p>
+
+                    <p>Over 13000 HTTP GET requests was made to Eurostat to download raw datasets, DSDs and code lists, with a total of disk space of ~58GB.</p>
+
+                    <h4 id="data-retrieval_world-bank">World Bank</h4>
+                    <p>The World Bank datasets were collected by making requests to the World Bank API endpoints using the XML output format.</p>
+
+                    <p>World Bank APIs was called ~150000 times to retrieve all of the WDI, WBF, WBCC, WBPO datasets, with a total disk space of ~20GB.</p>
+
+                    <p>The data is retrieved at irregular periods - at least once a month - from the World Bank API endpoints. The retrieval act is partly based on new dataset announcements in World Bank mailing lists. Although the data retrieval and transformation phases are conducted by independent scripts, the commitment to retrieve and store the data is based on achieving the quality of the eventual RDF serialization. Therefore, Java and Bash scripts are manually executed to retrieve, in order to closely monitor abnormalities in the responses and account for necessary changes in the transformations.</p>
 
 
 
