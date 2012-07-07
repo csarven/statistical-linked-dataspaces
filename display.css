@@ -154,6 +154,14 @@ color:#000;
 */
 }
 
+pre {
+font-family:"Courier New", monospace;
+margin:0 0 1.5em 0;
+padding:1em;
+border:1px solid #CCCCCC;
+overflow:auto;
+}
+
 code {
 font-family:"Courier New", monospace;
 word-wrap: break-word;

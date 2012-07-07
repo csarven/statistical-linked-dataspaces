@@ -116,7 +116,7 @@
 
                     <dl>
                         <dt>Participants and Relationships</dt>
-                        <dd>The participating data sources in a dataspace can be databases, repositories, web services or software packages. The source data can be structured, semi-structured or unstructured, where some may be set to allow updates, yet others only for reading. Similarly, a dataspace may have different relationship models between its sources, with descriptions at any level of granularity, as well as information on data provenance.</dt>
+                        <dd>The participating data sources in a dataspace can be databases, repositories, web services or software packages. The source data can be structured, semi-structured or unstructured, where some may be set to allow updates, yet others only for reading. Similarly, a dataspace may have different relationship models between its sources, with descriptions at any level of granularity, as well as information on data provenance.</dd>
 
                         <dt>Catalog and Browse</dt>
                         <dd>Dataspaces may include services to allow different modes of interaction with the data sources. Systems might simply provide services to support access to its catalogue in order to allow users to browse its inventory of data resources. Catalogues may have metadata about the resources such as their original source, used schemas, statistics on the data, creators, various timestamps, licensing, completeness and so forth. This type of provenance data provides a perspective for the users and administrators about the elements in the data sources, as well as assistance in reproduction and quality analysis.</dd>
@@ -128,7 +128,7 @@
                         <dd>In order to give the data sources a home and to allow inquiry services, a storage and an accompanying index component is used. Local storages and indexes aid in creating efficient queries, precise access to data, and support for data recovery and availability. Indexes are invaluable in terms of identify information across data sources whether locally or references to objects in the real-world.</dd>
 
                         <dt>Discovery and extensions</dt>
-                        <dd>Another type of dataspace service is the discovery component which is used for relating dataspace participants and consequently allow the system to provide better query results. This component would discover, identify and classify data sources and their content in order to easily locate and refer to items in the dataspace in the future. It is important for this component to monitor and allow an environment to update the schema mappings over time in order to accurately represent the dataspace's assets.<dd>
+                        <dd>Another type of dataspace service is the discovery component which is used for relating dataspace participants and consequently allow the system to provide better query results. This component would discover, identify and classify data sources and their content in order to easily locate and refer to items in the dataspace in the future. It is important for this component to monitor and allow an environment to update the schema mappings over time in order to accurately represent the dataspace's assets.</dd>
 
                         <dt>Pay-as-you-go</dt>
                         <dd>In creating semantic relationships between data sources, the involvement of users is usually focused on taking care of most beneficial efforts first. The system is expected to allow increment improvements based on the knowledge of the underlying data's structure, semantics and relationships between sources. Hence, a <em>pay-as-you-go</em> approach to data integration is employed in dataspaces as complete upfront integration is considered to be difficult and is not a required goal.</dd>
@@ -151,7 +151,7 @@
                         <dt>HTTP URIs</dt>
                         <dd>In a nutshell, the use of URIs allows us to refer to things and concepts, whether they are real or imaginary, in an absolute way. In order to persistently make use of things, <cite>Sir Tim Berners-Lee</cite> proposed that <q href="http://www.w3.org/DesignIssues/Axioms.html#Universality2">any resource of significance should be given a URI</q>. By employing the widely adopted <code>http:</code> URI scheme, the idea for Linked Data sets off in terms of providing a representation for requested resources.</dd>
 
-                        <dt>RDF data model</dd>
+                        <dt>RDF data model</dt>
                         <dd>The key ingredient in the information that is returned to the user has to do with the model of the data in the response. Regardless of the syntax that is used, Resource Description Framework (RDF) is essentially an entity-relationship model that provides a way to make statements about the things in our reality. A statement contains three atomic parts, also known as a triple: the <em>subject</em> resource in which the statement is about, followed with a <em>property</em> which is a vocabulary term that describes the type of relationship it has to an <em>object</em> resource. Each of these components are typically represented using HTTP URIs, with the possibility of the object resource being a literal string. In mathematical terms, RDF is a directed, labeled graph, which conceptually depicts a graph of things. What makes this method to make claims about things worthwhile is the act of linking any two URIs together in a particular way. It fundamentally presents an opportunity to discover new resources in an uniform way, whether the resource is in local storage or somewhere else.</dd>
 
                         <dt>RDF vocabularies</dt>
@@ -317,7 +317,7 @@
 
 
 
-                    <h3 id="loading-RDF-to-store" class="todo" title="This is more or less a copy/paste of http://csarven.ca/graphpusher . It should most likely be summarized.">GraphPusher</h3>
+                    <h3 id="graphpusher" class="todo" title="This is more or less a copy/paste of http://csarven.ca/graphpusher . It should most likely be summarized.">GraphPusher</h3>
                     <p>The manual creation of dataspaces [<a href="#r_1">1</a>] conforms to Linked Data principles is time consuming, and prone to human errors since there are a number of steps involved to gather the data, and place them in a store. Typically a list is compiled consisting of datasets with graph names for each dataset, and local copies of the data that is to be imported in to a store. This information may be tracked in a structured format, or a simple text file. The Vocabulary of Interlinked Datasets (VoID) [<a href="#r_2">2</a>] is used because it is an accepted standard to describe RDF datasets, as well as the SPARQL 1.1 Service Description (SD) [<a href="#r_3">3</a>] for discovering information about a SPARQL service.</p>
 
                     <p>One of the goals of publishing a VoID file alongside datasets that are published as Linked Data is to allow consumers to discover and retrieve the data. Based on this, the GraphPusher tool [<a href="#r_4">4</a>] is designed to aid users to retrieve and import data in RDF format into a graph store by making use of the metadata in a VoID file. VoID describes access methods for the actual RDF triples in a number of different ways. GraphPusher focuses on two of these methods; dereferencing HTTP URIs and compressed RDF data dumps.</p>
@@ -403,6 +403,58 @@
                         <li>Techniques to optimize storage footprint for duplicate copies of retrieved datasets.</li>
                         <li>Support other popular RDF stores e.g., Virtuoso RDF Quad Store [<a href="#r_14">14</a>] and 4store [<a href="#r_15">15</a>], to directly communicate with the store &#8211; currently TDB Triple Store is supported.</li>
                     </ul>
+
+
+                    <h3 id="linked-data-pages" class="todo" title="Write up the info. Add a screenshot">Linked Data Pages</h3>
+                    <p>Linked Data Pages is a Web publishing framework to generate RDF and HTML documents. It invokes unique SPARQL queries based on requested URIs, and outputs the results to assigned corresponding HTML templates. Links to alternate RDF formats as well as JSON are handled by content-negotiation.</p>
+
+                    <h4>Motivation</h4>
+                    <p>It came in a dream.</p>
+
+                    <h4>Overview</h4>
+                    <p>It is built on top of <a href="http://code.google.com/p/moriarty/">Moriarty</a>, <a href="http://code.google.com/p/paget/">Paget</a>, and <a href="https://github.com/semsol/arc2">ARC2</a> libraries. It uses Paget to dispatch URIs and build a local index from the SPARQL query result.</p>
+
+
+                    <h4>Configuration</h4>
+                    <p>There is an installation script to get it running. The same configurations can also be done manually:</p>
+
+                    <ul>
+                        <li>Set directories (LDP, Paget, Moriarty, ARC2)</li>
+                        <li>Set SPARQL service URI</li>
+                    </ul>
+
+                    <ul>
+                        <li>Site settings (logo, URI domain mapping between store and public URIs)</li>
+                    </ul>
+
+
+                    <h4>Resources</h4>
+                    <p>How to package a resource to query and template up...</p>
+                    <ul>
+
+                        <li>Prefixes</li>
+                        <li>Resource generation
+                            <ul>
+                                <li>SPARQL Queries (default is DESCRIBE)</li>
+                                <li>Assign template file</li>
+                                <li>Assign URI pattern</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h4>Interface</h4>
+                    <p><code>$triples = $this->getTriples('http://csarven.ca/#i');</code></p>
+
+                    <p>The <code>getTriples</code> function gets all the triples for us from our SPARQL query result and we place it in a multi-dimensional array. In this example, we are getting all the triples with subject <code>http://csarven.ca/#i</code>. It should give us the same triples we&#8217;ve imported into our RDF store. But we could also get other triples that match the pattern for parameters (subject, property, object) e.g., <code>$this->getTriples('http://csarven.ca/#i', 'http://xmlns.com/foaf/0.1/knows');</code></p>
+
+                    <p>That would get us all the triples with subject <code>http://csarven.ca/#i</code> and property <code>http://xmlns.com/foaf/0.1/knows</code>. An alias to this is the <code>getValue</code> function where we can use qnames for the property position: <code>$this->getValue('http://csarven.ca/#i', 'foaf:knows');</code></p>
+
+                    <p>You can define more qnames in <code>$config['prefixes']</code> at <code>/var/www/site/config.php</code>. See also <code>/var/www/lib/linked-data-pages/README</code> for more uses of <code>getTriples</code> like wildcards.</p>
+
+                    <p>For complex templating, that is, if you&#8217;d like to do more data processing with PHP, you can dive into the <code>SITE_Template</code> class in <code>/var/www/classes/SITE_Template.php</code> instead of creating your functions directly inside HTML templates. The functions in here can be called directly from your templates.</p>
+
+
+
 
 
                     <h2>Implementation of the Case Studies</h2>
