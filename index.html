@@ -315,6 +315,96 @@
                         <li>Applications</li>
                     </ul>
 
+
+
+                    <h3 id="loading-RDF-to-store" class="todo" title="This is more or less a copy/paste of http://csarven.ca/graphpusher . It should most likely be summarized.">GraphPusher</h3>
+                    <p>The manual creation of dataspaces [<a href="#r_1">1</a>] conforms to Linked Data principles is time consuming, and prone to human errors since there are a number of steps involved to gather the data, and place them in a store. Typically a list is compiled consisting of datasets with graph names for each dataset, and local copies of the data that is to be imported in to a store. This information may be tracked in a structured format, or a simple text file. The Vocabulary of Interlinked Datasets (VoID) [<a href="#r_2">2</a>] is used because it is an accepted standard to describe RDF datasets, as well as the SPARQL 1.1 Service Description (SD) [<a href="#r_3">3</a>] for discovering information about a SPARQL service.</p>
+
+                    <p>One of the goals of publishing a VoID file alongside datasets that are published as Linked Data is to allow consumers to discover and retrieve the data. Based on this, the GraphPusher tool [<a href="#r_4">4</a>] is designed to aid users to retrieve and import data in RDF format into a graph store by making use of the metadata in a VoID file. VoID describes access methods for the actual RDF triples in a number of different ways. GraphPusher focuses on two of these methods; dereferencing HTTP URIs and compressed RDF data dumps.</p>
+
+                    <p>Given RDF data that is to be imported into a graph store, additional information is required in order to carry out the update process; how to access the store, dataset to store in, and graph name to use. It naturally follows that this unique information needs to be handed over to the store per dataset for the update. When dataspaces are updated frequently, it brings forward a reason to perform with a script, minimizing human involvement and errors. Therefore, the underlying purpose for GraphPusher is to help with data deployment as efficiently as possible.</p>
+
+                    <p>Where users are publishers and consumers at the same time, the creation of a VoID description can be seen as a declarative programming approach to putting RDF data into data stores. GraphPusher&#8217;s potential use is to help applications to pull in Linked Data.</p>
+
+                    <p>GraphPusher was originally created to fulfil the data deployment need of DataGovIE&#8217;s [<a href="#r_5">5</a>] production and staging datasets. DataGovIE reuses its published VoID description to feed its own dataspace with incremental changes to data.</p>
+
+                    <p>GraphPusher approaches this task with the following sequence. Figure [<a href="#diagram_graphpusher-sequence">1</a>] gives an illustration.</p>
+
+                    <ol>
+                        <li>Compiling a list of datasets to be retrieved to local space and graph name to use per dataset or file. This is accomplished by retrieving a VoID file and extracting the <code>void:dataDump</code> property values. It also looks for SD&#8217;s <code>sd:name</code> property in VoID, where they are collected to name the graphs in the RDF store. In the case that <code>sd:name</code> is not present, the graph name method is determined by user&#8217;s configuration in GraphPusher.</li>
+
+                        <li>Datasets are downloaded to local disk. For compressed dataset archives, they are decompressed.</li>
+
+                        <li>Finally, the data is imported into the graph store by either executing an update operation on the RDF store directly, or through the SPARQL service via SPARQL Update.</li>
+                    </ol>
+
+                    <figure id="figure_graphpusher-sequence">
+                        <figcaption><strong>Figure 1</strong>: GraphPusher sequence</figcaption>
+                        <object type="image/svg+xml" data="graphpusher-sequence.svg" width="300" height="220"></object>
+                    </figure>
+
+                    <h4 id="implementation">Implementation</h4>
+                    <p>A reoccurring dataspace operation in Linked Data environments is the retrieval of remote data and placing them in an RDF storage. In the case of rebuilding an RDF store, the approach is to use a VoID description for the datasets in order to batch process some of the recurring steps. This is typically accomplished by publishing a VoID description of the datasets with triples using the <code>void:dataDump</code> property, and optionally with <code>sd:graph</code> and <code>sd:name</code> properties.</p>
+
+                    <h4 id="related-work">Related work</h4>
+                    <p>To the best of publicly available practices, there exists no technology that builds a dataspace automatically. The work is based on VoID as SADDLE [<a href="#r_11">11</a>] and DARQ [<a href="#r_12">12</a>] do not provide the required metadata coverage for dataset access, and VoID has 30% coverage in the Linking Open Data (LOD) [<a href="#r_13">13</a>] and is actively maintained.</p>
+
+                    <h4 id="about-the-code">About the code</h4>
+                    <p>GraphPusher takes a VoID URL as input from the command-line, retrieves the VoID file, looks for the <code>void:dataDump</code> property values, HTTP GETs them, and finally imports them into an RDF store using one of the graph name methods. The graph name method is defined as part of GraphPusher&#8217;s configuration.</p>
+
+                    <p>In order to specify the location of the RDF store for the data that is to be imported, GraphPusher can take either TDB Triple Store&#8217;s [<a href="#r_6">6</a>] assembler file which contains configuration for graphs and datasets, or a SPARQL service URI. If the TDB assembler filename is provided in the command-line argument with <code>--assembler</code>, GraphPusher checks this file to determine the name of the dataset and its location. It will then import the data dumps using the TDB loader. Alternatively, with the <code>--dataset</code> option, GraphPusher uses Apache Jena&#8217;s SPARQL over HTTP command-line script [<a href="#r_7">7</a>] to HTTP POST by using the SPARQL 1.1 Graph Store HTTP Protocol [<a href="#r_8">8</a>].</p>
+
+                    <p>GraphPusher is written in Ruby, and relies on the rapper [<a href="#r_9">9</a>] RDF parser utility, and optionally the TDB Triple Store. GraphPusher is configurable, e.g., location to store the data dumps, method to determine named graphs. It decompresses archived data dumps to a local directory, converts files with unrecognized RDF format extensions to Turtle format before importing. It is tested and functional in Debian/Ubuntu systems, available under the Apache License 2.0 [<a href="#r_10">10</a>].</p>
+
+                    <h4 id="determining-graph-name">Determining graph name</h4>
+                    <p>Where possible, GraphPusher makes a decision for dataset&#8217;s named graphs by staying consistent with publishers&#8217; intentions. In certain cases, it tries to indicate the origin of the data by reusing the dataset location in the graph name.</p>
+
+                    <p>Figure [<a href="figure_named-graph-flowchart">2</a>] illustrates the flow for this process.</p>
+
+                    <p>If <code>sd:name</code> is present in VoID, its value has highest priority because it explicitly states the named graph that is used in the dataset, and consequently how it can be referenced in a <code>FROM/FROM NAMED</code> clause.</p>
+
+                    <p>If <code>sd:name</code> is not present, GraphPusher looks for one of the <code>graphNameMethod</code> configuration property values: <code>dataset</code>, <code>dataDump</code>, <code>filename</code>. By default <code>dataset</code> value tells the GraphPusher to simply use the URI of the <code>void:Dataset</code>. If <code>dataDump</code> is set, the named graph IRI becomes the IRI of the data dump. Alternatively, if the <code>filename</code> method is used, the file name is appended to the <code>graphNameBase</code> URI value.</p>
+
+                    <figure id="figure_named-graph-flowchart">
+                        <figcaption><strong>Figure 2</strong>: Determining named graph flowchart</figcaption>
+                        <object type="image/svg+xml" data="graphpusher-named-graph-flowchart.svg" width="360" height="340"></object>
+                    </figure>
+
+                    <h4 id="preliminary-results">Preliminary Results</h4>
+                    <p>As there exists no automated approach to have local copies of the data dumps, determining a graph name per data dump, and importing the data into a store, the manual approach is used as baseline to compare against.</p>
+
+                    <p>Table [<a href="#table_comparison-manual-graphpusher-approaches">1</a>] gives an overview for the comparison of manual and GraphPusher approaches.</p>
+
+                    <table id="table_comparison-manual-graphpusher-approaches">
+                        <caption><strong>Table 1</strong>: Comparison of manual and GraphPusher approaches</caption>
+                        <thead>
+                            <tr><td></td><th>Manual</th><th>GraphPusher</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><th>Configurable</th><td>Full</td><td>Predefined</td></tr>
+                            <tr><th>Requirements</th><td>None</td><td>VoID</td></tr>
+                            <tr><th>Efficiency</th><td colspan="2">See discussion below</td></tr>
+                        </tbody>
+                    </table>
+
+                    <p>The bare-bone manual approach would typically make use of <em>wget</em> or <em>curl</em> to download the dataset files, several archive tools to decompress compressed datasets, and an RDF parser to convert a given dataset file in an RDF format to N-Triples format, where it is suitable for pattern matching with the <em>grep</em> tool.</p>
+
+                    <p><strong>Efficiency</strong>: The steps mentioned above would require the user to posses knowledge of command-line operations and running SPARQL queries, and depending on their expertise and available tools, given test runs, it takes 20 minutes or more if executed by hand. The automated approach in GraphPusher would typically take a minute or two to configure and run from command-line. The efficiency of each approach is noteworthy, especially when this task is repeated for different datasets and metadata.</p>
+
+                    <p>It should be noted here that, the expertise and time needed to have the required tools set up in the system is excluded as they vary from one favourable approach to another in a given operating environment. VoID is GraphPusher&#8217;s primary requirement, hence the assumption is that a VoID file exists, or can be generated.</p>
+
+                    <h4 id="conclusions">Conclusions</h4>
+                    <p>GraphPusher illustrates a direct application of reusing a VoID description to pull in datasets to a dataspace. At its core, it takes advantage of RDF&#8217;s <em>follow your nose</em> discovery to support data digestion pipelines. This is inline with the Linked Data methodology as it mostly relies on dereferenceable HTTP URIs.</p>
+
+                    <p>Given the following limitations of GraphPusher, there is future work in plans:</p>
+                    <ul>
+                        <li>Retrieval of a VoID description in an RDF store via a SPARQL Endpoint.</li>
+                        <li>Ability to skip data dump retrievals by checking for datasets&#8217; timestamps in HTTP headers, and using local copies where appropriate.</li>
+                        <li>Techniques to optimize storage footprint for duplicate copies of retrieved datasets.</li>
+                        <li>Support other popular RDF stores e.g., Virtuoso RDF Quad Store [<a href="#r_14">14</a>] and 4store [<a href="#r_15">15</a>], to directly communicate with the store &#8211; currently TDB Triple Store is supported.</li>
+                    </ul>
+
+
                     <h2>Implementation of the Case Studies</h2>
                     <h3>Deployment Architectures</h3>
 

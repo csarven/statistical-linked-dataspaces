@@ -62,6 +62,18 @@ page-break-after: avoid;
 }
 
 
+.todo {
+border:1px solid red;
+}
+.todo:after {
+content:"\ATODO: " attr(title);
+font-weight:normal;
+color:green;
+white-space:pre;
+word-wrap:break-word;
+word-break:break-all;
+}
+
 
 /*
 XXX: column-width doesn't seem to get applied in Firefox
