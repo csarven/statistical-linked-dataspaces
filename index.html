@@ -211,6 +211,7 @@
 
                     <p>The proposal here is that, with the assumption of publishing statistical data in a way that its components can be identified, discovered, and disseminated for numerous uses, a Linked Dataspace can be an ideal candidate. A statistical Linked Dataspace needs to identify resources and provide access to their descriptions, where such resources are in the nature of code lists, data cube observations, datasets and structures. Some of the specific challenges include: extraction of original data sources, transformations to RDF, and loading (ETL) to data storage services; creating global identifiers for the resources in its data catalogs; using vocabularies which are designed for modeling statistical data; offering services to the outside world such that its participating data sources can be browsed through; discovery via text searches and structured queries; and building interlinks with other data sources.</p>
 
+<p class="todo" title="LD architecture">Architecture diagram for general LD space</p>
 
                     <h2 id="requirements">Requirements</h2>
 <!--
@@ -221,6 +222,7 @@
 
                     <p>A high-level inspection of published statistical data reveals itself as a collection of significant amounts of data, that's compiled over time by different parties. Naturally the quality of the data sources vary from one publisher to the next, as they try to cater to different publishing criteria. For instance, statistical data is often available in different data formats, with varying vocabularies and thesaurus that's specific to publisher's view about the data. In terms of consumption, one particular example is as follows: the usefulness of raw data that is available in CSV format may depend on the availability and quality of the metadata for the terms that are used in the file. The shape in which the data is available, sets the tone for the data consumer. The data consumers need to make decisions based on the amount of work involved to obtain and work with such data in their own space.</p>
 
+<p class="todo" title="Group the ideas">Concerns for Publisher / Consumer</p>
                     <p>Therefore, it is reasonable to conclude that a number of decisions need to be made in order to prepare the dataspace for retrieval and reuse. A questionnaire along the following the lines can help determine the initial required actions to take:</p>
                     <ul>
                         <li>Who is the data publisher?</li>
@@ -317,7 +319,7 @@
 
 
 
-                    <h3 id="graphpusher" class="todo" title="This is more or less a copy/paste of http://csarven.ca/graphpusher . It should most likely be summarized.">GraphPusher</h3>
+                    <h3 id="graphpusher" class="todo" title="Extend in-context of Statistical Linked Data.">GraphPusher</h3>
                     <p>The manual creation of dataspaces [<a href="#r_1">1</a>] conforms to Linked Data principles is time consuming, and prone to human errors since there are a number of steps involved to gather the data, and place them in a store. Typically a list is compiled consisting of datasets with graph names for each dataset, and local copies of the data that is to be imported in to a store. This information may be tracked in a structured format, or a simple text file. The Vocabulary of Interlinked Datasets (VoID) [<a href="#r_2">2</a>] is used because it is an accepted standard to describe RDF datasets, as well as the SPARQL 1.1 Service Description (SD) [<a href="#r_3">3</a>] for discovering information about a SPARQL service.</p>
 
                     <p>One of the goals of publishing a VoID file alongside datasets that are published as Linked Data is to allow consumers to discover and retrieve the data. Based on this, the GraphPusher tool [<a href="#r_4">4</a>] is designed to aid users to retrieve and import data in RDF format into a graph store by making use of the metadata in a VoID file. VoID describes access methods for the actual RDF triples in a number of different ways. GraphPusher focuses on two of these methods; dereferencing HTTP URIs and compressed RDF data dumps.</p>
@@ -375,6 +377,7 @@
 
                     <p>Table [<a href="#table_comparison-manual-graphpusher-approaches">1</a>] gives an overview for the comparison of manual and GraphPusher approaches.</p>
 
+<p class="todo">www reviewer comment: I suggest the authors to define clearly all the constraints they used to assess those values.</p>
                     <table id="table_comparison-manual-graphpusher-approaches">
                         <caption><strong>Table 1</strong>: Comparison of manual and GraphPusher approaches</caption>
                         <thead>
@@ -409,11 +412,16 @@
                     <p>Linked Data Pages is a Web publishing framework to generate RDF and HTML documents. It invokes unique SPARQL queries based on requested URIs, and outputs the results to assigned corresponding HTML templates. Links to alternate RDF formats as well as JSON are handled by content-negotiation.</p>
 
                     <h4>Motivation</h4>
-                    <p>It came in a dream.</p>
+                    <p>1. Generic entity rendering, 2. Knowing what type of entities are there</p>
+
+                    <p>What were the challenges?</p>
 
                     <h4>Overview</h4>
                     <p>It is built on top of <a href="http://code.google.com/p/moriarty/">Moriarty</a>, <a href="http://code.google.com/p/paget/">Paget</a>, and <a href="https://github.com/semsol/arc2">ARC2</a> libraries. It uses Paget to dispatch URIs and build a local index from the SPARQL query result.</p>
 
+                    <p>Describe the necessary steps for the entity. Compare to other approaches (Sig.ma). See ODE for different types of entities. Perhaps even from other fields. Heterogeneous data sources in a unified view.</p>
+
+                    <p>Put a diagram.</p>
 
                     <h4>Configuration</h4>
                     <p>There is an installation script to get it running. The same configurations can also be done manually:</p>
@@ -453,11 +461,16 @@
 
                     <p>For complex templating, that is, if you&#8217;d like to do more data processing with PHP, you can dive into the <code>SITE_Template</code> class in <code>/var/www/classes/SITE_Template.php</code> instead of creating your functions directly inside HTML templates. The functions in here can be called directly from your templates.</p>
 
+                    <h4>Limitations</h4>
 
+<p>Differentiate Conceptual presentation vs. implementation</p>
 
 
 
                     <h2>Implementation of the Case Studies</h2>
+                    <p>Describe from the deployment side.. Why TDB, LIMES..</p>
+                    <p>Explain how I've built these spaces</p>
+
                     <h3>Deployment Architectures</h3>
 
                     <h3>Data Retrieval and Preprocessing</h3>
@@ -479,7 +492,7 @@
 
 
                     <h3>Data Conversion</h3>
-                    <h4>Java / Python / saxonb-xslt</h4>
+                    <h4>Java / Python / saxonb-xslt (command-line; performance..)</h4>
 
 
                     <h3>Building RDF stores</h3>
