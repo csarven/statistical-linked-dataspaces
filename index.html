@@ -331,7 +331,11 @@
                     </table>
 
                     <p>For some of the components, there are several implementations that are publicly available for use. A range of improvements can be done for each implementation with varying complexity. In the case studies, two areas in particular were identified for possible areas for improvements given the state of the art of publicly available technologies: loading of RDF data to RDF store, and a human user interface.</p>
-                    <p>It turned out that loading RDF data was a recurring task that had to be performed by the administrator. Hence, the <a href="#graphpusher">GraphPusher</a> tool was built to improve on the manual approach by automating bulk data loading. On a similar note, <a href="#linked-data-pages">Linked Data Pages</a> was written to provide better control over front-end templating system to present a Web interface for RDF data. Both of these contributions are discussed in further detail in the following sections.</p>
+                    <p>It turned out that loading RDF data was a recurring task that had to be performed by the administrator. Hence, the <a href="#graphpusher">GraphPusher</a> tool was built to improve on the manual approach by automating bulk data. GraphPusher was primarily used to help to deploy the Irish Government Linked Dataspace at <a href="http://data-gov.ie/">DataGovIE</a> and this is a report on preliminary findings on using this tool. As discussed in data sources for CSO Ireland, the data primarily consists of statistical data about the Irish population.</p>
+
+                    <p>On a similar note, <a href="#linked-data-pages">Linked Data Pages</a> was written to provide better control over front-end templating system to present a Web interface for RDF data. The Linked Data Pages framework was used to publish CSO Ireland and <a href="http://worldbank.270a.info/">World Bank</a> Linked Dataspaces.</p>
+
+                    <p>Both of these contributions are discussed in further detail in the following sections.</p>
 
                     <h3 id="graphpusher" class="todo" title="Extend in-context of Statistical Linked Data.">GraphPusher</h3>
                     <p>The manual creation of dataspaces [<a href="#r_1">1</a>] conforms to Linked Data principles is time consuming, and prone to human errors since there are a number of steps involved to gather the data, and place them in a store. Typically a list is compiled consisting of datasets with graph names for each dataset, and local copies of the data that is to be imported in to a store. This information may be tracked in a structured format, or a simple text file. The Vocabulary of Interlinked Datasets (VoID) [<a href="#r_2">2</a>] is used because it is an accepted standard to describe RDF datasets, as well as the SPARQL 1.1 Service Description (SD) [<a href="#r_3">3</a>] for discovering information about a SPARQL service.</p>
@@ -410,17 +414,19 @@
 
                     <p>It should be noted here that, the expertise and time needed to have the required tools set up in the system is excluded as they vary from one favourable approach to another in a given operating environment. VoID is GraphPusher&#8217;s primary requirement, hence the assumption is that a VoID file exists, or can be generated.</p>
 
-                    <h4 id="conclusions">Conclusions</h4>
-                    <p>GraphPusher illustrates a direct application of reusing a VoID description to pull in datasets to a dataspace. At its core, it takes advantage of RDF&#8217;s <em>follow your nose</em> discovery to support data digestion pipelines. This is inline with the Linked Data methodology as it mostly relies on dereferenceable HTTP URIs.</p>
+                    <h4 id="graphpusher-conclusions">Conclusions</h4>
+                    <p>GraphPusher illustrates a direct application of reusing a VoID description to pull in datasets to a dataspace. At its core, it takes advantage of RDF&#8217;s <em>follow your nose</em> discovery to support data digestion pipelines. This is in line with the Linked Data methodology as it mostly relies on dereferenceable HTTP URIs.</p>
 
                     <p>Given the following limitations of GraphPusher, there is future work in plans:</p>
                     <ul>
                         <li>Retrieval of a VoID description in an RDF store via a SPARQL Endpoint.</li>
                         <li>Ability to skip data dump retrievals by checking for datasets&#8217; timestamps in HTTP headers, and using local copies where appropriate.</li>
                         <li>Techniques to optimize storage footprint for duplicate copies of retrieved datasets.</li>
-                        <li>Merging all dump files per graph into a single N-Triples file before importing to the RDF store for more efficient loading. Consequently, this approach needs to account for blank nodes which occur in different files with the same identifier.</p>
+                        <li>Merging all dump files per graph into a single N-Triples file before importing to the RDF store for more efficient loading. Consequently, this approach needs to account for blank nodes which occur in different files with the same identifier.</li>
                         <li>Support other popular RDF stores e.g., Virtuoso RDF Quad Store [<a href="#r_14">14</a>] and 4store [<a href="#r_15">15</a>], to directly communicate with the store &#8211; currently TDB Triple Store is supported.</li>
                     </ul>
+
+                    <p>Based on the corrections which were made on the conversion scripts for the data model, the RDF store had to be loaded several times. In the earlier stages of Fuseki and its TDB RDF store, the store also had to be rebuilt in order to optimize query responses accordingly. Since the size of the 2006 Irish Census RDF data dumps are under 15MB compressed in total, it was a negligible step to download them to a temporary location in order to bulk load. Given the current limitation of GraphPusher not being able to work with local files, it wasn't suitable to download the compressed RDF data dumps of World Bank data, weighing around 400MB, repeatedly, during the course of its development.</p>
 
 
                     <h3 id="linked-data-pages" class="todo" title="Write up the info. Add a screenshot">Linked Data Pages</h3>
