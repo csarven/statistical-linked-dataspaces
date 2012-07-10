@@ -418,6 +418,7 @@
                         <li>Retrieval of a VoID description in an RDF store via a SPARQL Endpoint.</li>
                         <li>Ability to skip data dump retrievals by checking for datasets&#8217; timestamps in HTTP headers, and using local copies where appropriate.</li>
                         <li>Techniques to optimize storage footprint for duplicate copies of retrieved datasets.</li>
+                        <li>Merging all dump files per graph into a single N-Triples file before importing to the RDF store for more efficient loading. Consequently, this approach needs to account for blank nodes which occur in different files with the same identifier.</p>
                         <li>Support other popular RDF stores e.g., Virtuoso RDF Quad Store [<a href="#r_14">14</a>] and 4store [<a href="#r_15">15</a>], to directly communicate with the store &#8211; currently TDB Triple Store is supported.</li>
                     </ul>
 
