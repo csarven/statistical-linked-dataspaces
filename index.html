@@ -312,6 +312,7 @@
                         <caption><strong>Table 9.</strong> Linked Dataspace components, and implementations</caption>
                         <thead>
                             <tr><th>Components</th><th>Implementations</th></tr>
+                        </thead>
                         <tbody>
                             <tr><td>Environment</td><td>OS: Linux, Mac, Windows; Server: Apache, IIS</td></tr>
                             <tr><td>Data retrieval</td><td>CURL, Java, LDSpider, wget</td></tr>
@@ -363,20 +364,20 @@
                         <object type="image/svg+xml" data="graphpusher-sequence.svg" width="300" height="220"></object>
                     </figure>
 
-                    <h4 id="implementation">Implementation</h4>
+                    <h4 id="graphpusher_implementation">Implementation</h4>
                     <p>A reoccurring dataspace operation in Linked Data environments is the retrieval of remote data and placing them in an RDF storage. In the case of rebuilding an RDF store, the approach is to use a VoID description for the datasets in order to batch process some of the recurring steps. This is typically accomplished by publishing a VoID description of the datasets with triples using the <code>void:dataDump</code> property, and optionally with <code>sd:graph</code> and <code>sd:name</code> properties.</p>
 
-                    <h4 id="related-work">Related work</h4>
+                    <h4 id="graphpusher_related-work">Related work</h4>
                     <p>To the best of publicly available practices, there exists no technology that builds a dataspace automatically. The work is based on VoID as SADDLE [<a href="#r_11">11</a>] and DARQ [<a href="#r_12">12</a>] do not provide the required metadata coverage for dataset access, and VoID has 30% coverage in the Linking Open Data (LOD) [<a href="#r_13">13</a>] and is actively maintained.</p>
 
-                    <h4 id="about-the-code">About the code</h4>
+                    <h4 id="graphpusher_about-the-code">About the code</h4>
                     <p>GraphPusher takes a VoID URL as input from the command-line, retrieves the VoID file, looks for the <code>void:dataDump</code> property values, HTTP GETs them, and finally imports them into an RDF store using one of the graph name methods. The graph name method is defined as part of GraphPusher&#8217;s configuration.</p>
 
                     <p>In order to specify the location of the RDF store for the data that is to be imported, GraphPusher can take either TDB Triple Store&#8217;s [<a href="#r_6">6</a>] assembler file which contains configuration for graphs and datasets, or a SPARQL service URI. If the TDB assembler filename is provided in the command-line argument with <code>--assembler</code>, GraphPusher checks this file to determine the name of the dataset and its location. It will then import the data dumps using the TDB loader. Alternatively, with the <code>--dataset</code> option, GraphPusher uses Apache Jena&#8217;s SPARQL over HTTP command-line script [<a href="#r_7">7</a>] to HTTP POST by using the SPARQL 1.1 Graph Store HTTP Protocol [<a href="#r_8">8</a>].</p>
 
                     <p>GraphPusher is written in Ruby, and relies on the rapper [<a href="#r_9">9</a>] RDF parser utility, and optionally the TDB Triple Store. GraphPusher is configurable, e.g., location to store the data dumps, method to determine named graphs. It decompresses archived data dumps to a local directory, converts files with unrecognized RDF format extensions to Turtle format before importing. It is tested and functional in Debian/Ubuntu systems, available under the Apache License 2.0 [<a href="#r_10">10</a>].</p>
 
-                    <h4 id="determining-graph-name">Determining graph name</h4>
+                    <h4 id="graphpusher_determining-graph-name">Determining graph name</h4>
                     <p>Where possible, GraphPusher makes a decision for dataset&#8217;s named graphs by staying consistent with publishers&#8217; intentions. In certain cases, it tries to indicate the origin of the data by reusing the dataset location in the graph name.</p>
 
                     <p>Figure [<a href="figure_named-graph-flowchart">2</a>] illustrates the flow for this process.</p>
@@ -390,7 +391,7 @@
                         <object type="image/svg+xml" data="graphpusher-named-graph-flowchart.svg" width="360" height="340"></object>
                     </figure>
 
-                    <h4 id="preliminary-results">Preliminary Results</h4>
+                    <h4 id="graphpusher_preliminary-results">Preliminary Results</h4>
                     <p>As there exists no automated approach to have local copies of the data dumps, determining a graph name per data dump, and importing the data into a store, the manual approach is used as baseline to compare against.</p>
 
                     <p>Table [<a href="#table_comparison-manual-graphpusher-approaches">1</a>] gives an overview for the comparison of manual and GraphPusher approaches.</p>
@@ -410,7 +411,7 @@
                                         <dd>Provided that both approaches use the same set of tools behind the scenes, this criteria is meant to highlight the main difference between them.</dd>
                                         <dt>Efficiency</dt>
                                         <dd>This criteria outlines the amount of work required by the user for recurring tasks. The manual approach undoubtedly required the user to be fully involved in contrast to GraphPusher.</dd>
-                                    <dl>
+                                    </dl>
                                 </td>
                             </tr>
                         </tfoot>
@@ -427,7 +428,7 @@
 
                     <p>It should be noted here that, the expertise and time needed to have the required tools set up in the system is excluded as they vary from one favourable approach to another in a given operating environment. VoID is GraphPusher&#8217;s primary requirement, hence the assumption is that a VoID file exists, or can be generated.</p>
 
-                    <h4 id="graphpusher-conclusions">Conclusions</h4>
+                    <h4 id="graphpusher_conclusions">Conclusions</h4>
                     <p>GraphPusher illustrates a direct application of reusing a VoID description to pull in datasets to a dataspace. At its core, it takes advantage of RDF&#8217;s <em>follow your nose</em> discovery to support data digestion pipelines. This is in line with the Linked Data methodology as it mostly relies on dereferenceable HTTP URIs.</p>
 
                     <p>Given the following limitations of GraphPusher, there is future work in plans:</p>
@@ -442,62 +443,74 @@
                     <p>Based on the corrections which were made on the conversion scripts for the data model, the RDF store had to be loaded several times. In the earlier stages of Fuseki and its TDB RDF store, the store also had to be rebuilt in order to optimize query responses accordingly. Since the size of the 2006 Irish Census RDF data dumps are under 15MB compressed in total, it was a negligible step to download them to a temporary location in order to bulk load. Given the current limitation of GraphPusher not being able to work with local files, it wasn't suitable to download the compressed RDF data dumps of World Bank data, weighing around 400MB, repeatedly, during the course of its development.</p>
 
 
-                    <h3 id="linked-data-pages" class="todo" title="Write up the info. Add a screenshot">Linked Data Pages</h3>
-                    <p>Linked Data Pages is a Web publishing framework to generate RDF and HTML documents. It invokes unique SPARQL queries based on requested URIs, and outputs the results to assigned corresponding HTML templates. Links to alternate RDF formats as well as JSON are handled by content-negotiation.</p>
+                    <h3 id="linked-data-pages" class="todo" title="Add a screenshot of an HTML view">Linked Data Pages</h3>
+                    <p>Linked Data Pages (LDP) is a Web publishing framework to generate RDF and HTML documents. It invokes unique SPARQL queries based on requested URIs and outputs the results to corresponding HTML templates. Links to alternate RDF formats as well as JSON are handled by content-negotiation.</p>
 
                     <h4>Motivation</h4>
-                    <p>1. Generic entity rendering, 2. Knowing what type of entities are there</p>
+                    <p>Initial reasons to develop LDP in 2010 was to move beyond the de facto generic entity rendering for RDF resources That is, the requested URI corresponded with the result of <code>DESCRIBE</code> SPARQL query, where the property and object resources were primarily displayed in a key-value fashion. </p>
 
-                    <p>What were the challenges?</p>
+                    <p>While allowing default page rendering as base, if the developer had knowledge about the resources or the data model, it was reasonable to provide a way for them to uniquely display the resources to be more human friendly.</p>
 
                     <h4>Overview</h4>
                     <p>It is built on top of <a href="http://code.google.com/p/moriarty/">Moriarty</a>, <a href="http://code.google.com/p/paget/">Paget</a>, and <a href="https://github.com/semsol/arc2">ARC2</a> libraries. It uses Paget to dispatch URIs and build a local index from the SPARQL query result.</p>
 
                     <p>Describe the necessary steps for the entity. Compare to other approaches (Sig.ma). See ODE for different types of entities. Perhaps even from other fields. Heterogeneous data sources in a unified view.</p>
 
-                    <p>Put a diagram.</p>
 
-                    <h4>Configuration</h4>
-                    <p>There is an installation script to get it running. The same configurations can also be done manually:</p>
+                    <h4 id="linked-data-pages_installation">Installation</h4>
+                    <p>There is an installation web page to get LDP going. The same set of configuration settings in the script can be entered directly in the configuration file. The configuration is fairly basic and primarily consists of the following:</p>
 
-                    <ul>
-                        <li>Set directories (LDP, Paget, Moriarty, ARC2)</li>
-                        <li>Set SPARQL service URI</li>
-                    </ul>
+                    <dl>
+                        <dt>Directories</dt>
+                        <dd>Directory paths where each of the libraries (LDP, Paget, Moriarty and ARC2) reside in the file system.</dd>
+                        <dt>SPARQL service URI</dt>
+                        <dd>This is typically the URI that the SPARQL service accepts queries under.</dd>
+                    </dl>
 
-                    <ul>
-                        <li>Site settings (logo, URI domain mapping between store and public URIs)</li>
-                    </ul>
+                    <h4 id="linked-data-pages_site-configuration">Site configuration</h4>
+                    <p>The Web service can be configured with the following parameters:</p>
+
+                    <dl>
+                        <dt>Site settings</dt>
+                        <dd>Site name and domain name, root URI for access, theme to use, and site logo.</dd>
+                        <dt>URI host mapping</dt>
+                        <dd>If the host name that the service is running under is different from the host name that is used in the URIs in the RDF data, this setting allows mapping between the the two. For example, if there is a request is made to <code>http://example.org/foo</code>, the setting can be set to look for <code>http://example.net/foo</code> in the RDF store instead.</dd>
+                    </dl>
+
+                    <p>LDP is bundled with a default CSS theme, but allows different stylesheets to be used by simply providing its location.</p>
+
+                    <p>The reason to develop the URI host mapping feature was based on the fact that in the early stages of modeling 2006 Census data, the URI patterns was designed based on the knowledge of having the data work under <code>govdata.ie</code>. During the staging phase of publishing the RDF data under <code>data-gov.ie</code>, the URI patterns were not changed until further notice.</p>
 
 
-                    <h4>Resources</h4>
-                    <p>How to package a resource to query and template up...</p>
-                    <ul>
+                    <h4 id="linked-data-pages_resource-configuration">Resource configuration</h4>
+                    <p>LDP allows prefixes to be assigned for the URIs in the configuration file. It is put to use when working with query response values inside templates.</p>
 
-                        <li>Prefixes</li>
-                        <li>Resource generation
-                            <ul>
-                                <li>SPARQL Queries (default is DESCRIBE)</li>
-                                <li>Assign template file</li>
-                                <li>Assign URI pattern</li>
-                            </ul>
-                        </li>
-                    </ul>
+                    <p>LDP provides a way to organize what the URIs should describe and how they should be presented for the user in HTML and RDF. This is accomplished by putting three components together. The first is the URI pattern in question that is being offered, the second is the SPARQL query that it triggers when requested, and third is the template that is to be used to render the HTML page. Definitions of each of the components are defined as such:</p>
 
-                    <h4>Interface</h4>
-                    <p><code>$triples = $this->getTriples('http://csarven.ca/#i');</code></p>
+                    <dl>
+                        <dt>URI pattern</dt>
+                        <dd>Patterns are triggered in a way that when a URI is recognized, the most precise URI is selected for the response. This is in contrast to more relaxed patterns which are used to display. For instance, for code lists, each concept URI can be rendered the same way, such that it makes sense catch all concepts at their root path (code list) as opposed their full path. e.g., When <code>http://worldbank.270a.info/classification/country/CA</code> is requested, there would be a URI pattern looking out for <code>http://worldbank.270a.info/classification/country/</code> to respond with an output for all countries the same way. Of course, if one wishes to render <code>http://worldbank.270a.info/classification/country/CA</code> differently than the other countries, it can do so by using that URI pattern in the configuration.</dd>
+                        <dt>SPARQL Queries</dt>
+                        <dd>Once the URI pattern is determined, a SPARQL query needs to be triggered to retrieve a description of the resource. A full blown SPARQL query pattern can be entered here for each resource. If there is no URI pattern matched, it will default to <code>DESCRIBE &lt;URI&gt;</code>.</dd>
+                        <dt>HTML templates</dt>
+                        <dd>When an URI pattern is matched, along with the SPARQL query to trigger, an HTML template is assigned at the same time. The template has access to the response gathered from the SPARQL query. An index of values can be either be accessed directly, or a set of helper methods can be used directly from the template. For example,the <code>getTriples</code> function is used to find triples in an index (a multi-dimensional array). When no parameters are provided, it will simply return the full response. It can be used to look for a particular triple in the response. <code>$triples = $this->getTriples('http://csarven.ca/#i');</code> can be used directly in the template to get all of the triples with subject <code>http://csarven.ca/#i</code>. Similarly, <code>$this->getTriples('http://csarven.ca/#i', 'http://xmlns.com/foaf/0.1/knows');</code> can be used to get triples which match the pattern with given subject and property URIs. An alias to this is the <code>getValue</code> function where qnames can be used in the property position: <code>$this->getValue('http://csarven.ca/#i', 'foaf:knows');</code>. For more complex templating, for more data processing with PHP, the <code>SITE_Template</code> class offers more helper functions and can be extended.</dd>
 
-                    <p>The <code>getTriples</code> function gets all the triples for us from our SPARQL query result and we place it in a multi-dimensional array. In this example, we are getting all the triples with subject <code>http://csarven.ca/#i</code>. It should give us the same triples we&#8217;ve imported into our RDF store. But we could also get other triples that match the pattern for parameters (subject, property, object) e.g., <code>$this->getTriples('http://csarven.ca/#i', 'http://xmlns.com/foaf/0.1/knows');</code></p>
+                        <dd>If there is no URI pattern matched, the default template will be used to output the results. Given that the SPARQL query will use <code>DESCRIBE</code>, the default rendering of this template is displayed in a key-value pair fashion.</dd>
+                    </dl>
 
-                    <p>That would get us all the triples with subject <code>http://csarven.ca/#i</code> and property <code>http://xmlns.com/foaf/0.1/knows</code>. An alias to this is the <code>getValue</code> function where we can use qnames for the property position: <code>$this->getValue('http://csarven.ca/#i', 'foaf:knows');</code></p>
+                    <p>This resource configuration approach provides a flexible way for site owners to prepare responses for URIs as well as unique user interfaces.</p>
 
-                    <p>You can define more qnames in <code>$config['prefixes']</code> at <code>/var/www/site/config.php</code>. See also <code>/var/www/lib/linked-data-pages/README</code> for more uses of <code>getTriples</code> like wildcards.</p>
 
-                    <p>For complex templating, that is, if you&#8217;d like to do more data processing with PHP, you can dive into the <code>SITE_Template</code> class in <code>/var/www/classes/SITE_Template.php</code> instead of creating your functions directly inside HTML templates. The functions in here can be called directly from your templates.</p>
+                    <h4 id="linked-data-pages_conclusions">Conclusions</h4>
+<p class="todo">Differentiate Conceptual presentation vs. implementation ??????</p>
 
-                    <h4>Limitations</h4>
+                    <p>The LDP PHP framework is relies on Paget, Moriarty, and ARC2 as they take care of the lower level work. Hence, LDP functions by the fact that all these components are in a sense <em>stitched</em> together.</p>
 
-<p>Differentiate Conceptual presentation vs. implementation</p>
+                    <p>From the implementation side, Linked Data Pages provides results based on the URI pattern that is triggered. In other words, what information a resource contains and how it is represented is determined at the level of the URI itself. An alternative approach to outputting an HTML document would be based on the characteristics of the resource at hand. That is, the triple graph pattern from a SPARQL query result would allow the developer to shift through the results and assign a template in context of the triples at hand.</p>
+
+                    <p>LDP is capable of taking care of the bulk of the work that's required to publish Linked Data. The <a href="http://csarven.ca/how-to-create-a-linked-data-site">how to create a Linked Data site</a> explains the full process in further detail, from setting up a SPARQL service, importing data, to publishing pages using LDP.</p>
+
+
 
 
 
