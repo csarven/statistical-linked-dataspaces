@@ -15,6 +15,8 @@
    version="1.1"
    inkscape:version="0.48.3.1 r9886"
    sodipodi:docname="linked-dataspaces.svg">
+  <title
+     id="title3078">Linked Dataspace architecture</title>
   <defs
      id="defs3057">
     <marker
@@ -30,55 +32,6 @@
          d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
          transform="scale(0.6) rotate(180) translate(0,0)" />
     </marker>
-    <inkscape:perspective
-       sodipodi:type="inkscape:persp3d"
-       inkscape:vp_x="0 : 526.18109 : 1"
-       inkscape:vp_y="0 : 1000 : 0"
-       inkscape:vp_z="744.09448 : 526.18109 : 1"
-       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
-       id="perspective3056" />
-    <marker
-       inkscape:stockid="Arrow2Mend"
-       orient="auto"
-       refY="0"
-       refX="0"
-       id="Arrow2Mend-9"
-       style="overflow:visible">
-      <path
-         inkscape:connector-curvature="0"
-         id="path4239-2"
-         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
-         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
-         transform="scale(-0.6,-0.6)" />
-    </marker>
-    <marker
-       inkscape:stockid="Arrow2Mend"
-       orient="auto"
-       refY="0"
-       refX="0"
-       id="Arrow2Mend-8"
-       style="overflow:visible">
-      <path
-         inkscape:connector-curvature="0"
-         id="path4239-4"
-         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
-         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
-         transform="scale(-0.6,-0.6)" />
-    </marker>
-    <marker
-       inkscape:stockid="Arrow2Mend"
-       orient="auto"
-       refY="0"
-       refX="0"
-       id="Arrow2Mend-3"
-       style="overflow:visible">
-      <path
-         inkscape:connector-curvature="0"
-         id="path4239-5"
-         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
-         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
-         transform="scale(-0.6,-0.6)" />
-    </marker>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -88,7 +41,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.979899"
-     inkscape:cx="202.19498"
+     inkscape:cx="113.80663"
      inkscape:cy="876.60393"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -102,7 +55,11 @@
      inkscape:guide-bbox="true">
     <inkscape:grid
        type="xygrid"
-       id="grid3063" />
+       id="grid3063"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true" />
     <sodipodi:guide
        orientation="1,0"
        position="115,1080"
@@ -116,7 +73,33 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title>Linked Dataspace architecture</dc:title>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>http://csarven.ca/#i</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>http://csarven.ca/#i</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:publisher>
+          <cc:Agent>
+            <dc:title>http://csarven.ca/#i</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:identifier>http://csarven.ca/media/images/articles/linked-dataspaces.svg</dc:identifier>
+        <dc:language>en</dc:language>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>architecture</rdf:li>
+            <rdf:li>dataspace</rdf:li>
+            <rdf:li>linkeddata</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by-sa/3.0/" />
       </cc:Work>
     </rdf:RDF>
   </metadata>
