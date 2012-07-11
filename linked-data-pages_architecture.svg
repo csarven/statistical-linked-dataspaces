@@ -246,25 +246,25 @@
     <text
        xml:space="preserve"
        style="font-size:12px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="215"
+       x="219"
        y="177.36218"
        id="text6660"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan6662"
-         x="215"
+         x="219"
          y="177.36218"
          style="font-size:11px">SPARQL query request</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:12px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="205"
+       x="209"
        y="207.36218"
        id="text6664"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan6666"
-         x="205"
+         x="209"
          y="207.36218"
          style="font-size:11px">Resource matcher</tspan></text>
     <text
@@ -446,24 +446,24 @@
        id="rect8299"
        width="110"
        height="20"
-       x="200"
+       x="204"
        y="192.36218" />
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
        id="rect8301"
        width="135"
        height="20"
-       x="210"
+       x="214"
        y="162.36218" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
-       d="m 215,192.36218 0,-10"
+       d="m 219,192.36218 0,-10"
        id="path6221-2-1"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mend-5)"
-       d="m 205,192.36218 0,-80"
+       d="m 210,192.36218 0,-80"
        id="path8345"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
@@ -507,7 +507,7 @@
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-3)"
-       d="m 215,162.36218 0,-10"
+       d="m 219,162.36218 0,-10"
        id="path10147"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
