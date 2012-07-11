@@ -440,7 +440,18 @@
 
 
                     <h3 id="linked-data-pages" class="todo" title="Add a screenshot of an HTML view">Linked Data Pages</h3>
-                    <p>Linked Data Pages (LDP) is a Web publishing framework to generate RDF and HTML documents. It invokes unique SPARQL queries based on requested URIs and outputs the results to corresponding HTML templates. Links to alternate RDF formats as well as JSON are handled by content-negotiation.</p>
+                    <figure id="figure_linked-data-request-response">
+                        <figcaption><strong>Figure 8</strong>: Linked Data Request and Response</figcaption>
+                        <object type="image/svg+xml" data="linked-data-request-response.svg" width="240" height="190"></object>
+                    </figure>
+
+                    <figure id="figure_linked-data-pages_architecture">
+                        <figcaption><strong>Figure 8</strong>: Linked Data Pages architecture</figcaption>
+                        <object type="image/svg+xml" data="linked-data-pages_architecture.svg" width="365" height="290"></object>
+                    </figure>
+
+
+                    <p>Linked Data Pages (LDP) is a Web publishing tool to generate RDF and HTML documents. It invokes unique SPARQL queries based on requested URIs and outputs the results to corresponding HTML templates. Links to alternate RDF formats as well as JSON are handled by content-negotiation.</p>
 
                     <h4>Motivation</h4>
                     <p>Initial reasons to develop LDP in 2010 was to move beyond the de facto generic entity rendering for RDF resources That is, the requested URI corresponded with the result of <code>DESCRIBE</code> SPARQL query, where the property and object resources were primarily displayed in a key-value fashion. </p>
@@ -448,7 +459,7 @@
                     <p>While allowing default page rendering as base, if the developer had knowledge about the resources or the data model, it was reasonable to provide a way for them to uniquely display the resources to be more human friendly.</p>
 
                     <h4>Overview</h4>
-                    <p>It is built on top of <a href="http://code.google.com/p/moriarty/">Moriarty</a>, <a href="http://code.google.com/p/paget/">Paget</a>, and <a href="https://github.com/semsol/arc2">ARC2</a> libraries. It uses Paget to dispatch URIs and build a local index from the SPARQL query result.</p>
+                    <p>It is built on top of <a about="http://iandavis.com/id/me" rev="foaf:maker" href="http://code.google.com/p/paget/">Paget</a>, <a href="http://code.google.com/p/moriarty/">Moriarty</a>, and <a href="https://github.com/semsol/arc2">ARC2</a> libraries. Paget is a versatile Web application written in PHP by <a about="http://csarven.ca/#i" href="http://iandavis.com" rel="foaf:knows" resource="http://iandavis.com/id/me">Ian Davis</a> [http://blog.iandavis.com/2008/10/01/publishing-linked-data-with-php/]. Its HTML rendering of RDF is primitive in a sense that information is display in a tabular way. LDP extends on the framework to output more human readable Web pages. Additionally, LDP relies on its URI dispatch mechanism and to build a local index of the RDF data that's gathered from SPARQL query results.</p>
 
                     <p>Describe the necessary steps for the entity. Compare to other approaches (Sig.ma). See ODE for different types of entities. Perhaps even from other fields. Heterogeneous data sources in a unified view.</p>
 
@@ -499,8 +510,6 @@
 
                     <h4 id="linked-data-pages_conclusions">Conclusions</h4>
 <p class="todo">Differentiate Conceptual presentation vs. implementation ??????</p>
-
-                    <p>The LDP PHP framework is relies on Paget, Moriarty, and ARC2 as they take care of the lower level work. Hence, LDP functions by the fact that all these components are in a sense <em>stitched</em> together.</p>
 
                     <p>From the implementation side, Linked Data Pages provides results based on the URI pattern that is triggered. In other words, what information a resource contains and how it is represented is determined at the level of the URI itself. An alternative approach to outputting an HTML document would be based on the characteristics of the resource at hand. That is, the triple graph pattern from a SPARQL query result would allow the developer to shift through the results and assign a template in context of the triples at hand.</p>
 
