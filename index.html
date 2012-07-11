@@ -317,7 +317,7 @@
                             <tr><td>Environment</td><td>OS: Linux, Mac, Windows; Server: Apache, IIS</td></tr>
                             <tr><td>Data retrieval</td><td>CURL, Java, LDSpider, wget</td></tr>
                             <tr><td>Data preprocessing</td><td>Manual with custom scripts, Google Refine</td></tr>
-                            <tr><td>Data modeling</td><td>Google Refine, Manual, Neogolism</td></tr>
+                            <tr><td>Data modeling</td><td>Google Refine, Manual, Neologism</td></tr>
                             <tr><td>Data conversion</td><td>XSLT, CSV2RDF, D2R</td></tr>
                             <tr><td>RDF store and SPARQL servers</td><td>TDB, Fuseki, Virtuoso, Sesame, 4store</td></tr>
                             <tr><td>Loading RDF data to RDF store</td><td>Manual with custom scripts</td></tr>
@@ -392,7 +392,15 @@
                     </figure>
 
                     <h4 id="graphpusher_preliminary-results">Preliminary Results</h4>
-                    <p>As there exists no automated approach to have local copies of the data dumps, determining a graph name per data dump, and importing the data into a store, the manual approach is used as baseline to compare against.</p>
+                    <p>As there exists no automated approach to have local copies of the data dumps, determining a graph name per data dump, and importing the data into a store, the manual approach is used as baseline to compare against. The following criteria is used for comparison:</p>
+                    <dl>
+                        <dt>Configurability</dt>
+                        <dd>Indicates the flexibility and limitations of the approaches.</dd>
+                        <dt>Requirements</dt>
+                        <dd>Knowledge that is required to perform the tasks such as configuring and running common Linux shell tools, as well as VoID.</dd>
+                        <dt>Efficiency</dt>
+                        <dd>This criteria is intended to provide a measurement for the amount of time it takes to perform the full data loading process. It is context of performing the task more than once.</dd>
+                    </dl>
 
                     <p>Table [<a href="#table_comparison-manual-graphpusher-approaches">1</a>] gives an overview for the comparison of manual and GraphPusher approaches.</p>
 
@@ -401,30 +409,18 @@
                         <thead>
                             <tr><td></td><th>Manual</th><th>GraphPusher</th></tr>
                         </thead>
-                        <tfoot>
-                            <tr>
-                                <td colspan="3">
-                                    <dl>
-                                        <dt>Configurability</dt>
-                                        <dd>Used to indicate the flexibility of the approaches. The manual approach allows the user to practically to carry out the loading process as they see fit, whereas the GraphPusher approach comes with a predetermined list of configuration options to import the data. In that sense, GraphPusher is naturally limited to its feature set.</dd>
-                                        <dt>Requirements</dt>
-                                        <dd>Provided that both approaches use the same set of tools behind the scenes, this criteria is meant to highlight the main difference between them.</dd>
-                                        <dt>Efficiency</dt>
-                                        <dd>This criteria outlines the amount of work required by the user for recurring tasks. The manual approach undoubtedly required the user to be fully involved in contrast to GraphPusher.</dd>
-                                    </dl>
-                                </td>
-                            </tr>
-                        </tfoot>
                         <tbody>
                             <tr><th>Configurable</th><td>Full</td><td>Predefined</td></tr>
                             <tr><th>Requirements</th><td>None</td><td>VoID</td></tr>
-                            <tr><th>Efficiency</th><td colspan="2">See discussion below</td></tr>
+                            <tr><th>Efficiency</th><td colspan="2"><a href="#graphpusher_efficiency">See discussion below</a></td></tr>
                         </tbody>
                     </table>
 
-                    <p>The bare-bone manual approach would typically make use of <em>wget</em> or <em>curl</em> to download the dataset files, several archive tools to decompress compressed datasets, and an RDF parser to convert a given dataset file in an RDF format to N-Triples format, where it is suitable for pattern matching with the <em>grep</em> tool.</p>
+                    <p><strong>Configurability</strong>: The manual approach allows the user to configure the loading process as they see fit, whereas the GraphPusher approach comes with a predetermined list of configuration options to import the data. In that sense, GraphPusher is naturally limited to its feature set.</p>
 
-                    <p><strong>Efficiency</strong>: The steps mentioned above would require the user to posses knowledge of command-line operations and running SPARQL queries, and depending on their expertise and available tools, given test runs, it takes 20 minutes or more if executed by hand. The automated approach in GraphPusher would typically take a minute or two to configure and run from command-line. The efficiency of each approach is noteworthy, especially when this task is repeated for different datasets and metadata.</p>
+                    <p><strong>Requirements</strong>: The bare-bone manual approach would typically make use of <em>wget</em> or <em>curl</em> to download the dataset files, several archive tools to decompress compressed datasets, and an RDF parser to convert a given dataset file in an RDF format to N-Triples format, where it is suitable for pattern matching with the <em>grep</em> tool.</p>
+
+                    <p id="graphpusher_efficiency"><strong>Efficiency</strong>: The steps mentioned above would require the user to posses knowledge of command-line operations and running SPARQL queries, and depending on their expertise and available tools, given test runs, it takes 20 minutes or more if executed by hand. The automated approach in GraphPusher would typically take a minute or two to configure and run from command-line. The efficiency of each approach is noteworthy, especially when this task is repeated for different datasets and metadata.</p>
 
                     <p>It should be noted here that, the expertise and time needed to have the required tools set up in the system is excluded as they vary from one favourable approach to another in a given operating environment. VoID is GraphPusher&#8217;s primary requirement, hence the assumption is that a VoID file exists, or can be generated.</p>
 
@@ -440,7 +436,7 @@
                         <li>Support other popular RDF stores e.g., Virtuoso RDF Quad Store [<a href="#r_14">14</a>] and 4store [<a href="#r_15">15</a>], to directly communicate with the store &#8211; currently TDB Triple Store is supported.</li>
                     </ul>
 
-                    <p>Based on the corrections which were made on the conversion scripts for the data model, the RDF store had to be loaded several times. In the earlier stages of Fuseki and its TDB RDF store, the store also had to be rebuilt in order to optimize query responses accordingly. Since the size of the 2006 Irish Census RDF data dumps are under 15MB compressed in total, it was a negligible step to download them to a temporary location in order to bulk load. Given the current limitation of GraphPusher not being able to work with local files, it wasn't suitable to download the compressed RDF data dumps of World Bank data, weighing around 400MB, repeatedly, during the course of its development.</p>
+                    <p class="todo" title="Maybe this report can be moved later into Implementations">Based on the corrections which were made on the conversion scripts for the data model, the RDF store had to be loaded several times. In the earlier stages of Fuseki and its TDB RDF store, the store also had to be rebuilt in order to optimize query responses accordingly. Since the size of the 2006 Irish Census RDF data dumps are under 15MB compressed in total, it was a negligible step to download them to a temporary location in order to bulk load. Given the current limitation of GraphPusher not being able to work with local files, it wasn't suitable to download the compressed RDF data dumps of World Bank data, weighing around 400MB, repeatedly, during the course of its development.</p>
 
 
                     <h3 id="linked-data-pages" class="todo" title="Add a screenshot of an HTML view">Linked Data Pages</h3>
@@ -573,6 +569,7 @@
                     <h3>Source Code</h3>
 
 
+<p class="todo">Create a table comparing datasets in the LOD cloud... vs. average per domain. Assumption is that statistical linked dataspace has a low density of interlinks</p>
 
 
 
