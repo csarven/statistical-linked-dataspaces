@@ -227,6 +227,15 @@
 
                     <p>A high-level inspection of published statistical data reveals itself as a collection of significant amounts of data, that's compiled over time by different parties. Naturally the quality of the data sources vary from one publisher to the next, as they try to cater to different publishing criteria. For instance, statistical data is often available in different data formats (e.g., CSV, XML, JSON, SDMX-ML, PC-Axis), with varying vocabularies and thesaurus that's specific to publisher's view about the data. In terms of consumption, one particular example is as follows: the usefulness of raw data that is available in CSV format may depend on the availability and quality of the metadata for the terms that are used in the file. The shape in which the data is available, sets the tone for the data consumer. The data consumers need to make decisions based on the amount of work involved to obtain and work with such data in their own space.</p>
 
+<div class="todo">
+The shape in which the data is available, sets the tone for the data consumer.> ... characteristics of the data..
+here is the original data.. and here is what we are trying to do with the data..
+.. fresh data, such and such interface on top of it because that makes sense for the users of the data, we don't want to spend so much time doing x,y,z.
+1. what's in the data
+2. what do you want to do with it?
+</div>
+
+
                     <p>Therefore, it is reasonable to conclude that a number of decisions need to be made in order to prepare the dataspace for retrieval and reuse. A questionnaire along the following the lines can help determine core requirements by analysing each case study:</p>
                     <dl id="requirements-questionnaire">
                         <dt id="requirements-questionnaire_overview">Overview</dt>
@@ -286,15 +295,22 @@
 
 
                     <h3 id="core-requirements">Core requirements</h3>
+                    <p>The following core requirements are distilled from the deployment of CSO Ireland, Eurostat, and World Bank Linked Dataspaces:4</p>
+
                     <dl>
                         <dt id="core-requirements_storage">Storage space and RDF store</dt>
-                        <dd><em class="rfc2119">Must</em> have storage space where the retrieved raw data will be stored and processed in the filesystem, as well as an RDF storage and server to house the transformed RDF data.</dd>
+                        <dd><em class="rfc2119">Must</em> have storage space where the retrieved raw data will be stored and processed in the file system, as well as an RDF storage and server to house the transformed RDF data.</dd>
                         <dt id="core-requirements_transformation-tools">Transformation tools</dt>
                         <dd><em class="rfc2119">Must</em> have a set of tools to preprocess and convert non-RDF structured data to RDF. This primarily includes tools that would allow inspections, modifications, and conversion of the data into other formats.</dd>
                         <dt id="core-requirements_enrichment-tools">Enrichment tools</dt>
                         <dd><em class="rfc2119">Must</em> have a set of tools that can help to improve on the existing data. In order to fulfil the <a href="#linked-data-design-principle_4">4<sup>th</sup> Linked Data design principle</a> some of the important resources in the data needs to be interlinked with resources elsewhere. Therefore, the dataspace should either have tools to semi-automate the discovery of potential resources, or provide ways to manually find such resources. Another way to enrich existing data would be by way of aggregating related or useful data that's not in the original data.</dd>
                         <dt id="core-requirements_vocabularies">Vocabularies</dt>
                         <dd><em class="rfc2119">Must</em> have an RDF vocabulary to describe the statistical data model. <em class="rfc2119">Should</em> have a set of vocabularies that can describe the relationships in the data, code lists, and metadata for the datasets.</dd>
+                        <dt id="core-requirements_data-synchronisation">Data Synchronisation</dt>
+                        <dd><em class="rfc2119">Should</em> keep up to date with the changes that are made to the original data. This is important as far as making sure that the data is accurate and relevant.</dd>
+
+                        <dt id="core-requirements_publication">Publication</dt>
+                        <dd><em class="rfc2119">Must</em> publish the data that's consumable in any one of the standardized RDF formats, and allow SPARQL queries to be run over the data given the <a href="#linked-data-design-principle_3">3<sup>rd</sup> Linked Data design principle</a>. <em class="rfc2119">May</em> provide RDF data dumps in order to allow data consumers to easily retrieve the full dataset. <em class="rfc2119">Should</em> provide an HTML interface to browse through the data or its catalog for human consumption.</dd>
                     </dl>
 
 
@@ -428,10 +444,6 @@
                         <li>Merging all dump files per graph into a single N-Triples file before importing to the RDF store for more efficient loading. Consequently, this approach needs to account for blank nodes which occur in different files with the same identifier.</li>
                         <li>Support other popular RDF stores e.g., Virtuoso RDF Quad Store [<a href="#r_14">14</a>] and 4store [<a href="#r_15">15</a>], to directly communicate with the store &#8211; currently TDB Triple Store is supported.</li>
                     </ul>
-
-                    <p class="todo" title="Maybe this report can be moved later into Implementations">Based on the corrections which were made on the conversion scripts for the data model, the RDF store had to be loaded several times. In the earlier stages of Fuseki and its TDB RDF store, the store also had to be rebuilt in order to optimize query responses accordingly. Since the size of the 2006 Irish Census RDF data dumps are under 15MB compressed in total, it was a negligible step to download them to a temporary location in order to bulk load. Given the current limitation of GraphPusher not being able to work with local files, it wasn't suitable to download the compressed RDF data dumps of World Bank data, weighing around 400MB, repeatedly, during the course of its development.</p>
-
-
 
                     <h3 id="linked-data-pages" class="todo" title="Add a screenshot of an HTML view">Linked Data Pages</h3>
 
@@ -697,7 +709,6 @@
                     <p>In order to import this data into the RDF store rather efficiently, <a href="http://librdf.org/raptor/rapper.html">rapper</a> RDF parser utility [<a href="#r_23">23</a>] program was used to first re-serialize each RDF/XML file as N-Triples and appended to a single file at run-time before importing.</p>
 
 
-
                     <h3 id="linked-datasets">Linked Datasets</h3>
                     <h4 id="data-interlinking">Data Interlinking</h4>
                     <p>Interlinking things and concepts from our RDF datasets to external datasets in the LOD Cloud was a challenging task. It primarily requires the investigation of identifying eligible resource types in our datasets, and then finding suitable matches that are available externally. One useful requirement was to make sure that the target resources were dereferenable in order to make the interlinking worthwhile. Tables [<a href="#data-interlinking_cso-ireland_table">1</a>], [<a href="#data-interlinking_eurostat_table">2</a>], [<a href="#data-interlinking_world-bank_table">3</a>] gives an overview of the targeted external datasets, entity types, links, and counts for each case three cases respectively.</p>
@@ -757,6 +768,7 @@
                     <p>A code list for currencies was created based on <a href="http://www.currency-iso.org/iso_index/iso_tables/iso_tables_a1.htm">ISO 4217</a> currency and funds name [<a href="#r_26">26</a>] to represent the SDMX attributes for the amount measurements in the World Bank Finances datasets. They were also linked to each country which officially uses that currency. Given that some of the codes in the World Bank country code list are not considered to be countries e.g., <code>1W</code> representing <em>World</em>, only the resources which represented a real country have an added <code>rdf:type</code> instance of <code>dbo:Country</code>.</p>
 
 
+
                     <h4 id="rdf-datasets">RDF Datasets</h4>
                     <p>Tables [<a href="#linked-dataset_cso-ireland_table">4</a>], [<a href="#linked-dataset_eurostat_table">5</a>], [<a href="#linked-dataset_world-bank_table">6</a>] outlines the current state of RDF Linked Datasets for CSO Ireland, Eurostat, and World Bank. The size of the dataset are in rounded number of triples. The <a href="#void">datasets' VoID files</a> would normally contain exact numbers.</p>
 
@@ -789,7 +801,6 @@
                             <tr><th>Projects and Operations</th><td>RDF/XML</td><td>93MB</td><td>0.96M</td><td>N/A</td></tr>
                         </tbody>
                     </table>
-
 
 
                     <h3 id="data-license">Data License</h3>
