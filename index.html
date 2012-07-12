@@ -136,29 +136,29 @@
                     </dl>
 
 
-                    <h3>Linked Data</h3>
+                    <h3 id="linked-data">Linked Data</h3>
                     <p>One manifestation of the Semantic Web vision is Linked Data. It is the a pragmatic approach to publishing structured data on the Web in order to discover related data from different sources. The original design principles was put forward by <a about="http://csarven.ca/#i" rel="foaf:knows" href="http://www.w3.org/People/Berners-Lee/card#i">Sir Tim Berners-Lee</a> in 2006 as follows:</p>
 
                     <blockquote about="http://www.w3.org/People/Berners-Lee/card#i" rel="dcterms:creator" href="http://www.w3.org/DesignIssues/LinkedData.html">
-                        <ol>
-                            <li>Use URIs as names for things</li>
-                            <li>Use HTTP URIs so that people can look up those names.</li>
-                            <li>When someone looks up a URI, provide useful information, using the standards (RDF*, SPARQL)</li>
-                            <li>Include links to other URIs. so that they can discover more things.</li>
+                        <ol id="linked-data-design-principles">
+                            <li id="linked-data-design-principles_1">Use URIs as names for things</li>
+                            <li id="linked-data-design-principles_2">Use HTTP URIs so that people can look up those names.</li>
+                            <li id="linked-data-design-principles_3">When someone looks up a URI, provide useful information, using the standards (RDF*, SPARQL)</li>
+                            <li id="linked-data-design-principles_4">Include links to other URIs. so that they can discover more things.</li>
                         </ol>
                     </blockquote>
 
-                    <dl>
-                        <dt>HTTP URIs</dt>
+                    <dl id="linked-data-description">
+                        <dt id="linked-data-description_http-uris">HTTP URIs</dt>
                         <dd>In a nutshell, the use of URIs allows us to refer to things and concepts, whether they are real or imaginary, in an absolute way. In order to persistently make use of things, <cite>Sir Tim Berners-Lee</cite> proposed that <q href="http://www.w3.org/DesignIssues/Axioms.html#Universality2">any resource of significance should be given a URI</q>. By employing the widely adopted <code>http:</code> URI scheme, the idea for Linked Data sets off in terms of providing a representation for requested resources.</dd>
 
-                        <dt>RDF data model</dt>
+                        <dt id="linked-data-description_rdf-data-model">RDF data model</dt>
                         <dd>The key ingredient in the information that is returned to the user has to do with the model of the data in the response. Regardless of the syntax that is used, Resource Description Framework (RDF) is essentially an entity-relationship model that provides a way to make statements about the things in our reality. A statement contains three atomic parts, also known as a triple: the <em>subject</em> resource in which the statement is about, followed with a <em>property</em> which is a vocabulary term that describes the type of relationship it has to an <em>object</em> resource. Each of these components are typically represented using HTTP URIs, with the possibility of the object resource being a literal string. In mathematical terms, RDF is a directed, labeled graph, which conceptually depicts a graph of things. What makes this method to make claims about things worthwhile is the act of linking any two URIs together in a particular way. It fundamentally presents an opportunity to discover new resources in an uniform way, whether the resource is in local storage or somewhere else.</dd>
 
-                        <dt>RDF vocabularies</dt>
+                        <dt id="linked-data-description_rdf-vocabularies">RDF vocabularies</dt>
                         <dd>In RDF triple statements, properties are vocabulary terms that are used to relate a subject to an object. As these resources are accessible via HTTP URIs, when dereferenced they provide a description for the term in use. Some of the well-known vocabularies that are used in Linked Data publishing include: Friend of a Friend (FOAF) to describe people and the things that they do; RDF Data Cube which is used to describe multi-dimensional statistical data; SDMX for the statistical information model; British reference periods, SKOS to describe controlled thesauri, classification schemes and taxonomies; DC Terms for general purpose metadata relations and; VoID to provide metadata on datasets.</dd>
 
-                        <dt>SPARQL</dt>
+                        <dt id="linked-data-description_sparql">SPARQL</dt>
                         <dd>SPARQL Protocol and RDF Query Language (SPARQL) is a protocol and a query language to retrieve and manipulate RDF data. It can be used to express queries across local and remote data sources, whether the data resides in RDF files or databases. SPARQL queries consist of RDF triple graph patterns written in a fashion similar to Turtle, and allows modifiers for the patterns. In the Linked Data scene, it is common to see publicly accessible SPARQL endpoints where queries are sent and received over HTTP. Federated queries can be written to compute results that span over different SPARQL endpoints on the Web.</dd>
                     </dl>
 
@@ -177,7 +177,7 @@
 					<p>Organisations that are involved in publishing statistical Linked Data and establishing related methodologies and best practices include the <a href="http://data.gov.uk/">UK Government</a> [<a href="#r_3">3</a>], the National Institute of Statistics and Economic Studies (<dfn><abbr title="National Institute of Statistics and Economic Studies">INSEE</abbr></dfn>, France), the U.S. Bureau of Labour Statistics (<dfn><abbr title="Bureau of Labour Statistics">BLS</abbr></dfn>), and the European Environment Agency (<dfn><abbr title="European Environment Agency">EEA</abbr></dfn>). Statistics from many other sources are currently published not by the original statistics producer, but by third parties (universities, web technology companies etc.): U.S. Census 2000, Spanish Census, including historical microdata, EU election results, <a href="http://img.org/">International Monetary Fund</a> (<dfn><abbr title="International Monetary Fund">IMF</abbr></dfn>) commodity prices to name a few as well as the data from Central Statistics Office Ireland, Eurostat, and World Bank, which we will focus on in this paper.</p>
 
 
-                    <h3>Lifecycles</h3>
+                    <h3 id="linked-data-lifecycles">Lifecycles</h3>
                     <p>Summarize all of the lifecycles: http://www.w3.org/2011/gld/wiki/GLD_Life_cycle</p>
                     <p>Are they generic or government or statistical</p>
                     <ul>
@@ -227,9 +227,9 @@
 
                     <p>A high-level inspection of published statistical data reveals itself as a collection of significant amounts of data, that's compiled over time by different parties. Naturally the quality of the data sources vary from one publisher to the next, as they try to cater to different publishing criteria. For instance, statistical data is often available in different data formats (e.g., CSV, XML, JSON, SDMX-ML, PC-Axis), with varying vocabularies and thesaurus that's specific to publisher's view about the data. In terms of consumption, one particular example is as follows: the usefulness of raw data that is available in CSV format may depend on the availability and quality of the metadata for the terms that are used in the file. The shape in which the data is available, sets the tone for the data consumer. The data consumers need to make decisions based on the amount of work involved to obtain and work with such data in their own space.</p>
 
-                    <p>Therefore, it is reasonable to conclude that a number of decisions need to be made in order to prepare the dataspace for retrieval and reuse. A questionnaire along the following the lines can help determine the initial required actions to take, grouped into areas in concern:</p>
+                    <p>Therefore, it is reasonable to conclude that a number of decisions need to be made in order to prepare the dataspace for retrieval and reuse. A questionnaire along the following the lines can help determine core requirements by analysing each case study:</p>
                     <dl id="requirements-questionnaire">
-                        <dt>Overview</dt>
+                        <dt id="requirements-questionnaire_overview">Overview</dt>
                         <dd>Who is the data publisher?</dd>
                         <dd>Which parties was involved in compiling the original data?</dd>
                         <dd>What data is being published?</dd>
@@ -238,7 +238,7 @@
                         <dd>Is the accuracy of the data indicated?</dd>
                         <dd>Are there different versions or variations of the data?</dd>
 
-                        <dt>Retrieval</dt>
+                        <dt id="requirements-questionnaire_retrieval">Retrieval</dt>
                         <dd>Which formats is the data available in?</dd>
                         <dd>How big is the data?</dd>
                         <dd>How frequently is the data updated, if at all?</dd>
@@ -246,11 +246,11 @@
                         <dd>Which access points is the data distributed through?</dd>
                         <dd>Are there special access privileges required to retrieve the data?</dd>
 
-                        <dt>Processing</dt>
+                        <dt id="requirements-questionnaire_processing">Processing</dt>
                         <dd>Is the necessary tooling in place in order to work with the available formats?</dd>
                         <dd>Are the data files syntactically well-formed?</dd>
 
-                        <dt>Publishing</dt>
+                        <dt id="requirements-questionnaire_publication">Publication</dt>
                         <dd>What's the data license and terms of use?</dd>
                         <dd>Is there sufficient metadata?</dd>
                         <dd>Which languages is the data and metadata available in?</dd>
@@ -258,19 +258,20 @@
                     </dl>
 
 
-                    <p>The following observations are made about the data sources:</p>
+                    <h3 id="data-source">Data sources</h3>
+                    <p>The following initial observations are made about the data sources:</p>
 
-                    <h3 id="data-source_cso-ireland">CSO Ireland</h3>
+                    <h4 id="data-source_cso-ireland">CSO Ireland</h4>
                     <p>The <a href="http://cso.ie/">Central Statistics Office</a> (<dfn><abbr title="Central Statistics Office">CSO</abbr></dfn>) [<a href="#r_4">4</a>] is the official Irish agency responsible for collecting and disseminating statistics about Ireland. The main source of the statistical data for the CSO is the National Census that is scheduled to be held every five years. The data compiled by the CSO serve as a key input for decision-making in the Irish government and it informs its policies and programmes both at national and local levels.</p>
 
                     <p>The CSO publishes population statistics in several ways, none of which is particularly suited for direct reuse. The data is primarily available through the CSO's website, formatted for the purpose of display. The CSO offers access to raw demographic data in PC-Axis format for expressing multidimensional statistical data. CSO exposes raw data in an interactive data viewer provided by the <a href="http://www.beyond2020.com/">Beyond 20/20 software</a> [<a href="#r_5">5</a>] that allows to browse, sort and plot the data. It offers a way to export the data in XLS and CSV.</p>
 
-                    <h3 id="data-source_eurostat">Eurostat</h3>
+                    <h4 id="data-source_eurostat">Eurostat</h4>
                     <p><a href="http://ec.europa.eu/eurostat">Eurostat</a> [<a href="#r_6">6</a>] is the statistical office of European Union with the aim to provide European Union statistical information in a way that can be comparable at European level. Statistical data collection is done by statistical authorities of each Member States. They verify and analyse the data before sending it to Eurostat. Eurostat's role is to consolidate the statistical data they receive from each Member States and ensure that they are comparable. Eurostat actually only provides harmonized statistical data using common statistical language.</p>
 
                     <p>Eurostat offers access to datasets using the <a href="http://epp.eurostat.ec.europa.eu/NavTree_prod/everybody/BulkDownloadListing">bulk download facility</a> [<a href="#r_7">7</a>]. The datasets are published by Eurostat in three different formats: TSV, DFT and SDMX. This makes it possible for users to import the data into the tool of their choice. A complete list of datasets which are published by Eurostat is made available through table of contents. Although there is no filtration on the different types of statistics provided by Eurostat, the datasets essentially cover statistical information along the following themes: general and regional statistics, economy and finance, population and social conditions, industry, trade and services, agriculture and fisheries, external trade, transport, environment and energy, and science and technology.</p>
 
-                    <h3 id="data-source_world-bank">World Bank</h3>
+                    <h4 id="data-source_world-bank">World Bank</h4>
                     <p>The <a href="http://worldbank.org/">World Bank</a> [<a href="#r_9">9</a>] is an international development organization that provides access to a comprehensive set of data about countries around the globe. The publicly available statistical data is collected from officially-recognized international sources, and consists of a wide array of observations on development indicators, financial statements, climate change, projects and operations.</p>
 
                     <p>The World Bank provides a free and open access to numerous datasets in their <a href="http://data.worldbank.org/data-catalog">data catalog</a> [<a href="#r_10">10</a>]. These datasets are available in one or more formats: XML, JSON, CSV, XLS; with additional geospatial data in SHP and KML, and supporting documentations in PDF. The World Bank APIs offers some of the datasets primarily in XML and JSON representations, whereas the rest of the formats are available as data dumps. In our use-case, the decision on which datasets to work with was based on several factors such as the importance of the dataset, its completeness, and the ease of converting it into an RDF representation. Hence, the following datasets from the World Bank's API was selected with the preference of working with XML:</p>
@@ -283,6 +284,18 @@
                     </ul>
 
 
+
+                    <h3 id="core-requirements">Core requirements</h3>
+                    <dl>
+                        <dt id="core-requirements_storage">Storage space and RDF store</dt>
+                        <dd><em class="rfc2119">Must</em> have storage space where the retrieved raw data will be stored and processed in the filesystem, as well as an RDF storage and server to house the transformed RDF data.</dd>
+                        <dt id="core-requirements_transformation-tools">Transformation tools</dt>
+                        <dd><em class="rfc2119">Must</em> have a set of tools to preprocess and convert non-RDF structured data to RDF. This primarily includes tools that would allow inspections, modifications, and conversion of the data into other formats.</dd>
+                        <dt id="core-requirements_enrichment-tools">Enrichment tools</dt>
+                        <dd><em class="rfc2119">Must</em> have a set of tools that can help to improve on the existing data. In order to fulfil the <a href="#linked-data-design-principle_4">4<sup>th</sup> Linked Data design principle</a> some of the important resources in the data needs to be interlinked with resources elsewhere. Therefore, the dataspace should either have tools to semi-automate the discovery of potential resources, or provide ways to manually find such resources. Another way to enrich existing data would be by way of aggregating related or useful data that's not in the original data.</dd>
+                        <dt id="core-requirements_vocabularies">Vocabularies</dt>
+                        <dd><em class="rfc2119">Must</em> have an RDF vocabulary to describe the statistical data model. <em class="rfc2119">Should</em> have a set of vocabularies that can describe the relationships in the data, code lists, and metadata for the datasets.</dd>
+                    </dl>
 
 
                     <h2 id="components">Components</h2>

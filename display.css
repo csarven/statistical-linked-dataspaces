@@ -170,6 +170,14 @@ word-wrap: break-word;
 word-break:normal;
 }
 
+/*
+[id]:hover:after {
+margin-left:1em;
+content: "#" attr(id) ;
+color:#00f;
+text-align:right;
+}
+*/
 
 dt { font-weight:bold; }
 dd {
@@ -178,6 +186,12 @@ margin:0.5em 0 1em 1em;
 
 ol, ul, p, dd {
 text-align:justify;
+}
+
+.rfc2119 {
+text-transform: lowercase;
+font-variant: small-caps;
+font-style: normal;
 }
 
 #authors {
