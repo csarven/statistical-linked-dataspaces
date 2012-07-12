@@ -218,7 +218,7 @@
                         <object type="image/svg+xml" data="linked-dataspaces.svg" width="420" height="280"></object>
                     </figure>
 
-                    <h2 id="requirements">Requirements</h2>
+                    <h3 id="requirements">Requirements</h3>
 <!--
                     <p>Analysis of the original datasets (CSO Ireland, Eurostat, World Bank): What's available, why and what we are interested in (, what we need to prepare to access them?)</p>
                     <h3>Quantity: Huge amount of observations.. characteristics of the datasets (codelists.. in order to interpret observations).. how frequently are they updated (lower-upper bound)? Quality issues.. Provenance.. Not technically. Understanding / Analysis of the datasets.. How are they available (dumps, APIs)</h3>
@@ -267,20 +267,20 @@ here is the original data.. and here is what we are trying to do with the data..
                     </dl>
 
 
-                    <h3 id="data-source">Data sources</h3>
+                    <h4 id="data-source">Data sources</h4>
                     <p>The following initial observations are made about the data sources:</p>
 
-                    <h4 id="data-source_cso-ireland">CSO Ireland</h4>
+                    <h5 id="data-source_cso-ireland">CSO Ireland</h5>
                     <p>The <a href="http://cso.ie/">Central Statistics Office</a> (<dfn><abbr title="Central Statistics Office">CSO</abbr></dfn>) [<a href="#r_4">4</a>] is the official Irish agency responsible for collecting and disseminating statistics about Ireland. The main source of the statistical data for the CSO is the National Census that is scheduled to be held every five years. The data compiled by the CSO serve as a key input for decision-making in the Irish government and it informs its policies and programmes both at national and local levels.</p>
 
                     <p>The CSO publishes population statistics in several ways, none of which is particularly suited for direct reuse. The data is primarily available through the CSO's website, formatted for the purpose of display. The CSO offers access to raw demographic data in PC-Axis format for expressing multidimensional statistical data. CSO exposes raw data in an interactive data viewer provided by the <a href="http://www.beyond2020.com/">Beyond 20/20 software</a> [<a href="#r_5">5</a>] that allows to browse, sort and plot the data. It offers a way to export the data in XLS and CSV.</p>
 
-                    <h4 id="data-source_eurostat">Eurostat</h4>
+                    <h5 id="data-source_eurostat">Eurostat</h5>
                     <p><a href="http://ec.europa.eu/eurostat">Eurostat</a> [<a href="#r_6">6</a>] is the statistical office of European Union with the aim to provide European Union statistical information in a way that can be comparable at European level. Statistical data collection is done by statistical authorities of each Member States. They verify and analyse the data before sending it to Eurostat. Eurostat's role is to consolidate the statistical data they receive from each Member States and ensure that they are comparable. Eurostat actually only provides harmonized statistical data using common statistical language.</p>
 
                     <p>Eurostat offers access to datasets using the <a href="http://epp.eurostat.ec.europa.eu/NavTree_prod/everybody/BulkDownloadListing">bulk download facility</a> [<a href="#r_7">7</a>]. The datasets are published by Eurostat in three different formats: TSV, DFT and SDMX. This makes it possible for users to import the data into the tool of their choice. A complete list of datasets which are published by Eurostat is made available through table of contents. Although there is no filtration on the different types of statistics provided by Eurostat, the datasets essentially cover statistical information along the following themes: general and regional statistics, economy and finance, population and social conditions, industry, trade and services, agriculture and fisheries, external trade, transport, environment and energy, and science and technology.</p>
 
-                    <h4 id="data-source_world-bank">World Bank</h4>
+                    <h5 id="data-source_world-bank">World Bank</h5>
                     <p>The <a href="http://worldbank.org/">World Bank</a> [<a href="#r_9">9</a>] is an international development organization that provides access to a comprehensive set of data about countries around the globe. The publicly available statistical data is collected from officially-recognized international sources, and consists of a wide array of observations on development indicators, financial statements, climate change, projects and operations.</p>
 
                     <p>The World Bank provides a free and open access to numerous datasets in their <a href="http://data.worldbank.org/data-catalog">data catalog</a> [<a href="#r_10">10</a>]. These datasets are available in one or more formats: XML, JSON, CSV, XLS; with additional geospatial data in SHP and KML, and supporting documentations in PDF. The World Bank APIs offers some of the datasets primarily in XML and JSON representations, whereas the rest of the formats are available as data dumps. In our use-case, the decision on which datasets to work with was based on several factors such as the importance of the dataset, its completeness, and the ease of converting it into an RDF representation. Hence, the following datasets from the World Bank's API was selected with the preference of working with XML:</p>
@@ -294,7 +294,7 @@ here is the original data.. and here is what we are trying to do with the data..
 
 
 
-                    <h3 id="core-requirements">Core requirements</h3>
+                    <h4 id="core-requirements">Core requirements</h4>
                     <p>The following core requirements are distilled from the deployment of CSO Ireland, Eurostat, and World Bank Linked Dataspaces:4</p>
 
                     <dl>
