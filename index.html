@@ -803,6 +803,24 @@ here is the original data.. and here is what we are trying to do with the data..
                     </table>
 
 
+                    <h3 id="data-loading-to-store">Loading RDF data to RDF store</h3>
+                    <h4 id="data-loading-to-store_cso-ireland">CSO Ireland</h4>
+                    <p>As the data model for CSO Ireland was improved over time, the RDF store had to be loaded several times. In the earlier versions of Fuseki and its TDB RDF store, the RDF store also had to be rebuilt in order to optimize query responses accordingly. GraphPusher was used to help automate bulk-loading. As the size of the 2006 Irish Census RDF data dumps are under 15MB compressed in total, downloading of the dumps to a temporary location multiple times raised no issues.</p>
+
+                    <h4 id="data-loading-to-store_eurostat">Eurostat</h4>
+                    <p>The sheer large size of Eurostat's RDF data dumps (~533GB RDF/XML) presented a challenge to load them into an RDF store given that the resulting store size would have been multiple factors greater than the original dumps.</p>
+
+                    <h4 id="data-loading-to-store_world-bank">World Bank</h4>
+                    <p>Given the current scope of GraphPusher for not being able to work with local files, it wasn't suitable for it to download the World Bank's RDF data dumps repeatedly, since its compressed size was around 400MB. However, simple bash scripts was written to load the data directly to TDB store. The process to load the files was done in two steps:</p>
+                    <ol>
+                        <li>Each RDF file which belonged to the same named graph was transformed to N-Triples format using the rapper utility, and then concatenated to a single N-Triples file. The cost of this extra transformation reduced the load time into the TDB store.</li>
+                        <li>Loading of each N-Triples files to corresponding graphs.</li>
+                    </ol>
+
+                    <p>Files which were known to contain bnodes was not merged as they posed a conflict, and hence loaded individually.</p>
+
+
+
                     <h3 id="data-license">Data License</h3>
                     <h4 id="data-license_cso-ireland">CSO Ireland</h4>
                     <p>The use of the 2006 Irish Census data is governed by the Re-use of <a href="http://www.cso.ie/en/aboutus/dissemination/re-useofpublicsectorinformation/">Public Sector Information Statutory Instrument 279/2005</a> [<a href="#r_27">27</a>], which allows reuse provided that the creator (i.e., CSO) is attributed, the information is represented in an accurate way, and the information is used for a non-commercial purpose.</p>
