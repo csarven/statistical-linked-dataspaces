@@ -24,7 +24,7 @@
     xml:lang="en">
     <head>
         <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-        <title>Statistical Linked Dataspace</title>
+        <title>Statistical Linked Dataspaces</title>
         <meta name="description" content=""/>
         <link rel="stylesheet" type="text/css" media="all" href="display.css"/>
     </head>
@@ -32,7 +32,7 @@
     <body about="[this:]" typeof="foaf:Document sioc:Post biblio:Paper" class="hfeed journal">
         <div id="wrap">
             <div class="hentry">
-                <h1 property="dcterms:title" class="entry-title">On the design of dataspaces for statistical Linked Data</h1>
+                <h1 property="dcterms:title" class="entry-title">On the design of statistical Linked Dataspaces</h1>
 
                 <div id="authors">
                     <dl>
@@ -225,8 +225,7 @@
 -->
                     <p>A set of requirements to create a statistical Linked Dataspace are derived from the case studies of deploying CSO Ireland, Eurostat, and World Bank Linked Data. The requirements will be based on analysis of the original data sources, such as their characteristics in terms of quality, quantity, and update frequency.</p>
 
-                    <p>A high-level inspection of published statistical data reveals itself as a collection of significant amounts of data, that's compiled over time by different parties. Naturally the quality of the data sources vary from one publisher to the next, as they try to cater to different publishing criteria. For instance, statistical data is often available in different data formats, with varying vocabularies and thesaurus that's specific to publisher's view about the data. In terms of consumption, one particular example is as follows: the usefulness of raw data that is available in CSV format may depend on the availability and quality of the metadata for the terms that are used in the file. The shape in which the data is available, sets the tone for the data consumer. The data consumers need to make decisions based on the amount of work involved to obtain and work with such data in their own space.</p>
-
+                    <p>A high-level inspection of published statistical data reveals itself as a collection of significant amounts of data, that's compiled over time by different parties. Naturally the quality of the data sources vary from one publisher to the next, as they try to cater to different publishing criteria. For instance, statistical data is often available in different data formats (e.g., CSV, XML, JSON, SDMX-ML, PC-Axis), with varying vocabularies and thesaurus that's specific to publisher's view about the data. In terms of consumption, one particular example is as follows: the usefulness of raw data that is available in CSV format may depend on the availability and quality of the metadata for the terms that are used in the file. The shape in which the data is available, sets the tone for the data consumer. The data consumers need to make decisions based on the amount of work involved to obtain and work with such data in their own space.</p>
 
                     <p>Therefore, it is reasonable to conclude that a number of decisions need to be made in order to prepare the dataspace for retrieval and reuse. A questionnaire along the following the lines can help determine the initial required actions to take, grouped into areas in concern:</p>
                     <dl id="requirements-questionnaire">
@@ -259,19 +258,19 @@
                     </dl>
 
 
-<p>It is not super clear whether Data sources and Data retrieval should be up here.. because the realization section is going to talk about them. Especially for World Bank</p>
-                    <h3 id="data-sources">Data sources</h3>
-                    <h4 id="data-source_cso-ireland">CSO Ireland</h4>
+                    <p>The following observations are made about the data sources:</p>
+
+                    <h3 id="data-source_cso-ireland">CSO Ireland</h3>
                     <p>The <a href="http://cso.ie/">Central Statistics Office</a> (<dfn><abbr title="Central Statistics Office">CSO</abbr></dfn>) [<a href="#r_4">4</a>] is the official Irish agency responsible for collecting and disseminating statistics about Ireland. The main source of the statistical data for the CSO is the National Census that is scheduled to be held every five years. The data compiled by the CSO serve as a key input for decision-making in the Irish government and it informs its policies and programmes both at national and local levels.</p>
 
                     <p>The CSO publishes population statistics in several ways, none of which is particularly suited for direct reuse. The data is primarily available through the CSO's website, formatted for the purpose of display. The CSO offers access to raw demographic data in PC-Axis format for expressing multidimensional statistical data. CSO exposes raw data in an interactive data viewer provided by the <a href="http://www.beyond2020.com/">Beyond 20/20 software</a> [<a href="#r_5">5</a>] that allows to browse, sort and plot the data. It offers a way to export the data in XLS and CSV.</p>
 
-                    <h4 id="data-source_eurostat">Eurostat</h4>
+                    <h3 id="data-source_eurostat">Eurostat</h3>
                     <p><a href="http://ec.europa.eu/eurostat">Eurostat</a> [<a href="#r_6">6</a>] is the statistical office of European Union with the aim to provide European Union statistical information in a way that can be comparable at European level. Statistical data collection is done by statistical authorities of each Member States. They verify and analyse the data before sending it to Eurostat. Eurostat's role is to consolidate the statistical data they receive from each Member States and ensure that they are comparable. Eurostat actually only provides harmonized statistical data using common statistical language.</p>
 
-                    <p>Eurostat offers access to datasets using the <a href="http://epp.eurostat.ec.europa.eu/NavTree_prod/everybody/BulkDownloadListing">bulk download facility</a> [<a href="#r_7">6</a>]. The datasets are published by Eurostat in three different formats: TSV, DFT and SDMX. This makes it possible for users to import the data into the tool of their choice. A complete list of datasets which are published by Eurostat is made available through table of contents. Although there is no filtration on the different types of statistics provided by Eurostat, the datasets essentially cover statistical information along the following themes: general and regional statistics, economy and finance, population and social conditions, industry, trade and services, agriculture and fisheries, external trade, transport, environment and energy, and science and technology.</p>
+                    <p>Eurostat offers access to datasets using the <a href="http://epp.eurostat.ec.europa.eu/NavTree_prod/everybody/BulkDownloadListing">bulk download facility</a> [<a href="#r_7">7</a>]. The datasets are published by Eurostat in three different formats: TSV, DFT and SDMX. This makes it possible for users to import the data into the tool of their choice. A complete list of datasets which are published by Eurostat is made available through table of contents. Although there is no filtration on the different types of statistics provided by Eurostat, the datasets essentially cover statistical information along the following themes: general and regional statistics, economy and finance, population and social conditions, industry, trade and services, agriculture and fisheries, external trade, transport, environment and energy, and science and technology.</p>
 
-                    <h4 id="data-source_world-bank">World Bank</h4>
+                    <h3 id="data-source_world-bank">World Bank</h3>
                     <p>The <a href="http://worldbank.org/">World Bank</a> [<a href="#r_9">9</a>] is an international development organization that provides access to a comprehensive set of data about countries around the globe. The publicly available statistical data is collected from officially-recognized international sources, and consists of a wide array of observations on development indicators, financial statements, climate change, projects and operations.</p>
 
                     <p>The World Bank provides a free and open access to numerous datasets in their <a href="http://data.worldbank.org/data-catalog">data catalog</a> [<a href="#r_10">10</a>]. These datasets are available in one or more formats: XML, JSON, CSV, XLS; with additional geospatial data in SHP and KML, and supporting documentations in PDF. The World Bank APIs offers some of the datasets primarily in XML and JSON representations, whereas the rest of the formats are available as data dumps. In our use-case, the decision on which datasets to work with was based on several factors such as the importance of the dataset, its completeness, and the ease of converting it into an RDF representation. Hence, the following datasets from the World Bank's API was selected with the preference of working with XML:</p>
@@ -283,26 +282,6 @@
                         <li><a href="http://data.worldbank.org/data-catalog/projects-portfolio">World Bank Projects and Operations</a> (<dfn><abbr title="World Bank Projects and Operations">WBPO</abbr></dfn>) [<a href="#r_14">14</a>] provides information about the lending projects from 1947 to present along with links to publicly disclosed online documents.</li>
                     </ul>
 
-
-                    <h3 id="data-retrieval">Data Retrieval</h3>
-                    <h4 id="data-retrieval_cso-ireland">CSO Ireland</h4>
-                    <p>Data from the 2006 Irish Census was retrieved manually, downloading each slice of small area population statistics individually via the export to Excel files from the <a href="http://beyond2020.cso.ie/census/ReportFolders/ReportFolders.aspx">CSO's instance of the Beyond 20/20</a> [<a href="#r_15">15</a>]. 14 datasets in CSV format in total of 8MB was manually retrieved using the interactive application by clicking on the access URLs.</p>
-
-                    <h4 id="data-retrieval_eurostat">Eurostat</h4>
-                    <p>There are approximately 6100 datasets published by Eurostat. Eurostat updates information about datasets as well as table of contents twice a day. The datasets holds statistics on daily, monthly, quarterly and annual basis. Therefore, certain datasets are updated daily and many datasets are updated on monthly basis. To keep Eurostat RDF datasets up to date, we've scheduled a cronjob, which runs a set of scripts on weekly basis. In order to avoid unnecessary RDF transformations of each dataset, we've only updated the changed datasets within the past week.</p>
-
-                    <p>Along with the datasets, Eurostat also publishes Data Structure Definitions (<dfn><abbr title="Data Structure Definition">DSD</abbr></dfn>) about each dataset, as well as a set of dictionaries (code lists) which are shared among all datasets. Hence we take into consideration every type of information provided by Eurostat. The DSDs are published in XML format while the code lists are published in TSV format. Dataset is available in three different formats: TSV, DFT and SDMX. Given that the datasets, metadata and code lists each provide different type of information and is represented differently, we wrote Java programs to process XML and TSV formats of the metadata, dataset and code lists separately.</p>
-
-                    <p>We have written different shell scripts which wrap each Java program and one main script which handles the whole process of data downloading and transformation by invoking other scripts.</p>
-
-                    <p>Over 13000 HTTP GET requests was made to Eurostat to download raw datasets, DSDs and code lists, with a total of disk space of ~58GB.</p>
-
-                    <h4 id="data-retrieval_world-bank">World Bank</h4>
-                    <p>The World Bank datasets were collected by making requests to the World Bank API endpoints using the XML output format.</p>
-
-                    <p>World Bank APIs was called ~150000 times to retrieve all of the WDI, WBF, WBCC, WBPO datasets, with a total disk space of ~20GB.</p>
-
-                    <p>The data is retrieved at irregular periods - at least once a month - from the World Bank API endpoints. The retrieval act is partly based on new dataset announcements in World Bank mailing lists. Although the data retrieval and transformation phases are conducted by independent scripts, the commitment to retrieve and store the data is based on achieving the quality of the eventual RDF serialization. Therefore, Java and Bash scripts are manually executed to retrieve, in order to closely monitor abnormalities in the responses and account for necessary changes in the transformations.</p>
 
 
 
@@ -530,14 +509,37 @@
 </div>
 
 
-                    <h3>Deployment Architecture</h3>
+                    <h3 id="architecture">Deployment Architecture</h3>
+                    <p>Figures [<a href="#figure_architecture_cso-ireland">1</a>], [<a href="#figure_architecture_eurostat">2</a>], [<a href="#figure_architecture_world-bank">3</a>] illustrate an overview on the overall architecture of the deployment of our three case studies. They will be discuss in further detail in the following sections.</p>
+
+                    <figure id="figure_architecture_cso-ireland">
+                        <figcaption><strong>Figure 1</strong>. CSO Ireland deployment architecture</figcaption>
+                        <object type="image/svg+xml" data="cso-architecture.svg" width="460" height="111"></object>
+                    </figure>
+
+                    <figure id="figure_architecture_eurostat">
+                        <figcaption><strong>Figure 2</strong>. Eurostat deployment architecture</figcaption>
+                        <object type="image/svg+xml" data="eurostat-architecture.svg" width="460" height="253"></object>
+                    </figure>
+
                     <figure id="figure_architecture_world-bank">
                         <figcaption><strong>Figure 3</strong>. World Bank deployment architecture</figcaption>
                         <object type="image/svg+xml" data="wb-architecture.svg" width="460" height="176"></object>
                     </figure>
 
-
                     <h3 id="data-retrieval">Data Retrieval</h3>
+                    <h4 id="data-retrieval_cso-ireland">CSO Ireland</h4>
+                    <p>Data from the 2006 Irish Census was retrieved manually, downloading each slice of small area population statistics individually via the export to Excel files from the <a href="http://beyond2020.cso.ie/census/ReportFolders/ReportFolders.aspx">CSO's instance of the Beyond 20/20</a> [<a href="#r_15">15</a>]. 14 datasets in CSV format in total of 8MB was manually retrieved using the interactive application by clicking on the access URLs.</p>
+
+                    <h4 id="data-retrieval_eurostat">Eurostat</h4>
+                    <p>There are approximately 6100 datasets published by Eurostat. Eurostat updates information about datasets as well as table of contents twice a day. The datasets holds statistics on daily, monthly, quarterly and annual basis. Therefore, certain datasets are updated daily and many datasets are updated on monthly basis. To keep Eurostat RDF datasets up to date, we've scheduled a cronjob, which runs a set of scripts on weekly basis. In order to avoid unnecessary RDF transformations of each dataset, we've only updated the changed datasets within the past week.</p>
+
+                    <p>Along with the datasets, Eurostat also publishes Data Structure Definitions (<dfn><abbr title="Data Structure Definition">DSD</abbr></dfn>) about each dataset, as well as a set of dictionaries (code lists) which are shared among all datasets. Hence we take into consideration every type of information provided by Eurostat. The DSDs are published in XML format while the code lists are published in TSV format. Dataset is available in three different formats: TSV, DFT and SDMX. Given that the datasets, metadata and code lists each provide different type of information and is represented differently, we wrote Java programs to process XML and TSV formats of the metadata, dataset and code lists separately.</p>
+
+                    <p>We have written different shell scripts which wrap each Java program and one main script which handles the whole process of data downloading and transformation by invoking other scripts.</p>
+
+                    <p>Over 13000 HTTP GET requests was made to Eurostat to download raw datasets, DSDs and code lists, with a total of disk space of ~58GB.</p>
+
                     <h4 id="data-retrieval_world-bank">World Bank</h4>
                     <p>The World Bank datasets were collected by making requests to the World Bank API endpoints using the XML output format.</p>
 
@@ -546,9 +548,22 @@
                     <p>The data is retrieved at irregular periods - at least once a month - from the World Bank API endpoints. The retrieval act is partly based on new dataset announcements in World Bank mailing lists. Although the data retrieval and transformation phases are conducted by independent scripts, the commitment to retrieve and store the data is based on achieving the quality of the eventual RDF serialization. Therefore, Java and Bash scripts are manually executed to retrieve, in order to closely monitor abnormalities in the responses and account for necessary changes in the transformations.</p>
 
 
-                    <h3 id="data-transformation">Transformation</h3>
                     <h3 id="data-preprocessing">Data Preprocessing</h3>
                     <p>In this section, we cover some of the observed abnormalities in the original datasets, and the decisions which were made in order to later achieve reasonable RDF serializations. The information in this section is not exhaustive, and is only meant to illustrate some of the recurring challenges.</p>
+
+                    <h4 id="data-preprocessing_cso-ireland">CSO Ireland</h4>
+                    <p> The data was paged to several files that had to be pieced together, saved as CSV files, and provided with a different character encoding. Statistical data in the retrieved datasets were attributed to one of two mutually overlapping conceptualizations of Irish geography. There were datasets coded with enumeration areas and datasets coded with electoral districts. Both types of datasets were downloaded and combined during the conversion to RDF.</p>
+
+                    <h4 id="data-preprocessing_eurostat">Eurostat</h4>
+                    <p>Although, our data set parser parses TSV files to generate observation values using RDF Data Cube vocabulary but TSV files misses the frequency value which is necessary to represent observation value. In order to add frequency value to the observations of each data set, we additionally parsed SDMX format to retrieve the frequency value of each data set.</p>
+
+                    <p>Observations with values <code>:</code> which means <em>not available</em> were left out during the RDF transformations.</p>
+
+                    <p><code>dcterms:date</code> property was used for reference periods in Eurostat. We have encountered various reference periods and converted them into appropriate date literals while doing RDF transformation:</p>
+                    <p>YYYY-MM-DD date format was used where we encountered reference periods like: <code>{YYYY}M{MM}D{DD}</code>, <code>{YYYY}Q{QQ}</code>, <code>{YYYY}M{MM}</code>, <code>{YYYY}S{SS}</code>, <code>{YYYY}</code>.</p>
+                    <p>YYYY-MM-DD date format was used where we encountered reference periods like: <code>{YYYY}_{YYYY}</code>. We do not have time format information available in the data set which makes it hard to tell if the observation values are for 1 or x number of years.</p>
+
+                    <p>Certain observation values represent reference period values as Long Term Annual Average (<dfn><abbr title="Long Term Annual Average">LTAA</abbr></dfn>). We did not know how to deal with LTAA in RDF and Eurostat does not provide any information about it in the metadata of that particular dataset. Hence, we wrote a small Turtle file which contains the definition of LTAA. Reference periods mentioning LTAA in original dataset for any particular observation value were represented in RDF using the URI of Turtle file.</p>
 
                     <h4 id="data-preprocessing_world-bank">World Bank</h4>
                     <p>In order to arrive at a proper and useful Linked Data representation, some of the following problems were solved either with a script or manually updated, and others were brought up to the World Bank team's attention for investigation.</p>
@@ -568,6 +583,20 @@
 
                     <h4 id="uri-patterns">URI Patterns</h4>
                     <p>All three datasets make use of <em>slash URIs</em> throughout the schema and data, with the exception that Eurostat uses hash URIs for its observations. The reason for this was to keep the URI patterns consistent and to make sure that all important resources when dereferenced returned information. Since the content size of the responses for statistical data may be heavy, the <em>slash URIs</em> approach appeared to be preferable to <em>hash URIs</em>, as the latter would not allow distinct requests in majority of the deployments on the Web. This is of course independent to accessing these resources via SPARQL endpoints.</p>
+
+
+                    <h5 id="uri-patterns_cso-ireland">CSO Ireland</h5>
+                    <p>All the resources in the 2006 Irish Census dataset use slash URIs. The geographical code lists for enumeration areas and electoral districts employ hierarchical URIs [<a href="#r_18">18</a>], in which identifiers of geographical areas are nested within the "namespace" URIs of their parent geographical features (e.g., an enumeration area nested under a county) [<a href="#r_19">19</a>].</p>
+
+                    <p>In 2006 Irish Census dataset, blank nodes (<dfn><abbr title="blank nodes">bnodes</abbr></dfn>) were used only for identification of instances of <code>qb:ComponentSpecification</code>. All other resources were identified with URIs.</p>
+
+                    <h5 id="uri-patterns_eurostat">Eurostat</h5>
+                    <p>The base URI for Eurostat is <code>http://eurostat.linked-statistics.org/</code>. We kept same file name for the metadata and the actual dataset containing observation values as they appear in original data and distinguish them by using <code>dsd</code> and <code>data</code> in URI patterns. Further, the code lists which are shared among all datasets are provided by using <code>dic</code> in the pattern. The following URI patterns are used:</p>
+
+                    <p id="uri-patterns_eurostat_metadata"><em>Metadata</em>: (DSDs) have the pattern <code>http://eurostat.linked-statistics.org/dsd/{id}</code>, where id is one of the dataset's metadata file.</p>
+                    <p id="uri-patterns_eurostat_datasets"><em>Datasets</em>: are within <code>http://eurostat.linked-statistics.org/data/{id}</code>, where id is the filename for the dataset containing observation values.</p>
+                    <p id="uri-patterns_eurostat_code-lists"><em>Code lists</em>: use the pattern <code>http://eurostat.linked-statistics.org/dic/{id}</code>, where id is the dictionary filename.</p>
+                    <p id="uri-patterns_eurostat_observations"><em>Observations</em>: use the pattern <code>http://eurostat.linked-statistics.org/data/{dataset}#{dimension1},{dimensionN}</code>, where the order of dimension values in the URI space depends on the order of dimension values present in the data set.</p>
 
                     <h5 id="uri-patterns_world-bank">World Bank</h5>
                     <p>New URIs for classifications and properties were created because majority of the properties and concepts did not already exist in the wild, and in cases where they did, they did not fully correspond with the World Bank's. For instance, the country codes in the World Bank data are not only composed of concepts of countries, but also other geopolitical areas and income levels.</p>
@@ -595,6 +624,19 @@
 
 
                     <h4 id="data-structure-definition">Data Structure Definitions</h4>
+
+                    <h5 id="data-structure-definition_cso-ireland">CSO Ireland</h5>
+                    <p>In most cases, the data structure of the 2006 Irish Census data in RDF follows the structure of the source data, even though the transposition of the modelling patterns from the original data to its RDF version was not optimal from the perspective of modelling data in the Data Cube vocabulary. For example, for every source file representing an individual view on the Census data an instance of <code>qb:DataStructureDefinition</code> was created with dimensions that preserved the structure of the original file. Following this guideline data aggregation into a multidimensional data cube was deferred to a later stages of data processing.</p>
+
+                    <p>Nevertheless, the guideline of preserving the original data structure was not adhered to in all of the cases. There were labels used inconsistently in the source data. For example, both "Geographical Area" and "Geographic Area" were used in the data. In such cases, where multiple labels referred to the same concept, they were merged.</p>
+
+                    <p>The same treatment was applied on the extracted code lists that were reconstructed in RDF in a way copying their original structure. For example, multiple separate code lists for age were recreated in RDF and mapped together. A number of code lists featured "Total" as a coded value. This practice was also retained in RDF versions of these code lists.</p>
+
+                    <h5 id="data-structure-definition_eurostat">Eurostat</h5>
+                    <p>Eurostat publishes data structure definition of each dataset separately. Eurostat data structure definition consists of <em>concepts</em>, <em>code lists</em> and <em>components</em>. The <em>component</em> wraps all of the <em>concepts</em> and their associated <em>code lists</em> defined in a particular data structure definition. We defined all concepts as <code>skos:Concept</code> in our modeling approach. Further, all the code lists were defined as <code>skos:ConceptScheme</code>.</p>
+
+                    <p>Eurostat publishes their own code lists as well as reuse SDMX code lists. For example, Eurostat uses their own custom code list to represent different indicators but reuse Frequency code lists from <a href="http://sdmx.org/wp-content/uploads/2009/01/02_sdmx_cog_annex_2_cl_2009.pdf">SDMX content-oriented guidelines</a> [<a href="#r_20">20</a>].</p>
+
                     <h5 id="data-structure-definition_world-bank">World Bank</h5>
                     <p>Each dataset from the World Bank was treated on a case by case basis for DSDs as they had different data models:</p>
                     <ul>
@@ -608,6 +650,34 @@
 
 
                     <h3 id="data-conversion">Data Conversion</h3>
+
+                    <h4 id="data-conversion_cso-ireland">CSO Ireland</h4>
+                    <p>The conversion of 2006 Irish Census data was conducted with a custom Python script based on librdf [<a href="#r_21">21</a>]. Due to a relatively small volume of the data the conversion was initially implemented using an in-memory RDF store. Nevertheless, we have discovered it to be insufficient for every but the smallest datasets. Consequently, to cater for the larger datasets, the implementation switched to a file back-end based on <a href="http://www.oracle.com/technetwork/products/berkeleydb/overview/index.html">BerkeleyDB</a> [<a href="#r_22">22</a>].</p>
+
+                    <p>Still, the back-end was not capable of handling the computation of aggregated values using SPARQL queries. To compute aggregates a more performant, standalone triple store would be needed. Ultimately, we have decided to keep the back-end and postpone generation of aggregate values to a later stage when the data would be loaded into a triple store.</p>
+
+                    <p>Another implementation trade-off that we had to make was related to the SPARQL engine in librdf. Due to the engine not being able to execute certain types of SPARQL queries, queries were de-optimized in order for the engine to process them. For example, direct use of URIs in SPARQL graph patterns was not handled properly so that the URIs were matched in the <code>FILTER</code> clause.</p>
+
+                    <p>The most time consuming task of the conversion regarded "reverse engineering" of code lists used in the data. Most code lists were reconstructed manually from the headers and column names in the original data. However, unlike the majority of code lists containing several items, geographical code lists were too large to be processed manually and thus it was necessary to automate their extraction. Geographical code lists, such as the enumeration areas, had to be distilled from the statistical data referring to them. Since the statistical data contained little information about the code lists (e.g., code-name pairs), it was difficult to establish identity in them (e.g., resolve name clashes).</p>
+
+                    <h4 id="data-conversion_eurostat">Eurostat</h4>
+                    <p>Various tools have been used in the publishing process: our custom-written Java program was first used to download and transform the Eurostat datasets, meta data and the code lists into RDF. Eurostat publishes more than 6100 datasets which when converted into RDF took more than 537GB of disk space yielding ~8 billion triples altogether. Instead of hosting such a huge number of triples via an SPARQL endpoint, we generated a catalog file which contains a set of triples specifying the location of a particular dataset on the file system.</p>
+
+                    <p>The updated datasets are reflected through <code>lastUpdate</code> date field associated to each dataset in the table of contents file. We have scheduled a cron job which runs every weekend and execute the following steps:</p>
+
+                    <ol>
+                        <li>Download the new table of contents file and compare it against last week table of contents file. Compare the <code>lastUpdate</code> field from the two table of contents file for each dataset;</li>
+                        <li>For all those datasets, whose <code>lastUpdate</code> field has changed, add them to the conversion list;</li>
+                        <li>For each dataset in the conversion list, invoke the necessary scripts to download dataset and their associated meta data and transform them into RDF.</li>
+                        <li>Replace existing RDF datasets as well as metadata with the new updated RDF datasets and metadata;</li>
+                        <li>Update SPARQL endpoint;</li>
+                        <li>Replace the old table of contents file with the new table of contents file for comparison in the next week cron job.</li>
+                    </ol>
+
+                    <p>The approximate time of updating Eurostat RDF datasets on weekly basis is 3-4 days depending on the number of datasets updated or added in a week time. We have also setup a mailing list which provides information on our weekly updates to the interested Eurostat users. After the update has been completed, an email is automatically sent to the mailing list describing the number of datasets which has been modified, added, and deleted.</p>
+
+                    <p>Some of the code list names in Eurostat reuse the names in SDMX-XML codes, hence, they were kept as is since the RDF Data Cube vocabulary already uses SDMX-RDF. For other cases, they were renamed to closest possible vocabularies in RDF.</p>
+
                     <h4 id="data-conversion_world-bank">World Bank</h4>
                     <p>XSLT 2.0 stylesheets were created to transform the source XML files to target RDF/XML serializations. Saxon's command-line XSLT and XQuery Processor tool was used for the transformations, and employed as part of Bash scripts to iterate through all the files in the datasets. The conversion step from the command-line with <code>saxonb-xslt</code> under the Ubuntu operating system was preferred over Java's <code>SAXTransformerFactory</code> Class as it was significantly faster in preliminary tests.</p>
 
@@ -619,6 +689,30 @@
                     <h4 id="data-interlinking">Data Interlinking</h4>
                     <p>Interlinking things and concepts from our RDF datasets to external datasets in the LOD Cloud was a challenging task. It primarily requires the investigation of identifying eligible resource types in our datasets, and then finding suitable matches that are available externally. One useful requirement was to make sure that the target resources were dereferenable in order to make the interlinking worthwhile. Tables [<a href="#data-interlinking_cso-ireland_table">1</a>], [<a href="#data-interlinking_eurostat_table">2</a>], [<a href="#data-interlinking_world-bank_table">3</a>] gives an overview of the targeted external datasets, entity types, links, and counts for each case three cases respectively.</p>
 
+                    <h5 id="data-interlinking_cso-ireland">CSO Ireland</h5>
+                    <p>Interlinking for CSO Ireland was done by manually investigating useful URIs.</p>
+                    <table id="data-interlinking_cso-ireland_table">
+                        <caption><strong>Table 1.</strong> Interlinks in CSO Ireland</caption>
+                        <thead><tr><th>Target dataset</th><th>Entity type</th><th>Link type</th><th>Link count</th></tr></thead>
+                        <tbody>
+                            <tr><td><a href="http://dbpedia.org/">DBpedia</a></td><td><code>dbo:Country</code></td><td><code>owl:sameAs</code></td><td>52</td></tr>
+                            <tr><td><a href="http://dbpedia.org/">DBpedia</a></td><td><code>skos:ConceptScheme</code></td><td><code>skos:closeMatch</code></td><td>9</td></tr>
+                            <tr><td><a href="http://dbpedia.org/">DBpedia</a></td><td><code>skos:Concept</code></td><td><code>skos:exactMatch</code></td><td>5</td></tr>
+                            <tr><td><a href="http://sws.geonames.org/">Geonames</a></td><td><code>skos:Concept</code></td><td><code>skos:exactMatch</code></td><td>4</td></tr>
+                        </tbody>
+                    </table>
+
+                    <h5 id="data-interlinking_eurostat">Eurostat</h5>
+                    <p>The <a href="http://www4.wiwiss.fu-berlin.de/bizer/silk/">Silk Framework</a> [<a href="#r_24">24</a>] is used to publish initial link sets.</p>
+
+                    <table id="data-interlinking_eurostat_table">
+                        <caption><strong>Table 2.</strong> Interlinks in Eurostat</caption>
+                        <thead><tr><th>Target dataset</th><th>Entity type</th><th>Link type</th><th>Link count</th></tr></thead>
+                        <tbody>
+                            <tr><td><a href="http://dbpedia.org/">DBpedia</a></td><td><code>dbo:Country</code></td><td><code>owl:sameAs</code></td><td>1899</td></tr>
+                            <tr><td><a href="http://linkedgeodata.org/">LinkedGeoData</a></td><td><code>lgdo:Country</code></td><td><code>owl:sameAs</code></td><td>1876</td></tr>
+                        </tbody>
+                    </table>
 
                     <h5 id="data-interlinking_world-bank">World Bank</h5>
                     <p>The dataset is interlinked using <a href="http://aksw.org/Projects/limes">LInk discovery framework for MEtric Spaces</a> (<dfn><abbr title="LInk discovery framework for MEtric Spaces">LIMES</abbr></dfn>) [<a href="#r_25">25</a>]. While a great portion of the codes were matched automatically, it included a review step to catch false positives, true and false negatives, as well as curating the final results. Some of the code list concepts were manually matched with corresponding links in DBpedia using <code>skos:exactMatch</code>es and <code>skos:closeMatch</code>es, as well as to the World Bank site using <code>foaf:page</code>s.</p>
@@ -640,12 +734,38 @@
                     <h4 id="data-enrichment">Data Enrichment</h4>
                     <p>In this section we talk about some of the ways that we've tried to enrich the original data by adding information such that the datasets can be more useful, easily discovered, interlinked or queried.</p>
 
+                    <h5 id="data-enrichment_cso-ireland">CSO Ireland</h5>
+                    <p>The only data enrichment for CSO Ireland was the addition of World Geodetic System <dfn><abbr title="World Geodetic System">WGS</abbr></dfn> triples using <code>rdf:type</code> of <code>wgs:Point</code>, as well as latitude and longitude using <code>wgs:lat</code> and <code>wgs:long</code> to the descriptions of Irish city resources.</p>
+
+                    <h5 id="data-enrichment_eurostat">Eurostat</h5>
+                    <p><code>rdf:datatype</code>s were added to observation values in each dataset. The reason is some datasets has combination of numeric and decimal values which makes it harder to query or the user has to cast the datatype for observation values with different data types before making query. To avoid data type casting at query level, we pre processed all observation values of a dataset and associated the appropriate data type to all observation values in a particular dataset before serializing it into RDF.</p>
+
                     <h5 id="data-enrichment_world-bank">World Bank</h5>
                     <p>A code list for currencies was created based on <a href="http://www.currency-iso.org/iso_index/iso_tables/iso_tables_a1.htm">ISO 4217</a> currency and funds name [<a href="#r_26">26</a>] to represent the SDMX attributes for the amount measurements in the World Bank Finances datasets. They were also linked to each country which officially uses that currency. Given that some of the codes in the World Bank country code list are not considered to be countries e.g., <code>1W</code> representing <em>World</em>, only the resources which represented a real country have an added <code>rdf:type</code> instance of <code>dbo:Country</code>.</p>
 
 
                     <h4 id="rdf-datasets">RDF Datasets</h4>
                     <p>Tables [<a href="#linked-dataset_cso-ireland_table">4</a>], [<a href="#linked-dataset_eurostat_table">5</a>], [<a href="#linked-dataset_world-bank_table">6</a>] outlines the current state of RDF Linked Datasets for CSO Ireland, Eurostat, and World Bank. The size of the dataset are in rounded number of triples. The <a href="#void">datasets' VoID files</a> would normally contain exact numbers.</p>
+
+
+                    <table id="linked-dataset_cso-ireland_table">
+                        <caption><strong>Table 4.</strong> CSO Ireland Linked Data</caption>
+                        <thead><tr><th>Dataset</th><th>Format</th><th>Size</th><th>Number of triples</th><th>Number of observations</th></tr></thead>
+                        <tbody>
+                            <tr><th>2006 Irish Census</th><td>Turtle</td><td>776MB</td><td>12M</td><td>1.6M</td></tr>
+                        </tbody>
+                    </table>
+
+                    <table id="linked-dataset_eurostat_table">
+                        <caption><strong>Table 5.</strong> Eurostat Linked Data</caption>
+                        <thead><tr><th>Dataset</th><th>Format</th><th>Size</th><th>Number of triples</th><th>Number of observations</th></tr></thead>
+                        <tbody>
+                            <tr><th>Datasets</th><td>RDF/XML</td><td>537GB</td><td>8B</td><td>1B</td></tr>
+                            <tr><th>DSDs</th><td>Turtle</td><td>347MB</td><td>6M</td><td>N/A</td></tr>
+                            <tr><th>Code lists</th><td>RDF/XML</td><td>21MB</td><td>0.3M</td><td>N/A</td></tr>
+                        </tbody>
+                    </table>
+
                     <table id="linked-dataset_world-bank_table">
                         <caption><strong>Table 6.</strong> World Bank Linked Data</caption>
                         <thead><tr><th>Dataset</th><th>Format</th><th>Size</th><th>Number of triples</th><th>Number of observations</th></tr></thead>
@@ -660,6 +780,10 @@
 
 
                     <h3 id="data-license">Data License</h3>
+                    <h4 id="data-license_cso-ireland">CSO Ireland</h4>
+                    <p>The use of the 2006 Irish Census data is governed by the Re-use of <a href="http://www.cso.ie/en/aboutus/dissemination/re-useofpublicsectorinformation/">Public Sector Information Statutory Instrument 279/2005</a> [<a href="#r_27">27</a>], which allows reuse provided that the creator (i.e., CSO) is attributed, the information is represented in an accurate way, and the information is used for a non-commercial purpose.</p>
+                    <h4 id="data-license_eurostat">Eurostat</h4>
+                    <p>The actual Eurostat datasets adhere to <a href="http://epp.eurostat.ec.europa.eu/portal/page/portal/about_eurostat/policies/copyright_licence_policy">Eurostat's terms of use</a> [<a href="#r_28">28</a>] while the RDF data is licensed under <a href="http://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal (CC0 1.0) Public Domain Dedication</a> [<a href="#r_29">29</a>].</p>
                     <h4 id="data-license_world-bank">World Bank</h4>
                     <p>In addition to adhering to <a href="http://go.worldbank.org/OJC02YMLA0">World Bank's terms of use</a> [<a href="#r_30">30</a>], the RDF data that is published is licensed under CC0 1.0 Universal (CC0 1.0) Public Domain Dedication.</p>
 
@@ -670,7 +794,7 @@
                     <h4 id="data-provenance">Data Provenance</h4>
                     <p>Table <a href="data-provenance_table">7</a> outlines the vocabulary terms that are used in particular to provenance information in all three case studies. The provenance metadata for 2006 Irish Census was not created during the process of conversion to RDF. Some of the properties were added to the VoID file at a later stage.</p>
 
-                    <table class="todo" id="data-provenance_table" title="If not using all case-studies, remove the other two">
+                    <table id="data-provenance_table">
                         <caption><strong>Table 7.</strong> Provenance in CSO Ireland, Eurostat and World Bank Linked Datasets</caption>
                         <thead><tr><th>Type of provenance</th><th>CSO Ireland</th><th>Eurostat</th><th>World Bank</th></tr></thead>
                         <tbody>
@@ -690,23 +814,44 @@
 
                     <h4 id="void">VoID</h4>
                     <p>We use describe the Linked Datasets with the <a href="http://www.w3.org/TR/void/">VoID</a> vocabulary [<a href="#r_31">31</a>]. It is generally intended to give an overview of the dataset metadata i.e., what it contains, ways to access it or query it.</p>
+
+                    <h5 id="void_cso-ireland">CSO Ireland</h5>
+                    <p>A <a href="http://data-gov.ie/.well-known/void">VoID</a> file is compiled for the CSO Ireland datasets [<a href="#r_32">32</a>]. The information included, but not limited to is, locations to RDF datadumps, named graphs that are used in the SPARQL endpoint, used vocabularies, size of the datasets, and interlinks to external datasets.</p>
+                    <h5 id="void_eurostat">Eurostat</h5>
+                    <p>The VoID file is planned for next Eurostat Linked Data release.</p>
                     <h5 id="void_world-bank">World Bank</h5>
                     <p>A <a href="http://worldbank.270a.info/.well-known/void">VoID</a> file is compiled for the World Bank Linked Datasets [<a href="#r_33">33</a>]. The information included, but not limited to is, locations to RDF datadumps, named graphs that are used in the SPARQL endpoint, used vocabularies, size of the datasets, and interlinks to external datasets. Granular set of dataset statistics in generated and also included in the VoID file using <a href="http://aksw.org/projects/LODStats">LODStats</a> [<a href="#r_34">34</a>].</p>
 
 
                     <h4 id="user-interface">User-interface</h4>
                     <p>Here we briefly discuss how the published data can be access primarily using a Web browser.</p>
+                    <h5 id="user-interface_cso-ireland">CSO Ireland</h5>
+                    <p>The website is located at <code><a href="http://data-gov.ie/">http://data-gov.ie/</a></code> [<a href="#r_35">35</a>]. The HTML pages are generated and published by the <a href="https://github.com/csarven/linked-data-pages">Linked Data Pages</a> framework [<a href="#r_36">36</a>]. Linked Data Pages is used to invoke unique SPARQL queries based on the requested URI. The results are outputted in corresponding HTML templates. Links to alternate RDF formats as well as in JSON are handled by content-negotiation. Given the nature of the invoked SPARQL query, alternate formats may contain additional triples like labels for the vocabulary terms that&#8217;s not in the RDF dumps. This minor difference is mentioned for the users on the site. For some resources e.g., Cities, <a href="https://google-developers.appspot.com/chart/">Google Charts Tools</a> [<a href="#r_37">37</a>] is used to display various visualizations in place of the tabular data in the HTML.</p>
+                    <h5 id="user-interface_eurostat">Eurostat</h5>
+                    <p>The website is located at <code><a href="http://eurostat.linked-statistics.org/">http://eurostat.linked-statistics.org/</a></code> [<a href="#r_38">38</a>] where it contains custom static HTML pages, with links to dump directories, and SPARQL endpoint.</p>
+
                     <h5 id="user-interface_world-bank">World Bank</h5>
-                    <p>The website is located at <code><a href="http://worldbank.270a.info/">http://worldbank.270a.info/</a></code> [<a href="#r_39">39</a>]. The HTML pages are generated and published with <a href="https://github.com/csarven/linked-data-pages">Linked Data Pages</a> [<a href="#r_36">36</a>]. Linked Data Pages is used to invoke unique SPARQL queries based on the requested URI. The results are outputted in corresponding HTML templates. Links to alternate RDF formats as well as in JSON are handled by content-negotiation. Given the nature of the invoked SPARQL query, alternate formats may contain additional triples like labels for the vocabulary terms that&#8217;s not in the RDF dumps. This minor difference is mentioned for the users on the site. For some resources e.g., Cities, <a href="https://google-developers.appspot.com/chart/">Google Charts Tools</a> [<a href="#r_37">37</a>] is used to display various visualizations in place of the tabular data in the HTML.</p>
+                    <p>The website is located at <code><a href="http://worldbank.270a.info/">http://worldbank.270a.info/</a></code> [<a href="#r_39">39</a>]. The publication of approach of the World Bank Linked Data is same as CSO Ireland.</p>
+
+
 
                     <h4 id="sparql-endpoint">SPARQL Endpoint</h4>
+<p class="todo">Public, Performance (optimization with TDB)</p>
                     <p>The SPARQL endpoints are accessible publicly with no authorization requirements. As a trade-off, the SPARQL service is subject to high resource demands from the server for certain query types. No query restrictions were placed in neither of the cases.</p>
+                    <h5 id="sparql-endpoint_cso-ireland">CSO Ireland</h5>
+                    <p>Same setup as World Bank with its own <a href="http://data-gov.ie/sparql">SPARQL endpoint</a>. The endpoint allows access to the full schema and datasets, and uses named graphs.</p>
+                    <h5 id="sparql-endpoint_eurostat">Eurostat</h5>
+                    <p>Same setup as World Bank with its own <a href="http://eurostat.linked-statistics.org/sparql">SPARQL endpoint</a>. This endpoint includes only the schema and excludes the data (~533GB RDF/XML) due to the limitation of the available resources and performance reasons.</p>
                     <h5 id="sparql-endpoint_world-bank">World Bank</h5>
                     <p>Apache Jena&#8217;s <a href="http://incubator.apache.org/jena/documentation/tdb/">TDB</a> [<a href="#r_40">40</a>] storage system and <a href="http://incubator.apache.org/jena/documentation/serving_data/index.html">Fuseki</a> [<a href="#r_41">41</a>] is used to run the SPARQL server. Data in RDF format was incrementally loaded from into TDB RDF store using Jena's <code>tdbloader</code> script from command-line. A public <a href="http://worldbank.270a.info/sparql">SPARQL endpoint</a> is available which accepts SPARQL 1.1 queries. The endpoint allows access to the full schema and datasets, and uses named graphs.</p>
-                    <p class="todo">Public, Performance (optimization with TDB)</p>
+
 
                     <h4 id="data-dumps">Data Dumps</h4>
                     <p>The data dumps come in different formats, primarily either available in native RDF formats, or they are compressed for easy retrieval. Dumps are usually made visible by a link on the sites, or mentioned in the VoiD files. They are also <a href="dataset-announcement">announced in the Data Hub</a>.</p>
+                    <h5 id="data-dumps_cso-ireland">CSO Ireland</h5>
+                    <p>The <a href="http://data-gov.ie/data/">CSO Ireland's RDF data dumps</a> [<a href="#r_42">42</a>] are available in RDF Turtle compressed with gzip.</p>
+                    <h5 id="data-dumps_eurostat">Eurostat</h5>
+                    <p>The <a href="http://eurostat.linked-statistics.org/data/">Eurostat's RDF data dumps</a> [<a href="#r_43">43</a>] are available as individual RDF/XML files from the file system.</p>
                     <h5 id="data-dumps_world-bank">World Bank</h5>
                     <p>The <a href="http://worldbank.270a.info/data/">World Bank's RDF data dumps</a> [<a href="#r_44">44</a>] are available either as individual RDF/XML files or in compressed gzip format.</p>
 

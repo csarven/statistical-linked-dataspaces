@@ -166,10 +166,18 @@ code {
 font-family:"Courier New", monospace;
 word-wrap: break-word;
 }
+#data-provenance_table code {
+word-break:normal;
+}
+
 
 dt { font-weight:bold; }
 dd {
 margin:0.5em 0 1em 1em;
+}
+
+ol, ul, p, dd {
+text-align:justify;
 }
 
 #authors {
