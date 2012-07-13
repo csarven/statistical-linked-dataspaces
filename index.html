@@ -72,9 +72,9 @@
                         </ul>
                     </div>
 
-                    <h2>Acknowledgements</h2>
+                    <h2 id="acknowledgements">Acknowledgements</h2>
 
-                    <h2>Contents</h2>
+                    <h2 id="contents">Contents</h2>
                     <ul>
                         <li>...</li>
                     </ul>
@@ -137,7 +137,7 @@
 
 
                     <h3 id="linked-data">Linked Data</h3>
-                    <p>One manifestation of the Semantic Web vision is Linked Data. It is the a pragmatic approach to publishing structured data on the Web in order to discover related data from different sources. The original design principles was put forward by <a about="http://csarven.ca/#i" rel="foaf:knows" href="http://www.w3.org/People/Berners-Lee/card#i">Sir Tim Berners-Lee</a> in 2006 as follows:</p>
+                    <p>One manifestation of the Semantic Web vision is Linked Data. It is the a pragmatic approach to publishing structured data on the Web in order to discover related data from different sources. The <a href="http://www.w3.org/DesignIssues/LinkedData.html">Linked Data design principles was put forward by <a about="http://csarven.ca/#i" rel="foaf:knows" href="http://www.w3.org/People/Berners-Lee/card#i">Sir Tim Berners-Lee</a> in 2006 as follows:</p>
 
                     <blockquote about="http://www.w3.org/People/Berners-Lee/card#i" rel="dcterms:creator" href="http://www.w3.org/DesignIssues/LinkedData.html">
                         <ol id="linked-data-design-principles">
@@ -219,22 +219,9 @@
                     </figure>
 
                     <h3 id="requirements">Requirements</h3>
-<!--
-                    <p>Analysis of the original datasets (CSO Ireland, Eurostat, World Bank): What's available, why and what we are interested in (, what we need to prepare to access them?)</p>
-                    <h3>Quantity: Huge amount of observations.. characteristics of the datasets (codelists.. in order to interpret observations).. how frequently are they updated (lower-upper bound)? Quality issues.. Provenance.. Not technically. Understanding / Analysis of the datasets.. How are they available (dumps, APIs)</h3>
--->
                     <p>A set of requirements to create a statistical Linked Dataspace are derived from the case studies of deploying CSO Ireland, Eurostat, and World Bank Linked Data. The requirements will be based on analysis of the original data sources, such as their characteristics in terms of quality, quantity, and update frequency.</p>
 
-                    <p>A high-level inspection of published statistical data reveals itself as a collection of significant amounts of data, that's compiled over time by different parties. Naturally the quality of the data sources vary from one publisher to the next, as they try to cater to different publishing criteria. For instance, statistical data is often available in different data formats (e.g., CSV, XML, JSON, SDMX-ML, PC-Axis), with varying vocabularies and thesaurus that's specific to publisher's view about the data. In terms of consumption, one particular example is as follows: the usefulness of raw data that is available in CSV format may depend on the availability and quality of the metadata for the terms that are used in the file. The shape in which the data is available, sets the tone for the data consumer. The data consumers need to make decisions based on the amount of work involved to obtain and work with such data in their own space.</p>
-
-<div class="todo">
-The shape in which the data is available, sets the tone for the data consumer.> ... characteristics of the data..
-here is the original data.. and here is what we are trying to do with the data..
-.. fresh data, such and such interface on top of it because that makes sense for the users of the data, we don't want to spend so much time doing x,y,z.
-1. what's in the data
-2. what do you want to do with it?
-</div>
-
+                    <p>A high-level inspection of published statistical data reveals itself as a collection of significant amounts of data, that's compiled over time by different parties. Naturally the quality of the data sources vary from one publisher to the next, as they try to cater to different publishing criteria. For instance, statistical data is often available in different data formats (e.g., CSV, XML, JSON, SDMX-ML, PC-Axis), with varying vocabularies and thesaurus that's specific to publisher's view about the data. In terms of consumption, one particular example is as follows: the usefulness of raw data that is available in CSV format may depend on the availability and quality of the metadata for the terms that are used in the file. The shape in which the data is available, sets the tone for the data consumer. That is, the characteristics of the original data sets some boundaries on how well it can be reused by the others. This is typically because the consumer wants to do something with the data but to what extend they can accomplish that is really dependent on the input quality.</p>
 
                     <p>Therefore, it is reasonable to conclude that a number of decisions need to be made in order to prepare the dataspace for retrieval and reuse. A questionnaire along the following the lines can help determine core requirements by analysing each case study:</p>
                     <dl id="requirements-questionnaire">
@@ -258,6 +245,7 @@ here is the original data.. and here is what we are trying to do with the data..
                         <dt id="requirements-questionnaire_processing">Processing</dt>
                         <dd>Is the necessary tooling in place in order to work with the available formats?</dd>
                         <dd>Are the data files syntactically well-formed?</dd>
+                        <dd>What are some of the candidates for things which can be interlinked?</dd>
 
                         <dt id="requirements-questionnaire_publication">Publication</dt>
                         <dd>What's the data license and terms of use?</dd>
@@ -303,14 +291,14 @@ here is the original data.. and here is what we are trying to do with the data..
                         <dt id="core-requirements_transformation-tools">Transformation tools</dt>
                         <dd><em class="rfc2119">Must</em> have a set of tools to preprocess and convert non-RDF structured data to RDF. This primarily includes tools that would allow inspections, modifications, and conversion of the data into other formats.</dd>
                         <dt id="core-requirements_enrichment-tools">Enrichment tools</dt>
-                        <dd><em class="rfc2119">Must</em> have a set of tools that can help to improve on the existing data. In order to fulfil the <a href="#linked-data-design-principle_4">4<sup>th</sup> Linked Data design principle</a> some of the important resources in the data needs to be interlinked with resources elsewhere. Therefore, the dataspace should either have tools to semi-automate the discovery of potential resources, or provide ways to manually find such resources. Another way to enrich existing data would be by way of aggregating related or useful data that's not in the original data.</dd>
+                        <dd><em class="rfc2119">Must</em> have a set of tools that can help to improve on the existing data. In order to fulfil the <a href="#linked-data-design-principles_4">4<sup>th</sup> Linked Data design principle</a> some of the important resources in the data needs to be interlinked with resources elsewhere. Therefore, the dataspace should either have tools to semi-automate the discovery of potential resources, or provide ways to manually find such resources. Another way to enrich existing data would be by way of aggregating related or useful data that's not in the original data.</dd>
                         <dt id="core-requirements_vocabularies">Vocabularies</dt>
                         <dd><em class="rfc2119">Must</em> have an RDF vocabulary to describe the statistical data model. <em class="rfc2119">Should</em> have a set of vocabularies that can describe the relationships in the data, code lists, and metadata for the datasets.</dd>
                         <dt id="core-requirements_data-synchronisation">Data Synchronisation</dt>
                         <dd><em class="rfc2119">Should</em> keep up to date with the changes that are made to the original data. This is important as far as making sure that the data is accurate and relevant.</dd>
 
                         <dt id="core-requirements_publication">Publication</dt>
-                        <dd><em class="rfc2119">Must</em> publish the data that's consumable in any one of the standardized RDF formats, and allow SPARQL queries to be run over the data given the <a href="#linked-data-design-principle_3">3<sup>rd</sup> Linked Data design principle</a>. <em class="rfc2119">May</em> provide RDF data dumps in order to allow data consumers to easily retrieve the full dataset. <em class="rfc2119">Should</em> provide an HTML interface to browse through the data or its catalog for human consumption.</dd>
+                        <dd><em class="rfc2119">Must</em> publish the data that's consumable in any one of the standardized RDF formats, and allow SPARQL queries to be run over the data given the <a href="#linked-data-design-principles_3">3<sup>rd</sup> Linked Data design principle</a>. <em class="rfc2119">May</em> provide RDF data dumps in order to allow data consumers to easily retrieve the full dataset. <em class="rfc2119">Should</em> provide an HTML interface to browse through the data or its catalog for human consumption.</dd>
                     </dl>
 
 
