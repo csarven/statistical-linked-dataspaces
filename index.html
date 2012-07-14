@@ -187,8 +187,7 @@
 
 
                     <h3 id="linked-data-lifecycles">Lifecycles</h3>
-                    <p>Summarize all of the lifecycles: http://www.w3.org/2011/gld/wiki/GLD_Life_cycle</p>
-                    <p>Are they generic or government or statistical</p>
+                    <p class="todo" title="Are they generic or government or statistical.. what's common">Summarize all lifecycles: http://www.w3.org/2011/gld/wiki/GLD_Life_cycle</p>
                     <ul>
                         <li>Hyland et al.</li>
                         <li>Hausenblas et al. http://linked-data-life-cycles.info/</li>
@@ -314,7 +313,7 @@
 
 
                     <h2 id="components">Components</h2>
-                    <p>Are you still reading this? That's great, thank you dear reader. At this point, you are probably interested in the purpose of this chapter. It is fairly straight forward: to identify a concrete list of required components to realize a statistical Linked Dataspace, and in depth explanations of the technologies that are contributed in order to improve on areas for improvement. The purpose of the discussion on the missing technologies and the implementations is to essentially fill-in some of the current gaps in Linked Dataspaces.</p>
+                    <p>This chapter will identify a concrete list of required components to realize a statistical Linked Dataspace, give an in-depth explanation of the contributed technologies to fill-in some of the gaps in Linked Dataspaces</p>
 
                     <p>Given the requirements to publish a statistical Linked Dataspace as discussed earlier, Table 9 outlines a list of required components to realize such space with example implementations. If we take a look at the <a href="#figure_linked-dataspaces">Linked Dataspace architecture</a> again, we can see how some of these components and services are grouped together.</p>
 
@@ -324,24 +323,25 @@
                             <tr><th>Components</th><th>Implementations</th></tr>
                         </thead>
                         <tbody>
-                            <tr><td>Environment</td><td>OS: Linux, Mac, Windows; Server: Apache, IIS</td></tr>
+                            <tr><td>Environment</td><td>Linux, Apache</td></tr>
                             <tr><td>Data retrieval</td><td>CURL, Java, LDSpider, wget</td></tr>
                             <tr><td>Data preprocessing</td><td>Manual with custom scripts, Google Refine</td></tr>
                             <tr><td>Data modeling</td><td>Google Refine, Manual, Neologism</td></tr>
                             <tr><td>Data conversion</td><td>XSLT, CSV2RDF, D2R</td></tr>
                             <tr><td>RDF store and SPARQL servers</td><td>TDB, Fuseki, Virtuoso, Sesame, 4store</td></tr>
-                            <tr><td>Loading RDF data to RDF store</td><td>Manual with custom scripts</td></tr>
+                            <tr><td>Loading RDF data into RDF store</td><td>Manual with custom scripts</td></tr>
                             <tr><td>RDF store optimization</td><td>TDBstats</td></tr>
-                            <tr><td>Interlinking</td><td>Manual, LIMES, Silk</td></tr>
-                            <tr><td>Enrichment</td><td>Manual, Stanbol</td></tr>
-                            <tr><td>User interface</td><td>Callimachus, Linked Data API, OpenLink Data Explorer, Pubby</td></tr>
+                            <tr><td>Interlinking</td><td>Manual inspection and selection, SemFM, Silk, LIMES</td></tr>
+                            <tr><td>Enrichment</td><td>Manual, DL-Learner, Stanbol</td></tr>
                             <tr><td>Database metadata</td><td>VoID, LODStats</td></tr>
                             <tr><td>Data dumps</td><td>File system</td></tr>
-                            <tr><td>Applications</td><td>LodLive, SGVizler, Tabulator</td></tr>
+                            <tr><td>User interface</td><td>Callimachus, Linked Data API, OpenLink Data Explorer, Pubby</td></tr>
+                            <tr><td>Applications</td><td>LodLive, Sig.ma, SGVizler, Tabulator</td></tr>
                         </tbody>
                     </table>
 
                     <p>For some of the components, there are several implementations that are publicly available for use. A range of improvements can be done for each implementation with varying complexity. In the case studies, two areas in particular were identified for possible areas for improvements given the state of the art of publicly available technologies: loading of RDF data to RDF store, and presenting an interface for humans.</p>
+
                     <p>It turned out that loading RDF data was a recurring task that had to be performed by the administrator. Hence, the <a href="#graphpusher">GraphPusher</a> tool was built to improve on the manual approach by automating bulk data. GraphPusher was primarily used to help to deploy the Irish Government Linked Dataspace at <a href="http://data-gov.ie/">DataGovIE</a> and this is a report on preliminary findings on using this tool. As discussed in data sources for CSO Ireland, the data primarily consists of statistical data about the Irish population.</p>
 
                     <p>On a similar note, <a href="#linked-data-pages">Linked Data Pages</a> was written to provide better control over front-end templating system to present a Web interface for RDF data. The Linked Data Pages framework was used to publish CSO Ireland and <a href="http://worldbank.270a.info/">World Bank</a> Linked Dataspaces.</p>
@@ -522,21 +522,16 @@
 
                     <p>From the implementation side, Linked Data Pages provides results based on the URI pattern that is triggered. In other words, what information a resource contains and how it is represented is determined at the level of the URI itself. An alternative approach to outputting an HTML document would be based on the characteristics of the resource at hand. That is, the triple graph pattern from a SPARQL query result would allow the developer to shift through the results and assign a template in context of the triples at hand.</p>
 
-                    <p>LDP is capable of taking care of the bulk of the work that's required to publish Linked Data. The <a href="http://csarven.ca/how-to-create-a-linked-data-site">how to create a Linked Data site</a> explains the full process in further detail, from setting up a SPARQL service, importing data, to publishing pages using LDP.</p>
+                    <p>LDP is capable of taking care of the bulk of the work that's required to publish Linked Data. The <em><a href="http://csarven.ca/how-to-create-a-linked-data-site">How to create a Linked Data site</a></em> document explains the full process in further detail, from setting up a SPARQL service, importing data, to publishing pages using LDP.</p>
 
 
 
 
 
-                    <h2 id="case-studies">Realization of a statistical Linked Dataspace</h2>
-                    <p>In the past couple of years we have witnessed an increasing number of efforts to publish structured data on the Web following the Linked Data principles. This chapter reports on our experiences and lessons learned in the process of publishing statistical data along three case studies: Central Statistics Office Ireland, Eurostat, and World Bank. Comparison of different deployments are made in terms of methodology, URI patterns and vocabularies, metadata, and data access and discuss the underlying design decisions in each case.</p>
+                    <h2 id="case-studies">Realization of statistical Linked Dataspaces</h2>
+                    <p>In the past couple of years we have witnessed an increasing number of efforts to publish structured data on the Web following the Linked Data principles. This chapter reports on our experiences and lessons learned in the process of publishing statistical data along three case studies: Central Statistics Office Ireland, Eurostat, and World Bank. Comparison of different deployments are made in terms of methodology, URI patterns and vocabularies, metadata, and data access and discuss the underlying design decisions in each case. This chapter is explained in further detail in <em><a href="http://csarven.ca/publishing-statistical-linked-data">Publishing Statistical Linked Data</a></em>.</p>
 
-                    <p>The individuals which were involved to make it all happen, in no particular order, are: <a about="http://csarven.ca/#i" rel="foaf:knows" href="http://www.deri.ie/about/team/member/Aftab_Iqbal#me">Aftab Iqbal</a>, <a about="http://csarven.ca/#i" rel="foaf:knows" href="http://keg.vse.cz/resource/person/jindrich-mynarz">Jindřich Mynarz</a>, <a about="http://csarven.ca/#i" rel="foaf:knows" href="http://richard.cyganiak.de/#me">Richard Cyganiak</a>, <a about="http://csarven.ca/#i" rel="foaf:knows" href="http://sw-app.org/mic.xhtml#i">Michael Hausenblas</a>, and yours truly.</p>
-
-<div class="todo">
-                    <p>Describe from the deployment side.. Why TDB, LIMES..</p>
-                    <p>Explain how I've built these spaces</p>
-</div>
+                    <p>The individuals which were involved in making it all happen, in no particular order, are: <a about="http://csarven.ca/#i" rel="foaf:knows" href="http://www.deri.ie/about/team/member/Aftab_Iqbal#me">Aftab Iqbal</a>, <a about="http://csarven.ca/#i" rel="foaf:knows" href="http://keg.vse.cz/resource/person/jindrich-mynarz">Jindřich Mynarz</a>, <a about="http://csarven.ca/#i" rel="foaf:knows" href="http://richard.cyganiak.de/#me">Richard Cyganiak</a>, <a about="http://csarven.ca/#i" rel="foaf:knows" href="http://sw-app.org/mic.xhtml#i">Michael Hausenblas</a>, and yours truly.</p>
 
 
                     <h3 id="architecture">Deployment Architecture</h3>
@@ -716,7 +711,7 @@
 
                     <h3 id="linked-datasets">Linked Datasets</h3>
                     <h4 id="data-interlinking">Data Interlinking</h4>
-                    <p>Interlinking things and concepts from our RDF datasets to external datasets in the LOD Cloud was a challenging task. It primarily requires the investigation of identifying eligible resource types in our datasets, and then finding suitable matches that are available externally. One useful requirement was to make sure that the target resources were dereferenable in order to make the interlinking worthwhile. Tables [<a href="#data-interlinking_cso-ireland_table">1</a>], [<a href="#data-interlinking_eurostat_table">2</a>], [<a href="#data-interlinking_world-bank_table">3</a>] gives an overview of the targeted external datasets, entity types, links, and counts for each case three cases respectively.</p>
+                    <p>Interlinking things and concepts from our RDF datasets to external datasets in the LOD Cloud was a challenging task. It primarily requires an investigation to identify eligible resource types in our datasets, and then finding suitable matching resources in external datasets. One useful requirement was to make sure that the target resources were dereferenable in order to make the interlinking worthwhile. Tables [<a href="#data-interlinking_cso-ireland_table">1</a>], [<a href="#data-interlinking_eurostat_table">2</a>], [<a href="#data-interlinking_world-bank_table">3</a>] gives an overview of the targeted external datasets, entity types, links, and counts for each case three cases respectively.</p>
 
                     <h5 id="data-interlinking_cso-ireland">CSO Ireland</h5>
                     <p>Interlinking for CSO Ireland was done by manually investigating useful URIs.</p>
@@ -808,7 +803,7 @@
                     </table>
 
 
-                    <h3 id="data-loading-to-store">Loading RDF data to RDF store</h3>
+                    <h3 id="data-loading-to-store">Loading RDF data into RDF store</h3>
                     <h4 id="data-loading-to-store_cso-ireland">CSO Ireland</h4>
                     <p>As the data model for CSO Ireland was improved over time, the RDF store had to be loaded several times. In the earlier versions of Fuseki and its TDB RDF store, the RDF store also had to be rebuilt in order to optimize query responses accordingly. GraphPusher was used to help automate bulk-loading. As the size of the 2006 Irish Census RDF data dumps are under 15MB compressed in total, downloading of the dumps to a temporary location multiple times raised no issues.</p>
 
