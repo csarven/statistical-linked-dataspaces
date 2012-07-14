@@ -32,7 +32,7 @@
     <body about="[this:]" typeof="foaf:Document sioc:Post biblio:Paper" class="hfeed journal">
         <div id="wrap">
             <div class="hentry">
-                <h1 property="dcterms:title" class="entry-title">On the design of statistical Linked Dataspaces</h1>
+                <h1 property="dcterms:title" class="entry-title">Statistical Linked Dataspace</h1>
 
                 <div id="authors">
                     <dl>
@@ -470,14 +470,14 @@
 
 
                     <h3 about="[this:#linked-data-pages]" id="linked-data-pages" class="todo" title="Add a screenshot of an HTML view" property="rdfs:label">Linked Data Pages</h3>
-                    <p>It is important to highlight some of the core components which make up a publishing framework for Linked Data. The <a href="#linked-data-design-principles_3">3<sup>rd</sup> Linked Data design principle</a> primarily refers to RDF, a machine readable format. The obvious conclusions we can make from this is that, the mechanism that's required to publish RDF data needs to be able to take in resource requests, look for them in its dataspace, and compile an appropriate response back. This process can work in conjunction with responses to human users as well as machines. That is, with the help of HTTP Accept headers, content-negotiation can be done on the requesting agent's preferences. With this approach, a given URI can be requested in one of the RDF formats, HTML, or even JSON. This provides an opportunity for different types of users to make use of the underlying data.</p>
+                    <p>It is important to highlight some of the core components of a Linked Data framework. The <a href="#linked-data-design-principles_3">3<sup>rd</sup> Linked Data design principle</a> suggests to provide the data in RDF, a machine readable format, in the URI response. The obvious thing we can refer from this is that, the mechanism that's required to publish RDF data needs to be able to take in resource requests, look for them in its dataspace, and compile an appropriate response back. This process can work in conjunction with responses to human users as well as machines. That is, with the help of HTTP Accept headers, content-negotiation can be done on the requesting agent's preferences. With this approach, a given URI can be requested in one of the RDF formats, HTML, or even JSON. This provides an opportunity for different types of users to make use of the underlying data.</p>
 
-                    <p>Figure 8 illustrates a general process from requested URI (input) and response in HTML or RDF (output). The steps which take place are as follows:</p>
+                    <p>Figure 8 illustrates a general process from requested URI (input) to response in HTML or RDF (output). The steps which take place are as follows:</p>
 
                     <ol>
                         <li><em>Request</em>: An agent requests a URI from the server.</li>
                         <li><em>Consolidation</em>: The URI is looked for in the dataspace, and the data it describes is prepared by transforming it into a particular representation.</li>
-                        <li><em>Presentation</em>: An HTML template is prepared for the data for human consumption, as well as an RDF output for the same data.</li>
+                        <li><em>Presentation</em>: Either an HTML template is prepared for human consumption, or an RDF output is generated for the same data.</li>
                         <li><em>Response</em>: Depending on the preferred request format, either HTML or RDF is given back to the user.</li>
                     </ol>
 
@@ -488,9 +488,9 @@
                     </figure>
 
 
-                    <p>As an attempt to use a publishing architecture as such, existing frameworks were investigated in 2010. To name a few, Fresnel, LESS, Pubby, and Paget was explored for <a href="http://data-gov.ie/">DataGovIE</a> website. The idea was to use a tool that 1) had decent number of features for data consolidation, and 2) allowed custom templating for resources. The fundamental shortcomings of these tools appeared to be that on the templating side, they offered de facto generic entity rendering of RDF resources in HTML i.e., a tabular view of properties (key) and objects (value). This was also typically the result of a <code>DESCRIBE</code> SPARQL query for all given resources.</p>
+                    <p>As an attempt to use a publishing architecture as such, existing frameworks were investigated in 2010. To name a few, Fresnel, LESS, Pubby, and Paget was explored for use in <a href="http://data-gov.ie/">DataGovIE</a> website. The idea was to use a tool that 1) had the necessary features for data consolidation, and 2) allowed custom templating for resources. The fundamental shortcomings of these tools appeared to be that on the templating side, they offered de facto generic entity rendering of RDF resources in HTML i.e., a tabular view of properties and objects of a subject resource. This was also typically the result of a <code>DESCRIBE</code> SPARQL query for a given resource such that, it simply gave back whatever the RDF store had for that resource.</p>
 
-                    <p>In order to make the HTML user interface more friendly and have unique resource presentations, the Linked Data Pages (LDP) was developed. The motivation was to not only make the publishing process possible as other attempts, but also to make it easier for publishers to customize the HTML output. Instead of starting from scratch, Paget was extended as it offered a good base of features which matched the goals of DataGovIE. Table 8 illustrates LDP's architecture:</p>
+                    <p>In order to make the HTML user interface more friendly and have unique resource presentations, the Linked Data Pages (LDP) was developed. The motivation was to not only make the publishing process possible as other attempts, but also to make it easier for publishers to customize the HTML output. Instead of starting from scratch, Paget was extended since had a good feature base which matched DataGovIE's needs. Table 8 illustrates LDP's architecture:</p>
 
                     <figure id="figure_linked-data-pages_architecture">
                         <figcaption><strong>Figure 8</strong>: Linked Data Pages architecture</figcaption>
@@ -512,7 +512,7 @@ While allowing default page rendering when no custom queries or templates assign
                         <dt>Directories</dt>
                         <dd>Directory paths where each of the libraries (LDP, Paget, Moriarty and ARC2) reside in the file system.</dd>
                         <dt>SPARQL service URI</dt>
-                        <dd>This is typically the URI that the SPARQL service accepts queries under.</dd>
+                        <dd>The URI in which the SPARQL Queries are sent to.</dd>
                     </dl>
 
 
@@ -529,11 +529,7 @@ While allowing default page rendering when no custom queries or templates assign
 
                     <p>The reason to develop the URI host mapping feature was based on the fact that in the early stages of modeling 2006 Census data, the URI patterns was designed based on the knowledge of having the data work under <code>govdata.ie</code>. During the staging phase of publishing the RDF data under <code>data-gov.ie</code>, the URI patterns were not changed until further notice.</p>
 
-
-                    <h4 id="linked-data-pages_resource-configuration">Resource configuration</h4>
-                    <p>LDP allows prefixes to be assigned for the URIs in the configuration file. It is put to use when working with query response values inside templates.</p>
-
-                    <p>LDP provides a way to organize what the URIs should describe and how they should be presented for the user in HTML and RDF. This is accomplished by putting three components together. The first is the URI pattern in question that is being offered, the second is the SPARQL query that it triggers when requested, and third is the template that is to be used to render the HTML page. Definitions of each of the components are defined as such:</p>
+                    <p id="linked-data-pages_resource-configuration">In order to provide a simple and flexible way for site owners to prepare responses for their data, resource patterns can be configured to customize outputs. LDP has a way to organize what the URIs should describe and how they should be presented for the user in HTML and RDF. When a resource is requested, it is matched with most intended representation by configuring the three essential components together. The first is the URI pattern in question that is being made available, the second is the SPARQL query that it triggers when requested, and third is the template that is to be used to render the HTML page (if the response is to be in HTML). Definitions of each of the components are defined as such:</p>
 
                     <dl>
                         <dt>URI pattern</dt>
@@ -541,20 +537,17 @@ While allowing default page rendering when no custom queries or templates assign
                         <dt>SPARQL Queries</dt>
                         <dd>Once the URI pattern is determined, a SPARQL query needs to be triggered to retrieve a description of the resource. A full blown SPARQL query pattern can be entered here for each resource. If there is no URI pattern matched, it will default to <code>DESCRIBE &lt;URI&gt;</code>.</dd>
                         <dt>HTML templates</dt>
-                        <dd>When an URI pattern is matched, along with the SPARQL query to trigger, an HTML template is assigned at the same time. The template has access to the response gathered from the SPARQL query. An index of values can be either be accessed directly, or a set of helper methods can be used directly from the template. For example,the <code>getTriples</code> function is used to find triples in an index (a multi-dimensional array). When no parameters are provided, it will simply return the full response. It can be used to look for a particular triple in the response. <code>$triples = $this->getTriples('http://csarven.ca/#i');</code> can be used directly in the template to get all of the triples with subject <code>http://csarven.ca/#i</code>. Similarly, <code>$this->getTriples('http://csarven.ca/#i', 'http://xmlns.com/foaf/0.1/knows');</code> can be used to get triples which match the pattern with given subject and property URIs. An alias to this is the <code>getValue</code> function where qnames can be used in the property position: <code>$this->getValue('http://csarven.ca/#i', 'foaf:knows');</code>. For more complex templating, for more data processing with PHP, the <code>SITE_Template</code> class offers more helper functions and can be extended.</dd>
+                        <dd>When an URI pattern and a SPARQL query to trigger is matched, an HTML template is also assigned at the same time. The templating system has access to the response gathered from the SPARQL query. An index of values can either be accessed directly, or a set of helper methods can be used directly from the template. For example, a low level function like <code>getTriples</code> can be used to find triples in an index (a multi-dimensional array). When no parameters are provided, it returns the full index. However, it can be used to look for particular set of triples by passing in full URIs or QNames. For more complex templating or data processing, the <code>SITE_Template</code> class offers additional methods.</dd>
 
-                        <dd>If there is no URI pattern matched, the default template will be used to output the results. Given that the SPARQL query will use <code>DESCRIBE</code>, the default rendering of this template is displayed in a key-value pair fashion.</dd>
+                        <dd>If there is no URI pattern matched, the default template will be used to output the results in a key-value pair fashion by invoking a <code>DESCRIBE</code> SPARQL query.</dd>
                     </dl>
 
-                    <p>This resource configuration approach provides a flexible way for site owners to prepare responses for URIs as well as unique user interfaces.</p>
 
+                    <p id="linked-data-pages_conclusions" class="todo">Differentiate Conceptual presentation vs. implementation ??????</p>
 
-                    <h4 id="linked-data-pages_conclusions">Conclusions</h4>
-<p class="todo">Differentiate Conceptual presentation vs. implementation ??????</p>
+                    <p>From the implementation side, Linked Data Pages provides results based on the URI pattern that is triggered. In other words, what information a resource contains and how it is represented is determined at the URI level. An alternative approach to outputting would be based on the characteristics of the resource. That is, the triple graph pattern from a SPARQL query result can be taken and then based on desired parameters, the results can be passed to a template.</p>
 
-                    <p>From the implementation side, Linked Data Pages provides results based on the URI pattern that is triggered. In other words, what information a resource contains and how it is represented is determined at the level of the URI itself. An alternative approach to outputting an HTML document would be based on the characteristics of the resource at hand. That is, the triple graph pattern from a SPARQL query result would allow the developer to shift through the results and assign a template in context of the triples at hand.</p>
-
-                    <p>LDP is capable of taking care of the bulk of the work that's required to publish Linked Data. The <em><a href="http://csarven.ca/how-to-create-a-linked-data-site">How to create a Linked Data site</a></em> document explains the full process in further detail, from setting up a SPARQL service, importing data, to publishing pages using LDP.</p>
+                    <p>The <em><a href="http://csarven.ca/how-to-create-a-linked-data-site">How to create a Linked Data site</a></em> document explains the full process in further detail; from setting up a SPARQL service, importing data, to publishing documents using LDP.</p>
 
 
 
