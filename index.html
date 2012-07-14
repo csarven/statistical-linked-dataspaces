@@ -37,7 +37,7 @@
                 <div id="authors">
                     <dl>
                         <dt>Authors</dt>
-                        <dd class="entry-author"><a about="[this:]" rel="dcterms:creator dcterms:publisher dcterms:contributor" href="http://csarven.ca/#i">Sarven Capadisli</a><sup><a href="#author_email_1">1</a></sup> <sup><a href="#author_org_a">a</a></sup></dd>
+                        <dd class="entry-author"><a about="[this:]" rel="dcterms:creator dcterms:publisher" href="http://csarven.ca/#i">Sarven Capadisli</a><sup><a href="#author_email_1">1</a></sup> <sup><a href="#author_org_a">a</a></sup></dd>
                     </dl>
 
                     <ul id="author_emails">
@@ -105,7 +105,7 @@
 
 
                     <h2 id="introduction">Introduction</h2>
-                    <p>Are you ready to read some fascinating stuff? Excellent, lets jump right in. As you have undoubtedly have figured out, this is the introduction, unless you are here for the <a href="#conclusions">conclusions</a> you might want to skip this chapter. Here lies a brief overview of this document and its purpose: what are some of the problems and our assumptions, why do they need to be fixed, and how are we going at it.</p>
+                    <p>As you have undoubtedly have figured out, this is the introduction, unless you are here for the <a href="#conclusions">conclusions</a> you might want to skip this chapter. Herein lies a brief overview of this document and its purpose: what are some of the problems and our assumptions, why do they need to be fixed, and how are we going at it.</p>
 
                     <h3 id="problem-statement">Problem statement</h3>
                     <p>Convenient management of dataspaces for statistical Linked Data remains to be costly and lacks integrated and automated tool support. The design considerations and requirements are therefore at the forefront for reasonable functionality of these dataspace platforms.</p>
@@ -116,7 +116,7 @@
 
 
                     <h3 id="hypothesis">Hypothesis</h3>
-                    <p>It is contended that the deployment of statistical Linked Data comes with a specific set of requirements. The degree in which the requirements are accomplished predetermines the dataspace's usefulness for data consumers. Therefore, the hypothesis of this document is if a specific set of requirements for building and managing dataspaces for statistical Linked Data is possible, and the development of missing parts to do some of the processes better by reducing cost and making the dataspace more useful.</p>
+                    <p class="todo" title="Rephrase">It is contended that the deployment of statistical Linked Data comes with a specific set of requirements. The degree in which the requirements are accomplished predetermines the dataspace's usefulness for data consumers. Therefore, the hypothesis of this document is if a specific set of requirements for building and managing dataspaces for statistical Linked Data is possible, and the development of missing parts to do some of the processes better by reducing cost and making the dataspace more useful.</p>
 
                     <h3 id="contributions">Contributions</h3>
                     <p>With preference to minimizing developer intervention wherever possible, the contributions herein are within the expectations of working in Linked Dataspace and providing read access to data respectively. The set of design considerations and requirements are derived from case studies in publishing CSO Ireland, Eurostat, and World Bank datasets. The contributions will identify required components, missing tools, and highlight best practices to create a statistical Linked Dataspace:</p>
@@ -358,7 +358,6 @@
                             <tr><td>Database metadata</td><td>VoID, LODStats</td></tr>
                             <tr><td>Data dumps</td><td>File system</td></tr>
                             <tr><td>User interface</td><td>Callimachus, Linked Data API, OpenLink Data Explorer, Pubby</td></tr>
-                            <tr><td>Applications</td><td>LodLive, Sig.ma, SGVizler, Tabulator</td></tr>
                         </tbody>
                     </table>
 
@@ -533,7 +532,7 @@ While allowing default page rendering when no custom queries or templates assign
 
                     <dl>
                         <dt>URI pattern</dt>
-                        <dd>Patterns are triggered in a way that when a URI is recognized, the most precise URI is selected for the response. This is in contrast to more relaxed patterns which are used to display. For instance, for code lists, each concept URI can be rendered the same way, such that it makes sense catch all concepts at their root path (code list) as opposed their full path. e.g., When <code>http://worldbank.270a.info/classification/country/CA</code> is requested, there would be a URI pattern looking out for <code>http://worldbank.270a.info/classification/country/</code> to respond with an output for all countries the same way. Of course, if one wishes to render <code>http://worldbank.270a.info/classification/country/CA</code> differently than the other countries, it can do so by using that URI pattern in the configuration.</dd>
+                        <dd>Patterns are triggered in a way that when a URI is recognized, the most precise URI is selected for the response. This is in contrast to more relaxed patterns which are used to display. For instance, for code lists, each concept URI can be rendered the same way, such that it makes sense catch all concepts at their root path (code list) as opposed their full path. e.g., When <code>http://worldbank.270a.info/classification/country/CA</code> is requested, there would be a URI pattern looking out for <code>http://worldbank.270a.info/classification/country/</code> to respond with an output for all countries the same way. Of course, if one wishes to render <code>http://worldbank.270a.info/classification/country/CA</code> differently than the other countries, it can be done by using that URI pattern in the configuration.</dd>
                         <dt>SPARQL Queries</dt>
                         <dd>Once the URI pattern is determined, a SPARQL query needs to be triggered to retrieve a description of the resource. A full blown SPARQL query pattern can be entered here for each resource. If there is no URI pattern matched, it will default to <code>DESCRIBE &lt;URI&gt;</code>.</dd>
                         <dt>HTML templates</dt>
@@ -541,6 +540,8 @@ While allowing default page rendering when no custom queries or templates assign
 
                         <dd>If there is no URI pattern matched, the default template will be used to output the results in a key-value pair fashion by invoking a <code>DESCRIBE</code> SPARQL query.</dd>
                     </dl>
+
+                    <p>In order to better control the contents of the output for different contexts, the framework should offer ways to do some sort of data manipulations. This is more about aggregating additional data, whether from different SPARQL endpoints, cached results, or compiled on the go; and filtering data in different ways to make it more suitable for the consumer. Paget offers a number of methods to accomplish these where some are extended in site specific implementations.</p>
 
 
                     <p id="linked-data-pages_conclusions" class="todo">Differentiate Conceptual presentation vs. implementation ??????</p>
@@ -928,6 +929,10 @@ While allowing default page rendering when no custom queries or templates assign
 
 
                     <h3 id="dataset-announcement">Announcing the Datasets</h3>
+                    <h4 id="dataset-announcement_cso-ireland">CSO Ireland</h4>
+                    <p>The dataset is registered in the Data Hub with ID: <a href="http://thedatahub.org/dataset/data-gov-ie">data-gov-ie</a> [<a href="#r_45">45</a>]. The dataset <a href="http://www4.wiwiss.fu-berlin.de/lodcloud/ckan/validate.php?package=data-gov-ie">has level 4</a> in the CKAN Validator. It is in the lodcloud group.</p>
+                    <h4 id="dataset-announcement_eurostat">Eurostat</h4>
+                    <p>The dataset is registered in the Data Hub with ID: <a href="http://thedatahub.org/dataset/eurostat-linked-data">eurostat-linked-data</a> [<a href="#r_46">46</a>]. The dataset <a href="http://www4.wiwiss.fu-berlin.de/lodcloud/ckan/validator/validate.php?package=eurostat-linked-data">has level 1</a> in the CKAN Validator. It is a candidate for the lodcloud group. And it is also available in the LATC project's <a href="http://latc-project.eu/datasets/">EU data cloud</a>.</p>
                     <h4 id="dataset-announcement_world-bank">World Bank</h4>
                     <p>The dataset is registered in the Data Hub with ID: <a href="http://thedatahub.org/dataset/world-bank-linked-data">world-bank-linked-data</a> [<a href="#r_47">47</a>]. The dataset <a href="http://www4.wiwiss.fu-berlin.de/lodcloud/ckan/validator/validate.php?package=world-bank-linked-data">has level 3</a> in the CKAN Validator. It is a candidate for the lodcloud group.</p>
 
@@ -938,9 +943,14 @@ While allowing default page rendering when no custom queries or templates assign
 
 
                     <h2 id="conclusions">Conclusions</h2>
-                    <p>Well, herein lies the conclusion, unless you are here for the <a href="#introduction">introduction</a>, you can also go back up and read that. Not that I had any doubts that you'd read thus far, but I am delighted to know that it was on some level entertaining for you.</p>
+                    <p class="todo">In this document we identified some of the required components and deployment phases needed to realize statistical Linked Dataspaces.</p>
 
-                    <p>I hope this was interesting for you to read as it was for me to write. All comments are more than welcome! Thank you.</p>
+
+                    <p>The remaining question which requires our attention is that whether such Linked Dataspace for statistical data has any particular characteristics than any other data that is deployed under the same dataspace. The tool contributions; GraphPusher and Linked Data Pages although are helpful in the statistical Linked Dataspace, they can work just as well for other types of data. In other words, they do not bring a glaring benefit when working with statistical data.</p>
+
+                    <p>Of course, this can be looked at from a different perspective by making some assumptions. First, if we go with the idea that a VoID file adds immensely to the discovery of datasets, then publishing one for statistical data only helps to be better found and used across multiple disciplines. Similarly, code lists are extremely useful for reuse across data sources if only they can be discovered. From this, it could be said that GraphPusher sufficiently tackles on the problem of consuming various statistical Linked Data by simply making use of published VoID files. When GraphPusher gets the feature to decide whether to work with local or remote files, the process of bulk-loading can be put to better use. As we've seen in our case studies, GraphPusher was useful for CSO Ireland, but not for World Bank data dumps. In Linked Data Pages' case, publishing statistical data may be particularly useful if unique templates are created to illustrate dataset structures and code lists for better human consumption.</p>
+
+                    <p>There we have it. It is all very simple.</p>
 
                     <div id="references">
                         <h2>References</h2>
