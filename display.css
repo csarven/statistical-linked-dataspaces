@@ -142,6 +142,10 @@ content: counter(section)"." counter(sub-section) "." counter(sub-sub-section) "
 }
 
 
+ol ol {
+margin-left:1em;
+}
+
 li {
 list-style-position:inside;
 margin-bottom:0.25em;
