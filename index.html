@@ -86,6 +86,8 @@
 
 
                     <h2 id="introduction">Introduction</h2>
+                    <p>Are you mentally ready to read some fascinating stuff? Excellent, lets jump right in. As you've undoubtedly have guessed, this is the introduction, unless you are here for the <a href="#conclusions">conclusions</a> you might want to skip this chapter. Here lies a brief overview of this document and its purpose: what are some of the problems and our assumptions, why do they need to be fixed, and how are we going at it?</p>
+
                     <h3 id="problem-statement">Problem statement</h3>
                     <p>Convenient management of dataspaces for statistical Linked Data remains to be costly and lacks integrated and automated tool support. The design considerations and requirements are therefore at the forefront for reasonable functionality of these dataspace platforms.</p>
 
@@ -114,29 +116,31 @@
                     <h3 id="outline">Thesis Outline</h3>
                     <p>Chapter 2 presents <a href="#background">background</a> material for this document. It covers the essentials of the dataspace concept and summarizes its core components. The Linked Data design principles as well as Linked Statistics are explained in order to draw a bridge from dataspaces. Existing Linked Lifecycle models are also summarized in order to provide the basis of the problem space. Chapter 3 contains an overview of the <a href="#statistical-linked-dataspace">Statistical Linked Dataspace</a>, the core proposal of this document. It makes a connection between the general dataspaces concept with Linked Dataspaces, and proposes that Linked Dataspaces is well suited for deploying statistical data by outlining its requirements. Chapter 4 then outlines the required <a href="#components">components</a> with actual implementations of the technologies where GraphPusher and Linked Data Pages are put forward as contributions. Chapter 5 ties it all together by examining the phases and components of the case studies to <a href="#case-studies">realize</a> Statistical Linked Dataspaces. Chapter 6 <a href="#conclusions">concludes</a> by analysing the work described, results achieved, lessons learned, and the feature work up ahead.</p>
 
-
+                    <p>Sit back and open yourself as wide as the sky.</p>
 
                     <h2 id="background">Background</h2>
+                    <p>This chapter gathers and summarizes some of the fundamental knowledge that's necessary in order to discuss the design the Linked Dataspaces for statistical data.</p>
+
                     <h3 id="dataspaces">Dataspaces</h3>
                     <p>The services that are typically offered in today's information managements systems have to deal with integration and administration of diverse data sources. An abstraction layer for the applications in these systems are considered as <q>Dataspaces</q> as proposed in <a href="http://dl.acm.org/citation.cfm?id=1107502"><cite>From Databases to Dataspaces</cite></a> article. What constitutes a dataspace is that, it would typically consist of a set of data sources with some relationships between them.</p>
 
                     <dl>
-                        <dt>Participants and Relationships</dt>
+                        <dt id="participants-and-relationships">Participants and Relationships</dt>
                         <dd>The participating data sources in a dataspace can be databases, repositories, web services or software packages. The source data can be structured, semi-structured or unstructured, where some may be set to allow updates, yet others only for reading. Similarly, a dataspace may have different relationship models between its sources, with descriptions at any level of granularity, as well as information on data provenance.</dd>
 
-                        <dt>Catalog and Browse</dt>
+                        <dt id="catalog-and-browse">Catalog and Browse</dt>
                         <dd>Dataspaces may include services to allow different modes of interaction with the data sources. Systems might simply provide services to support access to its catalogue in order to allow users to browse its inventory of data resources. Catalogues may have metadata about the resources such as their original source, used schemas, statistics on the data, creators, various timestamps, licensing, completeness and so forth. This type of provenance data provides a perspective for the users and administrators about the elements in the data sources, as well as assistance in reproduction and quality analysis.</dd>
 
-                        <dt>Search and Query</dt>
+                        <dt id="search-and-query">Search and Query</dt>
                         <dd>One other type of service is meant for discovering data by way of searching and querying. The primary function for these services is to allow users to locate and extract particular information from the data sources. A search service offers relevant results to users based on keyword searches, as well as further exploration of the results. Its purpose is to provide a mechanism to deal with large collections of unfamiliar data using natural languages that users are familiar with. A query service in contrast, is meant to provide a structured way to retrieve or manipulate information in participating data sources. One important differentiating factor between searching and querying is that, a query service can let users formulate far more complex questions about the data and get answers to them.</dd>
 
-                        <dt>Local storage and index</dt>
+                        <dt id="local-storage-and-index">Local storage and index</dt>
                         <dd>In order to give the data sources a home and to allow inquiry services, a storage and an accompanying index component is used. Local storages and indexes aid in creating efficient queries, precise access to data, and support for data recovery and availability. Indexes are invaluable in terms of identify information across data sources whether locally or references to objects in the real-world.</dd>
 
-                        <dt>Discovery and extensions</dt>
+                        <dt id="discovery-and-extensions">Discovery and extensions</dt>
                         <dd>Another type of dataspace service is the discovery component which is used for relating dataspace participants and consequently allow the system to provide better query results. This component would discover, identify and classify data sources and their content in order to easily locate and refer to items in the dataspace in the future. It is important for this component to monitor and allow an environment to update the schema mappings over time in order to accurately represent the dataspace's assets.</dd>
 
-                        <dt>Pay-as-you-go</dt>
+                        <dt id="pay-as-you-go">Pay-as-you-go</dt>
                         <dd>In creating semantic relationships between data sources, the involvement of users is usually focused on taking care of most beneficial efforts first. The system is expected to allow increment improvements based on the knowledge of the underlying data's structure, semantics and relationships between sources. Hence, a <em>pay-as-you-go</em> approach to data integration is employed in dataspaces as complete upfront integration is considered to be difficult and is not a required goal.</dd>
                     </dl>
 
@@ -195,6 +199,8 @@
 
 
                     <h2 id="statistical-linked-dataspace">Statistical Linked Dataspace</h2>
+                    <p>With the background material out of the way, this chapter will dive into Linked Dataspaces and explain how it is a suitable platform to deploy statistical data. It will first present a possible connection between Dataspaces and Linked Dataspaces, give an architecture for a Linked Dataspace, and derive some requirements from case studies to build a dataspace that's particular to deploying statistical Linked Data.</p>
+
                     <p>The idea of <em>Dataspaces</em> as discussed earlier was proposed without being tied to any particular set of technologies or types of data. It is a broad description for what constitutes a dataspace. For the moment, without diving into specific technologies, tooling, or data, possible parallels can be drawn between <em>Dataspaces</em> and dataspaces which follows the Linked Data design principles. Table [<a href="#table_dataspaces-to-linked-dataspaces">1</a>] presents a generalized view for the components and services in Linked Dataspaces.</p>
 
                     <table id="table_dataspaces-to-linked-dataspaces">
@@ -288,7 +294,7 @@
 
 
                     <h4 id="core-requirements">Core requirements</h4>
-                    <p>The following core requirements are distilled from the deployment of CSO Ireland, Eurostat, and World Bank Linked Dataspaces:4</p>
+                    <p>The following core requirements are distilled from the deployment of CSO Ireland, Eurostat, and World Bank Linked Dataspaces:</p>
 
                     <dl>
                         <dt id="core-requirements_storage">Storage space and RDF store</dt>
@@ -308,7 +314,9 @@
 
 
                     <h2 id="components">Components</h2>
-                    <p>Given the requirements to publish a statistical Linked Dataspace, Table 9 outlines a list of required components to realize such space with example implementations.</p>
+                    <p>Are you still reading this? That's great, thank you dear reader. At this point, you are probably interested in the purpose of this chapter. It is fairly straight forward: to identify a concrete list of required components to realize a statistical Linked Dataspace, and in depth explanations of the technologies that are contributed in order to improve on areas for improvement. The purpose of the discussion on the missing technologies and the implementations is to essentially fill-in some of the current gaps in Linked Dataspaces.</p>
+
+                    <p>Given the requirements to publish a statistical Linked Dataspace as discussed earlier, Table 9 outlines a list of required components to realize such space with example implementations. If we take a look at the <a href="#figure_linked-dataspaces">Linked Dataspace architecture</a> again, we can see how some of these components and services are grouped together.</p>
 
                     <table id="linked-dataspace-components-implementations">
                         <caption><strong>Table 9.</strong> Linked Dataspace components, and implementations</caption>
@@ -333,7 +341,7 @@
                         </tbody>
                     </table>
 
-                    <p>For some of the components, there are several implementations that are publicly available for use. A range of improvements can be done for each implementation with varying complexity. In the case studies, two areas in particular were identified for possible areas for improvements given the state of the art of publicly available technologies: loading of RDF data to RDF store, and a human user interface.</p>
+                    <p>For some of the components, there are several implementations that are publicly available for use. A range of improvements can be done for each implementation with varying complexity. In the case studies, two areas in particular were identified for possible areas for improvements given the state of the art of publicly available technologies: loading of RDF data to RDF store, and presenting an interface for humans.</p>
                     <p>It turned out that loading RDF data was a recurring task that had to be performed by the administrator. Hence, the <a href="#graphpusher">GraphPusher</a> tool was built to improve on the manual approach by automating bulk data. GraphPusher was primarily used to help to deploy the Irish Government Linked Dataspace at <a href="http://data-gov.ie/">DataGovIE</a> and this is a report on preliminary findings on using this tool. As discussed in data sources for CSO Ireland, the data primarily consists of statistical data about the Irish population.</p>
 
                     <p>On a similar note, <a href="#linked-data-pages">Linked Data Pages</a> was written to provide better control over front-end templating system to present a Web interface for RDF data. The Linked Data Pages framework was used to publish CSO Ireland and <a href="http://worldbank.270a.info/">World Bank</a> Linked Dataspaces.</p>
@@ -521,6 +529,10 @@
 
 
                     <h2 id="case-studies">Realization of a statistical Linked Dataspace</h2>
+                    <p>In the past couple of years we have witnessed an increasing number of efforts to publish structured data on the Web following the Linked Data principles. This chapter reports on our experiences and lessons learned in the process of publishing statistical data along three case studies: Central Statistics Office Ireland, Eurostat, and World Bank. Comparison of different deployments are made in terms of methodology, URI patterns and vocabularies, metadata, and data access and discuss the underlying design decisions in each case.</p>
+
+                    <p>The individuals which were involved to make it all happen, in no particular order, are: <a about="http://csarven.ca/#i" rel="foaf:knows" href="http://www.deri.ie/about/team/member/Aftab_Iqbal#me">Aftab Iqbal</a>, <a about="http://csarven.ca/#i" rel="foaf:knows" href="http://keg.vse.cz/resource/person/jindrich-mynarz">Jindřich Mynarz</a>, <a about="http://csarven.ca/#i" rel="foaf:knows" href="http://richard.cyganiak.de/#me">Richard Cyganiak</a>, <a about="http://csarven.ca/#i" rel="foaf:knows" href="http://sw-app.org/mic.xhtml#i">Michael Hausenblas</a>, and yours truly.</p>
+
 <div class="todo">
                     <p>Describe from the deployment side.. Why TDB, LIMES..</p>
                     <p>Explain how I've built these spaces</p>
@@ -906,6 +918,9 @@
 
 
                     <h2 id="conclusions">Conclusions</h2>
+                    <p>Well, herein lies the conclusion, unless you are here for the <a href="#introduction">introduction</a>, you can also go back up and read that. Not that I had any doubts that you'd read thus far, but I am delighted to know that it was on some level entertaining for you.</p>
+
+                    <p>I hope this was interesting for you to read as it was for me to write. All comments are more than welcome! Thank you.</p>
 
                     <div id="references">
                         <h2>References</h2>
