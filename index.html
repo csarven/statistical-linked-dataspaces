@@ -146,7 +146,7 @@
 
 
                     <h3 id="linked-data">Linked Data</h3>
-                    <p>One manifestation of the Semantic Web vision is Linked Data. It is the a pragmatic approach to publishing structured data on the Web in order to discover related data from different sources. The <a href="http://www.w3.org/DesignIssues/LinkedData.html">Linked Data design principles was put forward by <a about="http://csarven.ca/#i" rel="foaf:knows" href="http://www.w3.org/People/Berners-Lee/card#i">Sir Tim Berners-Lee</a> in 2006 as follows:</p>
+                    <p>One manifestation of the Semantic Web vision is Linked Data. It is the a pragmatic approach to publishing structured data on the Web in order to discover related data from different sources. The <a href="http://www.w3.org/DesignIssues/LinkedData.html">Linked Data design principles</a> was put forward by <a about="http://csarven.ca/#i" rel="foaf:knows" href="http://www.w3.org/People/Berners-Lee/card#i">Sir Tim Berners-Lee</a> in 2006 as follows:</p>
 
                     <blockquote about="http://www.w3.org/People/Berners-Lee/card#i" rel="dcterms:creator" href="http://www.w3.org/DesignIssues/LinkedData.html">
                         <ol id="linked-data-design-principles">
@@ -446,35 +446,45 @@
                         <li>Support other popular RDF stores e.g., Virtuoso RDF Quad Store [<a href="#r_14">14</a>] and 4store [<a href="#r_15">15</a>], to directly communicate with the store &#8211; currently TDB Triple Store is supported.</li>
                     </ul>
 
-                    <h3 id="linked-data-pages" class="todo" title="Add a screenshot of an HTML view">Linked Data Pages</h3>
 
-                    <p>Figure 8 illustrates a general process from requested URI (input) and response in HTML or RDF (output).</p>
+                    <h3 about="[this:#linked-data-pages]" id="linked-data-pages" class="todo" title="Add a screenshot of an HTML view" property="rdfs:label">Linked Data Pages</h3>
+                    <p>It is important to highlight some of the core components which make up a publishing framework for Linked Data. The <a href="#linked-data-design-principles_3">3<sup>rd</sup> Linked Data design principle</a> primarily refers to RDF, a machine readable format. The obvious conclusions we can make from this is that, the mechanism that's required to publish RDF data needs to be able to take in resource requests, look for them in its dataspace, and compile an appropriate response back. This process can work in conjunction with responses to human users as well as machines. That is, with the help of HTTP Accept headers, content-negotiation can be done on the requesting agent's preferences. With this approach, a given URI can be requested in one of the RDF formats, HTML, or even JSON. This provides an opportunity for different types of users to make use of the underlying data.</p>
+
+                    <p>Figure 8 illustrates a general process from requested URI (input) and response in HTML or RDF (output). The steps which take place are as follows:</p>
+
+                    <ol>
+                        <li><em>Request</em>: An agent requests a URI from the server.</li>
+                        <li><em>Consolidation</em>: The URI is looked for in the dataspace, and the data it describes is prepared by transforming it into a particular representation.</li>
+                        <li><em>Presentation</em>: An HTML template is prepared for the data for human consumption, as well as an RDF output for the same data.</li>
+                        <li><em>Response</em>: Depending on the preferred request format, either HTML or RDF is given back to the user.</li>
+                    </ol>
+
+
                     <figure id="figure_linked-data-request-response">
                         <figcaption><strong>Figure 8</strong>: Linked Data Request and Response interface</figcaption>
                         <object type="image/svg+xml" data="linked-data-request-response.svg" width="240" height="190"></object>
                     </figure>
+
+
+                    <p>As an attempt to use a publishing architecture as such, existing frameworks were investigated in 2010. To name a few, Fresnel, LESS, Pubby, and Paget was explored for <a href="http://data-gov.ie/">DataGovIE</a> website. The idea was to use a tool that 1) had decent number of features for data consolidation, and 2) allowed custom templating for resources. The fundamental shortcomings of these tools appeared to be that on the templating side, they offered de facto generic entity rendering of RDF resources in HTML i.e., a tabular view of properties (key) and objects (value). This was also typically the result of a <code>DESCRIBE</code> SPARQL query for all given resources.</p>
+
+                    <p>In order to make the HTML user interface more friendly and have unique resource presentations, the Linked Data Pages (LDP) was developed. The motivation was to not only make the publishing process possible as other attempts, but also to make it easier for publishers to customize the HTML output. Instead of starting from scratch, Paget was extended as it offered a good base of features which matched the goals of DataGovIE. Table 8 illustrates LDP's architecture:</p>
 
                     <figure id="figure_linked-data-pages_architecture">
                         <figcaption><strong>Figure 8</strong>: Linked Data Pages architecture</figcaption>
                         <object type="image/svg+xml" data="linked-data-pages_architecture.svg" width="365" height="290"></object>
                     </figure>
 
+                    <p>LDP is built on top of <a about="http://iandavis.com/id/me" rev="foaf:maker" href="http://code.google.com/p/paget/">Paget</a>, which required <a href="http://code.google.com/p/moriarty/">Moriarty</a>, and <a href="https://github.com/semsol/arc2">ARC2</a> libraries. Paget is a versatile Web application written in PHP by <a about="http://csarven.ca/#i" href="http://iandavis.com" rel="foaf:knows" resource="http://iandavis.com/id/me">Ian Davis</a>. Its HTML rendering of RDF is basic in a sense that information is displayed in a tabular way. LDP extends on Paget's framework in order to output more human readable Web pages. Additionally, LDP relies on its URI dispatch mechanism and to build a local index of the RDF data that's gathered from SPARQL query results.</p>
 
-                    <p>Linked Data Pages (LDP) is a Web publishing tool to generate RDF and HTML documents. It invokes unique SPARQL queries based on requested URIs and outputs the results to corresponding HTML templates. Links to alternate RDF formats as well as JSON are handled by content-negotiation.</p>
+                    <p about="[this:#linked-data-pages]" property="rdfs:comment">The main benefit of LDP is that, URI patterns can be grouped with unique SPARQL queries and custom HTML templates.</p>
 
-                    <h4>Motivation</h4>
-                    <p>Initial reasons to develop LDP in 2010 was to move beyond the de facto generic entity rendering for RDF resources That is, the requested URI corresponded with the result of <code>DESCRIBE</code> SPARQL query, where the property and object resources were primarily displayed in a key-value fashion. </p>
-
-                    <p>While allowing default page rendering as base, if the developer had knowledge about the resources or the data model, it was reasonable to provide a way for them to uniquely display the resources to be more human friendly.</p>
-
-                    <h4>Overview</h4>
-                    <p>It is built on top of <a about="http://iandavis.com/id/me" rev="foaf:maker" href="http://code.google.com/p/paget/">Paget</a>, <a href="http://code.google.com/p/moriarty/">Moriarty</a>, and <a href="https://github.com/semsol/arc2">ARC2</a> libraries. Paget is a versatile Web application written in PHP by <a about="http://csarven.ca/#i" href="http://iandavis.com" rel="foaf:knows" resource="http://iandavis.com/id/me">Ian Davis</a> [http://blog.iandavis.com/2008/10/01/publishing-linked-data-with-php/]. Its HTML rendering of RDF is primitive in a sense that information is display in a tabular way. LDP extends on the framework to output more human readable Web pages. Additionally, LDP relies on its URI dispatch mechanism and to build a local index of the RDF data that's gathered from SPARQL query results.</p>
+While allowing default page rendering when no custom queries or templates assigned.
 
                     <p>Describe the necessary steps for the entity. Compare to other approaches (Sig.ma). See ODE for different types of entities. Perhaps even from other fields. Heterogeneous data sources in a unified view.</p>
 
 
-                    <h4 id="linked-data-pages_installation">Installation</h4>
-                    <p>There is an installation web page to get LDP going. The same set of configuration settings in the script can be entered directly in the configuration file. The configuration is fairly basic and primarily consists of the following:</p>
+                    <p id="linked-data-pages_installation">LDP can be configured from the installation web page, or directly from the configuration file. The configuration is fairly basic and primarily consists of the following:</p>
 
                     <dl>
                         <dt>Directories</dt>
@@ -483,8 +493,8 @@
                         <dd>This is typically the URI that the SPARQL service accepts queries under.</dd>
                     </dl>
 
-                    <h4 id="linked-data-pages_site-configuration">Site configuration</h4>
-                    <p>The Web service can be configured with the following parameters:</p>
+
+                    <p id="linked-data-pages_site-configuration">The service can be configured with the following parameters:</p>
 
                     <dl>
                         <dt>Site settings</dt>
@@ -493,7 +503,7 @@
                         <dd>If the host name that the service is running under is different from the host name that is used in the URIs in the RDF data, this setting allows mapping between the the two. For example, if there is a request is made to <code>http://example.org/foo</code>, the setting can be set to look for <code>http://example.net/foo</code> in the RDF store instead.</dd>
                     </dl>
 
-                    <p>LDP is bundled with a default CSS theme, but allows different stylesheets to be used by simply providing its location.</p>
+                    <p>LDP is bundled with a default CSS theme and allows different stylesheets to be used.</p>
 
                     <p>The reason to develop the URI host mapping feature was based on the fact that in the early stages of modeling 2006 Census data, the URI patterns was designed based on the knowledge of having the data work under <code>govdata.ie</code>. During the staging phase of publishing the RDF data under <code>data-gov.ie</code>, the URI patterns were not changed until further notice.</p>
 
@@ -711,7 +721,7 @@
 
                     <h3 id="linked-datasets">Linked Datasets</h3>
                     <h4 id="data-interlinking">Data Interlinking</h4>
-                    <p>Interlinking things and concepts from our RDF datasets to external datasets in the LOD Cloud was a challenging task. It primarily requires an investigation to identify eligible resource types in our datasets, and then finding suitable matching resources in external datasets. One useful requirement was to make sure that the target resources were dereferenable in order to make the interlinking worthwhile. Tables [<a href="#data-interlinking_cso-ireland_table">1</a>], [<a href="#data-interlinking_eurostat_table">2</a>], [<a href="#data-interlinking_world-bank_table">3</a>] gives an overview of the targeted external datasets, entity types, links, and counts for each case three cases respectively.</p>
+                    <p>Interlinking things and concepts from our RDF datasets to external datasets in the LOD Cloud was a challenging task. It primarily requires an investigation to identify eligible resource types in our datasets, and then finding suitable matching resources in external datasets. One useful requirement was to make sure that the target resources were dereferenceable in order to make the interlinking worthwhile. Tables [<a href="#data-interlinking_cso-ireland_table">1</a>], [<a href="#data-interlinking_eurostat_table">2</a>], [<a href="#data-interlinking_world-bank_table">3</a>] gives an overview of the targeted external datasets, entity types, links, and counts for each case three cases respectively.</p>
 
                     <h5 id="data-interlinking_cso-ireland">CSO Ireland</h5>
                     <p>Interlinking for CSO Ireland was done by manually investigating useful URIs.</p>
