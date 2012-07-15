@@ -29,13 +29,21 @@ thead { display: table-header-group; }
 tr, img { page-break-inside: avoid; }
 img { max-width: 100% !important; }
 
+#acknowledgements,
 #references {
-/*page-break-before: always;*/
+page-break-before: always;
 }
 #references a,
 table code {
 word-wrap:break-word;
 word-break:break-all;
+}
+
+#acknowledgements {
+display:none;
+}
+#acknowledgements + pre {
+margin-top:2em;
 }
 
 
@@ -61,11 +69,13 @@ page-break-after: avoid;
 
 }
 
+/*
 #contents + ol {
 position:fixed;
 top:1em;
 right:1em;
 }
+*/
 
 #acknowledgements + pre {
 padding:0;
