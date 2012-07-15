@@ -39,15 +39,21 @@
                         <dt>Authors</dt>
                         <dd class="entry-author"><a about="[this:]" rel="dcterms:creator dcterms:publisher" href="http://csarven.ca/#i">Sarven Capadisli</a><sup><a href="#author_email_1">1</a></sup> <sup><a href="#author_org_a">a</a></sup></dd>
                     </dl>
-
-                    <ul id="author_emails">
-                        <li id="author_email_1"><sup>1</sup><a about="http://csarven.ca/#i" rel="foaf:mbox" href="mailto:info@csarven.ca" class="author_email">info@csarven.ca</a></li>
-                    </ul>
-
-                    <ul id="author_orgs">
-                        <li id="author_org_a"><sup>a</sup><span about="http://csarven.ca/#i" rel="org:memberOf" resource="http://deri.ie/"/><a href="http://deri.ie/">Digital Enterprise Research Institute</a>, <a href="http://nuigalway.ie/">NUI, Galway</a>, Ireland</li>
-                    </ul>
                 </div>
+
+                <p id="document-purpose">Submitted in fulfillment of the requirements for the degree of Master of Science.</p>
+
+                <dl>
+                    <dt>Supervisor</dt>
+                    <dd class="entry-author"><a about="[this:]" rel="dcterms:contributor" href="http://sw-app.org/mic.xhtml#i">Michael Hausenblas</a></dd>
+                </dl>
+
+
+                <ul id="author_orgs">
+                    <li id="author_org_a"><span about="http://csarven.ca/#i" rel="org:memberOf" resource="http://deri.ie/"/><a href="http://deri.ie/">Digital Enterprise Research Institute</a>, <a href="http://nuigalway.ie/">National University of Ireland, Galway</a></li>
+                </ul>
+
+                <p id="document-submitted" property="dcterms:dateSubmitted" content="2012-07-16T09:00:00Z">2012-07</p>
 
                 <div id="abstract" class="entry-summary">
                     <h2>Abstract</h2>
@@ -102,6 +108,9 @@ to eloquently shed light on various topics in Linked Data whenever I poked him
 for random conversations. When in need to commit a Triple crime, 
 I'd like to have him on my side. Richard, \m/.
 
+My colleagues Aftab Iqbal and Jindřich Mynarz whom I've worked closely with in 
+publishing CSO Ireland and Eurostat Linked dataspaces.
+
 Yet another thanks goes to my family for their continuous support in my 
 academic and professional adventures, even though I can't adequately explain to 
 them what I really do on the InterWebs. Without their encouragement, I would 
@@ -121,7 +130,7 @@ When in doubt, mu.
 </pre>
 
 
-                    <h2 id="contents">Contents</h2>
+                    <h2 id="table-of-contents">Table of Contents</h2>
                     <ol>
                         <li><a href="#introduction">Introduction</a>
                             <ol>
@@ -610,10 +619,9 @@ While allowing default page rendering when no custom queries or templates assign
 
 
                     <h2 id="case-studies">Realization of statistical Linked Dataspaces</h2>
-                    <p>In the past couple of years we have witnessed an increasing number of efforts to publish structured data on the Web following the Linked Data principles. This chapter reports on our experiences and lessons learned in the process of publishing statistical data along three case studies: Central Statistics Office Ireland, Eurostat, and World Bank. Comparison of different deployments are made in terms of methodology, URI patterns and vocabularies, metadata, and data access and discuss the underlying design decisions in each case. This chapter is explained in further detail in <em><a href="http://csarven.ca/publishing-statistical-linked-data">Publishing Statistical Linked Data</a></em>.</p>
+                    <p>In the past couple of years we have witnessed an increasing number of efforts to publish structured data on the Web following the Linked Data principles. This chapter reports on our experiences and lessons learned in the process of publishing statistical data along three case studies: Central Statistics Office Ireland, Eurostat, and World Bank. Comparison of different deployments are made in terms of methodology, URI patterns and vocabularies, metadata, and data access and discuss the underlying design decisions in each case.</p>
 
-                    <p>The individuals which were involved in making it all happen, in no particular order, are: <a about="http://csarven.ca/#i" rel="foaf:knows" href="http://www.deri.ie/about/team/member/Aftab_Iqbal#me">Aftab Iqbal</a>, <a about="http://csarven.ca/#i" rel="foaf:knows" href="http://keg.vse.cz/resource/person/jindrich-mynarz">Jindřich Mynarz</a>, <a about="http://csarven.ca/#i" rel="foaf:knows" href="http://richard.cyganiak.de/#me">Richard Cyganiak</a>, <a about="http://csarven.ca/#i" rel="foaf:knows" href="http://sw-app.org/mic.xhtml#i">Michael Hausenblas</a>, and yours truly.</p>
-
+                    <p>The World Bank dataspace was realized entirety by the myself. The CSO Ireland and Eurostat datasets was modeled by other members of DERI, whereas I've helped in data deployment and publishing.</p>
 
                     <h3 id="architecture">Deployment Architecture</h3>
                     <p>Figures [<a href="#figure_architecture_cso-ireland">7</a>], [<a href="#figure_architecture_eurostat">9</a>], [<a href="#figure_architecture_world-bank">10</a>] illustrate an overview on the overall architecture of the deployment of our three case studies. They will be discuss in further detail in the following sections.</p>
@@ -769,7 +777,7 @@ While allowing default page rendering when no custom queries or templates assign
                     <p>The most time consuming task of the conversion regarded "reverse engineering" of code lists used in the data. Most code lists were reconstructed manually from the headers and column names in the original data. However, unlike the majority of code lists containing several items, geographical code lists were too large to be processed manually and thus it was necessary to automate their extraction. Geographical code lists, such as the enumeration areas, had to be distilled from the statistical data referring to them. Since the statistical data contained little information about the code lists (e.g., code-name pairs), it was difficult to establish identity in them (e.g., resolve name clashes).</p>
 
                     <h4 id="data-conversion_eurostat">Eurostat</h4>
-                    <p>Various tools have been used in the publishing process: our custom-written Java program was first used to download and transform the Eurostat datasets, meta data and the code lists into RDF. Eurostat publishes more than 6100 datasets which when converted into RDF took more than 537GB of disk space yielding ~8 billion triples altogether. Instead of hosting such a huge number of triples via an SPARQL endpoint, we generated a catalog file which contains a set of triples specifying the location of a particular dataset on the file system.</p>
+                    <p>Various tools have been used in the publishing process: our custom-written Java program was first used to download and transform the Eurostat datasets, meta data and the code lists into RDF. Eurostat publishes more than 6100 datasets which when converted into RDF took more than 533GB of disk space yielding ~8 billion triples altogether. Instead of hosting such a huge number of triples via an SPARQL endpoint, we generated a catalog file which contains a set of triples specifying the location of a particular dataset on the file system.</p>
 
                     <p>The updated datasets are reflected through <code>lastUpdate</code> date field associated to each dataset in the table of contents file. We have scheduled a cron job which runs every weekend and execute the following steps:</p>
 
@@ -868,7 +876,7 @@ While allowing default page rendering when no custom queries or templates assign
                         <caption><strong>Table 8</strong>. Eurostat Linked Data</caption>
                         <thead><tr><th>Dataset</th><th>Format</th><th>Size</th><th>Number of triples</th><th>Number of observations</th></tr></thead>
                         <tbody>
-                            <tr><th>Datasets</th><td>RDF/XML</td><td>537GB</td><td>8B</td><td>1B</td></tr>
+                            <tr><th>Datasets</th><td>RDF/XML</td><td>533GB</td><td>8B</td><td>1B</td></tr>
                             <tr><th>DSDs</th><td>Turtle</td><td>347MB</td><td>6M</td><td>N/A</td></tr>
                             <tr><th>Code lists</th><td>RDF/XML</td><td>21MB</td><td>0.3M</td><td>N/A</td></tr>
                         </tbody>
@@ -987,6 +995,12 @@ While allowing default page rendering when no custom queries or templates assign
                     <p>The <a href="http://worldbank.270a.info/data/">World Bank's RDF data dumps</a> [<a href="#r_44">44</a>] are available either as individual RDF/XML files or in compressed gzip format.</p>
 
                     <h3 id="code">Source Code</h3>
+                    <h4 id="code_cso-ireland">CSO Ireland</h4>
+                    <p>The code which transforms the source data to RDF serializations can be found at GitHub: <a href="https://github.com/data-gov-ie/cso2rdf">data-gov-ie/cso2rdf</a> [<a href="#r_48">48</a>].</p>
+
+                    <h4 id="code_eurostat">Eurostat</h4>
+                    <p>The code which transforms the source data to RDF serializations can be found at GitHub: <a href="https://github.com/LATC/EU-data-cloud">LATC/EU-data-cloud</a> [<a href="#r_49">49</a>].</p>
+
                     <h4 id="code_world-bank">World Bank</h4>
                     <p>The code which retrieves the World Bank data, transforms it to RDF serializations, and imports to TDB Triple Store can be found at GitHub: <a href="https://github.com/csarven/worldbank-linkeddata">csarven/worldbank-linkeddata</a> [<a href="#r_50">50</a>]. It is using the <a href="http://www.apache.org/licenses/LICENSE-2.0.html">Apache License 2.0</a>.</p>
 

@@ -72,7 +72,7 @@ page-break-after: avoid;
 }
 
 /*
-#contents + ol {
+#table-of-contents + ol {
 position:fixed;
 top:1em;
 right:1em;
@@ -180,14 +180,14 @@ content: counter(section)"." counter(sub-section) "." counter(sub-sub-section) "
 }
 
 
-#contents + ol ol {
+#table-of-contents + ol ol {
 margin-left:1em;
 }
-#contents + ol,
-#contents + ol ol { counter-reset: item; }
-#contents + ol li { display: block; }
-#contents + ol li:before,
-#contents + ol ol li:before {
+#table-of-contents + ol,
+#table-of-contents + ol ol { counter-reset: item; }
+#table-of-contents + ol li { display: block; }
+#table-of-contents + ol li:before,
+#table-of-contents + ol ol li:before {
 content: counters(item, ".");
 counter-increment: item;
 margin-right:0.5em;
