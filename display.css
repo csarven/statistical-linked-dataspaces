@@ -20,7 +20,7 @@ a abbr { cursor: pointer; border-bottom:0; }
 table { border-collapse:collapse; }
 tr { vertical-align:top; }
 ol { list-style-position:inside; }
-h2, h3, h4, h5, h6, p, ul, ol, li, pre, code, table {
+h2, h3, h4, h5, h6, p, ul, ol, li, pre, code, table, dt {
 orphans: 3;
 widows: 3;
 }
@@ -29,8 +29,10 @@ thead { display: table-header-group; }
 tr, img { page-break-inside: avoid; }
 img { max-width: 100% !important; }
 
-#acknowledgements,
-#references {
+#abstract,
+#document-identifier,
+h2:not([id="keywords"]),
+#acknowledgements + pre {
 page-break-before: always;
 }
 #references a,
@@ -50,7 +52,7 @@ margin-top:2em;
 body {
 background-color:#FFFFFF;
 color:#000000;
-font-family:sans-serif;
+font-family:"Canella", serif;
 font-size:16px;
 line-height:1.4;
 counter-reset: section;
@@ -120,13 +122,24 @@ column-gap:0.83cm;
 }
 */
 
-p, ol, ul, table, figure {
+p, ol, ul {
 margin-bottom:1em;
 }
+table, figure {
+margin-bottom:2em;
+}
+
+
+h1, h2, h3, h4, h5, h6, strong, th, dt {
+font-family:CanellaBold, serif;
+}
+i, cite, em, var, address, dfn {
+font-family:CanellaItalic, serif;
+}
+
 
 h1 {
 margin-bottom:1em;
-font-family:Arial, sans-serif;
 font-size:2em;
 text-align:center;
 }
@@ -138,9 +151,11 @@ h6 { font-size:1.1em; }
 
 h2 {
 margin-top:1.5em;
+margin-bottom:0.5em;
 }
 h3, h4, h5, h6 {
-margin-top:1em;
+margin-top:1.5em;
+margin-bottom:0.5em;
 }
 
 h2:nth-of-type(n+3) {
@@ -165,9 +180,20 @@ content: counter(section)"." counter(sub-section) "." counter(sub-sub-section) "
 }
 
 
-ol ol {
+#contents + ol ol {
 margin-left:1em;
 }
+#contents + ol,
+#contents + ol ol { counter-reset: item; }
+#contents + ol li { display: block; }
+#contents + ol li:before,
+#contents + ol ol li:before {
+content: counters(item, ".");
+counter-increment: item;
+margin-right:0.5em;
+}
+
+
 
 li {
 list-style-position:inside;
@@ -439,7 +465,6 @@ margin-bottom:1em;
 
 
 #references + ol {
-font-family:"Times New Roman", serif;
 font-size:9pt;
 }
 #references + ol {

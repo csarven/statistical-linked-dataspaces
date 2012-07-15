@@ -228,24 +228,24 @@ When in doubt, mu.
                         <dd>In a nutshell, the use of URIs allows us to refer to things and concepts, whether they are real or imaginary, in an absolute way. In order to persistently make use of things, <cite>Sir Tim Berners-Lee</cite> proposed that <q href="http://www.w3.org/DesignIssues/Axioms.html#Universality2">any resource of significance should be given a URI</q>. By employing the widely adopted <code>http:</code> URI scheme, the idea for Linked Data sets off in terms of providing a representation for requested resources.</dd>
 
                         <dt id="linked-data-description_rdf-data-model">RDF data model</dt>
-                        <dd>The key ingredient in the information that is returned to the user has to do with the model of the data in the response. Regardless of the syntax that is used, Resource Description Framework (RDF) is essentially an entity-relationship model that provides a way to make statements about the things in our reality. A statement contains three atomic parts, also known as a triple: the <em>subject</em> resource in which the statement is about, followed with a <em>property</em> which is a vocabulary term that describes the type of relationship it has to an <em>object</em> resource. Each of these components are typically represented using HTTP URIs, with the possibility of the object resource being a literal string. In mathematical terms, RDF is a directed, labeled graph, which conceptually depicts a graph of things. What makes this method to make claims about things worthwhile is the act of linking any two URIs together in a particular way. It fundamentally presents an opportunity to discover new resources in an uniform way, whether the resource is in local storage or somewhere else.</dd>
+                        <dd>The key ingredient in the information that is returned to the user has to do with the model of the data in the response. Regardless of the syntax that is used, Resource Description Framework (<dfn><abbr title="Resource Description Framework">RDF</abbr></dfn>) is essentially an entity-relationship model that provides a way to make statements about the things in our reality. A statement contains three atomic parts, also known as a triple: the <em>subject</em> resource in which the statement is about, followed with a <em>property</em> which is a vocabulary term that describes the type of relationship it has to an <em>object</em> resource. Each of these components are typically represented using HTTP URIs, with the possibility of the object resource being a literal string. In mathematical terms, RDF is a directed, labeled graph, which conceptually depicts a graph of things. What makes this method to make claims about things worthwhile is the act of linking any two URIs together in a particular way. It fundamentally presents an opportunity to discover new resources in an uniform way, whether the resource is in local storage or somewhere else.</dd>
 
                         <dt id="linked-data-description_rdf-vocabularies">RDF vocabularies</dt>
-                        <dd>In RDF triple statements, properties are vocabulary terms that are used to relate a subject to an object. As these resources are accessible via HTTP URIs, when dereferenced they provide a description for the term in use. Some of the well-known vocabularies that are used in Linked Data publishing include: Friend of a Friend (FOAF) to describe people and the things that they do; RDF Data Cube which is used to describe multi-dimensional statistical data; SDMX for the statistical information model; British reference periods, SKOS to describe controlled thesauri, classification schemes and taxonomies; DC Terms for general purpose metadata relations and; VoID to provide metadata on datasets.</dd>
+                        <dd>In RDF triple statements, properties are vocabulary terms that are used to relate a subject to an object. As these resources are accessible via HTTP URIs, when dereferenced they provide a description for the term in use. Some of the well-known vocabularies that are used in Linked Data publishing include: Friend of a Friend (<dfn><abbr title="Friend of a Friend">FOAF</abbr></dfn>) to describe people and the things that they do; RDF Data Cube which is used to describe multi-dimensional statistical data; Statistical Data and Metadata eXchange (<dfn><abbr title="Statistical Data and Metadata eXchange">SDMX</abbr></dfn>) for the statistical information model; British reference periods, Simple Knowledge Organization System (<dfn><abbr title="Simple Knowledge Organization System">SKOS</abbr></dfn>) to describe controlled thesauri, classification schemes and taxonomies; DC Terms for general purpose metadata relations and; VoID to provide metadata on datasets.</dd>
 
                         <dt id="linked-data-description_sparql">SPARQL</dt>
-                        <dd>SPARQL Protocol and RDF Query Language (SPARQL) is a protocol and a query language to retrieve and manipulate RDF data. It can be used to express queries across local and remote data sources, whether the data resides in RDF files or databases. SPARQL queries consist of RDF triple graph patterns written in a fashion similar to Turtle, and allows modifiers for the patterns. In the Linked Data scene, it is common to see publicly accessible SPARQL endpoints where queries are sent and received over HTTP. Federated queries can be written to compute results that span over different SPARQL endpoints on the Web.</dd>
+                        <dd>SPARQL Protocol and RDF Query Language (<dfn><abbr title="SPARQL Protocol and RDF Query Language">SPARQL</abbr></dfn>) is a protocol and a query language to retrieve and manipulate RDF data. It can be used to express queries across local and remote data sources, whether the data resides in RDF files or databases. SPARQL queries consist of RDF triple graph patterns written in a fashion similar to Turtle, and allows modifiers for the patterns. In the Linked Data scene, it is common to see publicly accessible SPARQL endpoints where queries are sent and received over HTTP. Federated queries can be written to compute results that span over different SPARQL endpoints on the Web.</dd>
                     </dl>
 
                     <p>The Linked Data efforts are concerned with publishing and querying all sorts of data that's interconnected in the form of a <em>Giant Global Graph</em>. Some of the motivations behind this is to uncover insights about societies, build smarter systems, making predictions, democratizing data for people, or to make better decisions.</p>
 
 
                     <h3 id="linked-statistics">Linked Statistics</h3>
-                    <p>With the rise of special-purpose, domain-specific formats such as <a href="http://www.scb.se/Pages/List____314011.aspx">PC-Axis</a> [<a href="#r_1">1</a>] or <a href="http://sdmx.org/">Statistical Data and Metadata eXchange</a> (SDMX) [<a href="#r_2">2</a>], an ISO standard for exchanging and sharing statistical data and metadata among organizations, re-using statistical data has become more possible. However, with the complexity introduced by these formats, the barrier for consuming the data has raised as well. On the other hand, general-purpose formats such as Microsoft's Excel or CSV are very widely deployed and a number of tools and libraries in any kind of programming language one could possibly think of exist to process them. The down-side of these formats is equally obvious: as much of the high-quality annotations and metadata, that is, how to interpret the observations, is not or only partially captured, the data fidelity suffers. Even worse, using these formats, the data and metadata typically gets separated. With linked statistics, one can leverage the existing infrastructure as well as retaining metadata along with the data, yielding high data fidelity, consumable in a standardised, straight-forward way. However, the handling of statistical data as Linked Data requires particular attention in order to maintain its integrity and fidelity.</p>
+                    <p>With the rise of special-purpose, domain-specific formats such as <a href="http://www.scb.se/Pages/List____314011.aspx">PC-Axis</a> [<a href="#r_1">1</a>] or <a href="http://sdmx.org/">SDMX</a> [<a href="#r_2">2</a>], an ISO standard for exchanging and sharing statistical data and metadata among organizations, re-using statistical data has become more possible. However, with the complexity introduced by these formats, the barrier for consuming the data has raised as well. On the other hand, general-purpose formats such as Microsoft's Excel or CSV are very widely deployed and a number of tools and libraries in any kind of programming language one could possibly think of exist to process them. The down-side of these formats is equally obvious: as much of the high-quality annotations and metadata, that is, how to interpret the observations, is not or only partially captured, the data fidelity suffers. Even worse, using these formats, the data and metadata typically gets separated. With linked statistics, one can leverage the existing infrastructure as well as retaining metadata along with the data, yielding high data fidelity, consumable in a standardised, straight-forward way. However, the handling of statistical data as Linked Data requires particular attention in order to maintain its integrity and fidelity.</p>
 
 					<p>Going beyond the operations of slicing, filtering and visualising statistical data typically requires out-of-band information to combine it with other kinds of data. Contextual information is usually not found in the statistical data itself. Using linked statistics, we are able to perform this data integration task in a more straight-forward way by leveraging the contextual information provided by the typed links between the data items of one data set to other datasets in the LOD cloud.</p>
 
-                    <p>The <a href="http://www.w3.org/TR/vocab-data-cube/">RDF Data Cube vocabulary</a> is used to express multi-dimensional statistical data on the Web, and its data model is compatible with the cube model that underlies SDMX. Data cubes are in the nature of a hyper-cube such that multiple dimensions may be used to refer to a particular observation in the cube. Data cubes are characterised by their <em>dimensions</em>, which indicate what the observation is about with a set of properties; its <em>measures</em> to represent the phenomenon that is being observed with a value; and optionally with <em>attributes</em> which help interpret the measure values with a unit. Dimensions typically represent concepts, which are taken from a code list, and are highly valuable as they may used across data cubes by any consumer. Code lists, also known as classifications, are typically identified by using the <em>Simple Knowledge Organization System</em> (SKOS) vocabulary in RDF.</p>
+                    <p>The <a href="http://www.w3.org/TR/vocab-data-cube/">RDF Data Cube vocabulary</a> is used to express multi-dimensional statistical data on the Web, and its data model is compatible with the cube model that underlies SDMX. Data cubes are in the nature of a hyper-cube such that multiple dimensions may be used to refer to a particular observation in the cube. Data cubes are characterised by their <em>dimensions</em>, which indicate what the observation is about with a set of properties; its <em>measures</em> to represent the phenomenon that is being observed with a value; and optionally with <em>attributes</em> which help interpret the measure values with a unit. Dimensions typically represent concepts, which are taken from a code list, and are highly valuable as they may used across data cubes by any consumer. Code lists, also known as classifications, are typically identified by using the SKOS vocabulary in RDF.</p>
 
 					<p>What linked statistics provide, and in fact enable, are queries across datasets: given the dimensions are linked, one can learn from a certain observation's dimension value, other provided dimension values, enabling the automation of cross-dataset queries, hence cutting down integration costs and delivering results quicker.</p>
 
@@ -276,7 +276,7 @@ When in doubt, mu.
                     <p>The idea of <em>Dataspaces</em> as discussed earlier was proposed without being tied to any particular set of technologies or types of data. It is a broad description for what constitutes a dataspace. For the moment, without diving into specific technologies, tooling, or data, possible parallels can be drawn between <em>Dataspaces</em> and dataspaces which follows the Linked Data design principles. Table [<a href="#table_dataspaces-to-linked-dataspaces">1</a>] presents a generalized view for the components and services in Linked Dataspaces.</p>
 
                     <table id="table_dataspaces-to-linked-dataspaces">
-                        <caption><strong>Table 1.</strong> Dataspaces to Linked Dataspaces</caption>
+                        <caption><strong>Table 1</strong>. Dataspaces to Linked Dataspaces</caption>
                         <thead>
                             <tr><th>Dataspaces</th><th>Linked Dataspaces</th></tr>
                         </thead>
@@ -293,11 +293,11 @@ When in doubt, mu.
 
                     <p>As Dataspaces are not attached to any specific list of data deployment services or practices, the Linked Dataspace can be seen as a narrower or a particular realization of a Dataspace. Having a dataspace that adheres to Linked Data principles is that, one of the forefront goals is to offer the data sources and some of its services in a way that the underlying data can be globally accessed and linked to by external data sources and applications.</p>
 
-                    <p>The proposal here is that, with the assumption of publishing statistical data in a way that its components can be identified, discovered, and disseminated for numerous uses, a Linked Dataspace can be an ideal candidate. A statistical Linked Dataspace needs to identify resources and provide access to their descriptions, where such resources are in the nature of code lists, data cube observations, datasets and structures. Some of the specific challenges include: extraction of original data sources, transformations to RDF, and loading (ETL) to data storage services; creating global identifiers for the resources in its data catalogs; using vocabularies which are designed for modeling statistical data; offering services to the outside world such that its participating data sources can be browsed through; discovery via text searches and structured queries; and building interlinks with other data sources.</p>
+                    <p>The proposal here is that, with the assumption of publishing statistical data in a way that its components can be identified, discovered, and disseminated for numerous uses, a Linked Dataspace can be an ideal candidate. A statistical Linked Dataspace needs to identify resources and provide access to their descriptions, where such resources are in the nature of code lists, data cube observations, datasets and structures. Some of the specific challenges include: extraction of original data sources, transformations to RDF, and loading (ETL) to data storage services; creating global identifiers for the resources in its data catalogs; using vocabularies which are designed for modeling statistical data; offering services to the outside world such that its participating data sources can be browsed through; discovery via text searches and structured queries; and building interlinks with other data sources. Figure [<a href="#figure_linked-dataspaces">2</a>] shows an architectural diagram of Linked Dataspaces.</p>
 
 
                     <figure id="figure_linked-dataspaces">
-                        <figcaption><strong>Figure 9</strong>: Linked Dataspaces architecture</figcaption>
+                        <figcaption><strong>Figure 2</strong>: Linked Dataspaces architecture</figcaption>
                         <object type="image/svg+xml" data="linked-dataspaces.svg" width="420" height="280"></object>
                     </figure>
 
@@ -388,27 +388,27 @@ When in doubt, mu.
                     <h2 id="components">Components</h2>
                     <p>This chapter will identify a concrete list of required components to realize a statistical Linked Dataspace, give an in-depth explanation of the contributed technologies to fill-in some of the gaps in Linked Dataspaces.</p>
 
-                    <p>Given the requirements to publish a statistical Linked Dataspace as discussed earlier, Table 9 outlines a list of required components to realize such space with example implementations. If we take a look at the <a href="#figure_linked-dataspaces">Linked Dataspace architecture</a> again, we can see how some of these components and services are grouped together.</p>
+                    <p>Given the requirements to publish a statistical Linked Dataspace as discussed earlier, Table [<a href="#linked-dataspace-components-implementations">2</a>] outlines a list of required components to realize such space with example implementations. If we take a look at the Linked Dataspace architecture in Figure [<a href="#figure_linked-dataspaces">2</a>] again, we can see how some of these components and services are grouped together.</p>
 
                     <table id="linked-dataspace-components-implementations">
-                        <caption><strong>Table 9.</strong> Linked Dataspace components, and implementations</caption>
+                        <caption><strong>Table 2</strong>. Linked Dataspace components, and implementations</caption>
                         <thead>
                             <tr><th>Components</th><th>Implementations</th></tr>
                         </thead>
                         <tbody>
                             <tr><td>Environment</td><td>Linux, Apache</td></tr>
-                            <tr><td>Data retrieval</td><td>CURL, Java, LDSpider, wget</td></tr>
-                            <tr><td>Data preprocessing</td><td>Manual with custom scripts, Google Refine</td></tr>
-                            <tr><td>Data modeling</td><td>Google Refine, Manual, Neologism</td></tr>
-                            <tr><td>Data conversion</td><td>XSLT, CSV2RDF, D2R</td></tr>
-                            <tr><td>RDF store and SPARQL servers</td><td>TDB, Fuseki, Virtuoso, Sesame, 4store</td></tr>
+                            <tr><td>Data retrieval</td><td>CURL, Java, <a href="http://code.google.com/p/ldspider/">LDSpider</a>, wget</td></tr>
+                            <tr><td>Data preprocessing</td><td>Manual with custom scripts, <a href="http://code.google.com/p/google-refine/">Google Refine</a></td></tr>
+                            <tr><td>Data modeling</td><td><a href="http://lab.linkeddata.deri.ie/2010/grefine-rdf-extension/">RDF extension for Google Refine</a>, Manual, <a href="http://neologism.deri.ie/">Neologism</a></td></tr>
+                            <tr><td>Data conversion</td><td>XSLT, CSV2RDF, <a href="http://d2rq.org/">D2RQ</a></td></tr>
+                            <tr><td>RDF store and SPARQL servers</td><td><a href="http://jena.apache.org/documentation/tdb/index.html">TDB</a>, <a href="http://jena.apache.org/documentation/serving_data/index.html">Fuseki</a>, <a href="http://virtuoso.openlinksw.com/">Virtuoso</a>, <a href="http://www.openrdf.org/">Sesame</a>, <a href="http://4store.org/">4store</a></td></tr>
                             <tr><td>Loading RDF data into RDF store</td><td>Manual with custom scripts</td></tr>
-                            <tr><td>RDF store optimization</td><td>TDBstats</td></tr>
-                            <tr><td>Interlinking</td><td>Manual inspection and selection, SemFM, Silk, LIMES</td></tr>
-                            <tr><td>Enrichment</td><td>Manual, DL-Learner, Stanbol</td></tr>
-                            <tr><td>Database metadata</td><td>VoID, LODStats</td></tr>
+                            <tr><td>RDF store optimization</td><td><a href="http://jena.apache.org/documentation/tdb/optimizer.html">TDBstats</a></td></tr>
+                            <tr><td>Interlinking</td><td>Manual inspection and selection, <a href="http://www4.wiwiss.fu-berlin.de/bizer/silk/">Silk</a>, <a href="http://aksw.org/Projects/limes">LIMES</a></td></tr>
+                            <tr><td>Enrichment</td><td>Manual, <a href="http://aksw.org/Projects/DLLearner">DL-Learner</a>, <a href="http://incubator.apache.org/stanbol/">Stanbol</a></td></tr>
+                            <tr><td>Database metadata</td><td><a href="http://www.w3.org/TR/void/">VoID</a>, <a href="http://aksw.org/projects/LODStats">LODStats</a></td></tr>
                             <tr><td>Data dumps</td><td>File system</td></tr>
-                            <tr><td>User interface</td><td>Callimachus, Linked Data API, OpenLink Data Explorer, Pubby</td></tr>
+                            <tr><td>User interface</td><td><a href="http://code.google.com/p/callimachus/">Callimachus</a>, <a href="http://code.google.com/p/linked-data-api/">Linked Data API</a>, <a href="http://ode.openlinksw.com/">OpenLink Data Explorer</a>, <a href="http://www4.wiwiss.fu-berlin.de/pubby/">Pubby</a></td></tr>
                         </tbody>
                     </table>
 
@@ -421,7 +421,7 @@ When in doubt, mu.
                     <p>Both of these contributions are discussed in further detail in the following sections.</p>
 
                     <h3 id="graphpusher">GraphPusher</h3>
-                    <p>The manual creation of dataspaces [<a href="#r_1">1</a>] conforms to Linked Data principles is time consuming, and prone to human errors since there are a number of steps involved to gather the data, and place them in a store. Typically a list is compiled consisting of datasets with graph names for each dataset, and local copies of the data that is to be imported in to a store. This information may be tracked in a structured format, or a simple text file. The Vocabulary of Interlinked Datasets (VoID) [<a href="#r_2">2</a>] is used because it is an accepted standard to describe RDF datasets, as well as the SPARQL 1.1 Service Description (SD) [<a href="#r_3">3</a>] for discovering information about a SPARQL service.</p>
+                    <p>The manual creation of dataspaces [<a href="#r_1">1</a>] conforms to Linked Data principles is time consuming, and prone to human errors since there are a number of steps involved to gather the data, and place them in a store. Typically a list is compiled consisting of datasets with graph names for each dataset, and local copies of the data that is to be imported in to a store. This information may be tracked in a structured format, or a simple text file. The Vocabulary of Interlinked Datasets (<dfn><abbr title="Vocabulary of Interlinked Datasets">VoID</abbr></dfn>) [<a href="#r_2">2</a>] is used because it is an accepted standard to describe RDF datasets, as well as the SPARQL 1.1 Service Description (SD) [<a href="#r_3">3</a>] for discovering information about a SPARQL service.</p>
 
                     <p>One of the goals of publishing a VoID file alongside datasets that are published as Linked Data is to allow consumers to discover and retrieve the data. Based on this, the GraphPusher tool [<a href="#r_4">4</a>] is designed to aid users to retrieve and import data in RDF format into a graph store by making use of the metadata in a VoID file. VoID describes access methods for the actual RDF triples in a number of different ways. GraphPusher focuses on two of these methods; dereferencing HTTP URIs and compressed RDF data dumps.</p>
 
@@ -431,7 +431,7 @@ When in doubt, mu.
 
                     <p>GraphPusher was originally created to fulfil the data deployment need of DataGovIE&#8217;s [<a href="#r_5">5</a>] production and staging datasets. DataGovIE reuses its published VoID description to feed its own dataspace with incremental changes to data.</p>
 
-                    <p>GraphPusher approaches this task with the following sequence. Figure [<a href="#diagram_graphpusher-sequence">1</a>] gives an illustration.</p>
+                    <p>GraphPusher approaches this task with the following sequence. Figure [<a href="#diagram_graphpusher-sequence">3</a>] gives an illustration.</p>
 
                     <ol>
                         <li>Compiling a list of datasets to be retrieved to local space and graph name to use per dataset or file. This is accomplished by retrieving a VoID file and extracting the <code>void:dataDump</code> property values. It also looks for SD&#8217;s <code>sd:name</code> property in VoID, where they are collected to name the graphs in the RDF store. In the case that <code>sd:name</code> is not present, the graph name method is determined by user&#8217;s configuration in GraphPusher.</li>
@@ -442,7 +442,7 @@ When in doubt, mu.
                     </ol>
 
                     <figure id="figure_graphpusher-sequence">
-                        <figcaption><strong>Figure 1</strong>: GraphPusher sequence</figcaption>
+                        <figcaption><strong>Figure 3</strong>: GraphPusher sequence</figcaption>
                         <object type="image/svg+xml" data="graphpusher-sequence.svg" width="300" height="220"></object>
                     </figure>
 
@@ -462,14 +462,14 @@ When in doubt, mu.
                     <h4 id="graphpusher_determining-graph-name">Determining graph name</h4>
                     <p>Where possible, GraphPusher makes a decision for dataset&#8217;s named graphs by staying consistent with publishers&#8217; intentions. In certain cases, it tries to indicate the origin of the data by reusing the dataset location in the graph name.</p>
 
-                    <p>Figure [<a href="figure_named-graph-flowchart">2</a>] illustrates the flow for this process.</p>
+                    <p>Figure [<a href="figure_named-graph-flowchart">4</a>] illustrates the flow for this process.</p>
 
                     <p>If <code>sd:name</code> is present in VoID, its value has highest priority because it explicitly states the named graph that is used in the dataset, and consequently how it can be referenced in a <code>FROM/FROM NAMED</code> clause.</p>
 
                     <p>If <code>sd:name</code> is not present, GraphPusher looks for one of the <code>graphNameMethod</code> configuration property values: <code>dataset</code>, <code>dataDump</code>, <code>filename</code>. By default <code>dataset</code> value tells the GraphPusher to simply use the URI of the <code>void:Dataset</code>. If <code>dataDump</code> is set, the named graph IRI becomes the IRI of the data dump. Alternatively, if the <code>filename</code> method is used, the file name is appended to the <code>graphNameBase</code> URI value.</p>
 
                     <figure id="figure_named-graph-flowchart">
-                        <figcaption><strong>Figure 2</strong>: Determining named graph flowchart</figcaption>
+                        <figcaption><strong>Figure 4</strong>: Determining named graph flowchart</figcaption>
                         <object type="image/svg+xml" data="graphpusher-named-graph-flowchart.svg" width="360" height="340"></object>
                     </figure>
 
@@ -484,10 +484,10 @@ When in doubt, mu.
                         <dd>This criteria is intended to provide a measurement for the amount of time it takes to perform the full data loading process. It is context of performing the task more than once.</dd>
                     </dl>
 
-                    <p>Table [<a href="#table_comparison-manual-graphpusher-approaches">1</a>] gives an overview for the comparison of manual and GraphPusher approaches.</p>
+                    <p>Table [<a href="#table_comparison-manual-graphpusher-approaches">3</a>] gives an overview for the comparison of manual and GraphPusher approaches.</p>
 
                     <table id="table_comparison-manual-graphpusher-approaches">
-                        <caption><strong>Table 1</strong>: Comparison of manual and GraphPusher approaches</caption>
+                        <caption><strong>Table 3</strong>: Comparison of manual and GraphPusher approaches</caption>
                         <thead>
                             <tr><td></td><th>Manual</th><th>GraphPusher</th></tr>
                         </thead>
@@ -522,7 +522,7 @@ When in doubt, mu.
                     <h3 about="[this:#linked-data-pages]" id="linked-data-pages" property="rdfs:label">Linked Data Pages</h3>
                     <p>It is important to highlight some of the core components of a Linked Data framework. The <a href="#linked-data-design-principles_3">3<sup>rd</sup> Linked Data design principle</a> suggests to provide the data in RDF, a machine readable format, in the URI response. The obvious thing we can refer from this is that, the mechanism that's required to publish RDF data needs to be able to take in resource requests, look for them in its dataspace, and compile an appropriate response back. This process can work in conjunction with responses to human users as well as machines. That is, with the help of HTTP Accept headers, content-negotiation can be done on the requesting agent's preferences. With this approach, a given URI can be requested in one of the RDF formats, HTML, or even JSON. This provides an opportunity for different types of users to make use of the underlying data.</p>
 
-                    <p>Figure 8 illustrates a general process from requested URI (input) to response in HTML or RDF (output). The steps which take place are as follows:</p>
+                    <p>Figure [<a href="#figure_linked-data-request-response">5</a>] illustrates a general process from requested URI (input) to response in HTML or RDF (output). The steps which take place are as follows:</p>
 
                     <ol>
                         <li><em>Request</em>: An agent requests a URI from the server.</li>
@@ -533,17 +533,17 @@ When in doubt, mu.
 
 
                     <figure id="figure_linked-data-request-response">
-                        <figcaption><strong>Figure 8</strong>: Linked Data Request and Response interface</figcaption>
+                        <figcaption><strong>Figure 5</strong>: Linked Data Request and Response interface</figcaption>
                         <object type="image/svg+xml" data="linked-data-request-response.svg" width="240" height="190"></object>
                     </figure>
 
 
                     <p>As an attempt to use a publishing architecture as such, existing frameworks were investigated in 2010. To name a few, Fresnel, LESS, Pubby, and Paget was explored for use in <a href="http://data-gov.ie/">DataGovIE</a> website. The idea was to use a tool that 1) had the necessary features for data consolidation, and 2) allowed custom templating for resources. The fundamental shortcomings of these tools appeared to be that on the templating side, they offered de facto generic entity rendering of RDF resources in HTML i.e., a tabular view of properties and objects of a subject resource. This was also typically the result of a <code>DESCRIBE</code> SPARQL query for a given resource such that, it simply gave back whatever the RDF store had for that resource.</p>
 
-                    <p>In order to make the HTML user interface more friendly and have unique resource presentations, the Linked Data Pages (LDP) was developed. The motivation was to not only make the publishing process possible as other attempts, but also to make it easier for publishers to customize the HTML output. Instead of starting from scratch, Paget was extended since had a good feature base which matched DataGovIE's needs. Table 8 illustrates LDP's architecture:</p>
+                    <p>In order to make the HTML user interface more friendly and have unique resource presentations, the Linked Data Pages (LDP) was developed. The motivation was to not only make the publishing process possible as other attempts, but also to make it easier for publishers to customize the HTML output. Instead of starting from scratch, Paget was extended since had a good feature base which matched DataGovIE's needs. Figure [<a href="#figure_linked-data-pages-architecture">6</a>] illustrates LDP's architecture:</p>
 
                     <figure id="figure_linked-data-pages_architecture">
-                        <figcaption><strong>Figure 8</strong>: Linked Data Pages architecture</figcaption>
+                        <figcaption><strong>Figure 6</strong>: Linked Data Pages architecture</figcaption>
                         <object type="image/svg+xml" data="linked-data-pages_architecture.svg" width="365" height="290"></object>
                     </figure>
 
@@ -594,10 +594,10 @@ While allowing default page rendering when no custom queries or templates assign
 
                     <p>In order to better control the contents of the output for different contexts, the framework should offer ways to do some sort of data manipulations. This is more about aggregating additional data, whether from different SPARQL endpoints, cached results, or compiled on the go; and filtering data in different ways to make it more suitable for the consumer. Paget offers a number of methods to accomplish these where some are extended in site specific implementations.</p>
 
-                    <p>Figure 5 shows a screenshot of the Galway City page at DataGoVIE.</p>
+                    <p>Figure [<a href="#geo.data-gov.ie-city-galway_screenshot">7</a>] shows a screenshot of the Galway City page at DataGoVIE.</p>
 
                     <figure id="geo.data-gov.ie-city-galway_screenshot">
-                        <figcaption><strong>Figure 5</strong>. Galway City page on DataGovIE</figcaption>
+                        <figcaption><strong>Figure 7</strong>. Galway City page on DataGovIE</figcaption>
                         <img src="geo.data-gov.ie-city-galway_screenshot.jpg" alt="Screenshot of Galway City page on DataGovIE" width="775" height="753"/>
                     </figure>
 
@@ -616,24 +616,26 @@ While allowing default page rendering when no custom queries or templates assign
 
 
                     <h3 id="architecture">Deployment Architecture</h3>
-                    <p>Figures [<a href="#figure_architecture_cso-ireland">1</a>], [<a href="#figure_architecture_eurostat">2</a>], [<a href="#figure_architecture_world-bank">3</a>] illustrate an overview on the overall architecture of the deployment of our three case studies. They will be discuss in further detail in the following sections.</p>
+                    <p>Figures [<a href="#figure_architecture_cso-ireland">7</a>], [<a href="#figure_architecture_eurostat">9</a>], [<a href="#figure_architecture_world-bank">10</a>] illustrate an overview on the overall architecture of the deployment of our three case studies. They will be discuss in further detail in the following sections.</p>
 
                     <figure id="figure_architecture_cso-ireland">
-                        <figcaption><strong>Figure 1</strong>. CSO Ireland deployment architecture</figcaption>
+                        <figcaption><strong>Figure 8</strong>. CSO Ireland deployment architecture</figcaption>
                         <object type="image/svg+xml" data="cso-architecture.svg" width="460" height="111"></object>
                     </figure>
 
                     <figure id="figure_architecture_eurostat">
-                        <figcaption><strong>Figure 2</strong>. Eurostat deployment architecture</figcaption>
+                        <figcaption><strong>Figure 9</strong>. Eurostat deployment architecture</figcaption>
                         <object type="image/svg+xml" data="eurostat-architecture.svg" width="460" height="253"></object>
                     </figure>
 
                     <figure id="figure_architecture_world-bank">
-                        <figcaption><strong>Figure 3</strong>. World Bank deployment architecture</figcaption>
+                        <figcaption><strong>Figure 10</strong>. World Bank deployment architecture</figcaption>
                         <object type="image/svg+xml" data="wb-architecture.svg" width="460" height="176"></object>
                     </figure>
 
                     <h3 id="data-retrieval">Data Retrieval</h3>
+                    <p>This section discusses the methods used to retrieve the statistical data from original sources.</p>
+
                     <h4 id="data-retrieval_cso-ireland">CSO Ireland</h4>
                     <p>Data from the 2006 Irish Census was retrieved manually, downloading each slice of small area population statistics individually via the export to Excel files from the <a href="http://beyond2020.cso.ie/census/ReportFolders/ReportFolders.aspx">CSO's instance of the Beyond 20/20</a> [<a href="#r_15">15</a>]. 14 datasets in CSV format in total of 8MB was manually retrieved using the interactive application by clicking on the access URLs.</p>
 
@@ -792,12 +794,12 @@ While allowing default page rendering when no custom queries or templates assign
 
                     <h3 id="linked-datasets">Linked Datasets</h3>
                     <h4 id="data-interlinking">Data Interlinking</h4>
-                    <p>Interlinking things and concepts from our RDF datasets to external datasets in the LOD Cloud was a challenging task. It primarily requires an investigation to identify eligible resource types in our datasets, and then finding suitable matching resources in external datasets. One useful requirement was to make sure that the target resources were dereferenceable in order to make the interlinking worthwhile. Tables [<a href="#data-interlinking_cso-ireland_table">1</a>], [<a href="#data-interlinking_eurostat_table">2</a>], [<a href="#data-interlinking_world-bank_table">3</a>] gives an overview of the targeted external datasets, entity types, links, and counts for each case three cases respectively.</p>
+                    <p>Interlinking things and concepts from our RDF datasets to external datasets in the LOD Cloud was a challenging task. It primarily requires an investigation to identify eligible resource types in our datasets, and then finding suitable matching resources in external datasets. One useful requirement was to make sure that the target resources were dereferenceable in order to make the interlinking worthwhile. Tables [<a href="#data-interlinking_cso-ireland_table">4</a>], [<a href="#data-interlinking_eurostat_table">5</a>], [<a href="#data-interlinking_world-bank_table">6</a>] gives an overview of the targeted external datasets, entity types, links, and counts for each case three cases respectively.</p>
 
                     <h5 id="data-interlinking_cso-ireland">CSO Ireland</h5>
                     <p>Interlinking for CSO Ireland was done by manually investigating useful URIs.</p>
                     <table id="data-interlinking_cso-ireland_table">
-                        <caption><strong>Table 1.</strong> Interlinks in CSO Ireland</caption>
+                        <caption><strong>Table 4</strong>. Interlinks in CSO Ireland</caption>
                         <thead><tr><th>Target dataset</th><th>Entity type</th><th>Link type</th><th>Link count</th></tr></thead>
                         <tbody>
                             <tr><td><a href="http://dbpedia.org/">DBpedia</a></td><td><code>dbo:Country</code></td><td><code>owl:sameAs</code></td><td>52</td></tr>
@@ -811,7 +813,7 @@ While allowing default page rendering when no custom queries or templates assign
                     <p>The <a href="http://www4.wiwiss.fu-berlin.de/bizer/silk/">Silk Framework</a> [<a href="#r_24">24</a>] is used to publish initial link sets.</p>
 
                     <table id="data-interlinking_eurostat_table">
-                        <caption><strong>Table 2.</strong> Interlinks in Eurostat</caption>
+                        <caption><strong>Table 5</strong>. Interlinks in Eurostat</caption>
                         <thead><tr><th>Target dataset</th><th>Entity type</th><th>Link type</th><th>Link count</th></tr></thead>
                         <tbody>
                             <tr><td><a href="http://dbpedia.org/">DBpedia</a></td><td><code>dbo:Country</code></td><td><code>owl:sameAs</code></td><td>1899</td></tr>
@@ -823,7 +825,7 @@ While allowing default page rendering when no custom queries or templates assign
                     <p>The dataset is interlinked using <a href="http://aksw.org/Projects/limes">LInk discovery framework for MEtric Spaces</a> (<dfn><abbr title="LInk discovery framework for MEtric Spaces">LIMES</abbr></dfn>) [<a href="#r_25">25</a>]. While a great portion of the codes were matched automatically, it included a review step to catch false positives, true and false negatives, as well as curating the final results. Some of the code list concepts were manually matched with corresponding links in DBpedia using <code>skos:exactMatch</code>es and <code>skos:closeMatch</code>es, as well as to the World Bank site using <code>foaf:page</code>s.</p>
 
                     <table id="data-interlinking_world-bank_table">
-                        <caption><strong>Table 3.</strong> Interlinks in World Bank</caption>
+                        <caption><strong>Table 6</strong>. Interlinks in World Bank</caption>
                         <thead><tr><th>Target dataset</th><th>Entity type</th><th>Link type</th><th>Link count</th></tr></thead>
                         <tbody>
                             <tr><td><a href="http://dbpedia.org/">DBpedia</a></td><td><code>dbo:Country</code></td><td><code>owl:sameAs</code></td><td>216</td></tr>
@@ -851,11 +853,11 @@ While allowing default page rendering when no custom queries or templates assign
 
 
                     <h4 id="rdf-datasets">RDF Datasets</h4>
-                    <p>Tables [<a href="#linked-dataset_cso-ireland_table">4</a>], [<a href="#linked-dataset_eurostat_table">5</a>], [<a href="#linked-dataset_world-bank_table">6</a>] outlines the current state of RDF Linked Datasets for CSO Ireland, Eurostat, and World Bank. The size of the dataset are in rounded number of triples. The <a href="#void">datasets' VoID files</a> would normally contain exact numbers.</p>
+                    <p>Tables [<a href="#linked-dataset_cso-ireland_table">7</a>], [<a href="#linked-dataset_eurostat_table">8</a>], [<a href="#linked-dataset_world-bank_table">9</a>] outlines the current state of RDF Linked Datasets for CSO Ireland, Eurostat, and World Bank. The size of the dataset are in rounded number of triples. The <a href="#void">datasets' VoID files</a> would normally contain exact numbers.</p>
 
 
                     <table id="linked-dataset_cso-ireland_table">
-                        <caption><strong>Table 4.</strong> CSO Ireland Linked Data</caption>
+                        <caption><strong>Table 7</strong>. CSO Ireland Linked Data</caption>
                         <thead><tr><th>Dataset</th><th>Format</th><th>Size</th><th>Number of triples</th><th>Number of observations</th></tr></thead>
                         <tbody>
                             <tr><th>2006 Irish Census</th><td>Turtle</td><td>776MB</td><td>12M</td><td>1.6M</td></tr>
@@ -863,7 +865,7 @@ While allowing default page rendering when no custom queries or templates assign
                     </table>
 
                     <table id="linked-dataset_eurostat_table">
-                        <caption><strong>Table 5.</strong> Eurostat Linked Data</caption>
+                        <caption><strong>Table 8</strong>. Eurostat Linked Data</caption>
                         <thead><tr><th>Dataset</th><th>Format</th><th>Size</th><th>Number of triples</th><th>Number of observations</th></tr></thead>
                         <tbody>
                             <tr><th>Datasets</th><td>RDF/XML</td><td>537GB</td><td>8B</td><td>1B</td></tr>
@@ -873,7 +875,7 @@ While allowing default page rendering when no custom queries or templates assign
                     </table>
 
                     <table id="linked-dataset_world-bank_table">
-                        <caption><strong>Table 6.</strong> World Bank Linked Data</caption>
+                        <caption><strong>Table 9</strong>. World Bank Linked Data</caption>
                         <thead><tr><th>Dataset</th><th>Format</th><th>Size</th><th>Number of triples</th><th>Number of observations</th></tr></thead>
                         <tbody>
                             <tr><th>Climate Change</th><td>RDF/XML</td><td>10GB</td><td>78M</td><td>7M</td></tr>
@@ -922,10 +924,10 @@ While allowing default page rendering when no custom queries or templates assign
                     <p>In this section we talk about various ways of making our Linked Datasets publicly accessible, discoverable, and usable.</p>
 
                     <h4 id="data-provenance">Data Provenance</h4>
-                    <p>Table <a href="data-provenance_table">7</a> outlines the vocabulary terms that are used in particular to provenance information in all three case studies. The provenance metadata for 2006 Irish Census was not created during the process of conversion to RDF. Some of the properties were added to the VoID file at a later stage.</p>
+                    <p>Table <a href="data-provenance_table">10</a> outlines the vocabulary terms that are used in particular to provenance information in all three case studies. The provenance metadata for 2006 Irish Census was not created during the process of conversion to RDF. Some of the properties were added to the VoID file at a later stage.</p>
 
                     <table id="data-provenance_table">
-                        <caption><strong>Table 7.</strong> Provenance in CSO Ireland, Eurostat and World Bank Linked Datasets</caption>
+                        <caption><strong>Table 10</strong>. Provenance in CSO Ireland, Eurostat and World Bank Linked Datasets</caption>
                         <thead><tr><th>Type of provenance</th><th>CSO Ireland</th><th>Eurostat</th><th>World Bank</th></tr></thead>
                         <tbody>
                             <tr><th>Defining source</th><td></td><td></td><td><code>rdfs:isDefinedBy</code></td></tr>
