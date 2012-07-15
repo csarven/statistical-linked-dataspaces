@@ -527,7 +527,7 @@ When in doubt, mu.
 
                     <h4 id="linked-data-frontend-architecture">Linked Data front-end architecture</h4>
 
-                    <p>Figure [<a href="#figure_linked-data-frontend">5</a>] illustrates a general process from the requested URI (input) to a response in HTML or RDF (output). The steps which take place are as follows:</p>
+                    <p>Figure [<a href="#figure_linked-data-frontend-architecture">5</a>] illustrates a general process from the requested URI (input) to a response in HTML or RDF (output). The steps which take place are as follows:</p>
 
                     <ol>
                         <li><em>Request</em>: An agent requests a URI from the server.</li>
@@ -537,7 +537,7 @@ When in doubt, mu.
                     </ol>
 
 
-                    <figure id="figure_linked-data-frontend">
+                    <figure id="figure_linked-data-frontend-architecture">
                         <figcaption><strong>Figure 5</strong>: Linked Data Request and Response interface</figcaption>
                         <object type="image/svg+xml" data="linked-data-frontend-architecture.svg" width="240" height="190"></object>
                     </figure>
@@ -549,9 +549,9 @@ When in doubt, mu.
 
                     <p>In order to make the HTML user interface more user friendly, Linked Data Pages (LDP) was developed. The motivation was to not only make the publishing process possible as other attempts, but also to make it easier for publishers to customize the HTML output. Instead of starting from scratch, Paget was extended since it had a good feature base which matched DataGovIE&#8217;s needs. Figure [<a href="#figure_linked-data-pages-architecture">6</a>] illustrates LDP&#8217;s architecture:</p>
 
-                    <figure id="figure_linked-data-pages_architecture">
+                    <figure id="figure_linked-data-pages-architecture">
                         <figcaption><strong>Figure 6</strong>: Linked Data Pages architecture</figcaption>
-                        <object type="image/svg+xml" data="linked-data-pages_architecture.svg" width="365" height="290"></object>
+                        <object type="image/svg+xml" data="linked-data-pages-architecture.svg" width="365" height="290"></object>
                     </figure>
 
                     <p>LDP is built on top of Paget, which requires <a href="http://code.google.com/p/moriarty/">Moriarty</a>, and <a href="https://github.com/semsol/arc2">ARC2</a> libraries. Paget is a versatile Web application written in PHP. Its HTML rendering of RDF is basic in a sense that information is displayed in a tabular way. LDP extends on Paget&#8217;s framework in order to output human readable Web pages. Additionally, LDP relies on its URI dispatch mechanism and to build a local index of the RDF data gathered from SPARQL query results.</p>
