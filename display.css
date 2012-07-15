@@ -61,6 +61,19 @@ page-break-after: avoid;
 
 }
 
+#contents + ol {
+position:fixed;
+top:1em;
+right:1em;
+}
+
+#acknowledgements + pre {
+padding:0;
+border:0;
+overflow:hidden;
+font-size:0.9em;
+}
+
 
 .todo {
 border:1px solid red;
