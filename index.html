@@ -37,19 +37,20 @@
                 <div id="authors">
                     <dl>
                         <dt>Author</dt>
-                        <dd class="entry-author"><a about="[this:]" rel="dcterms:creator dcterms:publisher" href="http://csarven.ca/#i">Sarven Capadisli</a></dd>
+                        <dd><a about="[this:]" rel="dcterms:creator dcterms:publisher" href="http://csarven.ca/#i">Sarven Capadisli</a></dd>
                     </dl>
                 </div>
 
-                <p id="document-purpose">Submitted in fulfillment of the requirements for the degree of Master of Science.</p>
+                <p id="document-purpose" property="rdfs:comment">Submitted in fulfilment of the requirements for the degree of Master of Science.</p>
 
                 <dl id="author_supervisor">
                     <dt>Supervisor</dt>
-                    <dd class="entry-author"><a about="[this:]" rel="dcterms:contributor" href="http://sw-app.org/mic.xhtml#i">Michael Hausenblas</a></dd>
+                    <dd><a href="http://sw-app.org/mic.xhtml#i">Dr. Michael Hausenblas</a></dd>
                 </dl>
 
                 <ul id="author_orgs">
-                    <li id="author_org_a"><span about="http://csarven.ca/#i" rel="org:memberOf" resource="http://deri.ie/"/><a href="http://deri.ie/">Digital Enterprise Research Institute</a>, <a href="http://nuigalway.ie/">National University of Ireland, Galway</a></li>
+                    <li id="deri"><a href="http://deri.ie/"><img src="logo_deri.gif"/> <span>Digital Enterprise Research Institute</span></a></li>
+                    <li id="nuigalway"><a href="http://nuigalway.ie/"><img src="logo_nuigalway.png"/> <span>National University of Ireland, Galway</span></a></li>
                 </ul>
 
                 <p id="document-submitted" property="dcterms:dateSubmitted" content="2012-07-16T09:00:00Z">2012-07</p>
@@ -64,7 +65,7 @@
                 <div property="dcterms:description" id="content" class="entry-content">
                     <div id="document-identifier">
                         <h2>ID</h2>
-                        <p><code>http://csarven.ca/statistical-linked-dataspace</code></p>
+                        <p><code>http://csarven.ca/statistical-linked-dataspaces</code></p>
                     </div>
 
                     <div id="keywords">
@@ -94,7 +95,7 @@ Shout outs go to:
         · tobyink (the gangster that sold me the Linked Data kool-aid) ·
          · iammyr · JeniT · edwcur · sheilagreaney · zyonnnn · belakv ·
 
-&lt;violin-music&gt;So many to thank, so little space, so:&lt;/violin-music&gt;
+So many to thank, so little space, so:
 
 I would like to express my gratitude to my supervisor, Michael Hausenblas, 
 whose expertise and guidance added considerably to my graduate experience. 
@@ -109,8 +110,8 @@ to eloquently shed light on various topics in Linked Data whenever I poked him
 for random conversations. When in need to commit a Triple crime, 
 I'd like to have him on my side. Richard, \m/.
 
-My colleagues Aftab Iqbal and Jindřich Mynarz whom I have worked closely with in 
-publishing CSO Ireland and Eurostat Linked Dataspaces.
+My colleagues Aftab Iqbal and Jindřich Mynarz whom I have worked with to 
+publish CSO Ireland and Eurostat Linked Dataspaces. Thank you for your support.
 
 Yet another thanks goes to my family for their continuous support in my 
 academic and professional adventures, even though I can't adequately explain to 
@@ -173,7 +174,7 @@ When in doubt, mu.
 
 
                     <h3 id="hypothesis">Hypothesis</h3>
-                    <p class="todo" title="Rephrase">It is contended that the deployment of statistical Linked Data comes with a specific set of requirements. The degree in which the requirements are accomplished predetermines the dataspace&#8217;s usefulness for data consumers. Therefore, the hypothesis of this document is if a specific set of requirements for building and managing dataspaces for statistical Linked Data is possible, and the development of missing parts to do some of the processes better by reducing cost and making the dataspace more useful.</p>
+                    <p>It is contended that the deployment of statistical Linked Data comes with a specific set of requirements. The degree in which the requirements are accomplished predetermines the dataspace&#8217;s usefulness for data consumers. Therefore, the hypothesis of this document is if a specific set of requirements for building and managing dataspaces for statistical Linked Data is possible, and if the development of missing parts will make the dataspace more useful.</p>
 
                     <h3 id="contributions">Contributions</h3>
                     <p>With preference to minimizing developer intervention wherever possible, the contributions herein are within the expectations of working in Linked Dataspace and providing read access to data respectively. The set of design considerations and requirements are derived from case studies in publishing 2006 Irish Census, Eurostat, and World Bank datasets. The contributions are as follows:</p>
@@ -222,7 +223,7 @@ When in doubt, mu.
 
 
                     <h3 id="linked-data">Linked Data</h3>
-                    <p>One manifestation of the Semantic Web vision is Linked Data. It is a pragmatic approach to publishing structured data on the Web in order to discover related data from different sources. The <a href="http://www.w3.org/DesignIssues/LinkedData.html">Linked Data design principles</a> were put forward by <a about="http://csarven.ca/#i" rel="foaf:knows" href="http://www.w3.org/People/Berners-Lee/card#i">Tim Berners-Lee</a> in 2006 as follows:</p>
+                    <p>One manifestation of the Semantic Web vision is Linked Data. It is a pragmatic approach to publishing structured data on the Web in order to discover related data from different sources. The <a href="http://www.w3.org/DesignIssues/LinkedData.html">Linked Data design principles</a> were put forward by <a href="http://www.w3.org/People/Berners-Lee/card#i">Tim Berners-Lee</a> in 2006 as follows:</p>
 
                     <blockquote about="http://www.w3.org/People/Berners-Lee/card#i" rel="dcterms:creator" href="http://www.w3.org/DesignIssues/LinkedData.html">
                         <ol id="linked-data-design-principles">
@@ -359,7 +360,7 @@ When in doubt, mu.
                     <h5 id="data-source_eurostat">Eurostat</h5>
                     <p><a href="http://ec.europa.eu/eurostat">Eurostat</a> [<a href="#r_6">6</a>] is the statistical office of the European Union with the aim to provide European Union statistical information in a way that can be comparable at European level. Statistical data collection is done by statistical authorities of each member state. They verify and analyse the data before sending it to Eurostat. Eurostat&#8217;s role is to consolidate the statistical data they receive from each member state and ensure that they are comparable. Eurostat actually only provides harmonized statistical data using common statistical language.</p>
 
-                    <p>Eurostat offers access to datasets using the <a href="http://epp.eurostat.ec.europa.eu/NavTree_prod/everybody/BulkDownloadListing">bulk download facility</a> [<a href="#r_7">7</a>]. The datasets are published by Eurostat in three different formats: Tab-seperated values (<dfn><abbr title="Tab-separated values">TSV</dfn>), DFT and SDMX. This makes it possible for users to import the data into the tool of their choice. A complete list of datasets which are published by Eurostat is made available through table of contents. Although there is no filtration on the different types of statistics provided by Eurostat, the datasets essentially cover statistical information along the following themes: general and regional statistics, economy and finance, population and social conditions, industry, trade and services, agriculture and fisheries, external trade, transport, environment and energy, and science and technology.</p>
+                    <p>Eurostat offers access to datasets using the <a href="http://epp.eurostat.ec.europa.eu/NavTree_prod/everybody/BulkDownloadListing">bulk download facility</a> [<a href="#r_7">7</a>]. The datasets are published by Eurostat in three different formats: Tab-seperated values (<dfn><abbr title="Tab-separated values">TSV</abbr></dfn>), DFT and SDMX. This makes it possible for users to import the data into the tool of their choice. A complete list of datasets which are published by Eurostat is made available through table of contents. Although there is no filtration on the different types of statistics provided by Eurostat, the datasets essentially cover statistical information along the following themes: general and regional statistics, economy and finance, population and social conditions, industry, trade and services, agriculture and fisheries, external trade, transport, environment and energy, and science and technology.</p>
 
                     <h5 id="data-source_world-bank">World Bank</h5>
                     <p>The <a href="http://worldbank.org/">World Bank</a> [<a href="#r_9">9</a>] is an international development organization that provides access to a comprehensive set of data about countries around the globe. The publicly available statistical data is collected from officially-recognized international sources, and consists of a wide array of observations on development indicators, financial statements, climate change, projects and operations.</p>
@@ -538,7 +539,7 @@ When in doubt, mu.
 
                     <figure id="figure_linked-data-frontend">
                         <figcaption><strong>Figure 5</strong>: Linked Data Request and Response interface</figcaption>
-                        <object type="image/svg+xml" data="linked-data-frontend.svg" width="240" height="190"></object>
+                        <object type="image/svg+xml" data="linked-data-frontend-architecture.svg" width="240" height="190"></object>
                     </figure>
 
 
