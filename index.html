@@ -32,7 +32,7 @@
     <body about="[this:]" typeof="foaf:Document sioc:Post biblio:Paper" class="hfeed journal">
         <div id="wrap">
             <div class="hentry">
-                <h1 property="dcterms:title" class="entry-title">Statistical Linked Dataspace</h1>
+                <h1 property="dcterms:title" class="entry-title">Statistical Linked Dataspaces</h1>
 
                 <div id="authors">
                     <dl>
@@ -519,7 +519,7 @@ When in doubt, mu.
                     </ul>
 
 
-                    <h3 about="[this:#linked-data-pages]" id="linked-data-pages" class="todo" title="Add a screenshot of an HTML view" property="rdfs:label">Linked Data Pages</h3>
+                    <h3 about="[this:#linked-data-pages]" id="linked-data-pages" property="rdfs:label">Linked Data Pages</h3>
                     <p>It is important to highlight some of the core components of a Linked Data framework. The <a href="#linked-data-design-principles_3">3<sup>rd</sup> Linked Data design principle</a> suggests to provide the data in RDF, a machine readable format, in the URI response. The obvious thing we can refer from this is that, the mechanism that's required to publish RDF data needs to be able to take in resource requests, look for them in its dataspace, and compile an appropriate response back. This process can work in conjunction with responses to human users as well as machines. That is, with the help of HTTP Accept headers, content-negotiation can be done on the requesting agent's preferences. With this approach, a given URI can be requested in one of the RDF formats, HTML, or even JSON. This provides an opportunity for different types of users to make use of the underlying data.</p>
 
                     <p>Figure 8 illustrates a general process from requested URI (input) to response in HTML or RDF (output). The steps which take place are as follows:</p>
@@ -594,8 +594,12 @@ While allowing default page rendering when no custom queries or templates assign
 
                     <p>In order to better control the contents of the output for different contexts, the framework should offer ways to do some sort of data manipulations. This is more about aggregating additional data, whether from different SPARQL endpoints, cached results, or compiled on the go; and filtering data in different ways to make it more suitable for the consumer. Paget offers a number of methods to accomplish these where some are extended in site specific implementations.</p>
 
+                    <p>Figure 5 shows a screenshot of the Galway City page at DataGoVIE.</p>
 
-                    <p id="linked-data-pages_conclusions" class="todo">Differentiate Conceptual presentation vs. implementation ??????</p>
+                    <figure id="geo.data-gov.ie-city-galway_screenshot">
+                        <figcaption><strong>Figure 5</strong>. Galway City page on DataGovIE</figcaption>
+                        <img src="geo.data-gov.ie-city-galway_screenshot.jpg" alt="Screenshot of Galway City page on DataGovIE" width="775" height="753"/>
+                    </figure>
 
                     <p>From the implementation side, Linked Data Pages provides results based on the URI pattern that is triggered. In other words, what information a resource contains and how it is represented is determined at the URI level. An alternative approach to outputting would be based on the characteristics of the resource. That is, the triple graph pattern from a SPARQL query result can be taken and then based on desired parameters, the results can be passed to a template.</p>
 
