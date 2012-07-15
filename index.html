@@ -855,6 +855,8 @@ While allowing default page rendering when no custom queries or templates assign
                     <h3 id="rdf-store-optimization">Store optimization</h3>
                     <p>TDB's <code>tdbloader</code> is an incremental loader that updates its index after each data load. On the initial load, a statistics file is created based on the contents of the data. The statistics file contains metadata about statistics (time and date the file was generated, size of graph), the frequence count of predicates. Although the numbers are estimated, they are not required to be exact for the <a href="http://jena.apache.org/documentation/tdb/optimizer.html">TDB Optimizer</a>. More specifically, the counts lets the optimizer in choosing one execution plan over another when queries are made.</p>
 
+                    <p>Since the statistics file is generated only once after the first data load, it is subject to going stale when more data is added to the store. This meant that the statistics file had to be updated using TDB's <code>tdbstats</code> utility.</p>
+
 
                     <h3 id="data-license">Data License</h3>
                     <h4 id="data-license_cso-ireland">CSO Ireland</h4>
