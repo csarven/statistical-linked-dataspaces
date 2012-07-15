@@ -36,24 +36,25 @@
 
                 <div id="authors">
                     <dl>
-                        <dt>Authors</dt>
-                        <dd class="entry-author"><a about="[this:]" rel="dcterms:creator dcterms:publisher" href="http://csarven.ca/#i">Sarven Capadisli</a><sup><a href="#author_email_1">1</a></sup> <sup><a href="#author_org_a">a</a></sup></dd>
+                        <dt>Author</dt>
+                        <dd class="entry-author"><a about="[this:]" rel="dcterms:creator dcterms:publisher" href="http://csarven.ca/#i">Sarven Capadisli</a></dd>
                     </dl>
                 </div>
 
                 <p id="document-purpose">Submitted in fulfillment of the requirements for the degree of Master of Science.</p>
 
-                <dl>
+                <dl id="author_supervisor">
                     <dt>Supervisor</dt>
                     <dd class="entry-author"><a about="[this:]" rel="dcterms:contributor" href="http://sw-app.org/mic.xhtml#i">Michael Hausenblas</a></dd>
                 </dl>
-
 
                 <ul id="author_orgs">
                     <li id="author_org_a"><span about="http://csarven.ca/#i" rel="org:memberOf" resource="http://deri.ie/"/><a href="http://deri.ie/">Digital Enterprise Research Institute</a>, <a href="http://nuigalway.ie/">National University of Ireland, Galway</a></li>
                 </ul>
 
                 <p id="document-submitted" property="dcterms:dateSubmitted" content="2012-07-16T09:00:00Z">2012-07</p>
+
+
 
                 <div id="abstract" class="entry-summary">
                     <h2>Abstract</h2>
@@ -81,15 +82,15 @@
                     <h2 id="acknowledgements">Acknowledgements</h2>
 <pre>
 ¸ø•*`*•ø¸ø•*`*•ø¸ø•*`*•ø¸ø•*`*•ø¸¸ø•*`*•ø¸¸ø•*`*•ø¸ø•*`*•ø¸ø•*`*•ø¸ø•*`*•ø¸¸ø•*`
-                _                                               
-              .' \ __/7 _    _      /7__ _//_  ___    ___   /7__
-             / o ,',//_/ \/,'o/7/7//,'o,'o,'o,'o/ \','o/ \//_(c'
-            /_n_/\_//\/_n_/|_,|,^,//|_|__/|_,|_/_nn_|_/_n_///__)
-                                          _//                   
+                 _
+               .' \ __/7 _    _      /7__ _//_  ___    ___   /7__
+              / o ,',//_/ \/,'o/7/7//,'o,'o,'o,'o/ \','o/ \//_(c'
+             /_n_/\_//\/_n_/|_,|,^,//|_|__/|_,|_/_nn_|_/_n_///__)
+                                           _//
 
 Shout outs go to:
 
-                   · #swig · #jena · DERI · GLD-WG · u+270a ·
+           · DERI · #swig · #jena · #talis · AKSW · GLD-WG · u+270a ·
         · tobyink (the gangster that sold me the Linked Data kool-aid) ·
          · iammyr · JeniT · edwcur · sheilagreaney · zyonnnn · belakv ·
 
@@ -108,8 +109,8 @@ to eloquently shed light on various topics in Linked Data whenever I poked him
 for random conversations. When in need to commit a Triple crime, 
 I'd like to have him on my side. Richard, \m/.
 
-My colleagues Aftab Iqbal and Jindřich Mynarz whom I've worked closely with in 
-publishing CSO Ireland and Eurostat Linked dataspaces.
+My colleagues Aftab Iqbal and Jindřich Mynarz whom I have worked closely with in 
+publishing CSO Ireland and Eurostat Linked Dataspaces.
 
 Yet another thanks goes to my family for their continuous support in my 
 academic and professional adventures, even though I can't adequately explain to 
@@ -148,7 +149,7 @@ When in doubt, mu.
                                 <li><a href="#linked-data-lifecycles">Linked Data Lifecycles</a></li>
                             </ol>
                         </li>
-                        <li><a href="#statistical-linked-dataspace">Statistical Linked Dataspace</a></li>
+                        <li><a href="#statistical-linked-dataspaces">Statistical Linked Dataspaces</a></li>
                         <li><a href="#components">Components</a>
                             <ol>
                                 <li><a href="#graphpusher">GraphPusher</a></li>
@@ -161,12 +162,12 @@ When in doubt, mu.
 
 
                     <h2 id="introduction">Introduction</h2>
-                    <p>As you have undoubtedly have figured out, this is the introduction, unless you are here for the <a href="#conclusions">conclusions</a> you might want to skip this chapter. Herein lies a brief overview of this document and its purpose: what are some of the problems and our assumptions, why do they need to be fixed, and how are we going at it.</p>
+                    <p>This thesis investigates the design and implementation of statistical Linked Dataspaces. This chapter provides an overview of this document and its purpose: what are some of the problems and our assumptions, what are we trying to improve, and how are we going at it.</p>
 
                     <h3 id="problem-statement">Problem statement</h3>
                     <p>Convenient management of dataspaces for statistical Linked Data remains to be costly and lacks integrated and automated tool support. The design considerations and requirements are therefore at the forefront for reasonable functionality of these dataspace platforms.</p>
 
-                    <p>Access to statistical data, primarily in the public sector has exploded in recent years. While these initiatives provide new opportunities to get insights on societies, management of the dataspaces are consequently confronted with new challenges. As centralized dataspaces are now faced with more heterogeneous data collections, with varying quality, solutions which employ the Linked Data principles appear to be promising.</p>
+                    <p>Access to statistical data, primarily in the public sector has increased in recent years. While these initiatives provide new opportunities to get insights on societies, management of the dataspaces are consequently confronted with new challenges. As centralized dataspaces are now faced with more heterogeneous data collections, with varying quality, solutions which employ the Linked Data principles appear to be promising.</p>
 
                     <p>However, due to a range of technical challenges, development teams often face low-level repetitive data management tasks with partial tooling at their disposal. These challenges on the surface include: addressing data integration, synchronisation, and access. Within the context of statistical data, the expectations from these dataspaces is that, a Linked Data tool-chain is utilized, and the data is accessible to both humans as well as the machines.</p>
 
@@ -175,9 +176,11 @@ When in doubt, mu.
                     <p class="todo" title="Rephrase">It is contended that the deployment of statistical Linked Data comes with a specific set of requirements. The degree in which the requirements are accomplished predetermines the dataspace&#8217;s usefulness for data consumers. Therefore, the hypothesis of this document is if a specific set of requirements for building and managing dataspaces for statistical Linked Data is possible, and the development of missing parts to do some of the processes better by reducing cost and making the dataspace more useful.</p>
 
                     <h3 id="contributions">Contributions</h3>
-                    <p>With preference to minimizing developer intervention wherever possible, the contributions herein are within the expectations of working in Linked Dataspace and providing read access to data respectively. The set of design considerations and requirements are derived from case studies in publishing 2006 Irish Census, Eurostat, and World Bank datasets. The contributions will identify required components, missing tools, and highlight best practices to create a statistical Linked Dataspace:</p>
+                    <p>With preference to minimizing developer intervention wherever possible, the contributions herein are within the expectations of working in Linked Dataspace and providing read access to data respectively. The set of design considerations and requirements are derived from case studies in publishing 2006 Irish Census, Eurostat, and World Bank datasets. The contributions are as follows:</p>
 
                     <dl>
+                        <dt>Statistical Linked Dataspaces</dt>
+                        <dd>Deriving requirements for statistical Linked Dataspaces and proposing an architecture.</dd>
                         <dt>Required components</dt>
                         <dd>Identification of required components to create a dataspace.</dd>
                         <dt>GraphPusher</dt>
@@ -189,7 +192,7 @@ When in doubt, mu.
                     </dl>
 
                     <h3 id="document-outline">Document outline</h3>
-                    <p>Chapter 2 presents <a href="#background">background</a> material for this document. It covers the essentials of the dataspace concept and summarizes its core components. The Linked Data design principles as well as Linked Statistics are explained in order to draw a bridge from dataspaces. Existing Linked Lifecycle models are also summarized in order to provide the basis of the problem space. Chapter 3 contains an overview of the <a href="#statistical-linked-dataspace">Statistical Linked Dataspace</a>, the core proposal of this document. It makes a connection between the general dataspaces concept with Linked Dataspaces, and proposes that Linked Dataspaces is well suited for deploying statistical data by outlining its requirements. Chapter 4 then outlines the required <a href="#components">components</a> with actual implementations of the technologies where GraphPusher and Linked Data Pages are put forward as contributions. Chapter 5 ties it all together by examining the phases and components of the case studies to <a href="#case-studies">realize</a> Statistical Linked Dataspaces. Chapter 6 <a href="#conclusions">concludes</a> by analysing the work described, results achieved, lessons learned, and the feature work up ahead.</p>
+                    <p>Chapter 2 presents <a href="#background">background</a> material for this document. It covers the essentials of the dataspace concept and summarizes its core components. The Linked Data design principles as well as Linked Statistics are explained in order to draw a bridge from dataspaces. Existing Linked Lifecycle models are also summarized in order to provide the basis of the problem space. Chapter 3 contains an overview of the <a href="#statistical-linked-dataspaces">Statistical Linked Dataspaces</a>, the core proposal of this document. It makes a connection between the general dataspaces concept with Linked Dataspaces, and proposes that Linked Dataspaces is well suited for deploying statistical data by outlining its requirements. Chapter 4 then outlines the required <a href="#components">components</a> with actual implementations of the technologies where GraphPusher and Linked Data Pages are put forward as contributions. Chapter 5 ties it all together by examining the phases and components of the case studies to <a href="#case-studies">realize</a> Statistical Linked Dataspaces. Chapter 6 <a href="#conclusions">concludes</a> by analysing the work described, results achieved, lessons learned, and the feature work up ahead.</p>
 
                     <h2 id="background">Background</h2>
                     <p>This chapter gathers and summarizes some of the fundamental knowledge that is necessary in order to discuss the design of Linked Dataspaces for statistical data.</p>
@@ -248,7 +251,7 @@ When in doubt, mu.
 
 
                     <h3 id="linked-statistics">Linked Statistics</h3>
-                    <p>With the rise of special-purpose, domain-specific formats such as <a href="http://www.scb.se/Pages/List____314011.aspx">PC-Axis</a> [<a href="#r_1">1</a>] or <a href="http://sdmx.org/">Statistical Data and Metadata eXchange</a>   (<dfn><abbr title="Statistical Data and Metadata eXchange">SDMX</abbr></dfn>) [<a href="#r_2">2</a>], an ISO standard for exchanging and sharing statistical data and metadata among organizations, re-using statistical data has become more feasible. However, with the complexity introduced by these formats, the barrier for consuming the data has raised as well. On the other hand, general-purpose formats such as Microsoft&#8217;s Excel or CSV are very widely deployed and a number of tools and libraries in any kind of programming language one could possibly think of exist to process them. The down-side of these formats is equally obvious: as much of the high-quality annotations and metadata, that is, how to interpret the observations, is not or only partially captured, the data fidelity suffers. Even worse, using these formats, the data and metadata typically gets separated. With linked statistics, one can leverage the existing infrastructure as well as retaining metadata along with the data, yielding high data fidelity, consumable in a standardised, straight-forward way. However, the handling of statistical data as Linked Data requires particular attention in order to maintain its integrity and fidelity.</p>
+                    <p>As pointed out in <a href="http://www.springerlink.com/content/t2244913r2583jw1/">Official statistics and the Practice of Data Fidelity</a>, domain-specific formats such as <a href="http://www.scb.se/Pages/List____314011.aspx">PC-Axis</a> [<a href="#r_1">1</a>] or <a href="http://sdmx.org/">Statistical Data and Metadata eXchange</a> (<dfn><abbr title="Statistical Data and Metadata eXchange">SDMX</abbr></dfn>) [<a href="#r_2">2</a>], an ISO standard for exchanging and sharing statistical data and metadata among organizations, re-using statistical data has become more feasible. However, with the complexity introduced by these formats, the barrier for consuming the data has raised as well. On the other hand, general-purpose formats such as Microsoft&#8217;s Excel or CSV are very widely deployed and a number of tools and libraries in any kind of programming language one could possibly think of exist to process them. The down-side of these formats is equally obvious: as much of the high-quality annotations and metadata, that is, how to interpret the observations, is not or only partially captured, the data fidelity suffers. Even worse, using these formats, the data and metadata typically gets separated. With linked statistics, one can leverage the existing infrastructure as well as retaining metadata along with the data, yielding high data fidelity, consumable in a standardised, straight-forward way. However, the handling of statistical data as Linked Data requires particular attention in order to maintain its integrity and fidelity.</p>
 
 					<p>Going beyond the operations of slicing, filtering and visualising statistical data typically requires out-of-band information to combine it with other kinds of data. Contextual information is usually not found in the statistical data itself. Using linked statistics, we are able to perform this data integration task in a more straight-forward way by leveraging the contextual information provided by the typed links between the data items of one data set to other datasets in the LOD cloud.</p>
 
@@ -277,7 +280,7 @@ When in doubt, mu.
                     <p>The lifecycles that Hausenblas et al. and the LOD2 stack proposes a view that is derived from publishing various types of Linked Data, whereas Hyland et al., Villazon-Terrazas et al, and the DataLift vision base their cases from the deployment of government Linked Data.</p>
 
 
-                    <h2 id="statistical-linked-dataspace">Statistical Linked Dataspace</h2>
+                    <h2 id="statistical-linked-dataspaces">Statistical Linked Dataspaces</h2>
                     <p>With the background material introduced, this chapter will dive into Linked Dataspaces and explain how it is a suitable platform to deploy statistical data. It will first present a possible connection between Dataspaces and Linked Dataspaces, give an architecture for a Linked Dataspace, and derive some requirements from case studies to build a dataspace which is particular to deploying statistical Linked Data.</p>
 
                     <p>The idea of <em>Dataspaces</em> as discussed earlier was proposed without being tied to any particular set of technologies or types of data. It is a broad description for what constitutes a dataspace. For the moment, without diving into specific technologies, tooling, or data, possible parallels can be drawn between <em>Dataspaces</em> and dataspaces which follows the Linked Data design principles. Table [<a href="#table_dataspaces-to-linked-dataspaces">1</a>] presents a generalized view for the components and services in Linked Dataspaces.</p>
@@ -373,11 +376,11 @@ When in doubt, mu.
 
 
                     <h4 id="core-requirements">Core requirements</h4>
-                    <p>The following core requirements are distilled from the analysis above as the deployment of CSO Ireland, Eurostat, and World Bank Linked Dataspaces as described in chapter 5.</p>
+                    <p>The following core requirements are distilled from the analysis above as the deployment of CSO Ireland, Eurostat, and World Bank Linked Dataspaces as described in chapter 5. A statistical Linked Dataspace:</p>
 
                     <dl>
                         <dt id="core-requirements_storage">Storage space and RDF store</dt>
-                        <dd>A statistical Linked Dataspace <em class="rfc2119">Must</em> have storage space where the retrieved raw data will be stored and processed in the file system, as well as an RDF storage and server to host the transformed RDF data.</dd>
+                        <dd><em class="rfc2119">Must</em> have storage space where the retrieved raw data will be stored and processed in the file system, as well as an RDF storage and server to host the transformed RDF data.</dd>
                         <dt id="core-requirements_transformation-tools">Transformation tools</dt>
                         <dd><em class="rfc2119">Must</em> have a set of tools to preprocess and convert non-RDF structured data to RDF. This primarily includes tools that would allow inspections, modifications, and conversion of the data into other RDF formats.</dd>
                         <dt id="core-requirements_enrichment-tools">Enrichment tools</dt>
@@ -519,25 +522,29 @@ When in doubt, mu.
 
 
                     <h3 about="[this:#linked-data-pages]" id="linked-data-pages" property="rdfs:label">Linked Data Pages</h3>
-                    <p>It is important to highlight some of the core components of a Linked Data user-interface framework. The <a href="#linked-data-design-principles_3">3<sup>rd</sup> Linked Data design principle</a> suggests to provide the data in RDF, a machine readable format, in the HTTP response. The obvious thing we can inrefer from this is that the mechanism that is required to publish RDF data needs to be able to take in resource requests, look for them in its dataspace, and compile an appropriate response back. This process can work in conjunction with responses to human users as well as machines. That is, with the help of HTTP Accept headers, content-negotiation can be done on the requesting agent&#8217;s preferences. With this approach, a given URI can be requested in one of the RDF formats, HTML, or JSON. This provides an opportunity for different types of users to make use of the underlying data.</p>
+                    <p>It is important to highlight some of the core components of a Linked Data user-interface framework. The <a href="#linked-data-design-principles_3">3<sup>rd</sup> Linked Data design principle</a> suggests to provide the data in RDF, a machine readable format, in the HTTP response. The obvious thing we can infer from this is that the mechanism that is required to publish RDF data needs to be able to take in resource requests, look for them in its dataspace, and compile an appropriate response back. This process can work in conjunction with responses to human users as well as machines. That is, with the help of HTTP Accept headers, content-negotiation can be done on the requesting agent&#8217;s preferences. With this approach, a given URI can be requested in one of the RDF formats, HTML, or JSON. This provides an opportunity for different types of users to make use of the underlying data.</p>
 
-                    <p>Figure [<a href="#figure_linked-data-request-response">5</a>] illustrates a general process from the requested URI (input) to a response in HTML or RDF (output). The steps which take place are as follows:</p>
+                    <h4 id="linked-data-frontend-architecture">Linked Data front-end architecture</h4>
+
+                    <p>Figure [<a href="#figure_linked-data-frontend">5</a>] illustrates a general process from the requested URI (input) to a response in HTML or RDF (output). The steps which take place are as follows:</p>
 
                     <ol>
                         <li><em>Request</em>: An agent requests a URI from the server.</li>
                         <li><em>Consolidation</em>: The URI is looked in the dataspace, and the resource it identifies is prepared by transforming it into a particular representation.</li>
-                        <li><em>Presentation</em>: Either an HTML template is prepared for human consumption, or an RDF output is generated for the same data.</li>
+                        <li><em>Presentation</em>: Either an HTML page is created based on a template, or an RDF output is generated for the same data.</li>
                         <li><em>Response</em>: Depending on the preferred request format, either HTML or RDF is returned to the user.</li>
                     </ol>
 
 
-                    <figure id="figure_linked-data-request-response">
+                    <figure id="figure_linked-data-frontend">
                         <figcaption><strong>Figure 5</strong>: Linked Data Request and Response interface</figcaption>
-                        <object type="image/svg+xml" data="linked-data-request-response.svg" width="240" height="190"></object>
+                        <object type="image/svg+xml" data="linked-data-frontend.svg" width="240" height="190"></object>
                     </figure>
 
 
                     <p>As an attempt to use a publishing architecture as such, existing frameworks were investigated in 2010. To name a few, <a href="http://www.w3.org/2005/04/fresnel-info/">Fresnel</a>, <a href="http://less.aksw.org/">LESS</a>, <a href="http://www4.wiwiss.fu-berlin.de/pubby/">Pubby</a>, and <a href="http://code.google.com/p/paget/">Paget</a> was explored for use in <a href="http://data-gov.ie/">DataGovIE</a> website. The idea was to use a tool that 1) had the necessary features for data consolidation, and 2) allowed custom templating for resources. The fundamental shortcomings of these tools appeared to be that on the templating side, they offered de facto generic entity rendering of RDF resources in HTML i.e., a tabular view of properties and objects of a subject resource. This was also typically the result of a <code>DESCRIBE</code> SPARQL query for a given resource such which simply returned a response identified by an URI.</p>
+
+                    <h4 id="linked-data-pages-architecture">Linked Data Pages architecture</h4>
 
                     <p>In order to make the HTML user interface more user friendly, Linked Data Pages (LDP) was developed. The motivation was to not only make the publishing process possible as other attempts, but also to make it easier for publishers to customize the HTML output. Instead of starting from scratch, Paget was extended since it had a good feature base which matched DataGovIE&#8217;s needs. Figure [<a href="#figure_linked-data-pages-architecture">6</a>] illustrates LDP&#8217;s architecture:</p>
 
@@ -550,6 +557,7 @@ When in doubt, mu.
 
                     <p about="[this:#linked-data-pages]" property="rdfs:comment">The main benefit of LDP is that URI patterns can be grouped with unique SPARQL queries and custom HTML templates.</p>
 
+                    <h4>Setup</h4>
                     <p id="linked-data-pages_installation">LDP can be configured from the installation web page, or directly from the configuration file. The configuration is fairly basic and primarily consists of the following:</p>
 
                     <dl>
@@ -573,7 +581,9 @@ When in doubt, mu.
 
                     <p>The reason to develop the URI host mapping feature was based on the fact that in the early stages of modeling 2006 Census data, the URI patterns were designed based on the knowledge of having the data work under <code>govdata.ie</code>. During the staging phase of publishing the RDF data under <code>data-gov.ie</code>, the URI patterns were not changed and hence had to be mapped as an interm solution until the URI patterns in the data model was updated.</p>
 
-                    <p id="linked-data-pages_resource-configuration">In order to provide a simple and flexible way for site owners to prepare responses for their data, resource patterns can be configured to customize outputs. LDP has a way to organize what the URIs should describe and how they should be presented for the user in HTML and RDF. When a resource is requested, it is matched with most intended representation by configuring the three essential components together. The first is the URI pattern in question that is being made available, the second is the SPARQL query that it triggers when requested, and third is the template that is to be used to render the HTML page. Definitions of each of the components are defined as such:</p>
+
+                    <h4 id="linked-data-pages_resource-configuration">Resource sets</h4>
+                    <p>In order to provide a simple and flexible way for site owners to prepare responses for their data, resource patterns can be configured to customize outputs. LDP has a way to organize what the URIs should describe and how they should be presented for the user in HTML and RDF. When a resource is requested, it is matched with most intended representation by configuring the three essential components together. The first is the URI pattern in question that is being made available, the second is the SPARQL query that it triggers when requested, and third is the template that is to be used to render the HTML page. Definitions of each of the components are defined as such:</p>
 
                     <dl>
                         <dt>URI pattern</dt>
@@ -599,8 +609,8 @@ When in doubt, mu.
 
                     <p>The <em><a href="http://csarven.ca/how-to-create-a-linked-data-site">How to create a Linked Data site</a></em> document explains the full process in further detail; from setting up a SPARQL service, importing data, to publishing documents using LDP.</p>
 
-
-
+                    <h4 id="linked-data-pages_conclusions">Conclusions</h4>
+                    <p>Linked Data Pages works well by letting the publishers (developers) focus mostly on what the resources should contain and how they should be presented on a web page. Although some understanding of the way the tool is required, with some intervention, custom HTML pages for different types of resources can be created fairly easily. Given that statistical Linked Data needs to distinguish different code lists, and Data Cubes, Linked Data Pages approach looks promising.</p>
 
 
                     <h2 id="case-studies">Realization of statistical Linked Dataspaces</h2>
@@ -692,7 +702,7 @@ When in doubt, mu.
                     <p>In 2006 Irish Census dataset, blank nodes were used only for identification of instances of <code>qb:ComponentSpecification</code>. All other resources were identified with URIs.</p>
 
                     <h5 id="uri-patterns_eurostat">Eurostat</h5>
-                    <p>The base URI for Eurostat is <code>http://eurostat.linked-statistics.org/</code>. We keptthe  same file name for the metadata and the actual dataset containing observation values as they appear in the original data and distinguish them by using <code>dsd</code> and <code>data</code> in URI patterns. Further, the code lists which are shared among all datasets are provided by using <code>dic</code> in the pattern. The following URI patterns are used:</p>
+                    <p>The base URI for Eurostat is <code>http://eurostat.linked-statistics.org/</code>. We kept the same file name for the metadata and the actual dataset containing observation values as they appear in the original data and distinguish them by using <code>dsd</code> and <code>data</code> in URI patterns. Further, the code lists which are shared among all datasets are provided by using <code>dic</code> in the pattern. The following URI patterns are used:</p>
 
                     <p id="uri-patterns_eurostat_metadata"><em>Metadata</em>: (DSDs) have the pattern <code>http://eurostat.linked-statistics.org/dsd/{id}</code>, where id is one of the dataset&#8217;s metadata file.</p>
                     <p id="uri-patterns_eurostat_datasets"><em>Datasets</em>: are within <code>http://eurostat.linked-statistics.org/data/{id}</code>, where id is the filename for the dataset containing observation values.</p>
@@ -881,7 +891,7 @@ When in doubt, mu.
 
 
                     <h3 id="data-loading-to-store">Loading RDF data into RDF store</h3>
-                    <p>TDB is an RDF store that is used in following cases. The data was loaded into the store using TDB&#8217;s incremental <code>tdbloader</code> utility. In some instances, SPARQL Update was used.</p>
+                    <p>TDB is an RDF store that is used in all three cases. The data was loaded into the store using TDB&#8217;s incremental <code>tdbloader</code> utility. In some instances, SPARQL Update was used.</p>
 
                     <h4 id="data-loading-to-store_cso-ireland">CSO Ireland</h4>
                     <p>As the data model for CSO Ireland was improved over time, the RDF store had to be loaded several times. In the earlier versions of Fuseki and its TDB RDF store, the RDF store also had to be rebuilt in order to optimize query responses accordingly. GraphPusher was used to help automate bulk-loading via TDB. As the size of the 2006 Irish Census RDF data dumps are under 15MB compressed in total, downloading of the dumps to a temporary location multiple times raised no issues.</p>
@@ -896,7 +906,7 @@ When in doubt, mu.
                         <li>Loading of each N-Triples files to corresponding graphs.</li>
                     </ol>
 
-                    <p>Files which were known to contain blannk nodes were not merged as they posed a conflict, and hence loaded individually.</p>
+                    <p>Files which were known to contain blank nodes were not merged as they posed a conflict, and hence loaded individually.</p>
 
 
                     <h3 id="rdf-store-optimization">Store optimization</h3>
@@ -964,9 +974,9 @@ When in doubt, mu.
                     <h4 id="sparql-endpoint">SPARQL Endpoint</h4>
                     <p>The SPARQL endpoints are accessible publicly with no authorization requirements. As a trade-off, the SPARQL service is subject to high resource demands from the server for certain query types. No query restrictions were placed in any of the cases.</p>
                     <h5 id="sparql-endpoint_cso-ireland">CSO Ireland</h5>
-                    <p>Same setup as World Bank (see below) with its own <a href="http://data-gov.ie/sparql">SPARQL endpoint</a>. The endpoint allows access to the full schema and datasets, and uses named graphs.</p>
+                    <p>The endpoint allows access to the full schema and datasets, and uses named graphs. With the same setup as World Bank (see below) with its own <a href="http://data-gov.ie/sparql">SPARQL endpoint</a>.</p>
                     <h5 id="sparql-endpoint_eurostat">Eurostat</h5>
-                    <p>Same setup as World Bank (see below) with its own <a href="http://eurostat.linked-statistics.org/sparql">SPARQL endpoint</a>. This endpoint includes only the schema and excludes the data (~533GB RDF/XML) due to the limitation of the available resources and performance reasons.</p>
+                    <p>This endpoint includes only the schema and excludes the data (~533GB RDF/XML) due to the limitation of the available computing resources and performance reasons. With the same setup as World Bank (see below) with its own <a href="http://eurostat.linked-statistics.org/sparql">SPARQL endpoint</a>.</p>
                     <h5 id="sparql-endpoint_world-bank">World Bank</h5>
                     <p>Apache Jena&#8217;s <a href="http://incubator.apache.org/jena/documentation/tdb/">TDB</a> [<a href="#r_40">40</a>] storage system and <a href="http://incubator.apache.org/jena/documentation/serving_data/index.html">Fuseki</a> [<a href="#r_41">41</a>] is used to run the SPARQL server. Data in RDF format was incrementally loaded from into TDB RDF store using Jena&#8217;s <code>tdbloader</code> script from command-line. A public <a href="http://worldbank.270a.info/sparql">SPARQL endpoint</a> is available which accepts SPARQL 1.1 queries. The endpoint allows access to the full schema and datasets, and uses named graphs.</p>
 
@@ -1002,17 +1012,20 @@ When in doubt, mu.
 
 
                     <h2 id="conclusions">Conclusions</h2>
-                    <p>Finally, this is where we wrap things up with some analysis and outlook for everything that is been said thus far.</p>
+                    <p>This thesis identified some of the required components and deployment phases needed to realize statistical Linked Dataspaces. The motivations behind this was to make the publishing of statistical Linked Data easier. The investigation for it was to see whether a specific set of technologies helped with such challenges by looking at the lessons learned from the case studies.</p>
 
-                    <p>This thesis identified some of the required components and deployment phases needed to realize statistical Linked Dataspaces. The motivations behind this was to make the publishing of linked statistical data easier. The investigation for it was to see whether a specific set of technologies helped with such challenges by looking at the lessons learned from the case studies.</p>
+                    <p>It can be stated that the lifecycle that is in place to deploy a statistical Linked Dataspace is very close to existing Linked Data lifecycle models. The main emphasis that should be made here is the extra attention given to modeling statistical data, interlinking, and accompanying provenance data. Publishing code lists for reuse, and dataset metadata for discovery is at the core of making statistical Linked Data useful internally and externally. Therefore, it is contented that tools that can bring extra value to these processes would be particularly useful in this dataspace.</p>
 
-                    <p>It can be easily observed that the lifecycle that is in place to deploy a statistical Linked Dataspace is very close to existing Linked Data lifecycle models. The main emphasis that should be made here is the extra attention given to modeling statistical data, interlinking, and accompanying provenance data. Publishing code lists for reuse, and dataset metadata for discovery is at the core of making statistical Linked Data useful internally and externally. Therefore, it is contented that tools that can bring extra value to these processes would be particularly useful in this dataspace. To name a few, tools can improve on; discovering resources which can be reused or linked to; various ways to simplify the data modeling phase; more humanly consumable views of statistical data.</p>
+                    <p>The remaining question, which requires our attention is whether a Linked Dataspace for statistical data has particular characteristics than any other data that is deployed under the same dataspace. Statistical data is inherently highly structured and comes with rich metadata. In contrast to other types of data such as text or multimedia heavy content:</p>
+                    <ul>
+                        <li>There is typically no Natural Language Processing (<dfn><abbr title="Natural Language Processing">NLP</abbr></dfn>) component necessary.</li>
+                        <li>Due its structuredness and consequently a high number of observations, the resulting RDF tends to be high volume which makes it more challenging to provide queries over the data via a SPARQL endpoint.</li>
+                        <li>One has to deal with a multitude of dimensions and measures which can be particularly challenging in terms of visualization and interaction with the data.</li>
+                    </ul>
 
-                    <p>The remaining question which requires our attention is whether a Linked Dataspace for statistical data has particular characteristics than any other data that is deployed under the same dataspace. The tool contributions; GraphPusher and Linked Data Pages although are helpful in the statistical Linked Dataspace, they can work just as well for other types of data. In other words, they do not bring an added benefit when working with statistical data.</p>
+                    <p>In terms of tool contributions, GraphPusher and Linked Data Pages although are helpful in the statistical Linked Dataspace, they can work just as well for other types of data. As a VoID file adds immensely to the discovery of datasets, then publishing one for statistical Linked Data only helps to be better found and used across multiple disciplines. Similarly, code lists are extremely useful for reuse across data sources if only they can be discovered. From this, it could be said that GraphPusher sufficiently tackles on the problem of consuming various statistical Linked Data by simply making use of published VoID files. When GraphPusher gets the feature to decide whether to work with local or remote files, the process of bulk-loading can be put to better use. As seen in our case studies, GraphPusher was useful for CSO Ireland, but not for World Bank data dumps at this time. With that aside, GraphPusher is handy when dealing with large datasets. In Linked Data Pages' case, publishing statistical data may be particularly useful if unique templates are created to illustrate dataset structures and code lists for better human consumption.</p>
 
-                    <p>Of course, this can be looked at from a different perspective by making some assumptions. First, if we go with the idea that a VoID file adds immensely to the discovery of datasets, then publishing one for statistical data only helps to be better found and used across multiple disciplines. Similarly, code lists are extremely useful for reuse across data sources if only they can be discovered. From this, it could be said that GraphPusher sufficiently tackles on the problem of consuming various statistical Linked Data by simply making use of published VoID files. When GraphPusher gets the feature to decide whether to work with local or remote files, the process of bulk-loading can be put to better use. As seen in our case studies, GraphPusher was useful for CSO Ireland, but not for World Bank data dumps. In Linked Data Pages' case, publishing statistical data may be particularly useful if unique templates are created to illustrate dataset structures and code lists for better human consumption.</p>
-
-                    <p>So here we have it. It is all very simple.</p>
+                    <p>Future work could focus on improving the interaction, interpretation, and visualization of statistical Linked Data by means of enabling existing tools (either specialized or general purpose applications) to consume RDF. With this domain experts can benefit from the Linked Data in their native environment. Further, standardization of code lists and vocabularies (e.g., RDF DataCube, and SKOS) is vital for cross-domain interpretation</p>
 
                     <div id="references">
                         <h2>References</h2>
