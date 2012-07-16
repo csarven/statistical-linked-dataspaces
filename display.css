@@ -30,6 +30,7 @@ h2, h3, h4, h5, h6, p, ul, ol, li, pre, code, table, dt {
 orphans: 3;
 widows: 5;
 }
+.dn { display:none; }
 
 thead { display: table-header-group; }
 tr, img { page-break-inside: avoid; }
@@ -156,7 +157,7 @@ font-family:CanellaItalic, serif;
 
 h1 {
 margin-bottom:1em;
-font-size:2.2em;
+font-size:2.6em;
 text-align:center;
 }
 h2 { font-size:2em; }
@@ -166,7 +167,7 @@ h5 { font-size:1.3em; }
 h6 { font-size:1.2em; }
 
 h2, h3, h4, h5 {
-margin-top:1.75em;
+margin-top:1.7em;
 margin-bottom:1.25em;
 }
 
@@ -268,43 +269,45 @@ text-align:center;
 }
 
 
-#authors dl,
-#authors ul {
-margin-bottom:1em;
-text-align:center;
+#authors dd,
+#document-purpose dd,
+#author_supervisor dd,
+#author_orgs dd {
+margin-left:0;
 }
 
-#authors dd {
-display:inline;
-margin-bottom:0;
-}
-
-
-#authors,
-#document-purpose,
+#authors *,
+#document-purpose *,
 #author_supervisor *,
-#author_orgs,
-#document-submitted {
+#author_orgs dt,
+#document-submitted * {
 text-align:center;
 }
 
 #author_orgs {
 margin:0 auto;
+float:left;
+width:100%;
 }
 
-#author_orgs li {
+#author_orgs dd {
 list-style-type:none;
 margin-bottom:0.5em;
 float:left;
+text-align:left;
 }
 
-#author_orgs li img,
-#author_orgs li span {
+#author_orgs dd img,
+#author_orgs dd span {
 float:left;
 }
 
+#author_orgs img {
+margin-right:5px;
+}
+
 #deri {
-margin-right:9px;
+margin-right:15px;
 }
 
 #deri span {
@@ -312,10 +315,10 @@ margin-top:15px;
 width:150px;
 }
 #nuigalway {
-margin-top:10px;
+margin-top:20px;
 }
 #nuigalway span {
-margin-top:8px;
+margin-top:5px;
 width:180px;
 }
 
