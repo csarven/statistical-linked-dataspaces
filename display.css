@@ -72,6 +72,9 @@ page-break-after: avoid;
 }
 
 
+a { text-decoration:none; color:#000; }
+
+
 .journal {
 
 }
@@ -292,7 +295,7 @@ float:left;
 }
 
 #deri {
-margin-right:12px;
+margin-right:9px;
 }
 
 #deri span {
