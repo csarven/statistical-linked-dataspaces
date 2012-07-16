@@ -6,11 +6,17 @@
  */
 
 /*
-XXX:The following @page doesn't work in Gecko and WebKit because of https://bugzilla.mozilla.org/show_bug.cgi?id=115199 and https://bugs.webkit.org/show_bug.cgi?id=35329 . Leaving it here and hoping that it will work one day. See also: http://en.wikipedia.org/wiki/Comparison_of_layout_engines_%28Cascading_Style_Sheets%29#CSS_version_support
+XXX:The following @page doesn't work in Gecko because of https://bugzilla.mozilla.org/show_bug.cgi?id=115199 and https://bugs.webkit.org/show_bug.cgi?id=35329 . Leaving it here and hoping that it will work one day. See also: http://en.wikipedia.org/wiki/Comparison_of_layout_engines_%28Cascading_Style_Sheets%29#CSS_version_support
 */
 @page {
-margin:1.9cm 1.9cm 2.54cm 1.9cm;
-size:18cm 23.5cm;
+/*size:18cm 23.5cm;*/
+/*size:A4;*/
+size:210mm 297mm; 
+margin:4cm;
+/*@bottom-center { counter(page) }*/
+}
+@page:first {
+/*@bottom-center { }*/
 }
 
 
@@ -22,7 +28,7 @@ tr { vertical-align:top; }
 ol { list-style-position:inside; }
 h2, h3, h4, h5, h6, p, ul, ol, li, pre, code, table, dt {
 orphans: 3;
-widows: 3;
+widows: 5;
 }
 
 thead { display: table-header-group; }
@@ -32,7 +38,9 @@ img { max-width: 100% !important; }
 #abstract,
 #document-identifier,
 h2,
-#acknowledgements + pre {
+#acknowledgements + pre,
+#figure_linked-dataspaces-architecture,
+#figure_architecture_world-bank {
 page-break-before: always;
 }
 
@@ -157,10 +165,11 @@ h4 { font-size:1.4em; }
 h5 { font-size:1.3em; }
 h6 { font-size:1.2em; }
 
-h2, h3, h4, h5, h6 {
-margin-top:1.5em;
-margin-bottom:1.5em;
+h2, h3, h4, h5 {
+margin-top:1.75em;
+margin-bottom:1.25em;
 }
+
 
 h2:nth-of-type(n+3) {
 counter-increment: section;

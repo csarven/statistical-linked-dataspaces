@@ -57,9 +57,15 @@
 
 
 
-                <div id="abstract" class="entry-summary">
+                <div property="dcterms:abstract" id="abstract" class="entry-summary">
                     <h2>Abstract</h2>
-                    <p property="dcterms:abstract" datatype="">This thesis investigates the design and implementation of Statistical Linked Dataspaces. It will present a possible connection between Dataspaces and Linked Dataspaces, give an architecture for a Linked Dataspace, and derive some requirements from case studies to build a dataspace which is particular to deploying statistical Linked Data.</p>
+                    <p>Statistical data, in particular official statistics published by government agencies, often provide the basis for policy making and business intelligence tasks. Linked Data, by virtue of utilising Web standards, provides for setting typed links between data items in different data sources, thereby connecting these sources into a single global dataspace. Taken together, the question at hand now is how to approach the design and implementation of a statistical Linked Dataspace and to identify the particularities of it.</p>
+
+                    <p>Initially, the thesis presents a connection between the general concept of a dataspace as introduced by Franklin et. al. and a Linked Dataspaces as well as proposes an architecture for a Linked Dataspace. Then, based on the analysis of three case studies (Irish Census 2006, Eurostat, and World Bank), it derives requirements for the implementation of such a dataspace. This forms the first core contribution of the work.</p>
+
+                    <p>In the process of deploying statistical Linked Dataspaces we have identified the necessary components and also gaps in the tool support concerning certain phases of Linked Data life cycles, which led to the development of two tools, representing a core  contribution of the thesis: i) GraphPusher, a tool that automates bulk data loading into an RDF store based on a dataset description, and ii) Linked Data Pages, a publishing framework that provides for templated, visual rendering of the data. Additionally, again based on the deployment experience of the above mentioned three statistical data sources as Linked Data, lessons learned and best practices around the topics of data retrieval, conversion, modeling, enrichment and publishing are presented, which constitutes another contribution of said work.</p>
+
+                    <p>As statistical data is inherently highly structured and comes with rich metadata (in form of code lists, dictionaries, etc.) we found certain areas that deserve particular attention when implementing a statistical Linked Dataspace, including the ability to deal with large-scale RDF data (due to the high number of observations in the data), and the challenge of visualization and interaction with the data.</p>
                 </div>
 
                 <div property="dcterms:description" id="content" class="entry-content">
@@ -102,7 +108,7 @@ whose expertise and guidance added considerably to my graduate experience.
 The fact that he was able to handle a big kid like me without losing his cool, 
 should be written in the history of student-supervisor relationships. 
 Thank you Michael for inviting me to DERI and giving me the opportunity 
-to work with you. ?v=
+to work with you.
 
 Richard Cyganiak deserves a category on all of his own. I have learned a lot 
 from Richard through our discussions over the course of two years. He was able 
@@ -304,10 +310,10 @@ When in doubt, mu.
 
                     <p>As Dataspaces are not attached to any specific list of data deployment services or practices, the Linked Dataspace can be seen as a narrower or a particular realization of a Dataspace. Having a dataspace that adheres to Linked Data principles is that, one of the forefront goals is to offer the data sources and some of its services in a way that the underlying data can be globally accessed and linked to by external data sources and applications.</p>
 
-                    <p>The proposal here is that, with the assumption of publishing statistical data in a way that its components can be identified, discovered, and disseminated for numerous uses, a Linked Dataspace can be an ideal candidate. A statistical Linked Dataspace needs to identify resources and provide access to their descriptions, where such resources are in the nature of code lists, data cube observations, datasets and structures. Some of the specific challenges include: extraction of original data sources, transformations to RDF, and loading (ETL) to data storage services; creating global identifiers for the resources in its data catalogs; using vocabularies which are designed for modeling statistical data; offering services to the outside world such that its participating data sources can be browsed through; discovery via text searches and structured queries; and building interlinks with other data sources. Figure [<a href="#figure_linked-dataspaces">2</a>] depicts an architectural diagram of Linked Dataspaces.</p>
+                    <p>The proposal here is that, with the assumption of publishing statistical data in a way that its components can be identified, discovered, and disseminated for numerous uses, a Linked Dataspace can be an ideal candidate. A statistical Linked Dataspace needs to identify resources and provide access to their descriptions, where such resources are in the nature of code lists, data cube observations, datasets and structures. Some of the specific challenges include: extraction of original data sources, transformations to RDF, and loading (ETL) to data storage services; creating global identifiers for the resources in its data catalogs; using vocabularies which are designed for modeling statistical data; offering services to the outside world such that its participating data sources can be browsed through; discovery via text searches and structured queries; and building interlinks with other data sources. Figure [<a href="#figure_linked-dataspaces-architecture">2</a>] depicts an architectural diagram of Linked Dataspaces.</p>
 
 
-                    <figure id="figure_linked-dataspaces">
+                    <figure id="figure_linked-dataspaces-architecture">
                         <figcaption><strong>Figure 2</strong>: Linked Dataspaces architecture</figcaption>
                         <object type="image/svg+xml" data="linked-dataspaces.svg" width="420" height="280"></object>
                     </figure>
@@ -399,7 +405,7 @@ When in doubt, mu.
                     <h2 id="components">Components</h2>
                     <p>This chapter will identify a concrete list of required components to realize a statistical Linked Dataspace and give an in-depth explanation of the contributed technologies to fill-in some of the gaps in Linked Dataspaces.</p>
 
-                    <p>Given the requirements to publish a statistical Linked Dataspace as discussed earlier, Table [<a href="#linked-dataspace-components-implementations">2</a>] outlines a list of required components to realize such space with example implementations. If we take a look at the Linked Dataspace architecture in Figure [<a href="#figure_linked-dataspaces">2</a>] again, we can see how some of these components and services are grouped together.</p>
+                    <p>Given the requirements to publish a statistical Linked Dataspace as discussed earlier, Table [<a href="#linked-dataspace-components-implementations">2</a>] outlines a list of required components to realize such space with example implementations. If we take a look at the Linked Dataspace architecture in Figure [<a href="#figure_linked-dataspaces-architecture">2</a>] again, we can see how some of these components and services are grouped together.</p>
 
                     <table id="linked-dataspace-components-implementations">
                         <caption><strong>Table 2</strong>. Linked Dataspace components, and implementations</caption>
@@ -798,6 +804,8 @@ When in doubt, mu.
 
 
                     <h3 id="linked-datasets">Linked Datasets</h3>
+                    <p>These sections explain the work done on data interlinking and enrichment, and the resulting RDF datasets.</p>
+
                     <h4 id="data-interlinking">Data Interlinking</h4>
                     <p>Interlinking things and concepts from our RDF datasets to external datasets in the LOD Cloud was a challenging task. It primarily requires an investigation to identify eligible resource types in our datasets, and then finding suitable matching resources in external datasets. One requirement was to make sure that the target resources were dereferenceable in order to make the interlinking worthwhile. Tables [<a href="#data-interlinking_cso-ireland_table">4</a>], [<a href="#data-interlinking_eurostat_table">5</a>], [<a href="#data-interlinking_world-bank_table">6</a>] give an overview of the targeted external datasets, entity types, links, and counts for each of the three cases respectively.</p>
 
@@ -917,6 +925,8 @@ When in doubt, mu.
 
 
                     <h3 id="data-license">Data License</h3>
+                    <p>All our published Linked Data adheres to original data publisher&#8217;s data license and terms of use. Additionally attributions are given on the websites.</p>
+
                     <h4 id="data-license_cso-ireland">CSO Ireland</h4>
                     <p>The use of the 2006 Irish Census data is governed by the re-use of <a href="http://www.cso.ie/en/aboutus/dissemination/re-useofpublicsectorinformation/">Public Sector Information Statutory Instrument 279/2005</a> [<a href="#r_87">87</a>], which allows reuse provided that the creator (i.e., CSO) is attributed, the information is represented in an accurate way, and the information is used for a non-commercial purpose.</p>
                     <h4 id="data-license_eurostat">Eurostat</h4>
@@ -991,7 +1001,10 @@ When in doubt, mu.
                     <h5 id="data-dumps_world-bank">World Bank</h5>
                     <p>The <a href="http://worldbank.270a.info/data/">World Bank&#8217;s RDF data dumps</a> [<a href="#r_101">101</a>] are available either as individual RDF/XML files or in compressed gzip format.</p>
 
+
                     <h3 id="code">Source Code</h3>
+                    <p>All program codes used to create are publicly available. It allows other developers to investigate or improve on approaches taken here in their own space.</p>
+
                     <h4 id="code_cso-ireland">CSO Ireland</h4>
                     <p>The code which transforms the source data to RDF serializations can be found at GitHub: <a href="https://github.com/data-gov-ie/cso2rdf">data-gov-ie/cso2rdf</a> [<a href="#r_102">102</a>].</p>
 
@@ -1003,6 +1016,8 @@ When in doubt, mu.
 
 
                     <h3 id="dataset-announcement">Announcing the Datasets</h3>
+                    <p>Announcing a datasets consists of letting the world know about the Linked datasets that follows the Linked Data principles. Typically it involves submission to data catalogs (e.g., see below for the Data Hub), writing a blog post, mentioning it on mailing lists and so on. This allows the datasets to be discovered in a number of different ways.</p>
+
                     <h4 id="dataset-announcement_cso-ireland">CSO Ireland</h4>
                     <p>The dataset is registered in the Data Hub with ID: <a href="http://thedatahub.org/dataset/data-gov-ie">data-gov-ie</a> [<a href="#r_106">106</a>]. The dataset <a href="http://www4.wiwiss.fu-berlin.de/lodcloud/ckan/validate.php?package=data-gov-ie">has level 4</a> in the CKAN Validator. It is in the lodcloud group.</p>
                     <h4 id="dataset-announcement_eurostat">Eurostat</h4>
