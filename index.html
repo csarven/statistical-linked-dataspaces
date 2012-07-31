@@ -29,7 +29,7 @@
         <link rel="stylesheet" type="text/css" media="all" href="display.css"/>
     </head>
 
-    <body about="[this:]" typeof="foaf:Document sioc:Post biblio:Paper" class="hfeed journal">
+    <body about="[this:]" typeof="foaf:Document sioc:Post biblio:Thesis" class="hfeed journal">
         <div id="wrap">
             <div class="hentry">
                 <h1 property="dcterms:title" class="entry-title">Statistical Linked Dataspaces</h1>
@@ -125,13 +125,13 @@ I'd like to have him on my side. Richard, \m/.
 My colleagues Aftab Iqbal and Jindřich Mynarz whom I have worked with to 
 publish CSO Ireland and Eurostat Linked Dataspaces. Thank you for your support.
 
+And my friend Joanne Downs, a true philosopher at heart, that kept me on my 
+toes with her enthusiasm to run after knowledge and sometimes 9780812696110.
+
 Yet another thanks goes to my family for their continuous support in my 
 academic and professional adventures, even though I can't adequately explain to 
 them what I really do on the InterWebs. Without their encouragement, I would 
 not have been a curious fellow.
-
-And my friend Joanne Downs, a true philosopher at heart, that kept me on my 
-toes with her enthusiasm to run after knowledge and sometimes 9780812696110.
 
 I am grateful for my partner&#8217;s love, and insights, which held me together 
 all this time. Brigitte Schuster, /7.
@@ -231,7 +231,7 @@ When in doubt, mu.
                         <dd>Another type of dataspace service is the discovery component which is used for relating dataspace participants and consequently allow the system to provide better query results. This component would discover, identify and classify data sources and their content in order to easily locate and refer to items in the dataspace in the future. It is important for this component to monitor and allow an environment to update the schema mappings over time in order to accurately represent the dataspace&#8217;s assets.</dd>
 
                         <dt id="pay-as-you-go">Pay-as-you-go</dt>
-                        <dd>In creating semantic relationships between data sources, the involvement of users is usually focused on taking care of most beneficial efforts first. The system is expected to allow increment improvements based on the knowledge of the underlying data&#8217;s structure, semantics and relationships between sources. Hence, a <em>pay-as-you-go</em> approach to data integration is employed in dataspaces as complete upfront integration is considered to be difficult and is not a required goal.</dd>
+                        <dd>In creating semantic relationships between data sources, the involvement of users is usually focused on taking care of most beneficial efforts first. The system is expected to allow incremental improvements based on the knowledge of the underlying data&#8217;s structure, semantics and relationships between sources. Hence, a <em>pay-as-you-go</em> approach to data integration is employed in dataspaces as complete upfront integration is considered to be difficult and is not a required goal.</dd>
                     </dl>
 
 
@@ -455,10 +455,10 @@ When in doubt, mu.
 
                     <p>Both of these contributions are discussed in further detail in the following sections.</p>
 
-                    <h3 id="graphpusher">GraphPusher</h3>
+                    <h3 about="[this:#graphpusher]" property="rdfs:label" id="graphpusher">GraphPusher</h3>
                     <p>The manual creation of dataspaces [<a href="#r_1">1</a>] conforms to Linked Data principles is time consuming, and prone to human errors since there are a number of steps involved to gather the data, and place them in a store. Typically a list is compiled consisting of datasets with graph names for each dataset, and local copies of the data that is to be imported in to a store. This information may be tracked in a structured format, or a simple text file. The VoID is used because it is an accepted standard to describe RDF datasets, as well as the <a href="http://www.w3.org/TR/sparql11-service-description/">SPARQL 1.1 Service Description</a> (<dfn><abbr title="SPARQL 1.1 Service Description">SD</abbr></dfn>) [<a href="#r_56">56</a>] for discovering information about a SPARQL service.</p>
 
-                    <p>One of the goals of publishing a VoID file alongside datasets that are published as Linked Data is to allow consumers to discover and retrieve the data. Based on this, the <a href="https://github.com/csarven/graphpusher">GraphPusher</a> tool [<a href="#r_57">57</a>] is designed to aid users to retrieve and import data in RDF format into a graph store by making use of the metadata in a VoID file. VoID describes access methods for the actual RDF triples in a number of different ways. GraphPusher focuses on two of these methods; dereferencing HTTP URIs and compressed RDF data dumps.</p>
+                    <p about="[this:#graphpusher]" property="rdfs:comment">One of the goals of publishing a VoID file alongside datasets that are published as Linked Data is to allow consumers to discover and retrieve the data. Based on this, the <a href="https://github.com/csarven/graphpusher">GraphPusher</a> tool [<a href="#r_57">57</a>] is designed to aid users to retrieve and import data in RDF format into a graph store by making use of the metadata in a VoID file. VoID describes access methods for the actual RDF triples in a number of different ways. GraphPusher focuses on two of these methods; dereferencing HTTP URIs and compressed RDF data dumps.</p>
 
                     <p>Given RDF data that is to be imported into a graph store, additional information is required in order to carry out the update process; how to access the store, dataset to store in, and graph name to use. It naturally follows that this unique information needs to be handed over to the store per dataset for the update. When dataspaces are updated frequently, it brings forward a reason to perform with a script, minimizing human involvement and errors. Therefore, the underlying purpose for GraphPusher is to help with data deployment as efficiently as possible.</p>
 
@@ -476,9 +476,9 @@ When in doubt, mu.
                         <li>Finally, the data is imported into the graph store by either executing an update operation on the RDF store directly, or through the SPARQL service via SPARQL Update.</li>
                     </ol>
 
-                    <figure id="figure_graphpusher-sequence">
+                    <figure id="figure_graphpusher-sequence" rel="[this:#graphpusher]">
                         <figcaption><strong>Figure 3</strong>: GraphPusher sequence</figcaption>
-                        <object type="image/svg+xml" data="graphpusher-sequence.svg" width="300" height="220"></object>
+                        <object type="image/svg+xml" data="graphpusher-sequence.svg" about="graphpusher-sequence.svg" typeof="biblio:Figure" width="300" height="220"></object>
                     </figure>
 
                     <h4 id="graphpusher_implementation">Implementation</h4>
@@ -503,9 +503,9 @@ When in doubt, mu.
 
                     <p>If <code>sd:name</code> is not present, GraphPusher looks for one of the <code>graphNameMethod</code> configuration property values: <code>dataset</code>, <code>dataDump</code>, <code>filename</code>. By default <code>dataset</code> value tells the GraphPusher to simply use the URI of the <code>void:Dataset</code>. If <code>dataDump</code> is set, the named graph IRI becomes the IRI of the data dump. Alternatively, if the <code>filename</code> method is used, the file name is appended to the <code>graphNameBase</code> URI value.</p>
 
-                    <figure id="figure_named-graph-flowchart">
+                    <figure id="figure_named-graph-flowchart" rel="[this:#graphpusher]">
                         <figcaption><strong>Figure 4</strong>: Determining named graph flowchart</figcaption>
-                        <object type="image/svg+xml" data="graphpusher-named-graph-flowchart.svg" width="360" height="340"></object>
+                        <object type="image/svg+xml" data="graphpusher-named-graph-flowchart.svg" about="graphpusher-named-graph-flowchart.svg" typeof="biblio:Figure" width="360" height="340"></object>
                     </figure>
 
                     <h4 id="graphpusher_preliminary-results">Preliminary Results</h4>
@@ -546,7 +546,7 @@ When in doubt, mu.
                     </ul>
 
 
-                    <h3 about="[this:#linked-data-pages]" id="linked-data-pages" property="rdfs:label">Linked Data Pages</h3>
+                    <h3 about="[this:#linked-data-pages]" property="rdfs:label" id="linked-data-pages">Linked Data Pages</h3>
                     <p>It is important to highlight some of the core components of a Linked Data user-interface framework. The <a href="#linked-data-design-principles_3">3<sup>rd</sup> Linked Data design principle</a> suggests to provide the data in RDF, a machine readable format, in the HTTP response. The obvious thing we can infer from this is that the mechanism that is required to publish RDF data needs to be able to take in resource requests, look for them in its dataspace, and compile an appropriate response back. This process can work in conjunction with responses to human users as well as machines. That is, with the help of HTTP Accept headers, content-negotiation can be done on the requesting agent&#8217;s preferences. With this approach, a given URI can be requested in one of the RDF formats, HTML, or JSON. This provides an opportunity for different types of users to make use of the underlying data.</p>
 
                     <h4 id="linked-data-frontend-architecture">Linked Data front-end architecture</h4>
@@ -1058,7 +1058,7 @@ When in doubt, mu.
 
                     <p>In terms of tool contributions, GraphPusher and Linked Data Pages although are helpful in the statistical Linked Dataspace, they can work just as well for other types of data. As a VoID file adds immensely to the discovery of datasets, then publishing one for statistical Linked Data only helps to be better found and used across multiple disciplines. Similarly, code lists are extremely useful for reuse across data sources if only they can be discovered. From this, it could be said that GraphPusher sufficiently tackles on the problem of consuming various statistical Linked Data by simply making use of published VoID files. When GraphPusher gets the feature to decide whether to work with local or remote files, the process of bulk-loading can be put to better use. As seen in our case studies, GraphPusher was useful for CSO Ireland, but not for World Bank data dumps at this time. With that aside, GraphPusher is handy when dealing with large datasets. In Linked Data Pages' case, publishing statistical data may be particularly useful if unique templates are created to illustrate dataset structures and code lists for better human consumption.</p>
 
-                    <p>Future work could focus on improving the interaction, interpretation, and visualization of statistical Linked Data by means of enabling existing tools (either specialized or general purpose applications) to consume RDF. With this domain experts can benefit from the Linked Data in their native environment. Further, standardization of code lists and vocabularies (e.g., RDF DataCube, and SKOS) is vital for cross-domain interpretation</p>
+                    <p>Future work could focus on improving the interaction, interpretation, and visualization of statistical Linked Data by means of enabling existing tools (either specialized or general purpose applications) to consume RDF. With this domain experts can benefit from the Linked Data in their native environment. Further, standardization of code lists and vocabularies (e.g., RDF DataCube, and SKOS) is vital for cross-domain interpretation.</p>
 
                     <div id="references">
                         <h2>References</h2>
