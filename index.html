@@ -437,7 +437,7 @@ When in doubt, mu.
                         </thead>
                         <tbody>
                             <tr><td>Environment</td><td>Linux, Apache</td></tr>
-                            <tr><td>Data retrieval</td><td>CURL, Java, <a href="http://code.google.com/p/ldspider/">LDSpider</a> [<a href="#r_33">33</a>], <a href="http://marbles.sourceforge.net/">Marbles</a>  [<a href="#r_34">34</a>], wget</td></tr>
+                            <tr><td>Data retrieval</td><td>CURL, Java, <a href="http://code.google.com/p/ldspider/">LDSpider</a> [<a href="#r_33">33</a>], <a href="http://marbles.sourceforge.net/">Marbles</a> [<a href="#r_34">34</a>], wget</td></tr>
                             <tr><td>Data preprocessing</td><td>Manual with custom scripts, <a href="http://code.google.com/p/google-refine/">Google Refine</a> [<a href="#r_35">35</a>]</td></tr>
                             <tr><td>Data modeling</td><td><a href="http://lab.linkeddata.deri.ie/2010/grefine-rdf-extension/">RDF extension for Google Refine</a> [<a href="#r_36">36</a>], <a href="http://neologism.deri.ie/">Neologism</a> [<a href="#r_37">37</a>]</td></tr>
                             <tr><td>Data conversion</td><td>XSLT, CSV2RDF, <a href="http://d2rq.org/">D2RQ</a> [<a href="#r_38">38</a>]</td></tr>
@@ -459,6 +459,14 @@ When in doubt, mu.
                     <p>On a similar note, <a href="#linked-data-pages">Linked Data Pages</a> (described in detail in section 4.2) was written to provide better control over front-end templating system to present a Web interface for RDF data. The Linked Data Pages framework was used to publish CSO Ireland and <a href="http://worldbank.270a.info/">World Bank</a> [<a href="#r_55">55</a>] Linked Dataspaces.</p>
 
                     <p>Both of these contributions are discussed in further detail in the following sections.</p>
+
+                    <p>Figure [<a href="#figure_linked-dataspaces-architecture-component-contributions">3</a>] reflects the contributions of this thesis within the Linked Dataspace architectural workflow as depicted in Figure [<a href="#figure_linked-dataspaces-architecture">2</a>].</p>
+
+                    <figure id="figure_linked-dataspaces-architecture-component-contributions">
+                        <figcaption><strong>Figure 3</strong>: Linked Dataspaces architectural workflow from case studies and contributions</figcaption>
+                        <object type="image/svg+xml" data="linked-dataspaces-component-contributions.svg" width="420" height="280"></object>
+                    </figure>
+
 
                     <h3 about="[this:#graphpusher]" property="rdfs:label" id="graphpusher">GraphPusher</h3>
                     <p>The manual creation of dataspaces [<a href="#r_1">1</a>] conforms to Linked Data principles is time consuming, and prone to human errors since there are a number of steps involved to gather the data, and place them in a store. Typically a list is compiled consisting of datasets with graph names for each dataset, and local copies of the data that is to be imported in to a store. This information may be tracked in a structured format, or a simple text file. The VoID is used because it is an accepted standard to describe RDF datasets, as well as the <a href="http://www.w3.org/TR/sparql11-service-description/">SPARQL 1.1 Service Description</a> (<dfn><abbr title="SPARQL 1.1 Service Description">SD</abbr></dfn>) [<a href="#r_56">56</a>] for discovering information about a SPARQL service.</p>
