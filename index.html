@@ -212,7 +212,7 @@ When in doubt, mu.
                     <p>This chapter gathers and summarizes some of the fundamental knowledge that is necessary in order to discuss the design of Linked Dataspaces for statistical data.</p>
 
                     <h3 id="dataspaces">Dataspaces</h3>
-                    <p>The services that are typically offered in today&#8217;s information managements systems have to deal with integration and administration of diverse data sources. An abstraction layer for the applications in these systems are considered as <q>Dataspaces</q> as proposed in <a href="http://dl.acm.org/citation.cfm?id=1107502"><cite>From Databases to Dataspaces</cite></a> article [<a href="#r_1">1</a>]. What constitutes a dataspace is that it would typically consist of a set of data sources with some relationships between them.</p>
+                    <p>The services that are typically offered in today&#8217;s information management systems have to deal with integration and administration of diverse data sources. An abstraction layer for the applications in these systems are considered as <q>Dataspaces</q> as proposed in <a href="http://dl.acm.org/citation.cfm?id=1107502"><cite>From Databases to Dataspaces</cite></a> article [<a href="#r_1">1</a>]. What constitutes a dataspace is that it would typically consist of a set of data sources with some relationships between them.</p>
 
                     <dl>
                         <dt id="participants-and-relationships">Participants and Relationships</dt>
@@ -292,6 +292,12 @@ When in doubt, mu.
                     <p>All models at their core describe the cycles taking place from data extraction, transformation, to publishing Linked Data. One common understanding between these lifecycles is that, although phases are linear, the full cycle is repeated and can be re-picked up from any phase. In other words, there is an expectation from the dataspace such that it allows jumping between the phases and be incrementally improved. This particularly holds true for phases which include interlinking of resources with resources in other dataspaces. It is also in-line with the <em>pay-as-you-go</em> approach as described earlier in Dataspaces.</p>
 
                     <p>The lifecycles that Hausenblas et al. and the LOD2 stack proposes a view that is derived from publishing various types of Linked Data, whereas Hyland et al., Villazon-Terrazas et al, and the DataLift vision base their cases from the deployment of government Linked Data.</p>
+
+
+                    <h3 id="challenges">Challenges</h3>
+                    <p>As statistical data is inherently highly structured and comes with rich metadata (in form of code lists, dictionaries, etc.), particular challenges are posed in order to deal with the large-scale data behind the scenes, as well as offering interaction services for querying and visualising. While these challenges are present in various levels in different dataspace implementations, here we observe the specific challenges in context of Linked Dataspaces. For instance, modeling of RDF data, and RDF store optimisation techniques play important roles for data discovery and efficient interactivity. As consumers have different interests from a statistical Linked Dataspaces, consequently different approaches to dataspace operations are devised based on use-cases.</p>
+
+                    <p>On a similar token, the level of data quality is at the core of a useful dataspace. The challenges which stem from this would typically have an expectation such that the data is well-maintained; for instance, synchronized or kept up to date with most recent changes, or catalogued in a way that data sources can be browsed or discovered by any user.</p>
 
 
                     <h3 id="related-work">Related Work</h3>
