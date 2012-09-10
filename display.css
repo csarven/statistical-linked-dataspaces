@@ -54,6 +54,10 @@ display:none;
 }
 #acknowledgements + pre {
 margin-top:2em;
+padding:0;
+border:0;
+overflow:hidden;
+font-size:0.9em;
 }
 
 #comments,
@@ -96,12 +100,6 @@ right:1em;
 }
 */
 
-#acknowledgements + pre {
-padding:0;
-border:0;
-overflow:hidden;
-font-size:0.9em;
-}
 
 
 .todo {
