@@ -40,9 +40,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="5.6"
-     inkscape:cx="214.78801"
-     inkscape:cy="977.6324"
+     inkscape:zoom="1.979899"
+     inkscape:cx="350.37983"
+     inkscape:cy="928.59996"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -192,25 +192,25 @@
     <text
        xml:space="preserve"
        style="font-size:12px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="330"
+       x="332"
        y="57.362183"
        id="text3893"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="330"
+         x="332"
          y="57.362183"
          style="font-size:11px"
          id="tspan3094">VoID file</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:12px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="329"
+       x="332"
        y="147.36218"
        id="text3897"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan3899"
-         x="329"
+         x="332"
          y="147.36218"
          style="font-size:11px">LODStats</tspan></text>
     <text
@@ -228,20 +228,15 @@
     <text
        xml:space="preserve"
        style="font-size:12px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="155"
-       y="92.362183"
+       x="160"
+       y="99.362183"
        id="text3940"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         id="tspan3942"
-         x="155"
-         y="92.362183"
-         style="font-size:11px">SPARQL</tspan><tspan
-         sodipodi:role="line"
-         x="155"
-         y="106.11218"
+         x="160"
+         y="99.362183"
          id="tspan3074"
-         style="font-size:11px">server</tspan></text>
+         style="font-size:11px">Fuseki</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:12px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -304,20 +299,15 @@
     <text
        xml:space="preserve"
        style="font-size:12px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="115"
-       y="92.362183"
+       x="118"
+       y="99.362183"
        id="text3974"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         id="tspan3976"
-         x="115"
-         y="92.362183"
-         style="font-size:11px">RDF</tspan><tspan
-         sodipodi:role="line"
-         x="115"
-         y="106.11218"
+         x="118"
+         y="99.362183"
          id="tspan3072"
-         style="font-size:11px">store</tspan></text>
+         style="font-size:11px">TDB</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:12px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -362,7 +352,7 @@
          id="tspan3080"
          style="font-size:11px">files</tspan></text>
     <rect
-       style="fill:none;stroke:#000000;stroke-width:0.75828755;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        id="rect3086"
        width="115"
        height="20"
@@ -376,7 +366,7 @@
        x="230"
        y="42.362183" />
     <rect
-       style="fill:none;stroke:#000000;stroke-width:0.49487168;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        id="rect3092"
        width="60"
        height="20"
@@ -397,21 +387,21 @@
        x="125"
        y="172.36218" />
     <rect
-       style="fill:none;stroke:#000000;stroke-width:0.38729835;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        id="rect3102"
        width="45"
        height="20"
        x="125"
        y="132.36218" />
     <rect
-       style="fill:none;stroke:#000000;stroke-width:0.5204165;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        id="rect3104"
        width="65"
        height="20"
        x="250"
        y="132.36218" />
     <rect
-       style="fill:none;stroke:#000000;stroke-width:0.46547467;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        id="rect3106"
        width="65"
        height="20"
@@ -430,7 +420,7 @@
          y="267.36218"
          style="font-size:11px">Structured data</tspan></text>
     <rect
-       style="fill:none;stroke:#000000;stroke-width:0.42257711;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        id="rect3894"
        width="40"
        height="35"
@@ -451,7 +441,7 @@
        x="110"
        y="252.36218" />
     <rect
-       style="fill:none;stroke:#000000;stroke-width:0.5937711;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        id="rect3906"
        width="55"
        height="35"
@@ -490,7 +480,7 @@
        id="path3910-8"
        inkscape:connector-curvature="0" />
     <rect
-       style="fill:none;stroke:#000000;stroke-width:0.52440441;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
        id="rect4016"
        width="110"
        height="20"
@@ -593,14 +583,14 @@
          style="font-size:11px"
          id="tspan3101">Pusher</tspan></text>
     <rect
-       style="fill:none;stroke:#000000;stroke-width:0.4767313;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
        id="rect4004"
        width="50"
        height="35"
        x="205"
        y="77.362183" />
     <rect
-       style="fill:none;stroke:#000000;stroke-width:0.31622776;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        id="rect3102-1"
        width="30"
        height="20"
