@@ -120,7 +120,7 @@ Richard Cyganiak deserves a category on all of his own. I have learned a lot
 from Richard through our discussions over the course of two years. He was able 
 to eloquently shed light on various topics in Linked Data whenever I poked him 
 for random conversations. When in need to commit a Triple crime, 
-I'd like to have him on my side. Richard, \m/.
+I&#8217;d like to have him on my side. Richard, \m/.
 
 My colleagues Aftab Iqbal and Jindřich Mynarz whom I have worked with to 
 publish CSO Ireland and Eurostat Linked Dataspaces. Thank you for your support.
@@ -129,7 +129,7 @@ And my friend Joanne Downs, a true philosopher at heart, that kept me on my
 toes with her enthusiasm to run after knowledge and sometimes 9780812696110.
 
 Yet another thanks goes to my family for their continuous support in my 
-academic and professional adventures, even though I can't adequately explain to 
+academic and professional adventures, even though I can&#8217;t adequately explain to 
 them what I really do on the InterWebs. Without their encouragement, I would 
 not have been a curious fellow.
 
@@ -261,7 +261,7 @@ When in doubt, mu.
                         <dd>SPARQL Protocol and RDF Query Language (<dfn><abbr title="SPARQL Protocol and RDF Query Language">SPARQL</abbr></dfn>) is a protocol and a query language to retrieve and manipulate RDF data. It can be used to express queries across local and remote data sources, whether the data resides in RDF files or databases. SPARQL queries consist of graph patterns written in a fashion similar to Turtle (an RDF format), and allows modifiers for the patterns. In the Linked Data community, it is common to see publicly accessible SPARQL endpoints where queries are sent and received over HTTP. Federated queries can be written to compute results that span over different SPARQL endpoints on the Web.</dd>
                     </dl>
 
-                    <p>The Linked Data efforts are concerned with publishing and querying all sorts of data that is interconnected in the form of Tim Berners-Lee's <em>Giant Global Graph</em>. Some of the motivations behind this is to uncover insights about societies, build smarter systems, making predictions, democratizing data for people, or to make better decisions.</p>
+                    <p>The Linked Data efforts are concerned with publishing and querying all sorts of data that is interconnected in the form of Tim Berners-Lee&#8217;s <em>Giant Global Graph</em>. Some of the motivations behind this is to uncover insights about societies, build smarter systems, making predictions, democratizing data for people, or to make better decisions.</p>
 
 
                     <h3 id="linked-statistics">Linked Statistics</h3>
@@ -654,7 +654,7 @@ When in doubt, mu.
                     <h2 id="case-studies">Realization of statistical Linked Dataspaces</h2>
                     <p>In the past couple of years we have witnessed an increasing number of efforts to publish statistical data on the Web following the Linked Data principles. This chapter reports on our experiences and lessons learned in the process of publishing statistical data along three case studies: Irish Census, Eurostat, and World Bank. Comparison of different deployments are made in terms of methodology, URI patterns and vocabularies, metadata, and data access and discuss the underlying design decisions in each case.</p>
 
-                    <p>The World Bank dataspace was realized entirety by the myself. The CSO Ireland and Eurostat datasets was modeled by other members of DERI, whereas I've helped in data deployment and publishing.</p>
+                    <p>The World Bank dataspace was realized entirety by the myself. The CSO Ireland and Eurostat datasets was modeled by other members of DERI, whereas I&#8217;ve helped in data deployment and publishing.</p>
 
                     <h3 id="architecture">Deployment Architecture</h3>
                     <p>Figures [<a href="#figure_architecture_cso-ireland">7</a>], [<a href="#figure_architecture_eurostat">9</a>], [<a href="#figure_architecture_world-bank">10</a>] illustrate an overview on the overall architecture of the deployment of our three case studies. They will be discuss in further detail in the following sections.</p>
@@ -748,7 +748,7 @@ When in doubt, mu.
                     <p id="uri-patterns_eurostat_observations"><em>Observations</em>: use the pattern <code>http://eurostat.linked-statistics.org/data/{dataset}#{dimension1},{dimensionN}</code>, where the order of dimension values in the URI space depends on the order of dimension values present in the data set.</p>
 
                     <h5 id="uri-patterns_world-bank">World Bank</h5>
-                    <p>New URIs for classifications and properties were created because the majority of the properties and concepts did not already exist in the wild, and in cases where they did, they did not fully correspond with the World Bank's. For instance, the country codes in the World Bank data are not only composed of concepts of countries, but also other geopolitical areas and income levels.</p>
+                    <p>New URIs for classifications and properties were created because the majority of the properties and concepts did not already exist in the wild, and in cases where they did, they did not fully correspond with the World Bank&#8217;s. For instance, the country codes in the World Bank data are not only composed of concepts of countries, but also other geopolitical areas and income levels.</p>
 
                     <p>Terms in the URIs are in lower-case and delimited with the minus-sign. The dimension values are used as the terms in the URI space and are delimited with a slash.</p>
 
@@ -898,7 +898,7 @@ When in doubt, mu.
 
 
                     <h4 id="rdf-datasets">RDF Datasets</h4>
-                    <p>Tables [<a href="#linked-dataset_cso-ireland_table">7</a>], [<a href="#linked-dataset_eurostat_table">8</a>], [<a href="#linked-dataset_world-bank_table">9</a>] outlines the current state of RDF Linked Datasets for CSO Ireland, Eurostat, and World Bank. The size of the dataset are in rounded number of triples. The <a href="#void">datasets' VoID files</a> would normally contain exact numbers.</p>
+                    <p>Tables [<a href="#linked-dataset_cso-ireland_table">7</a>], [<a href="#linked-dataset_eurostat_table">8</a>], [<a href="#linked-dataset_world-bank_table">9</a>] outlines the current state of RDF Linked Datasets for CSO Ireland, Eurostat, and World Bank. The size of the dataset are in rounded number of triples. The <a href="#void">datasets&#8217; VoID files</a> would normally contain exact numbers.</p>
 
 
                     <table id="linked-dataset_cso-ireland_table">
@@ -1070,7 +1070,7 @@ When in doubt, mu.
                         <li>One has to deal with a multitude of dimensions and measures which can be particularly challenging in terms of visualization and interaction with the data.</li>
                     </ul>
 
-                    <p>In terms of tool contributions, GraphPusher and Linked Data Pages although are helpful in statistical Linked Dataspaces, they can work just as well for other types of data. As a VoID file adds immensely to the discovery of datasets, then publishing one for statistical Linked Data only helps to be better found and used across multiple disciplines. Similarly, code lists are extremely useful for reuse across data sources if only they can be discovered. From this, it could be said that GraphPusher sufficiently tackles on the problem of consuming various statistical Linked Data by simply making use of published VoID files. When GraphPusher gets the feature to decide whether to work with local or remote files, the process of bulk-loading can be put to better use. As seen in our case studies, GraphPusher was useful for CSO Ireland, but not for World Bank data dumps at this time. With that aside, GraphPusher is handy when dealing with large datasets. In Linked Data Pages' case, publishing statistical data may be particularly useful if unique templates are created to illustrate dataset structures and code lists for better human consumption.</p>
+                    <p>In terms of tool contributions, GraphPusher and Linked Data Pages although are helpful in statistical Linked Dataspaces, they can work just as well for other types of data. As a VoID file adds immensely to the discovery of datasets, then publishing one for statistical Linked Data only helps to be better found and used across multiple disciplines. Similarly, code lists are extremely useful for reuse across data sources if only they can be discovered. From this, it could be said that GraphPusher sufficiently tackles on the problem of consuming various statistical Linked Data by simply making use of published VoID files. When GraphPusher gets the feature to decide whether to work with local or remote files, the process of bulk-loading can be put to better use. As seen in our case studies, GraphPusher was useful for CSO Ireland, but not for World Bank data dumps at this time. With that aside, GraphPusher is handy when dealing with large datasets. In Linked Data Pages&#8217; case, publishing statistical data may be particularly useful if unique templates are created to illustrate dataset structures and code lists for better human consumption.</p>
 
                     <p>As raw statistical data is available in different ways: from access points, formats, quality, to quantity, it consequently impacts Linked Dataspaces&#8217; organization and operation. In other words, while the dataspaces for each case study operated in a similar fashion on the surface, materializing Linked Data from raw data, and its access differed. For instance, given the sheer size of observations in Eurostat, it made more sense to offer the observation data as flat RDF files as opposed to making the data accessible via a SPARQL endpoint. One reason was due to the fact that RDF stores index the data in variety ways which requires multitude amounts of disk space alone. Querying over the data in a reasonable fashion was predicted to not be the case due to available system resources; disk space and memory. This raises some challenges: whether statistical Linked Dataspaces which contain large volume of data can be queried on small to medium-level systems, improving RDF stores e.g., indexing methods, store optimizations</p>
 
@@ -1198,7 +1198,7 @@ When in doubt, mu.
  <li id="r_111"><a rel="dcterms:references" href="https://github.com/AKSW/cubeviz.ontowiki">https://github.com/AKSW/cubeviz.ontowiki</a></li>
  <li id="r_112"><a rel="dcterms:references" href="http://ec.europa.eu/information_society/digital-agenda/scoreboard/index_en.htm">http://ec.europa.eu/information_society/digital-agenda/scoreboard/index_en.htm</a></li>
  <li id="r_113"><a rel="dcterms:references" href="http://data.lod2.eu/scoreboard/">http://data.lod2.eu/scoreboard/</a></li>
- <li id="r_114">Martin, M., Nuffelen, B. van, Abruzzini, S., Auer, S.: <em>The Digital Agenda Scoreboard: an statistical anatomy of Europe's way into the information age</em>, Submitted to Semantic Web Journal (2012), <a rel="dcterms:references" href="http://www.semantic-web-journal.net/sites/default/files/swj283.pdf">http://www.semantic-web-journal.net/sites/default/files/swj283.pdf</a></li>
+ <li id="r_114">Martin, M., Nuffelen, B. van, Abruzzini, S., Auer, S.: <em>The Digital Agenda Scoreboard: an statistical anatomy of Europe&#8217;s way into the information age</em>, Submitted to Semantic Web Journal (2012), <a rel="dcterms:references" href="http://www.semantic-web-journal.net/sites/default/files/swj283.pdf">http://www.semantic-web-journal.net/sites/default/files/swj283.pdf</a></li>
  <li id="r_115">Cyganiak, R., Hausenblas, M., McCuirc, E.: <em>Official Statistics and the Practice of Data Fidelity.</em>, In: Linking Government Data, 2011. ISBN <a rel="dcterms:references" href="urn:isbn:9781461417668">9781461417668</a>.</li>
                         </ol>
                     </div>
