@@ -9,28 +9,29 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="744.09448819"
-   height="1052.3622047"
+   width="394.07227"
+   height="268.52734"
    id="svg3055"
    version="1.1"
    inkscape:version="0.48.3.1 r9886"
    sodipodi:docname="linked-dataspaces-component-contributions.svg">
   <title
-     id="title3078">Linked Dataspace architecture</title>
+     id="title3078">Linked Dataspaces architectural workflow from case studies and contributions</title>
   <defs
      id="defs3057">
     <marker
        inkscape:stockid="Arrow2Mend"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="Arrow2Mend"
-       style="overflow:visible;">
+       style="overflow:visible">
       <path
          id="path4239"
-         style="fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round;"
-         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
-         transform="scale(0.6) rotate(180) translate(0,0)" />
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="scale(-0.6,-0.6)"
+         inkscape:connector-curvature="0" />
     </marker>
   </defs>
   <sodipodi:namedview
@@ -40,9 +41,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.979899"
-     inkscape:cx="350.37983"
-     inkscape:cy="928.59996"
+     inkscape:zoom="2.8"
+     inkscape:cx="132.77499"
+     inkscape:cy="137.47184"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -52,17 +53,23 @@
      inkscape:window-y="24"
      inkscape:window-maximized="1"
      showguides="true"
-     inkscape:guide-bbox="true">
+     inkscape:guide-bbox="true"
+     fit-margin-top="10"
+     fit-margin-left="10"
+     fit-margin-right="10"
+     fit-margin-bottom="10">
     <inkscape:grid
        type="xygrid"
        id="grid3063"
        empspacing="5"
        visible="true"
        enabled="true"
-       snapvisiblegridlinesonly="true" />
+       snapvisiblegridlinesonly="true"
+       originx="-1.1777344px"
+       originy="-774.83008px" />
     <sodipodi:guide
        orientation="1,0"
-       position="115,1080"
+       position="113.82227,305.16992"
        id="guide3082" />
   </sodipodi:namedview>
   <metadata
@@ -73,7 +80,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title>Linked Dataspace architecture</dc:title>
+        <dc:title>Linked Dataspaces architectural workflow from case studies and contributions</dc:title>
         <dc:creator>
           <cc:Agent>
             <dc:title>http://csarven.ca/#i</dc:title>
@@ -106,7 +113,8 @@
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(-1.1777344,-9.0047607)">
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -142,7 +150,7 @@
          id="tspan3851"
          x="116"
          y="227.36218"
-         style="font-size:11px">File storage</tspan></text>
+         style="font-size:11px">ext4, Bash, wget</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:12px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -418,7 +426,7 @@
          id="tspan3110"
          x="116"
          y="267.36218"
-         style="font-size:11px">Structured data</tspan></text>
+         style="font-size:11px">XML, CSV</tspan></text>
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        id="rect3894"
@@ -429,14 +437,14 @@
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        id="rect3896"
-       width="75"
+       width="105"
        height="20"
        x="110"
        y="212.36218" />
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        id="rect3900"
-       width="95"
+       width="65"
        height="20"
        x="110"
        y="252.36218" />
@@ -590,9 +598,9 @@
        x="205"
        y="77.362183" />
     <rect
-       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       style="fill:none;stroke:#000000;stroke-width:0.54006171;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        id="rect3102-1"
-       width="30"
+       width="35"
        height="20"
        x="170"
        y="132.36218" />
