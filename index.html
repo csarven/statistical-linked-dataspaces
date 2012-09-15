@@ -160,6 +160,7 @@ When in doubt, mu.
                                 <li><a href="#linked-data">Linked Data</a></li>
                                 <li><a href="#linked-statistics">Linked Statistics</a></li>
                                 <li><a href="#linked-data-lifecycles">Linked Data Lifecycles</a></li>
+                                <li><a href="#challenges">Challenges</a></li>
                                 <li><a href="#related-work">Related Work</a></li>
                             </ol>
                         </li>
@@ -205,7 +206,7 @@ When in doubt, mu.
                         <dd>Summary of the lessons learned from development pitfalls, workarounds, and best practices on data retrieval, modeling, integration to publishing.</dd>
                     </dl>
 
-                    <h3 id="document-outline">Document outline</h3>
+                    <h3 id="document-outline">Document Outline</h3>
                     <p>Chapter 2 presents <a href="#background">background</a> material for this document. It covers the essentials of the dataspace concept and summarizes its core components. The Linked Data design principles as well as Linked Statistics are explained in order to draw a bridge from dataspaces. Existing Linked Lifecycle models are also summarized in order to provide the basis of the problem space. Chapter 3 contains an overview of the <a href="#statistical-linked-dataspaces">Statistical Linked Dataspaces</a>, the core proposal of this document. It makes a connection between the general dataspaces concept with Linked Dataspaces, and proposes that Linked Dataspaces is well suited for deploying statistical data by outlining its requirements. Chapter 4 then outlines the required <a href="#components">components</a> with actual implementations of the technologies where GraphPusher and Linked Data Pages are put forward as contributions. Chapter 5 ties it all together by examining the phases and components of the case studies to <a href="#case-studies">realize</a> Statistical Linked Dataspaces. Chapter 6 <a href="#conclusions">concludes</a> by analysing the work described, results achieved, lessons learned, and the feature work up ahead.</p>
 
                     <h2 id="background">Background</h2>
@@ -295,9 +296,9 @@ When in doubt, mu.
 
 
                     <h3 id="challenges">Challenges</h3>
-                    <p>As statistical data is inherently highly structured and comes with rich metadata (in form of code lists, dictionaries, etc.), particular challenges are posed in order to deal with the large-scale data behind the scenes, as well as offering interaction services for querying and visualising. While these challenges are present in various levels in different dataspace implementations, here we observe the specific challenges in context of Linked Dataspaces. For instance, modeling of RDF data, and RDF store optimisation techniques play important roles for data discovery and efficient interactivity. As consumers have different interests from a statistical Linked Dataspaces, consequently different approaches to dataspace operations are devised based on use-cases.</p>
+                    <p>As statistical data is inherently highly structured and comes with metadata (in form of code lists, dictionaries, etc.), particular challenges are posed in order to deal with the large-scale data behind the scenes, as well as offering interaction services for querying and visualising. While these challenges are present in various levels in different dataspace implementations, here we observe the specific challenges in context of Linked Dataspaces. For instance, RDF data modeling, and RDF store optimisation techniques are some of the precursors for the level of data discovery and user interactivity that is achieved.</p>
 
-                    <p>On a similar token, the level of data quality is at the core of a useful dataspace. The challenges which stem from this would typically have an expectation such that the data is well-maintained; for instance, synchronized or kept up to date with most recent changes, catalogued in a way that data sources can be browsed or discovered by any user, making sure that data provenance is given attention, and relationships to other data sources are drawn.</p>
+                    <p>In order to provide a useful Linked Dataspace, this typically means that the data should be well-maintained; for instance, synchronized or kept up to date with most recent changes, catalogued in a way that data sources can be browsed or discovered by any user, making sure that data provenance is given attention, and relationships to other data sources are drawn.</p>
 
 
                     <h3 id="related-work">Related Work</h3>
@@ -977,7 +978,7 @@ When in doubt, mu.
                         <caption><strong>Table 10</strong>. Provenance in CSO Ireland, Eurostat and World Bank Linked Datasets</caption>
                         <thead><tr><th>Type of provenance</th><th>CSO Ireland</th><th>Eurostat</th><th>World Bank</th></tr></thead>
                         <tbody>
-                            <tr><th>Defining source</th><td>-</td><td></td><td><code>rdfs:isDefinedBy</code></td></tr>
+                            <tr><th>Defining source</th><td></td><td></td><td><code>rdfs:isDefinedBy</code></td></tr>
                             <tr><th>License</th><td></td><td><code>rdfs:seeAlso</code></td><td><code>dcterms:license</code></td></tr>
                             <tr><th>Source location</th><td><code>dcterms:source</code></td><td><code>dcterms:source</code></td><td><code>dcterms:source</code></td></tr>
                             <tr><th>Related resource</th><td></td><td></td><td><code>dcterms:hasPart</code>, <code>dcterms:isPartOf</code></td></tr>
