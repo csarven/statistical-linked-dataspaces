@@ -170,11 +170,11 @@ margin-bottom:1.25em;
 }
 
 
-h2:nth-of-type(n+3) {
+h2:nth-of-type(n+5) {
 counter-increment: section;
 counter-reset: sub-section;
 }
-h2:nth-of-type(n+3):before {
+h2:nth-of-type(n+5):before {
 content: "Chapter " counter(section) ":\A\00a0";
 font-size:1.3em;
 }
