@@ -9,9 +9,9 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.1"
-   viewBox="34 119 509.19932 286.57863"
-   width="636.49915"
-   height="358.2233"
+   viewBox="34 119 754.62812 418.94448"
+   width="943.28516"
+   height="523.6806"
    id="svg2"
    inkscape:version="0.48.3.1 r9886"
    sodipodi:docname="eurostat-architecture.svg">
@@ -28,9 +28,9 @@
      inkscape:window-height="1026"
      id="namedview307"
      showgrid="false"
-     inkscape:zoom="0.99205455"
-     inkscape:cx="24.293224"
-     inkscape:cy="235.92436"
+     inkscape:zoom="0.35074425"
+     inkscape:cx="468.97301"
+     inkscape:cy="262.38456"
      inkscape:window-x="65"
      inkscape:window-y="24"
      inkscape:window-maximized="1"
@@ -226,7 +226,7 @@
   <g
      style="fill:none;stroke:none"
      id="g55"
-     transform="matrix(0.67151516,0,0,0.67151516,17.615606,45.431891)">
+     transform="translate(5.678411,5.53684)">
     <title
        id="title57">Layer 1</title>
     <g
