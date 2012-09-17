@@ -34,8 +34,8 @@ img { max-width: 100% !important; }
 #document-identifier,
 h2,
 #acknowledgements + pre,
-#figure_linked-dataspaces-architecture,
-#figure_architecture_world-bank {
+#linked-dataspaces-architecture_figure,
+#architecture_world-bank_figure {
 page-break-before: always;
 }
 
