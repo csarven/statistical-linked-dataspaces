@@ -9,12 +9,12 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.1"
-   viewBox="34 119 509.19932 286.57863"
-   width="636.49915"
-   height="358.2233"
+   viewBox="34 119 509.12319 202.81155"
+   width="636.40399"
+   height="253.51443"
    id="svg2"
    inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="eurostat-architecture.svg">
+   sodipodi:docname="worldbank-architecture.svg">
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -26,22 +26,22 @@
      inkscape:pageshadow="2"
      inkscape:window-width="1615"
      inkscape:window-height="1026"
-     id="namedview307"
+     id="namedview221"
      showgrid="false"
-     inkscape:zoom="0.99205455"
-     inkscape:cx="24.293224"
-     inkscape:cy="235.92436"
-     inkscape:window-x="65"
-     inkscape:window-y="24"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="svg2"
+     fit-margin-top="10"
      fit-margin-left="10"
      fit-margin-right="10"
      fit-margin-bottom="10"
-     fit-margin-top="10" />
+     inkscape:zoom="0.68120894"
+     inkscape:cx="321.59534"
+     inkscape:cy="55.565318"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
   <metadata
      id="metadata4">
-    <dc:date>2012-06-14 11:39Z</dc:date>
+    <dc:date>2012-06-15 08:08Z</dc:date>
     <!-- Produced by OmniGraffle Professional 5.4 -->
     <rdf:RDF>
       <cc:Work
@@ -226,175 +226,119 @@
   <g
      style="fill:none;stroke:none"
      id="g55"
-     transform="matrix(0.67151516,0,0,0.67151516,17.615606,45.431891)">
+     transform="matrix(0.65199068,0,0,0.65199068,18.324583,47.803507)">
     <title
        id="title57">Layer 1</title>
     <g
        id="g59">
       <use
-         height="407"
-         width="739"
+         height="291"
+         width="761"
          y="0"
          x="0"
          style="filter:url(#Shadow)"
          id="use61"
-         xlink:href="#id13_Graphic" />
+         xlink:href="#id5_Graphic" />
       <use
-         height="407"
-         width="739"
+         height="291"
+         width="761"
          y="0"
          x="0"
          style="filter:url(#Shadow)"
          id="use63"
-         xlink:href="#id5_Graphic" />
+         xlink:href="#id15_Graphic" />
       <use
-         height="407"
-         width="739"
+         height="291"
+         width="761"
          y="0"
          x="0"
          style="filter:url(#Shadow)"
          id="use65"
-         xlink:href="#id14_Graphic" />
+         xlink:href="#id16_Graphic" />
       <use
-         height="407"
-         width="739"
+         height="291"
+         width="761"
          y="0"
          x="0"
          style="filter:url(#Shadow)"
          id="use67"
-         xlink:href="#id15_Graphic" />
-      <use
-         height="407"
-         width="739"
-         y="0"
-         x="0"
-         style="filter:url(#Shadow)"
-         id="use69"
-         xlink:href="#id16_Graphic" />
-      <use
-         height="407"
-         width="739"
-         y="0"
-         x="0"
-         style="filter:url(#Shadow)"
-         id="use71"
-         xlink:href="#id24_Graphic" />
-      <use
-         height="407"
-         width="739"
-         y="0"
-         x="0"
-         style="filter:url(#Shadow)"
-         id="use73"
          xlink:href="#id26_Graphic" />
-      <use
-         height="407"
-         width="739"
-         y="0"
-         x="0"
-         style="filter:url(#Shadow)"
-         id="use75"
-         xlink:href="#id33_Graphic" />
     </g>
     <path
        style="stroke:#999999;stroke-width:1;stroke-linecap:round;stroke-linejoin:round"
        inkscape:connector-curvature="0"
-       id="path77"
-       d="m 38.821589,121.96316 159.668411,0 c 1.10457,0 2,0.89543 2,2 l 0,397.94448 c 0,1.10456 -0.89543,2 -2,2 l -159.668411,0 c -1.104569,0 -2,-0.89544 -2,-2 0,0 0,0 0,0 l 0,-397.94448 c 0,-1.10457 0.895431,-2 2,-2 z" />
+       id="path69"
+       d="m 247.82002,262.86178 159.66841,0 c 1.10457,0 2,0.89543 2,2 l 0,96.8721 c 0,1.10457 -0.89543,2 -2,2 l -159.66841,0 c -1.10457,0 -2,-0.89543 -2,-2 0,0 0,0 0,0 l 0,-96.8721 c 0,-1.10457 0.89543,-2 2,-2 0,0 0,0 0,0 z" />
     <text
        style="fill:#000000"
-       id="text79"
-       transform="translate(41.821589,472.40764)">
+       id="text71"
+       transform="translate(250.82002,340.23388)">
+      <tspan
+         style="font-size:12px;font-weight:500;font-family:Helvetica"
+         id="tspan73"
+         textLength="126.07617"
+         y="11"
+         x="13.79612"
+         font-weight="500"
+         font-size="12">dataset synchronisation</tspan>
+    </text>
+    <path
+       style="stroke:#999999;stroke-width:1;stroke-linecap:round;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       id="path75"
+       d="m 38.821589,121.96316 159.668411,0 c 1.10457,0 2,0.89543 2,2 l 0,237.77072 c 0,1.10457 -0.89543,2 -2,2 l -159.668411,0 c -1.104569,0 -2,-0.89543 -2,-2 0,0 0,0 0,0 l 0,-237.77072 c 0,-1.10457 0.895431,-2 2,-2 0,0 0,0 0,0 z" />
+    <text
+       style="fill:#000000"
+       id="text77"
+       transform="translate(41.821589,340.23388)">
+      <tspan
+         style="font-size:12px;font-weight:500;font-family:Helvetica"
+         id="tspan79"
+         textLength="11.326172"
+         y="11"
+         x="34.919167"
+         font-weight="500"
+         font-size="12">W</tspan>
       <tspan
          style="font-size:12px;font-weight:500;font-family:Helvetica"
          id="tspan81"
-         textLength="44.689453"
+         textLength="54.029297"
          y="11"
-         x="54.489479"
+         x="46.034401"
          font-weight="500"
-         font-size="12">Eurostat</tspan>
+         font-size="12">orld Bank</tspan>
       <tspan
          style="font-size:12px;font-weight:500;font-family:Helvetica"
          id="tspan83"
-         textLength="76.722656"
-         y="25"
-         x="38.472878"
+         textLength="19.341797"
+         y="11"
+         x="99.407448"
          font-weight="500"
-         font-size="12">bulk download</tspan>
-      <tspan
-         style="font-size:12px;font-weight:500;font-family:Helvetica"
-         id="tspan85"
-         textLength="33.339844"
-         y="39"
-         x="60.164284"
-         font-weight="500"
-         font-size="12">facility</tspan>
+         font-size="12">API</tspan>
     </text>
-    <g
-       id="id13_Graphic">
-      <path
-         style="fill:#ffffff"
-         inkscape:connector-curvature="0"
-         id="path88"
-         d="m 79.17852,277.16262 72,0 0,43.2 c -21.6,-5.4 -50.4,16.2 -72,5.4 z" />
-      <path
-         style="stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round"
-         inkscape:connector-curvature="0"
-         id="path90"
-         d="m 79.17852,277.16262 72,0 0,43.2 c -21.6,-5.4 -50.4,16.2 -72,5.4 z" />
-      <text
-         style="fill:#000000"
-         id="text92"
-         transform="translate(84.17852,289.46262)">
-        <tspan
-           style="font-size:10px;font-weight:500;font-family:Helvetica"
-           id="tspan94"
-           textLength="6.1083984"
-           y="10"
-           x="22.108398"
-           font-weight="500"
-           font-size="10">T</tspan>
-        <tspan
-           style="font-size:10px;font-weight:500;font-family:Helvetica"
-           id="tspan96"
-           textLength="12.783203"
-           y="10"
-           x="27.108398"
-           font-weight="500"
-           font-size="10">oC</tspan>
-        <tspan
-           style="font-size:10px;font-weight:500;font-family:Helvetica"
-           id="tspan98"
-           textLength="27.22168"
-           y="22"
-           x="17.38916"
-           font-weight="500"
-           font-size="10">(XML)</tspan>
-      </text>
-    </g>
     <g
        id="id5_Graphic">
       <rect
          style="fill:#ffffff"
-         id="rect101"
+         id="rect86"
          height="36"
          width="81"
          y="194.20461"
          x="287.15424" />
       <rect
          style="stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round"
-         id="rect103"
+         id="rect88"
          height="36"
          width="81"
          y="194.20461"
          x="287.15424" />
       <text
          style="fill:#000000"
-         id="text105"
+         id="text90"
          transform="translate(292.15425,200.20461)">
         <tspan
            style="font-size:10px;font-weight:500;font-family:Helvetica"
-           id="tspan107"
+           id="tspan92"
            textLength="32.802734"
            y="10"
            x="19.098633"
@@ -402,53 +346,7 @@
            font-size="10">dataset</tspan>
         <tspan
            style="font-size:10px;font-weight:500;font-family:Helvetica"
-           id="tspan109"
-           textLength="35.566406"
-           y="22"
-           x="17.716797"
-           font-weight="500"
-           font-size="10">retrieval</tspan>
-      </text>
-    </g>
-    <g
-       id="id14_Graphic">
-      <rect
-         style="fill:#ffffff"
-         id="rect112"
-         height="36"
-         width="81"
-         y="286.16263"
-         x="287.15424" />
-      <rect
-         style="stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round"
-         id="rect114"
-         height="36"
-         width="81"
-         y="286.16263"
-         x="287.15424" />
-      <text
-         style="fill:#000000"
-         id="text116"
-         transform="translate(292.15425,292.16262)">
-        <tspan
-           style="font-size:10px;font-weight:500;font-family:Helvetica"
-           id="tspan118"
-           textLength="6.1083984"
-           y="10"
-           x="26.608398"
-           font-weight="500"
-           font-size="10">T</tspan>
-        <tspan
-           style="font-size:10px;font-weight:500;font-family:Helvetica"
-           id="tspan120"
-           textLength="12.783203"
-           y="10"
-           x="31.608398"
-           font-weight="500"
-           font-size="10">oC</tspan>
-        <tspan
-           style="font-size:10px;font-weight:500;font-family:Helvetica"
-           id="tspan122"
+           id="tspan94"
            textLength="35.566406"
            y="22"
            x="17.716797"
@@ -461,20 +359,20 @@
       <path
          style="fill:#ffffff"
          inkscape:connector-curvature="0"
-         id="path125"
+         id="path97"
          d="m 443.61385,194.20461 80.40293,0 -20.10073,35.99999 -80.40295,0 z" />
       <path
          style="stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round"
          inkscape:connector-curvature="0"
-         id="path127"
+         id="path99"
          d="m 443.61385,194.20461 80.40293,0 -20.10073,35.99999 -80.40295,0 z" />
       <text
          style="fill:#000000"
-         id="text129"
+         id="text101"
          transform="translate(448.61385,200.20461)">
         <tspan
            style="font-size:10px;font-weight:500;font-family:Helvetica"
-           id="tspan131"
+           id="tspan103"
            textLength="23.330078"
            y="10"
            x="14.875222"
@@ -482,7 +380,7 @@
            font-size="10">RDF</tspan>
         <tspan
            style="font-size:10px;font-weight:500;font-family:Helvetica"
-           id="tspan133"
+           id="tspan105"
            textLength="48.359375"
            y="22"
            x="0.97141337"
@@ -495,20 +393,20 @@
       <path
          style="fill:#ffffff"
          inkscape:connector-curvature="0"
-         id="path136"
-         d="m 661.2581,332.79809 0,-57.59832 c 0,-3.97429 22.51282,-7.19979 50.25183,-7.19979 27.73902,0 50.25184,3.2255 50.25184,7.19979 l 0,57.59832 c 0,3.97428 -22.51282,7.19979 -50.25184,7.19979 -27.73901,0 -50.25183,-3.22551 -50.25183,-7.19979" />
+         id="path108"
+         d="m 683.37597,241.00376 0,-57.59832 c 0,-3.97428 22.51283,-7.19979 50.25183,-7.19979 27.739,0 50.25184,3.22551 50.25184,7.19979 l 0,57.59832 c 0,3.97429 -22.51284,7.19979 -50.25184,7.19979 -27.739,0 -50.25183,-3.2255 -50.25183,-7.19979" />
       <path
          style="stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round"
          inkscape:connector-curvature="0"
-         id="path138"
-         d="m 661.2581,332.79809 0,-57.59832 c 0,-3.97429 22.51282,-7.19979 50.25183,-7.19979 27.73902,0 50.25184,3.2255 50.25184,7.19979 l 0,57.59832 c 0,3.97428 -22.51282,7.19979 -50.25184,7.19979 -27.73901,0 -50.25183,-3.22551 -50.25183,-7.19979 m 0,-57.59832 c 0,3.97428 22.51282,7.19979 50.25183,7.19979 27.73902,0 50.25184,-3.22551 50.25184,-7.19979" />
+         id="path110"
+         d="m 683.37597,241.00376 0,-57.59832 c 0,-3.97428 22.51283,-7.19979 50.25183,-7.19979 27.739,0 50.25184,3.22551 50.25184,7.19979 l 0,57.59832 c 0,3.97429 -22.51284,7.19979 -50.25184,7.19979 -27.739,0 -50.25183,-3.2255 -50.25183,-7.19979 m 0,-57.59832 c 0,3.97429 22.51283,7.19979 50.25183,7.19979 27.739,0 50.25184,-3.2255 50.25184,-7.19979" />
       <text
          style="fill:#000000"
-         id="text140"
-         transform="translate(666.2581,295.59882)">
+         id="text112"
+         transform="translate(688.37597,203.8045)">
         <tspan
            style="font-size:10px;font-weight:500;font-family:Helvetica"
-           id="tspan142"
+           id="tspan114"
            textLength="13.339844"
            y="10"
            x="4.3900185"
@@ -516,7 +414,7 @@
            font-size="10">SP</tspan>
         <tspan
            style="font-size:10px;font-weight:500;font-family:Helvetica"
-           id="tspan144"
+           id="tspan116"
            textLength="27.231445"
            y="10"
            x="16.992558"
@@ -524,7 +422,7 @@
            font-size="10">ARQL</tspan>
         <tspan
            style="font-size:10px;font-weight:500;font-family:Helvetica"
-           id="tspan146"
+           id="tspan118"
            textLength="42.25586"
            y="10"
            x="43.857792"
@@ -532,7 +430,7 @@
            font-size="10">Endpoint</tspan>
         <tspan
            style="font-size:10px;font-weight:500;font-family:Helvetica"
-           id="tspan148"
+           id="tspan120"
            textLength="36.113281"
            y="22"
            x="27.195194"
@@ -540,33 +438,30 @@
            font-size="10">(Fuseki)</tspan>
       </text>
     </g>
-    <path
+    <line
        style="stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#FilledArrow_Marker)"
-       inkscape:connector-curvature="0"
-       id="path150"
-       d="m 513.9664,212.20461 11.9,0 128.7446,0.22835 2,0" />
-    <path
-       style="stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#FilledArrow_Marker)"
-       inkscape:connector-curvature="0"
-       id="path152"
-       d="m 510.78177,304.16264 11.9,0 126.67636,-0.1637 2,0" />
+       id="line122"
+       y2="211.96695"
+       x2="542.44531"
+       y1="212.20461"
+       x1="513.96637" />
     <path
        style="fill:#ffffff"
        inkscape:connector-curvature="0"
-       id="path154"
-       d="m 666.511,185.43296 72,0 0,43.2 c -21.6,-5.4 -50.4,16.2 -72,5.4 z" />
+       id="path124"
+       d="m 552.345,184.88434 72,0 0,43.2 c -21.6,-5.4 -50.4,16.2 -72,5.4 z" />
     <path
        style="stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round"
        inkscape:connector-curvature="0"
-       id="path156"
-       d="m 666.511,185.43296 72,0 0,43.2 c -21.6,-5.4 -50.4,16.2 -72,5.4 z" />
+       id="path126"
+       d="m 552.345,184.88434 72,0 0,43.2 c -21.6,-5.4 -50.4,16.2 -72,5.4 z" />
     <text
        style="fill:#000000"
-       id="text158"
-       transform="translate(671.511,197.73296)">
+       id="text128"
+       transform="translate(557.345,197.18434)">
       <tspan
          style="font-size:10px;font-weight:500;font-family:Helvetica"
-         id="tspan160"
+         id="tspan130"
          textLength="56.69922"
          y="10"
          x="2.6503906"
@@ -574,7 +469,7 @@
          font-size="10">observations</tspan>
       <tspan
          style="font-size:10px;font-weight:500;font-family:Helvetica"
-         id="tspan162"
+         id="tspan132"
          textLength="50.551758"
          y="22"
          x="5.7241211"
@@ -584,20 +479,20 @@
     <path
        style="fill:#ffffff"
        inkscape:connector-curvature="0"
-       id="path164"
-       d="m 675.50993,194.43191 72,0 0,43.2 c -21.6,-5.4 -50.4,16.2 -72,5.4 z" />
+       id="path134"
+       d="m 561.34394,193.88329 72,0 0,43.2 c -21.6,-5.4 -50.4,16.2 -72,5.4 z" />
     <path
        style="stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round"
        inkscape:connector-curvature="0"
-       id="path166"
-       d="m 675.50993,194.43191 72,0 0,43.2 c -21.6,-5.4 -50.4,16.2 -72,5.4 z" />
+       id="path136"
+       d="m 561.34394,193.88329 72,0 0,43.2 c -21.6,-5.4 -50.4,16.2 -72,5.4 z" />
     <text
        style="fill:#000000"
-       id="text168"
-       transform="translate(680.50993,206.73191)">
+       id="text138"
+       transform="translate(566.34394,206.18329)">
       <tspan
          style="font-size:10px;font-weight:500;font-family:Helvetica"
-         id="tspan170"
+         id="tspan140"
          textLength="56.69922"
          y="10"
          x="2.6503906"
@@ -605,7 +500,7 @@
          font-size="10">observations</tspan>
       <tspan
          style="font-size:10px;font-weight:500;font-family:Helvetica"
-         id="tspan172"
+         id="tspan142"
          textLength="50.551758"
          y="22"
          x="5.7241211"
@@ -615,20 +510,20 @@
     <path
        style="fill:#ffffff"
        inkscape:connector-curvature="0"
-       id="path174"
-       d="m 684.5089,203.43086 72,0 0,43.2 c -21.6,-5.4 -50.4,16.2 -72,5.4 z" />
+       id="path144"
+       d="m 570.3429,202.88224 72,0 0,43.2 c -21.6,-5.4 -50.4,16.2 -72,5.4 z" />
     <path
        style="stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round"
        inkscape:connector-curvature="0"
-       id="path176"
-       d="m 684.5089,203.43086 72,0 0,43.2 c -21.6,-5.4 -50.4,16.2 -72,5.4 z" />
+       id="path146"
+       d="m 570.3429,202.88224 72,0 0,43.2 c -21.6,-5.4 -50.4,16.2 -72,5.4 z" />
     <text
        style="fill:#000000"
-       id="text178"
-       transform="translate(689.5089,215.73086)">
+       id="text148"
+       transform="translate(575.3429,215.18224)">
       <tspan
          style="font-size:10px;font-weight:500;font-family:Helvetica"
-         id="tspan180"
+         id="tspan150"
          textLength="43.891602"
          y="10"
          x="9.2373047"
@@ -636,7 +531,7 @@
          font-size="10">RDF/XML</tspan>
       <tspan
          style="font-size:10px;font-weight:500;font-family:Helvetica"
-         id="tspan182"
+         id="tspan152"
          textLength="2.7783203"
          y="10"
          x="52.762695"
@@ -644,224 +539,84 @@
          font-size="10" />
       <tspan
          style="font-size:10px;font-weight:500;font-family:Helvetica"
-         id="tspan184"
+         id="tspan154"
          textLength="48.916016"
          y="22"
          x="6.5419922"
          font-weight="500"
          font-size="10">documents</tspan>
     </text>
-    <text
-       style="fill:#000000"
-       id="text186"
-       transform="translate(559.84498,261.49642)">
-      <tspan
-         style="font-size:10px;font-weight:500;font-family:Helvetica"
-         id="tspan188"
-         textLength="32.246094"
-         y="10"
-         x="4.8769531"
-         font-weight="500"
-         font-size="10">catalog</tspan>
-      <tspan
-         style="font-size:10px;font-weight:500;font-family:Helvetica"
-         id="tspan190"
-         textLength="21.113281"
-         y="22"
-         x="10.443359"
-         font-weight="500"
-         font-size="10">DSD</tspan>
-      <tspan
-         style="font-size:10px;font-weight:500;font-family:Helvetica"
-         id="tspan192"
-         textLength="41.68457"
-         y="34"
-         x="0.15771484"
-         font-weight="500"
-         font-size="10">code lists</tspan>
-    </text>
-    <g
-       id="id24_Graphic">
-      <path
-         style="fill:#ffffff"
-         inkscape:connector-curvature="0"
-         id="path195"
-         d="m 291.65424,430.91502 72,0 0,43.2 c -21.6,-5.4 -50.4,16.2 -72,5.4 z" />
-      <path
-         style="stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round"
-         inkscape:connector-curvature="0"
-         id="path197"
-         d="m 291.65424,430.91502 72,0 0,43.2 c -21.6,-5.4 -50.4,16.2 -72,5.4 z" />
-      <text
-         style="fill:#000000"
-         id="text199"
-         transform="translate(296.65424,443.21502)">
-        <tspan
-           style="font-size:10px;font-weight:500;font-family:Helvetica"
-           id="tspan201"
-           textLength="23.344727"
-           y="10"
-           x="10.523926"
-           font-weight="500"
-           font-size="10">local</tspan>
-        <tspan
-           style="font-size:10px;font-weight:500;font-family:Helvetica"
-           id="tspan203"
-           textLength="6.1083984"
-           y="10"
-           x="33.692871"
-           font-weight="500"
-           font-size="10">T</tspan>
-        <tspan
-           style="font-size:10px;font-weight:500;font-family:Helvetica"
-           id="tspan205"
-           textLength="12.783203"
-           y="10"
-           x="38.692871"
-           font-weight="500"
-           font-size="10">oC</tspan>
-        <tspan
-           style="font-size:10px;font-weight:500;font-family:Helvetica"
-           id="tspan207"
-           textLength="27.22168"
-           y="22"
-           x="17.38916"
-           font-weight="500"
-           font-size="10">(XML)</tspan>
-      </text>
-    </g>
     <g
        id="id26_Graphic">
       <rect
          style="fill:#ffffff"
-         id="rect210"
+         id="rect157"
          height="36"
-         width="57"
-         y="365.01993"
-         x="238.53523" />
+         width="81"
+         y="279.79529"
+         x="287.15424" />
       <rect
          style="stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round"
-         id="rect212"
+         id="rect159"
          height="36"
-         width="57"
-         y="365.01993"
-         x="238.53523" />
+         width="81"
+         y="279.79529"
+         x="287.15424" />
       <text
          style="fill:#000000"
-         id="text214"
-         transform="translate(243.53523,377.01993)">
+         id="text161"
+         transform="translate(292.15424,285.7953)">
         <tspan
            style="font-size:10px;font-weight:500;font-family:Helvetica"
-           id="tspan216"
-           textLength="35.576172"
+           id="tspan163"
+           textLength="42.797852"
            y="10"
-           x="5.7119141"
+           x="15.490234"
            font-weight="500"
-           font-size="10">cron job</tspan>
+           font-size="10">manually</tspan>
+        <tspan
+           style="font-size:10px;font-weight:500;font-family:Helvetica"
+           id="tspan165"
+           textLength="66.137695"
+           y="22"
+           x="2.4311523"
+           font-weight="500"
+           font-size="10">triggered script</tspan>
       </text>
     </g>
     <line
        style="stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:8, 5;marker-start:url(#FilledArrow_Marker_2)"
-       id="line218"
-       y2="383.01993"
-       x2="295.53522"
-       y1="331.36023"
-       x1="322.79996" />
-    <path
-       style="stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#FilledArrow_Marker)"
-       inkscape:connector-curvature="0"
-       id="path220"
-       d="m 151.17852,304.16262 11.9,0 112.17573,0 2,0" />
-    <path
-       style="stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;marker-start:url(#FilledArrow_Marker_2);marker-end:url(#FilledArrow_Marker)"
-       inkscape:connector-curvature="0"
-       id="path222"
-       d="m 327.65424,421.01502 0,-2 10e-6,-84.9524 0,-1.99999" />
-    <line
-       style="stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:8, 5;marker-start:url(#FilledArrow_Marker_2)"
-       id="line224"
-       y2="286.16263"
+       id="line167"
+       y2="279.79529"
        x2="327.65424"
        y1="240.10461"
        x1="327.65424" />
     <path
        style="stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#FilledArrow_Marker)"
        inkscape:connector-curvature="0"
-       id="path226"
+       id="path169"
        d="m 368.15425,212.20461 11.9,0 41.60923,0 2,0" />
-    <g
-       id="id33_Graphic">
-      <path
-         style="fill:#ffffff"
-         inkscape:connector-curvature="0"
-         id="path229"
-         d="m 440.4292,286.16264 80.40293,0 -20.10073,36 -80.40294,0 z" />
-      <path
-         style="stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round"
-         inkscape:connector-curvature="0"
-         id="path231"
-         d="m 440.4292,286.16264 80.40293,0 -20.10073,36 -80.40294,0 z" />
-      <text
-         style="fill:#000000"
-         id="text233"
-         transform="translate(445.4292,292.16264)">
-        <tspan
-           style="font-size:10px;font-weight:500;font-family:Helvetica"
-           id="tspan235"
-           textLength="23.330078"
-           y="10"
-           x="14.875222"
-           font-weight="500"
-           font-size="10">RDF</tspan>
-        <tspan
-           style="font-size:10px;font-weight:500;font-family:Helvetica"
-           id="tspan237"
-           textLength="48.359375"
-           y="22"
-           x="0.97141337"
-           font-weight="500"
-           font-size="10">conversion</tspan>
-      </text>
-    </g>
-    <path
-       style="stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#FilledArrow_Marker)"
-       inkscape:connector-curvature="0"
-       id="path239"
-       d="m 368.15425,304.16262 11.9,0 38.42458,2e-5 2,0" />
-    <text
-       style="fill:#000000"
-       id="text241"
-       transform="translate(552.34495,189.27329)">
-      <tspan
-         style="font-size:10px;font-weight:500;font-family:Helvetica"
-         id="tspan243"
-         textLength="56.69922"
-         y="10"
-         x="0.15039062"
-         font-weight="500"
-         font-size="10">observations</tspan>
-    </text>
     <line
        style="stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:8, 5;marker-start:url(#FilledArrow_Marker_3)"
-       id="line245"
-       y2="474.21194"
-       x2="646.42706"
-       y1="474.21194"
-       x1="689.12708" />
+       id="line171"
+       y2="369.34915"
+       x2="656.45697"
+       y1="369.34915"
+       x1="699.15704" />
     <line
        style="stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#FilledArrow_Marker_4)"
-       id="line247"
-       y2="509.12643"
-       x2="689.12708"
-       y1="509.12643"
-       x1="646.42712" />
+       id="line173"
+       y2="404.26364"
+       x2="699.15704"
+       y1="404.26364"
+       x1="656.45703" />
     <text
        style="fill:#000000"
-       id="text249"
-       transform="translate(719.35466,502.62643)">
+       id="text175"
+       transform="translate(729.3846,397.76364)">
       <tspan
          style="font-size:10px;font-weight:500;font-family:Helvetica"
-         id="tspan251"
+         id="tspan177"
          textLength="27.241211"
          y="10"
          x="0.48779297"
@@ -869,7 +624,7 @@
          font-size="10">data fl</tspan>
       <tspan
          style="font-size:10px;font-weight:500;font-family:Helvetica"
-         id="tspan253"
+         id="tspan179"
          textLength="12.783203"
          y="10"
          x="27.729004"
@@ -878,11 +633,11 @@
     </text>
     <text
        style="fill:#000000"
-       id="text255"
-       transform="translate(719.3547,467.49944)">
+       id="text181"
+       transform="translate(729.38465,362.63665)">
       <tspan
          style="font-size:10px;font-weight:500;font-family:Helvetica"
-         id="tspan257"
+         id="tspan183"
          textLength="37.792969"
          y="10"
          x="0.21191406"
@@ -890,76 +645,30 @@
          font-size="10">control fl</tspan>
       <tspan
          style="font-size:10px;font-weight:500;font-family:Helvetica"
-         id="tspan259"
+         id="tspan185"
          textLength="12.783203"
          y="10"
          x="38.004883"
          font-weight="500"
          font-size="10">ow</tspan>
     </text>
-    <line
-       style="stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:8, 5;marker-start:url(#FilledArrow_Marker_2)"
-       id="line261"
-       y2="322.16263"
-       x2="470.58029"
-       y1="421.01529"
-       x1="469.85315" />
-    <text
-       style="fill:#000000"
-       id="text263"
-       transform="translate(430.67785,433.79898)">
-      <tspan
-         style="font-size:10px;font-weight:500;font-family:Helvetica"
-         id="tspan265"
-         textLength="21.123047"
-         y="10"
-         x="0.25878906"
-         font-weight="500"
-         font-size="10">notifi</tspan>
-      <tspan
-         style="font-size:10px;font-weight:500;font-family:Helvetica"
-         id="tspan267"
-         textLength="53.359375"
-         y="10"
-         x="21.381836"
-         font-weight="500"
-         font-size="10">cation email</tspan>
-    </text>
-    <path
-       style="stroke:#999999;stroke-width:1;stroke-linecap:round;stroke-linejoin:round"
-       inkscape:connector-curvature="0"
-       id="path269"
-       d="m 233.15425,272.7807 159.66841,0 c 1.10457,0 2,0.89543 2,2 l 0,247.12695 c 0,1.10457 -0.89543,2 -2,2 l -159.66841,0 c -1.10457,0 -2,-0.89543 -2,-2 0,0 0,0 0,0 l 0,-247.12695 c 0,-1.10457 0.89543,-2 2,-2 z" />
-    <text
-       style="fill:#000000"
-       id="text271"
-       transform="translate(236.15425,500.40765)">
-      <tspan
-         style="font-size:12px;font-weight:500;font-family:Helvetica"
-         id="tspan273"
-         textLength="126.07617"
-         y="11"
-         x="13.79612"
-         font-weight="500"
-         font-size="12">dataset synchronisation</tspan>
-    </text>
     <path
        style="fill:#ffffff"
        inkscape:connector-curvature="0"
-       id="path275"
+       id="path187"
        d="m 70.17957,149.61309 72,0 0,60.52503 c -21.6,-7.56563 -50.4,22.69688 -72,7.56562 z" />
     <path
        style="stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round"
        inkscape:connector-curvature="0"
-       id="path277"
+       id="path189"
        d="m 70.17957,149.61309 72,0 0,60.52503 c -21.6,-7.56563 -50.4,22.69688 -72,7.56562 z" />
     <text
        style="fill:#000000"
-       id="text279"
+       id="text191"
        transform="translate(75.17957,171.65842)">
       <tspan
          style="font-size:10px;font-weight:500;font-family:Helvetica"
-         id="tspan281"
+         id="tspan193"
          textLength="56.69922"
          y="10"
          x="2.6503906"
@@ -967,7 +676,7 @@
          font-size="10">observations</tspan>
       <tspan
          style="font-size:10px;font-weight:500;font-family:Helvetica"
-         id="tspan283"
+         id="tspan195"
          textLength="50.551758"
          y="22"
          x="5.7241211"
@@ -977,20 +686,20 @@
     <path
        style="fill:#ffffff"
        inkscape:connector-curvature="0"
-       id="path285"
+       id="path197"
        d="m 79.17852,162.221 72,0 0,60.52503 c -21.6,-7.56563 -50.4,22.69688 -72,7.56562 z" />
     <path
        style="stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round"
        inkscape:connector-curvature="0"
-       id="path287"
+       id="path199"
        d="m 79.17852,162.221 72,0 0,60.52503 c -21.6,-7.56563 -50.4,22.69688 -72,7.56562 z" />
     <text
        style="fill:#000000"
-       id="text289"
+       id="text201"
        transform="translate(84.17852,184.26633)">
       <tspan
          style="font-size:10px;font-weight:500;font-family:Helvetica"
-         id="tspan291"
+         id="tspan203"
          textLength="56.69922"
          y="10"
          x="2.6503906"
@@ -998,7 +707,7 @@
          font-size="10">observations</tspan>
       <tspan
          style="font-size:10px;font-weight:500;font-family:Helvetica"
-         id="tspan293"
+         id="tspan205"
          textLength="50.551758"
          y="22"
          x="5.7241211"
@@ -1008,20 +717,20 @@
     <path
        style="fill:#ffffff"
        inkscape:connector-curvature="0"
-       id="path295"
+       id="path207"
        d="m 88.17747,174.82891 72,0 0,60.52503 c -21.6,-7.56563 -50.4,22.69688 -72,7.56562 z" />
     <path
        style="stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round"
        inkscape:connector-curvature="0"
-       id="path297"
+       id="path209"
        d="m 88.17747,174.82891 72,0 0,60.52503 c -21.6,-7.56563 -50.4,22.69688 -72,7.56562 z" />
     <text
        style="fill:#000000"
-       id="text299"
+       id="text211"
        transform="translate(93.17747,196.87424)">
       <tspan
          style="font-size:10px;font-weight:500;font-family:Helvetica"
-         id="tspan301"
+         id="tspan213"
          textLength="56.69922"
          y="10"
          x="2.6503906"
@@ -1029,19 +738,26 @@
          font-size="10">observations</tspan>
       <tspan
          style="font-size:10px;font-weight:500;font-family:Helvetica"
-         id="tspan303"
-         textLength="57.77832"
+         id="tspan215"
+         textLength="27.22168"
          y="22"
-         x="2.1108398"
+         x="17.38916"
          font-weight="500"
-         font-size="10">(SDMX/TSV)</tspan>
+         font-size="10">(XML)</tspan>
     </text>
     <line
        style="stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#FilledArrow_Marker)"
-       id="line305"
+       id="line217"
        y2="212.23988"
        x2="277.2543"
        y1="212.65704"
        x1="160.17747" />
+    <line
+       style="stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#FilledArrow_Marker_4)"
+       id="line219"
+       y2="212.20461"
+       x2="674.57599"
+       y1="212.20461"
+       x1="642.3429" />
   </g>
 </svg>
