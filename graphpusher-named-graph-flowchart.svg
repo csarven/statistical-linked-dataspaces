@@ -9,8 +9,8 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="334.94141"
-   height="344.67773"
+   width="640"
+   height="659.16711"
    id="svg2"
    version="1.1"
    inkscape:version="0.48.3.1 r9886"
@@ -54,8 +54,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.8"
-     inkscape:cx="148.77756"
-     inkscape:cy="37.094004"
+     inkscape:cx="227.73542"
+     inkscape:cy="283.38564"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -77,11 +77,11 @@
        visible="true"
        enabled="true"
        snapvisiblegridlinesonly="true"
-       originx="14.448242px"
-       originy="-1441.1188px" />
+       originx="166.97753px"
+       originy="-1283.8741px" />
     <sodipodi:guide
        orientation="1,0"
-       position="329.44824,257.08008"
+       position="481.97753,414.32478"
        id="guide3042" />
   </sodipodi:namedview>
   <metadata
@@ -100,182 +100,182 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(9.4482422,5.2354736)">
+     transform="translate(161.97753,162.48017)">
     <text
        xml:space="preserve"
-       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Monospace"
-       x="5"
-       y="12.362183"
+       style="font-size:23.6234417px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Monospace"
+       x="-143.22064"
+       y="-137.52327"
        id="text3041"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="5"
-         y="12.362183"
+         x="-143.22064"
+         y="-137.52327"
          id="tspan3047"
-         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans">∀ void:dataDump URL</tspan><tspan
+         style="font-size:19.6862011px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans">∀ void:dataDump URL</tspan><tspan
          sodipodi:role="line"
-         x="5"
-         y="24.862183"
+         x="-143.22064"
+         y="-112.91552"
          id="tspan3053"
-         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans">        ∃ an sd:name</tspan></text>
+         style="font-size:19.6862011px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans">        ∃ an sd:name</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Monospace"
-       x="150"
-       y="47.362183"
+       style="font-size:19.6862011px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Monospace"
+       x="142.22928"
+       y="-68.621567"
        id="text4647"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan4649"
-         x="150"
-         y="47.362183"
-         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans">T</tspan></text>
+         x="142.22928"
+         y="-68.621567"
+         style="font-size:19.6862011px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans">T</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Monospace"
-       x="50"
-       y="57.362183"
+       style="font-size:19.6862011px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Monospace"
+       x="-54.632732"
+       y="-48.935368"
        id="text4647-7"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan4649-8"
-         x="50"
-         y="57.362183"
-         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans">F</tspan></text>
+         x="-54.632732"
+         y="-48.935368"
+         style="font-size:19.6862011px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans">F</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Monospace"
-       x="175"
-       y="72.362183"
+       style="font-size:19.6862011px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Monospace"
+       x="191.44479"
+       y="-19.406063"
        id="text4672"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan4674"
-         x="175"
-         y="72.362183"
-         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans">graph=sd:name</tspan></text>
+         x="191.44479"
+         y="-19.406063"
+         style="font-size:19.6862011px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans">graph=sd:name</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Monospace"
-       x="20"
-       y="82.362183"
+       style="font-size:19.6862011px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Monospace"
+       x="-113.69134"
+       y="0.28013775"
        id="text4676"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan4678"
-         x="20"
-         y="82.362183"
-         style="font-size:10px">$<tspan
-   style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans"
+         x="-113.69134"
+         y="0.28013775"
+         style="font-size:19.6862011px">$<tspan
+   style="font-size:19.6862011px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans"
    id="tspan5263">graphNameMethod</tspan></tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Monospace"
-       x="160"
-       y="127.36218"
+       style="font-size:19.6862011px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Monospace"
+       x="161.91548"
+       y="88.868042"
        id="text5259"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5261"
-         x="160"
-         y="127.36218"
-         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans">graph=http://../void.ttl#Foo</tspan></text>
+         x="161.91548"
+         y="88.868042"
+         style="font-size:19.6862011px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans">graph=http://../void.ttl#Foo</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Monospace"
-       x="0"
-       y="167.36218"
+       style="font-size:19.6862011px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Monospace"
+       x="-153.06374"
+       y="167.61285"
        id="text5265"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5267"
-         x="0"
-         y="167.36218"
-         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans">dataDump</tspan></text>
+         x="-153.06374"
+         y="167.61285"
+         style="font-size:19.6862011px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans">dataDump</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Monospace"
-       x="100"
-       y="137.36218"
+       style="font-size:19.6862011px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Monospace"
+       x="43.798275"
+       y="108.55424"
        id="text5269"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5271"
-         x="100"
-         y="137.36218"
-         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans">filename</tspan></text>
+         x="43.798275"
+         y="108.55424"
+         style="font-size:19.6862011px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans">filename</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Monospace"
-       x="5"
-       y="237.36218"
+       style="font-size:19.6862011px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Monospace"
+       x="-143.22064"
+       y="305.41626"
        id="text5273"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5275"
-         x="5"
-         y="237.36218"
-         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans">Compressed?</tspan></text>
+         x="-143.22064"
+         y="305.41626"
+         style="font-size:19.6862011px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans">Compressed?</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Monospace"
-       x="80"
-       y="167.36218"
+       style="font-size:19.6862011px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Monospace"
+       x="4.4258718"
+       y="167.61285"
        id="text5277"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5279"
-         x="80"
-         y="167.36218"
-         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans">Compressed?</tspan></text>
+         x="4.4258718"
+         y="167.61285"
+         style="font-size:19.6862011px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans">Compressed?</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Monospace"
-       x="130"
-       y="102.36218"
+       style="font-size:19.6862011px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Monospace"
+       x="102.85688"
+       y="39.652542"
        id="text5319"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5321"
-         x="130"
-         y="102.36218"
-         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans">dataset</tspan></text>
+         x="102.85688"
+         y="39.652542"
+         style="font-size:19.6862011px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans">dataset</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Monospace"
-       x="0"
-       y="327.36218"
+       style="font-size:19.6862011px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Monospace"
+       x="-153.06374"
+       y="482.59207"
        id="text5323"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5325"
-         x="0"
-         y="327.36218"
-         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans">graph=http://../foo.ttl</tspan></text>
+         x="-153.06374"
+         y="482.59207"
+         style="font-size:19.6862011px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans">graph=http://../foo.ttl</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Monospace"
-       x="60"
-       y="262.36218"
+       style="font-size:19.6862011px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Monospace"
+       x="-34.946533"
+       y="354.63177"
        id="text5327"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5329"
-         x="60"
-         y="262.36218"
-         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans">T</tspan></text>
+         x="-34.946533"
+         y="354.63177"
+         style="font-size:19.6862011px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans">T</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Monospace"
-       x="15"
-       y="277.36218"
+       style="font-size:19.6862011px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Monospace"
+       x="-123.53444"
+       y="384.16107"
        id="text5331"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5333"
-         x="15"
-         y="277.36218"
-         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans">F</tspan></text>
+         x="-123.53444"
+         y="384.16107"
+         style="font-size:19.6862011px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans">F</tspan></text>
     <flowRoot
        xml:space="preserve"
        id="flowRoot5335"
@@ -289,74 +289,74 @@
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans" /></flowRegion><flowPara
          id="flowPara5341" /></flowRoot>    <text
        xml:space="preserve"
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Monospace"
-       x="80"
-       y="292.36218"
+       style="font-size:19.6862011px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Monospace"
+       x="4.4258718"
+       y="413.69037"
        id="text5343"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5345"
-         x="80"
-         y="292.36218"
-         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans">∀ files in http://../foo.tar.gz</tspan><tspan
+         x="4.4258718"
+         y="413.69037"
+         style="font-size:19.6862011px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans">∀ files in http://../foo.tar.gz</tspan><tspan
          sodipodi:role="line"
-         x="80"
-         y="304.86218"
+         x="4.4258718"
+         y="438.29813"
          id="tspan5347"
-         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans">    graph=http://../foo.tar.gz</tspan></text>
+         style="font-size:19.6862011px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans">    graph=http://../foo.tar.gz</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Monospace"
-       x="135"
-       y="192.36218"
+       style="font-size:19.6862011px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Monospace"
+       x="112.69998"
+       y="216.82835"
        id="text5363"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5365"
-         x="135"
-         y="192.36218"
-         style="font-size:10px">F</tspan></text>
+         x="112.69998"
+         y="216.82835"
+         style="font-size:19.6862011px">F</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Monospace"
-       x="90"
-       y="202.36218"
+       style="font-size:19.6862011px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Monospace"
+       x="24.112074"
+       y="236.51456"
        id="text5367"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5369"
-         x="90"
-         y="202.36218"
-         style="font-size:10px">T</tspan></text>
+         x="24.112074"
+         y="236.51456"
+         style="font-size:19.6862011px">T</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Monospace"
-       x="120"
-       y="217.36218"
+       style="font-size:19.6862011px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Monospace"
+       x="83.170677"
+       y="266.04385"
        id="text5371"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5373"
-         x="120"
-         y="217.36218"
-         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans">graph=http://example.org/graph/foo.ttl</tspan></text>
+         x="83.170677"
+         y="266.04385"
+         style="font-size:19.6862011px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans">graph=http://example.org/graph/foo.ttl</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Monospace"
-       x="90"
-       y="252.36218"
+       style="font-size:19.6862011px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Monospace"
+       x="24.112074"
+       y="334.94556"
        id="text5375"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5377"
-         x="90"
-         y="252.36218"
-         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans">∀ files in http://../foo.tar.gz</tspan><tspan
+         x="24.112074"
+         y="334.94556"
+         style="font-size:19.6862011px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans">∀ files in http://../foo.tar.gz</tspan><tspan
          sodipodi:role="line"
-         x="90"
-         y="264.86218"
+         x="24.112074"
+         y="359.55331"
          id="tspan5379"
-         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans">    graph=http://example.org/graph/$file</tspan></text>
+         style="font-size:19.6862011px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans">    graph=http://example.org/graph/$file</tspan></text>
     <flowRoot
        xml:space="preserve"
        id="flowRoot3044"
@@ -378,26 +378,26 @@
            x="-6.5659914"
            y="174.03455" /></flowRegion><flowPara
          id="flowPara3060" /></flowRoot>    <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
-       d="m 70,27.362183 -10,40"
+       style="fill:none;stroke:#000000;stroke-width:1.96862018px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="m -15.26033,-107.99397 -19.686201,78.744806"
        id="path3078"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
-       d="m 70,27.362183 110,35"
+       style="fill:none;stroke:#000000;stroke-width:1.96862018px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="m -15.26033,-107.99397 216.54822,68.901705"
        id="path3080"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline"
-       d="m 45,92.362183 0,69.999997"
+       d="m -64.475834,19.96634 0,137.8034"
        id="path3082"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
-       d="m 80,87.362186 75,29.999994"
+       style="fill:none;stroke:#000000;stroke-width:1.96862018px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="M 4.4258718,10.123245 152.07238,69.181838"
        id="path3100"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
@@ -413,38 +413,38 @@
            y="35.643654"
            style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans" /></flowRegion><flowPara
          id="flowPara3108" /></flowRoot>    <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
-       d="M 80,87.362183 40,227.36218"
+       style="fill:none;stroke:#000000;stroke-width:1.96862018px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="M 4.4258718,10.123239 -74.318934,285.73006"
        id="path3064"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
-       d="m 80,87.362183 25,69.999997"
+       style="fill:none;stroke:#000000;stroke-width:1.96862018px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="M 4.4258718,10.123239 53.641376,147.92664"
        id="path3066"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
-       d="m 105,172.36218 35,30"
+       style="fill:none;stroke:#000000;stroke-width:1.96862018px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="m 53.641376,177.45595 68.901704,59.0586"
        id="path3070"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
-       d="m 105,172.36218 -10,65"
+       style="fill:none;stroke:#000000;stroke-width:1.96862018px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="M 53.641376,177.45595 33.955174,305.41626"
        id="path3074"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
-       d="m 35,242.36218 -25,70"
+       style="fill:none;stroke:#000000;stroke-width:1.96862018px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="M -84.162035,315.25936 -133.37754,453.06277"
        id="path3076"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
-       d="m 35,242.36218 40,40"
+       style="fill:none;stroke:#000000;stroke-width:1.96862018px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="m -84.162035,315.25936 78.744806,78.7448"
        id="path3079"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
