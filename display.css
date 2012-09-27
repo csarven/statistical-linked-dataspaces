@@ -107,7 +107,15 @@ right:1em;
 }
 */
 
+.toc a:after {
+content: attr(title);
+float:right;
+}
 
+.toc > li:first-child > a:after {
+content: "Page " attr(title);
+float:right;
+}
 
 .todo {
 border:1px solid red;
