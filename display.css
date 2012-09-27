@@ -13,7 +13,13 @@ size:210mm 297mm;
 margin:4cm;
 }
 
-
+/*
+@page {
+  @bottom {
+    content: counter(page);
+  }
+}
+*/
 
 * { margin:0; padding:0; background: transparent; filter:none !important; -ms-filter: none !important; }
 img { display:block; border:0; }
