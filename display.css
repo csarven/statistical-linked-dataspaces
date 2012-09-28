@@ -9,17 +9,14 @@
 XXX:The following @page doesn't work in Gecko because of https://bugzilla.mozilla.org/show_bug.cgi?id=115199 and https://bugs.webkit.org/show_bug.cgi?id=35329 . Leaving it here and hoping that it will work one day. See also: http://en.wikipedia.org/wiki/Comparison_of_layout_engines_%28Cascading_Style_Sheets%29#CSS_version_support
 */
 @page {
-size:210mm 297mm; 
-margin:4cm;
+    size:210mm 297mm;
+    margin:4cm;
+
+    @bottom-center {
+        content: counter(page);
+    }
 }
 
-/*
-@page {
-  @bottom {
-    content: counter(page);
-  }
-}
-*/
 
 * { margin:0; padding:0; background: transparent; filter:none !important; -ms-filter: none !important; }
 img { display:block; border:0; }
@@ -490,4 +487,12 @@ list-style-type: none;
 }
 #references + ol li:before {
 content: "[" counter(list-order) "] ";
+}
+
+.references  li {
+margin-bottom:1em;
+}
+
+#bibliography {
+list-style-type:none;
 }
