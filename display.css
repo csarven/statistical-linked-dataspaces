@@ -10,7 +10,7 @@ XXX:The following @page doesn't work in Gecko because of https://bugzilla.mozill
 */
 @page {
     size:210mm 297mm;
-    margin:4cm;
+    margin:4cm 2cm 4cm 4cm;
 
     @bottom-center {
         content: counter(page);
@@ -75,11 +75,11 @@ body {
 background-color:#FFFFFF;
 color:#000000;
 font-family:"Canella", serif;
-font-size:16px;
-line-height:1.6;
+font-size:14px;
+line-height:1.4;
 counter-reset: section;
 counter-reset: sub-section;
-width:18cm;
+/*width:18cm;*/
 margin:0 auto;
 }
 
