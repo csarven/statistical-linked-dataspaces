@@ -25,10 +25,10 @@ a abbr { cursor: pointer; border-bottom:0; }
 table { border-collapse:collapse; }
 tr { vertical-align:top; }
 ol { list-style-position:inside; }
-/*h2, h3, h4, h5, h6, p, ul, ol, li, pre, code, table, dt, h3+p, h4+p {*/
-/*widows: 1;*/
-/*orphans: 1;*/
-/*}*/
+h2, h3, h4, h5, h6, p, ul, ol, li, pre, code, table, dt, h3+p, h4+p {
+widows: 5;
+orphans: 3;
+}
 
 thead { display: table-header-group; }
 tr, img { page-break-inside: avoid; }
@@ -40,13 +40,16 @@ h2,
 #acknowledgements + pre,
 #graphpusher-sequence_figure,
 #named-graph-flowchart_figure,
+#data-source,
 #linked-data-pages,
 #linked-data-frontend-architecture_figure,
 #linked-data-pages-architecture_figure,
 #geodatagovie-city-galway_screenshot,
 #architecture_eurostat_figure,
-#data-enrichment_world-bank,
-#code
+#data-interlinking_cso-ireland_table,
+#data-enrichment,
+#linked-dataset_eurostat_table,
+#future-work
 /*#data-retrieval_eurostat*/
 /*#architecture_world-bank_figure,*/ {
 page-break-before: always;
@@ -86,7 +89,7 @@ display:none;
 body {
 background-color:#FFFFFF;
 color:#000000;
-font-family:"Canella", serif;
+font-family:/*"Canella", */serif;
 font-size:16px;
 line-height:1.6;
 counter-reset: section;
@@ -169,12 +172,12 @@ margin-bottom:2em;
 }
 
 
-h1, h2, h3, h4, h5, h6, strong, th, dt {
-font-family:CanellaBold, serif;
-}
-i, cite, em, var, address, dfn {
-font-family:CanellaItalic, serif;
-}
+/*h1, h2, h3, h4, h5, h6, strong, th, dt {*/
+/*font-family:CanellaBold, serif;*/
+/*}*/
+/*i, cite, em, var, address, dfn {*/
+/*font-family:CanellaItalic, serif;*/
+/*}*/
 
 
 h1 {
@@ -246,7 +249,7 @@ color:#000;
 }
 
 pre {
-font-family:"Courier New", monospace;
+font-family:monospace;
 margin:0 0 1.5em 0;
 padding:1em;
 border:1px solid #CCCCCC;
@@ -254,7 +257,7 @@ overflow:auto;
 }
 
 code {
-font-family:"Courier New", monospace;
+font-family:monospace;
 word-wrap: break-word;
 }
 #data-provenance_table code {
@@ -503,7 +506,7 @@ content: "[" counter(list-order) "] ";
 }
 
 .references  li {
-margin-bottom:1em;
+margin-top:1.25em;
 line-height:1.5;
 }
 
