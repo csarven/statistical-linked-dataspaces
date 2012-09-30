@@ -17,6 +17,7 @@ XXX:The following @page doesn't work in Gecko because of https://bugzilla.mozill
     }
 }
 
+.test {background:red}
 
 * { margin:0; padding:0; background: transparent; filter:none !important; -ms-filter: none !important; }
 img { display:block; border:0; }
@@ -24,10 +25,10 @@ a abbr { cursor: pointer; border-bottom:0; }
 table { border-collapse:collapse; }
 tr { vertical-align:top; }
 ol { list-style-position:inside; }
-h2, h3, h4, h5, h6, p, ul, ol, li, pre, code, table, dt {
-widows: 5;
-orphans: 3;
-}
+/*h2, h3, h4, h5, h6, p, ul, ol, li, pre, code, table, dt, h3+p, h4+p {*/
+/*widows: 1;*/
+/*orphans: 1;*/
+/*}*/
 
 thead { display: table-header-group; }
 tr, img { page-break-inside: avoid; }
@@ -37,12 +38,22 @@ img { max-width: 100% !important; }
 #document-identifier,
 h2,
 #acknowledgements + pre,
-#linked-dataspaces-architecture_figure,
-#architecture_world-bank_figure {
+#graphpusher-sequence_figure,
+#named-graph-flowchart_figure,
+#linked-data-pages,
+#linked-data-frontend-architecture_figure,
+#linked-data-pages-architecture_figure,
+#geodatagovie-city-galway_screenshot,
+#architecture_eurostat_figure,
+#data-enrichment_world-bank,
+#code
+/*#data-retrieval_eurostat*/
+/*#architecture_world-bank_figure,*/ {
 page-break-before: always;
 }
 
-#keywords h2 {
+#keywords h2,
+h2 + p + h3 {
 page-break-before: avoid;
 }
 
@@ -470,8 +481,8 @@ border-bottom:0;
 
 
 
-.main figcaption {
-margin-bottom:1em;
+figcaption {
+margin-bottom:1.5em;
 }
 
 
@@ -491,8 +502,10 @@ content: "[" counter(list-order) "] ";
 
 .references  li {
 margin-bottom:1em;
+line-height:1.5;
 }
 
-#bibliography {
+#bibliography li {
 list-style-type:none;
+text-align:left;
 }
