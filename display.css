@@ -79,8 +79,7 @@ line-height:1.3;
 #comments,
 .entry-author,
 .datetimestamp,
-.entry-replies,
-#license {
+.entry-replies {
 display:none;
 }
 
