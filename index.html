@@ -383,10 +383,10 @@ When in doubt, mu.
 
                     <p>The proposal here is that, with the assumption of publishing statistical data in a way that its components can be identified, discovered, and disseminated for numerous uses, a Linked Dataspace can be an ideal candidate. A statistical Linked Dataspace needs to identify resources and provide access to their descriptions, where such resources are in the nature of code lists, data cube observations, datasets and structures. Some of the specific challenges include: extraction of original data sources, transformations to RDF, and loading (<abbr title="Extraction, Transformation, Loading">ETL</abbr>) to data storage services; creating global identifiers for the resources in its data catalogs; using vocabularies which are designed for modeling statistical data; offering services to the outside world such that its participating data sources can be browsed through; discovery via text searches and structured queries; and building interlinks with other data sources. Figure [<a href="#linked-dataspaces-architecture_figure">1</a>] depicts a architectural pipeline of Linked Dataspaces. While this diagram depicts a workflow from one phase to another in a particular direction, the phases themselves are not necessarily tied to one another. For example, given the <em>pay-as-you-go</em> approach, certain interlinks may be created and published straight away without having to go through any other component.</p>
 
-                    <figure id="linked-dataspaces-architecture_figure">
-                        <figcaption><strong>Figure 1</strong>: Linked Dataspaces architectural workflow</figcaption>
+                    <div class="figure" id="linked-dataspaces-architecture_figure">
+                        <p><strong>Figure 1</strong>: Linked Dataspaces architectural workflow</p>
                         <object type="image/svg+xml" data="linked-dataspaces.svg" width="640" height="427"></object>
-                    </figure>
+                    </div>
 
                     <h3 id="requirements">Requirements</h3>
                     <p>A set of requirements to create a statistical Linked Dataspace are derived from the case studies of deploying CSO Ireland, Eurostat, and World Bank Linked Data. The requirements are based on analysis of the original data sources, such as their characteristics in terms of quality, quantity, and update frequency.</p>
@@ -509,10 +509,10 @@ When in doubt, mu.
 
                     <p>Figure [<a href="#linked-dataspaces-architecture-component-contributions_figure">2</a>] reflects the contributions of this thesis within the Linked Dataspace architectural workflow.</p>
 
-                    <figure id="linked-dataspaces-architecture-component-contributions_figure">
-                        <figcaption><strong>Figure 2</strong>: Linked Dataspaces architectural workflow from case studies and contributions</figcaption>
+                    <div class="figure" id="linked-dataspaces-architecture-component-contributions_figure">
+                        <p><strong>Figure 2</strong>: Linked Dataspaces architectural workflow from case studies and contributions</p>
                         <object type="image/svg+xml" data="linked-dataspaces-component-contributions.svg" width="640" height="444"></object>
-                    </figure>
+                    </div>
 
                     <h3 about="[this:#graphpusher]" property="rdfs:label" id="graphpusher">GraphPusher</h3>
                     <p>The manual creation of dataspaces conforms to Linked Data principles is time consuming, and prone to human errors since there are a number of steps involved to gather the data, and place them in a store. Typically a list is compiled consisting of datasets with graph names for each dataset, and local copies of the data that is to be imported in to a store. This information may be tracked in a structured format, or a simple text file. The VoID is used because it is an accepted standard to describe RDF datasets, as well as the <a href="http://www.w3.org/TR/sparql11-service-description/">SPARQL 1.1 Service Description</a> (<dfn><abbr title="SPARQL 1.1 Service Description">SD</abbr></dfn>) [<a href="#r_57">57</a>] for discovering information about a SPARQL service.</p>
@@ -535,10 +535,10 @@ When in doubt, mu.
                         <li>Finally, the data is imported into the graph store by either executing an update operation on the RDF store directly, or through the SPARQL service via SPARQL Update.</li>
                     </ol>
 
-                    <figure id="graphpusher-sequence_figure" rel="[this:#graphpusher]">
-                        <figcaption><strong>Figure 3</strong>: GraphPusher sequence</figcaption>
+                    <div class="figure" id="graphpusher-sequence_figure" rel="[this:#graphpusher]">
+                        <p><strong>Figure 3</strong>: GraphPusher sequence</p>
                         <object type="image/svg+xml" data="graphpusher-sequence.svg" about="graphpusher-sequence.svg" typeof="biblio:Figure" width="640" height="483"></object>
-                    </figure>
+                    </div>
 
                     <h4 id="graphpusher_implementation">Implementation</h4>
                     <p>A reoccurring dataspace operation in Linked Data environments is the retrieval of remote data and placing them in an RDF storage. In the case of rebuilding an RDF store, the approach is to use a VoID description for the datasets in order to batch process some of the recurring steps. This is typically accomplished by publishing a VoID description of the datasets with triples using the <code>void:dataDump</code> property, and optionally with <code>sd:graph</code> and <code>sd:name</code> properties.</p>
@@ -562,10 +562,10 @@ When in doubt, mu.
 
                     <p>If <code>sd:name</code> is not present, GraphPusher looks for one of the <code>graphNameMethod</code> configuration property values: <code>dataset</code>, <code>dataDump</code>, <code>filename</code>. By default <code>dataset</code> value tells the GraphPusher to simply use the URI of the <code>void:Dataset</code>. If <code>dataDump</code> is set, the named graph IRI becomes the IRI of the data dump. Alternatively, if the <code>filename</code> method is used, the file name is appended to the <code>graphNameBase</code> URI value.</p>
 
-                    <figure id="named-graph-flowchart_figure" rel="[this:#graphpusher]">
-                        <figcaption><strong>Figure 4</strong>: Determining named graph flowchart</figcaption>
+                    <div class="figure" id="named-graph-flowchart_figure" rel="[this:#graphpusher]">
+                        <p><strong>Figure 4</strong>: Determining named graph flowchart</p>
                         <object type="image/svg+xml" data="graphpusher-named-graph-flowchart.svg" about="graphpusher-named-graph-flowchart.svg" typeof="biblio:Figure" width="640" height="659"></object>
-                    </figure>
+                    </div>
 
                     <h4 id="graphpusher_preliminary-results">Preliminary Results</h4>
                     <p>As there exists no automated approach to have local copies of the data dumps, determining a graph name per data dump, and importing the data into a store, the manual approach is used as baseline to compare against. The following criteria are used for comparison:</p>
@@ -620,10 +620,10 @@ When in doubt, mu.
                     </ol>
 
 
-                    <figure id="linked-data-frontend-architecture_figure">
-                        <figcaption><strong>Figure 5</strong>: Linked Data Request and Response interface</figcaption>
+                    <div class="figure" id="linked-data-frontend-architecture_figure">
+                        <p><strong>Figure 5</strong>: Linked Data Request and Response interface</p>
                         <object type="image/svg+xml" data="linked-data-frontend-architecture.svg" width="640" height="500"></object>
-                    </figure>
+                    </div>
 
 
                     <p>As an attempt to use a publishing architecture as such, existing frameworks were investigated in 2010. To name a few, <a href="http://www.w3.org/2005/04/fresnel-info/">Fresnel</a> [<a href="#r_67">67</a>], <a href="http://less.aksw.org/">LESS</a> [<a href="#r_68">68</a>], <a href="http://www4.wiwiss.fu-berlin.de/pubby/">Pubby</a>, and <a href="http://code.google.com/p/paget/">Paget</a> [<a href="#r_69">69</a>] was explored for use in DataGovIE website. The idea was to use a tool that 1) had the necessary features for data consolidation, and 2) allowed custom templating for resources. The fundamental shortcomings of these tools appeared to be that on the templating side, they offered de facto generic entity rendering of RDF resources in HTML i.e., a tabular view of properties and objects of a subject resource. This was also typically the result of a <code>DESCRIBE</code> SPARQL query [<a href="#r_70">70</a>] for a given resource such which simply returned a response identified by an URI.</p>
@@ -632,10 +632,10 @@ When in doubt, mu.
 
                     <p>In order to make the HTML user interface more user friendly, <a href="https://github.com/csarven/linked-data-pages">Linked Data Pages</a> (<dfn><abbr title="Linked Data Pages">LDP</abbr></dfn>) [<a href="#r_71">71</a>] was developed. The motivation was to not only make the publishing process possible as other attempts, but also to make it easier for publishers to customize the HTML output. Instead of starting from scratch, Paget was extended since it had a good feature base which matched DataGovIE&#8217;s needs. Figure [<a href="#linked-data-pages-architecture_figure">6</a>] illustrates LDP&#8217;s architecture:</p>
 
-                    <figure id="linked-data-pages-architecture_figure">
-                        <figcaption><strong>Figure 6</strong>: Linked Data Pages architecture</figcaption>
+                    <div class="figure" id="linked-data-pages-architecture_figure">
+                        <p><strong>Figure 6</strong>: Linked Data Pages architecture</p>
                         <object type="image/svg+xml" data="linked-data-pages-architecture.svg" width="640" height="512"></object>
-                    </figure>
+                    </div>
 
                     <p>LDP is built on top of Paget, which requires <a href="http://code.google.com/p/moriarty/">Moriarty</a> [<a href="#r_72">72</a>], and <a href="https://github.com/semsol/arc2">ARC2</a> [<a href="#r_73">73</a>] libraries. Paget is a versatile Web application written in PHP. Its HTML rendering of RDF is basic in a sense that information is displayed in a tabular way. LDP extends on Paget&#8217;s framework in order to output human readable Web pages. Additionally, LDP relies on its URI dispatch mechanism and to build a local index of the RDF data gathered from SPARQL query results.</p>
 
@@ -684,10 +684,10 @@ When in doubt, mu.
 
                     <p>Figure [<a href="#geodatagovie-city-galway_screenshot">7</a>] shows a screenshot of the Galway City page at DataGoVIE.</p>
 
-                    <figure id="geodatagovie-city-galway_screenshot">
-                        <figcaption><strong>Figure 7</strong>. Galway City page on DataGovIE</figcaption>
+                    <div class="figure" id="geodatagovie-city-galway_screenshot">
+                        <p><strong>Figure 7</strong>. Galway City page on DataGovIE</p>
                         <img src="geo.data-gov.ie-city-galway_screenshot.jpg" alt="Screenshot of Galway City page on DataGovIE" width="775" height="753"/>
-                    </figure>
+                    </div>
 
                     <p>From the implementation side, Linked Data Pages provides results based on the URI pattern that is triggered. In other words, what information a resource contains and how it is represented is determined at the URI level. An alternative approach to outputting would be based on the characteristics of the resource. That is, the triple graph pattern from a SPARQL query result can be taken and then based on desired parameters, the results can be passed to a template.</p>
 
@@ -707,20 +707,20 @@ When in doubt, mu.
                     <h3 id="architecture">Deployment Architecture</h3>
                     <p>Figures [<a href="#architecture_cso-ireland_figure">8</a>], [<a href="#architecture_eurostat_figure">9</a>], [<a href="#architecture_world-bank_figure">10</a>] illustrate an overview on the overall architecture of the deployment of our three case studies. They will be discuss in further detail in the following sections.</p>
 
-                    <figure id="architecture_cso-ireland_figure">
-                        <figcaption><strong>Figure 8</strong>. CSO Ireland deployment architecture</figcaption>
+                    <div class="figure" id="architecture_cso-ireland_figure">
+                        <p><strong>Figure 8</strong>. CSO Ireland deployment architecture</p>
                         <object type="image/svg+xml" data="cso-architecture.svg" width="640" height="167"></object>
-                    </figure>
+                    </div>
 
-                    <figure id="architecture_eurostat_figure">
-                        <figcaption><strong>Figure 9</strong>. Eurostat deployment architecture</figcaption>
+                    <div class="figure" id="architecture_eurostat_figure">
+                        <p><strong>Figure 9</strong>. Eurostat deployment architecture</p>
                         <object type="image/svg+xml" data="eurostat-architecture.svg" width="640" height="350"></object>
-                    </figure>
+                    </div>
 
-                    <figure id="architecture_world-bank_figure">
-                        <figcaption><strong>Figure 10</strong>. World Bank deployment architecture</figcaption>
+                    <div class="figure" id="architecture_world-bank_figure">
+                        <p><strong>Figure 10</strong>. World Bank deployment architecture</p>
                         <object type="image/svg+xml" data="worldbank-architecture.svg" width="640" height="255"></object>
-                    </figure>
+                    </div>
 
                     <h3 id="data-retrieval">Data Retrieval</h3>
                     <p>This section discusses the methods used to retrieve the statistical data from original sources.</p>

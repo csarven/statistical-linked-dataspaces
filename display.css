@@ -163,7 +163,7 @@ column-gap:0.83cm;
 p, ol, ul {
 margin-bottom:1em;
 }
-table, figure {
+table, .figure {
 margin-bottom:2em;
 }
 
@@ -481,7 +481,7 @@ border-bottom:0;
 
 
 
-figcaption {
+.figure {
 margin-bottom:1.5em;
 }
 
