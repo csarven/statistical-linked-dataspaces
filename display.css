@@ -297,6 +297,7 @@ text-align:center;
 #authors dd,
 #document-purpose dd,
 #author_supervisor dd,
+#author_reviewers dd,
 #author_orgs dd {
 margin-left:0;
 }
@@ -304,6 +305,7 @@ margin-left:0;
 #authors *,
 #document-purpose *,
 #author_supervisor *,
+#author_reviewers *,
 #author_orgs dt,
 #document-submitted * {
 text-align:center;
